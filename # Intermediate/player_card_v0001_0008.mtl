@@ -1,0 +1,40 @@
+# MTL written from /Users/bstahl/Dropbox/Ben Dropbox/Developer/Code/SceneKitTest/# Intermediate/player_card_v0001_0008.obj
+newmtl Black_032High_032Gloss_032Plastic_046lxp
+Kd 0.012549 0.012549 0.012549
+Ns 2048
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.1 0.1 0.1
+newmtl player_card_hs
+Kd 0.8 0.8 0.8
+Ns 256
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.2 0.2 0.2
+map_Kd /Users/bstahl/Dropbox/Ben Dropbox/Developer/Code/SceneKitTest/# Intermediate/Player Card Textures/nfl.p.7755.png
+newmtl player_card_name_bg
+Kd 0.8 0.8 0.8
+Ns 256
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.2 0.2 0.2
+map_Kd /Users/bstahl/Dropbox/Ben Dropbox/Developer/Code/SceneKitTest/# Intermediate/Player Card Textures/pc_name_bg.png
+newmtl player_card_stats_bg
+Kd 0.8 0.8 0.8
+Ns 256
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.2 0.2 0.2
+map_Kd /Users/bstahl/Dropbox/Ben Dropbox/Developer/Code/SceneKitTest/# Intermediate/Player Card Textures/pc_stats_bg.png
+newmtl player_card_team_strip
+Kd 0.8 0.8 0.8
+Ns 256
+d 1
+illum 2
+Ka 0 0 0
+Ks 0.2 0.2 0.2
+map_Kd /Users/bstahl/Dropbox/Ben Dropbox/Developer/Code/SceneKitTest/# Intermediate/nfl_t_34_strip.png

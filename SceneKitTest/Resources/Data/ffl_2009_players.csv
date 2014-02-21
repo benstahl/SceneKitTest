@@ -1,0 +1,556 @@
+"ID","FIRST_NAME","LAST_NAME","SHORT_DISPLAY_NAME","DISPLAY_NAME","TOOL_NAME","TEAM_ID","TEAM_NAME","POSITION","Y_RANK","POS_RANK","TD","YD","YDS_PER_GAME","QB_RATING","FG","FGM","PAT","PATM","LONG","POINTS_ALLOWED","TACKLES","INT","FUMBLES","SACKS"
+"nfl.p.7779","Joseph","Addai","J. Addai","Joseph Addai","Addai, Joseph - IND - RB","nfl.t.11","Indianapolis","RB","40","20","3","283","70.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6463","Sam","Aiken","S. Aiken","Sam Aiken","Aiken, Sam - NWE - WR","nfl.t.17","New England","WR","1899","170",0,"26","8.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8939","Erik","Ainge","E. Ainge","Erik Ainge","Ainge, Erik - NYJ - QB","nfl.t.20","NY Jets","QB","1962","55",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4587","David","Akers","D. Akers","David Akers","Akers, David - PHI - K","nfl.t.21","Philadelphia","K","184","4",0,0,0,0,"5/6","5","11/11","11","49",0,0,0,0,0
+"nfl.p.9031","Anthony","Alridge","A. Alridge","Anthony Alridge","Alridge, Anthony - WAS - RB","nfl.t.28","Washington","RB","1704","78",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9037","Danny","Amendola","D. Amendola","Danny Amendola","Amendola, Danny - STL - WR","nfl.t.14","St. Louis","WR","1823","151",0,"8","4.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8000","David","Anderson","D. Anderson","David Anderson","Anderson, David - HOU - WR","nfl.t.34","Houston","WR","1682","130",0,"56","14.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8449","Deon","Anderson","D. Anderson","Deon Anderson","Anderson, Deon - DAL - RB","nfl.t.6","Dallas","RB","1948","147",0,"5","2.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7389","Derek","Anderson","D. Anderson","Derek Anderson","Anderson, Derek - CLE - QB","nfl.t.5","Cleveland","QB","1433","30","2","363","181.5","50.7",0,0,0,0,0,0,0,"4",0,0
+"nfl.p.9541","Shane","Andrus","S. Andrus","Shane Andrus","Andrus, Shane - TAM - K","nfl.t.27","Tampa Bay","K","1829","33",0,0,0,0,"0/0",0,"0/0",0,0,0,0,0,0,0
+"nfl.p.7982","Devin","Aromashodu","D. Aromashodu","Devin Aromashodu","Aromashodu, Devin - CHI - WR","nfl.t.3","Chicago","WR","1675","128",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6421","B.J.","Askew","B. Askew","B.J. Askew","Askew, B.J. - TAM - RB","nfl.t.27","Tampa Bay","RB","1910","126",0,"3","1.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8021","Miles","Austin","M. Austin","Miles Austin","Austin, Miles - DAL - WR","nfl.t.6","Dallas","WR","140","49","1","81","20.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7858","Jason","Avant","J. Avant","Jason Avant","Avant, Jason - PHI - WR","nfl.t.21","Philadelphia","WR","1408","86","1","111","37.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8810","Donnie","Avery","D. Avery","Donnie Avery","Avery, Donnie - STL - WR","nfl.t.14","St. Louis","WR","74","27",0,"117","29.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7425","Billy","Bajema","B. Bajema","Billy Bajema","Bajema, Billy - STL - TE","nfl.t.14","St. Louis","TE","1828","100",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5974","Chris","Baker","C. Baker","Chris Baker","Baker, Chris - NWE - TE","nfl.t.17","New England","TE","1431","42","1","50","16.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7285","Marion","Barber","M. Barber","Marion Barber","Barber, Marion - DAL - RB","nfl.t.6","Dallas","RB","19","14","3","302","100.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9349","Ramses","Barden","R. Barden","Ramses Barden","Barden, Ramses - NYG - WR","nfl.t.19","NY Giants","WR","1606","118",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8907","Gary","Barnidge","G. Barnidge","Gary Barnidge","Barnidge, Gary - CAR - TE","nfl.t.29","Carolina","TE","1757","89",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8010","Hank","Baskett","H. Baskett","Hank Baskett","Baskett, Hank - IND - WR","nfl.t.11","Indianapolis","WR","1678","129",0,"6","6.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4319","Charlie","Batch","C. Batch","Charlie Batch","Batch, Charlie - PIT - QB","nfl.t.23","Pittsburgh","QB","2006","81",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6533","Arnaz","Battle","A. Battle","Arnaz Battle","Battle, Arnaz - SFO - WR","nfl.t.25","San Francisco","WR","1568","114",0,"31","10.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8739","Jackie","Battle","J. Battle","Jackie Battle","Battle, Jackie - KAN - RB","nfl.t.12","Kansas City","RB","1952","148",0,"15","5.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5056","Anthony","Becht","A. Becht","Anthony Becht","Becht, Anthony - ARI - TE","nfl.t.22","Arizona","TE","1689","83",0,"27","9.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8294","John","Beck","J. Beck","John Beck","Beck, John - BAL - QB","nfl.t.33","Baltimore","QB","2002","79",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9364","Travis","Beckum","T. Beckum","Travis Beckum","Beckum, Travis - NYG - TE","nfl.t.19","NY Giants","TE","1564","71",0,"23","11.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8008","Mike","Bell","M. Bell","Mike Bell","Bell, Mike - NOR - RB","nfl.t.18","New Orleans","RB","234","68","1","238","119.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8847","Earl","Bennett","E. Bennett","Earl Bennett","Bennett, Earl - CHI - WR","nfl.t.3","Chicago","WR","166","56",0,"200","50.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8838","Martellus","Bennett","M. Bennett","Martellus Bennett","Bennett, Martellus - DAL - TE","nfl.t.6","Dallas","TE","1440","46",0,"40","10.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5474","Michael","Bennett","M. Bennett","Michael Bennett","Bennett, Michael - SDG - RB","nfl.t.24","San Diego","RB","1781","90",0,"40","20.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7180","Cedric","Benson","C. Benson","Cedric Benson","Benson, Cedric - CIN - RB","nfl.t.4","Cincinnati","RB","70","32","2","416","104.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6837","Bernard","Berrian","B. Berrian","Bernard Berrian","Berrian, Bernard - MIN - WR","nfl.t.16","Minnesota","WR","77","28","1","177","44.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9030","Davone","Bess","D. Bess","Davone Bess","Bess, Davone - MIA - WR","nfl.t.15","Miami","WR","197","65",0,"168","42.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5942","Ladell","Betts","L. Betts","Ladell Betts","Betts, Ladell - WAS - RB","nfl.t.28","Washington","RB","194","63",0,"125","31.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7434","Rob","Bironas","R. Bironas","Rob Bironas","Bironas, Rob - TEN - K","nfl.t.10","Tennessee","K","173","2",0,0,0,0,"4/6","4","7/7","7","45",0,0,0,0,0
+"nfl.p.6390","Anquan","Boldin","A. Boldin","Anquan Boldin","Boldin, Anquan - ARI - WR","nfl.t.22","Arizona","WR","28","9","1","175","58.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6355","Kyle","Boller","K. Boller","Kyle Boller","Boller, Kyle - STL - QB","nfl.t.14","St. Louis","QB","1889","40","2","308","154.0","63.6",0,0,0,0,0,0,0,"2",0,0
+"nfl.p.4728","Marty","Booker","M. Booker","Marty Booker","Booker, Marty - ATL - WR","nfl.t.1","Atlanta","WR","1436","92",0,"59","29.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8407","Kevin","Boss","K. Boss","Kevin Boss","Boss, Kevin - NYG - TE","nfl.t.19","NY Giants","TE","181","18",0,"143","35.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8277","Dwayne","Bowe","D. Bowe","Dwayne Bowe","Bowe, Dwayne - KAN - WR","nfl.t.12","Kansas City","WR","30","10","2","107","35.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7215","Mark","Bradley","M. Bradley","Mark Bradley","Bradley, Mark - KAN - WR","nfl.t.12","Kansas City","WR","141","50","1","168","56.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8504","Ahmad","Bradshaw","A. Bradshaw","Ahmad Bradshaw","Bradshaw, Ahmad - NYG - RB","nfl.t.19","NY Giants","RB","110","44",0,"284","71.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5228","Tom","Brady","T. Brady","Tom Brady","Brady, Tom - NWE - QB","nfl.t.17","New England","QB","23","3","5","1151","287.8","83.7",0,0,0,0,0,0,0,"2",0,0
+"nfl.p.5951","Deion","Branch","D. Branch","Deion Branch","Branch, Deion - SEA - WR","nfl.t.26","Seattle","WR","111","41",0,"54","27.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9438","Tom","Brandstater","T. Brandstater","Tom Brandstater","Brandstater, Tom - DEN - QB","nfl.t.7","Denver","QB","1970","60",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8396","Steve","Breaston","S. Breaston","Steve Breaston","Breaston, Steve - ARI - WR","nfl.t.22","Arizona","WR","99","38",0,"177","88.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5479","Drew","Brees","D. Brees","Drew Brees","Brees, Drew - NOR - QB","nfl.t.18","New Orleans","QB","15","1","9","1043","260.8","108.4",0,0,0,0,0,0,0,"2",0,0
+"nfl.p.9294","Kenny","Britt","K. Britt","Kenny Britt","Britt, Kenny - TEN - WR","nfl.t.10","Tennessee","WR","205","70",0,"271","67.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9456","Aaron","Brown","A. Brown","Aaron Brown","Brown, Aaron - DET - RB","nfl.t.8","Detroit","RB","1817","96",0,"54","13.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6429","Chris","Brown","C. Brown","Chris Brown","Brown, Chris - HOU - RB","nfl.t.34","Houston","RB","1768","85",0,"60","20.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9291","Donald","Brown","D. Brown","Donald Brown","Brown, Donald - IND - RB","nfl.t.11","Indianapolis","RB","92","40","2","257","64.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6558","Josh","Brown","J. Brown","Josh Brown","Brown, Josh - STL - K","nfl.t.14","St. Louis","K","210","12",0,0,0,0,"1/4","1","3/3","3","53",0,0,0,0,0
+"nfl.p.4878","Kris","Brown","K. Brown","Kris Brown","Brown, Kris - HOU - K","nfl.t.34","Houston","K","183","3",0,0,0,0,"5/6","5","11/11","11","38",0,0,0,0,0
+"nfl.p.7211","Reggie","Brown","R. Brown","Reggie Brown","Brown, Reggie - PHI - WR","nfl.t.21","Philadelphia","WR","1552","109",0,"4","4.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7178","Ronnie","Brown","R. Brown","Ronnie Brown","Brown, Ronnie - MIA - RB","nfl.t.15","Miami","RB","26","16","4","419","104.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.2914","Isaac","Bruce","I. Bruce","Isaac Bruce","Bruce, Isaac - SFO - WR","nfl.t.25","San Francisco","WR","170","58",0,"159","39.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.2485","Mark","Brunell","M. Brunell","Mark Brunell","Brunell, Mark - NOR - QB","nfl.t.18","New Orleans","QB","1995","75",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5949","Antonio","Bryant","A. Bryant","Antonio Bryant","Bryant, Antonio - TAM - WR","nfl.t.27","Tampa Bay","WR","46","15","1","79","26.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5569","Correll","Buckhalter","C. Buckhalter","Correll Buckhalter","Buckhalter, Correll - DEN - RB","nfl.t.7","Denver","RB","144","52","1","363","90.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8685","Eldra","Buckley","E. Buckley","Eldra Buckley","Buckley, Eldra - PHI - RB","nfl.t.21","Philadelphia","RB","1876","108",0,"4","2.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9436","David","Buehler","D. Buehler","David Buehler","Buehler, David - DAL - K","nfl.t.6","Dallas","K","1831","34",0,0,0,0,"0/0",0,"0/0",0,0,0,0,0,0,0
+"nfl.p.5197","Marc","Bulger","M. Bulger","Marc Bulger","Bulger, Marc - STL - QB","nfl.t.14","St. Louis","QB","226","27","1","350","116.7","70.6",0,0,0,0,0,0,0,0,0,0
+"nfl.p.6407","Nate","Burleson","N. Burleson","Nate Burleson","Burleson, Nate - SEA - WR","nfl.t.26","Seattle","WR","138","47","1","262","65.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8918","Keenan","Burton","K. Burton","Keenan Burton","Burton, Keenan - STL - WR","nfl.t.14","St. Louis","WR","204","69",0,"92","23.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8354","Michael","Bush","M. Bush","Michael Bush","Bush, Michael - OAK - RB","nfl.t.13","Oakland","RB","168","57","1","165","41.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7751","Reggie","Bush","R. Bush","Reggie Bush","Bush, Reggie - NOR - RB","nfl.t.18","New Orleans","RB","43","21","1","269","67.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9355","Deon","Butler","D. Butler","Deon Butler","Butler, Deon - SEA - WR","nfl.t.26","Seattle","WR","1793","143",0,"30","7.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7842","Dominique","Byrd","D. Byrd","Dominique Byrd","Byrd, Dominique - ARI - TE","nfl.t.22","Arizona","TE","1492","58",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7123","Jeremy","Cain","J. Cain","Jeremy Cain","Cain, Jeremy - JAC - RB","nfl.t.30","Jacksonville","RB","1882","111",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8874","Andre","Caldwell","A. Caldwell","Andre Caldwell","Caldwell, Andre - CIN - WR","nfl.t.4","Cincinnati","WR","1466","104","1","159","39.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7657","Greg","Camarillo","G. Camarillo","Greg Camarillo","Camarillo, Greg - MIA - WR","nfl.t.15","Miami","WR","187","63",0,"86","21.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7201","Jason","Campbell","J. Campbell","Jason Campbell","Campbell, Jason - WAS - QB","nfl.t.28","Washington","QB","180","23","5","1048","262.0","85.5",0,0,0,0,0,0,0,"5",0,0
+"nfl.p.8815","John","Carlson","J. Carlson","John Carlson","Carlson, John - SEA - TE","nfl.t.26","Seattle","TE","102","10","2","208","52.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.549","John","Carney","J. Carney","John Carney","Carney, John - NOR - K","nfl.t.18","New Orleans","K","235","15",0,0,0,0,"6/7","6","18/18","18","39",0,0,0,0,0
+"nfl.p.9032","Dan","Carpenter","D. Carpenter","Dan Carpenter","Carpenter, Dan - MIA - K","nfl.t.15","Miami","K","285","26",0,0,0,0,"6/7","6","9/9","9","45",0,0,0,0,0
+"nfl.p.5887","David","Carr","D. Carr","David Carr","Carr, David - NYG - QB","nfl.t.19","NY Giants","QB","2014","86",0,"8","4.0","47.9",0,0,0,0,0,0,0,0,0,0
+"nfl.p.6119","Rock","Cartwright","R. Cartwright","Rock Cartwright","Cartwright, Rock - WAS - RB","nfl.t.28","Washington","RB","1937","143","1","12","3.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9416","James","Casey","J. Casey","James Casey","Casey, James - HOU - TE","nfl.t.34","Houston","TE","1756","88",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7406","Matt","Cassel","M. Cassel","Matt Cassel","Cassel, Matt - KAN - QB","nfl.t.12","Kansas City","QB","95","13","5","516","172.0","82.5",0,0,0,0,0,0,0,"2",0,0
+"nfl.p.8416","Brent","Celek","B. Celek","Brent Celek","Celek, Brent - PHI - TE","nfl.t.21","Philadelphia","TE","179","17","2","245","81.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5499","Chris","Chambers","C. Chambers","Chris Chambers","Chambers, Chris - SDG - WR","nfl.t.24","San Diego","WR","122","42","1","69","17.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8850","Jamaal","Charles","J. Charles","Jamaal Charles","Charles, Jamaal - KAN - RB","nfl.t.12","Kansas City","RB","147","54",0,"131","43.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8902","Tashard","Choice","T. Choice","Tashard Choice","Choice, Tashard - DAL - RB","nfl.t.6","Dallas","RB","190","62","1","225","56.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8090","Brian","Clark","B. Clark","Brian Clark","Clark, Brian - TAM - WR","nfl.t.27","Tampa Bay","WR","1930","173",0,"17","8.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6360","Dallas","Clark","D. Clark","Dallas Clark","Clark, Dallas - IND - TE","nfl.t.11","Indianapolis","TE","67","4","2","371","92.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4829","Desmond","Clark","D. Clark","Desmond Clark","Clark, Desmond - CHI - TE","nfl.t.3","Chicago","TE","1447","48",0,"31","15.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7198","Mark","Clayton","M. Clayton","Mark Clayton","Clayton, Mark - BAL - WR","nfl.t.33","Baltimore","WR","132","46","1","201","50.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6774","Michael","Clayton","M. Clayton","Michael Clayton","Clayton, Michael - TAM - WR","nfl.t.27","Tampa Bay","WR","176","60",0,"120","30.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7798","Kellen","Clemens","K. Clemens","Kellen Clemens","Clemens, Kellen - NYJ - QB","nfl.t.20","NY Jets","QB","1949","50",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8411","David","Clowney","D. Clowney","David Clowney","Clowney, David - NYJ - WR","nfl.t.20","NY Jets","WR","1591","116",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8542","Daniel","Coats","D. Coats","Daniel Coats","Coats, Daniel - CIN - TE","nfl.t.4","Cincinnati","TE","1679","79",0,"86","21.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8011","Patrick","Cobbs","P. Cobbs","Patrick Cobbs","Cobbs, Patrick - MIA - RB","nfl.t.15","Miami","RB","1787","91",0,"55","13.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9338","Glen","Coffee","G. Coffee","Glen Coffee","Coffee, Glen - SFO - RB","nfl.t.25","San Francisco","RB","1477","73",0,"186","46.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9362","Chase","Coffman","C. Coffman","Chase Coffman","Coffman, Chase - CIN - TE","nfl.t.4","Cincinnati","TE","212","21",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5107","Laveranues","Coles","L. Coles","Laveranues Coles","Coles, Laveranues - CIN - WR","nfl.t.4","Cincinnati","WR","85","33","1","80","20.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9391","Austin","Collie","A. Collie","Austin Collie","Collie, Austin - IND - WR","nfl.t.11","Indianapolis","WR","1453","97","1","131","32.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.3115","Kerry","Collins","K. Collins","Kerry Collins","Collins, Kerry - TEN - QB","nfl.t.10","Tennessee","QB","227","28","6","932","233.0","68.9",0,0,0,0,0,0,0,"6",0,0
+"nfl.p.3116","Todd","Collins","T. Collins","Todd Collins","Collins, Todd - WAS - QB","nfl.t.28","Washington","QB","1928","46",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8001","Marques","Colston","M. Colston","Marques Colston","Colston, Marques - NOR - WR","nfl.t.18","New Orleans","WR","32","11","3","228","57.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9353","Jared","Cook","J. Cook","Jared Cook","Cook, Jared - TEN - TE","nfl.t.10","Tennessee","TE","1566","72",0,"11","3.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6840","Chris","Cooley","C. Cooley","Chris Cooley","Cooley, Chris - WAS - TE","nfl.t.28","Washington","TE","93","7","2","254","63.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7109","Terrance","Copper","T. Copper","Terrance Copper","Copper, Terrance - KAN - WR","nfl.t.12","Kansas City","WR","1835","152",0,"8","8.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9530","Quan","Cosby","Q. Cosby","Quan Cosby","Cosby, Quan - CIN - WR","nfl.t.4","Cincinnati","WR","1849","161",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6867","Jerricho","Cotchery","J. Cotchery","Jerricho Cotchery","Cotchery, Jerricho - NYJ - WR","nfl.t.20","NY Jets","WR","78","29","1","356","89.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8853","Brad","Cottam","B. Cottam","Brad Cottam","Cottam, Brad - KAN - TE","nfl.t.12","Kansas City","TE","1570","73",0,"11","11.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9051","Mike","Cox","M. Cox","Mike Cox","Cox, Mike - KAN - RB","nfl.t.12","Kansas City","RB","1932","139",0,"16","16.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9274","Michael","Crabtree","M. Crabtree","Michael Crabtree","Crabtree, Michael - SFO - WR","nfl.t.25","San Francisco","WR","97","36",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6975","Patrick","Crayton","P. Crayton","Patrick Crayton","Crayton, Patrick - DAL - WR","nfl.t.6","Dallas","WR","239","77","1","238","59.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7448","Joshua","Cribbs","J. Cribbs","Joshua Cribbs","Cribbs, Joshua - CLE - WR","nfl.t.5","Cleveland","WR","1686","132",0,"64","16.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8447","Mason","Crosby","M. Crosby","Mason Crosby","Crosby, Mason - GNB - K","nfl.t.9","Green Bay","K","195","6",0,0,0,0,"7/9","7","9/10","9","52",0,0,0,0,0
+"nfl.p.7834","Brodie","Croyle","B. Croyle","Brodie Croyle","Croyle, Brodie - KAN - QB","nfl.t.12","Kansas City","QB","1455","31","2","177","177.0","116.1",0,0,0,0,0,0,0,0,0,0
+"nfl.p.5482","Alge","Crumpler","A. Crumpler","Alge Crumpler","Crumpler, Alge - TEN - TE","nfl.t.10","Tennessee","TE","1422","40",0,"113","28.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4659","Daunte","Culpepper","D. Culpepper","Daunte Culpepper","Culpepper, Daunte - DET - QB","nfl.t.8","Detroit","QB","1951","51",0,"54","54.0","68.0",0,0,0,0,0,0,0,0,0,0
+"nfl.p.6154","Billy","Cundiff","B. Cundiff","Billy Cundiff","Cundiff, Billy - CLE - K","nfl.t.5","Cleveland","K","1681","31",0,0,0,0,"3/3","3","2/2","2","31",0,0,0,0,0
+"nfl.p.6410","Kevin","Curtis","K. Curtis","Kevin Curtis","Curtis, Kevin - PHI - WR","nfl.t.21","Philadelphia","WR","145","51",0,"70","35.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7581","Tony","Curtis","T. Curtis","Tony Curtis","Curtis, Tony - BAL - TE","nfl.t.33","Baltimore","TE","1573","74",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7760","Jay","Cutler","J. Cutler","Jay Cutler","Cutler, Jay - CHI - QB","nfl.t.3","Chicago","QB","73","10","9","923","230.8","89.3",0,0,0,0,0,0,0,"5",0,0
+"nfl.p.9678","Chase","Daniel","C. Daniel","Chase Daniel","Daniel, Chase - NOR - QB","nfl.t.18","New Orleans","QB","1967","59",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7847","Owen","Daniels","O. Daniels","Owen Daniels","Daniels, Owen - HOU - TE","nfl.t.34","Houston","TE","90","5","2","202","50.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8500","Kenneth","Darby","K. Darby","Kenneth Darby","Darby, Kenneth - STL - RB","nfl.t.14","St. Louis","RB","1779","88",0,"37","12.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5933","Andre'","Davis","A. Davis","Andre' Davis","Davis, Andre' - HOU - WR","nfl.t.34","Houston","WR","1811","147",0,"14","14.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8284","Buster","Davis","B. Davis","Buster Davis","Davis, Buster - SDG - WR","nfl.t.24","San Diego","WR","1671","127",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7078","Carey","Davis","C. Davis","Carey Davis","Davis, Carey - PIT - RB","nfl.t.23","Pittsburgh","RB","1955","149",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8825","Fred","Davis","F. Davis","Fred Davis","Davis, Fred - WAS - TE","nfl.t.28","Washington","TE","1804","96",0,"10","3.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8935","Kellen","Davis","K. Davis","Kellen Davis","Davis, Kellen - CHI - TE","nfl.t.3","Chicago","TE","258","29","2","58","29.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9435","Nate","Davis","N. Davis","Nate Davis","Davis, Nate - SFO - QB","nfl.t.25","San Francisco","QB","1971","61",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7445","Rashied","Davis","R. Davis","Rashied Davis","Davis, Rashied - CHI - WR","nfl.t.3","Chicago","WR","1772","139",0,"16","5.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7755","Vernon","Davis","V. Davis","Vernon Davis","Davis, Vernon - SFO - TE","nfl.t.25","San Francisco","TE","164","16","3","211","52.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4269","Phil","Dawson","P. Dawson","Phil Dawson","Dawson, Phil - CLE - K","nfl.t.5","Cleveland","K","252","18",0,0,0,0,"4/4","4","2/2","2","47",0,0,0,0,0
+"nfl.p.4841","James","Dearth","J. Dearth","James Dearth","Dearth, James - NYJ - TE","nfl.t.20","NY Jets","TE","1500","59",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4555","Jake","Delhomme","J. Delhomme","Jake Delhomme","Delhomme, Jake - CAR - QB","nfl.t.29","Carolina","QB","136","19","2","620","206.7","54.3",0,0,0,0,0,0,0,"7",0,0
+"nfl.p.9408","Jarett","Dillard","J. Dillard","Jarett Dillard","Dillard, Jarett - JAC - WR","nfl.t.30","Jacksonville","WR","1773","140",0,"14","14.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6211","Darnell","Dinkins","D. Dinkins","Darnell Dinkins","Dinkins, Darnell - NOR - TE","nfl.t.18","New Orleans","TE","1563","70",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8933","Dennis","Dixon","D. Dixon","Dennis Dixon","Dixon, Dennis - PIT - QB","nfl.t.23","Pittsburgh","QB","1959","54",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8858","Early","Doucet","E. Doucet","Early Doucet","Doucet, Early - ARI - WR","nfl.t.22","Arizona","WR","1761","137",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7374","Joel","Dreessen","J. Dreessen","Joel Dreessen","Dreessen, Joel - HOU - TE","nfl.t.34","Houston","TE","1690","84",0,"48","16.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4863","Donald","Driver","D. Driver","Donald Driver","Driver, Donald - GNB - WR","nfl.t.9","Green Bay","WR","96","35","2","301","75.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6979","Jeff","Dugan","J. Dugan","Jeff Dugan","Dugan, Jeff - MIN - TE","nfl.t.16","Minnesota","TE","1755","87",0,"33","16.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9496","Julian","Edelman","J. Edelman","Julian Edelman","Edelman, Julian - NWE - WR","nfl.t.17","New England","WR","1880","169",0,"135","45.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9470","Dominique","Edison","D. Edison","Dominique Edison","Edison, Dominique - TEN - WR","nfl.t.10","Tennessee","WR","1624","121",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7179","Braylon","Edwards","B. Edwards","Braylon Edwards","Edwards, Braylon - NYJ - WR","nfl.t.20","NY Jets","WR","53","18",0,"139","34.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8346","Trent","Edwards","T. Edwards","Trent Edwards","Edwards, Trent - BUF - QB","nfl.t.2","Buffalo","QB","137","20","5","852","213.0","76.5",0,0,0,0,0,0,0,"5",0,0
+"nfl.p.2495","Jason","Elam","J. Elam","Jason Elam","Elam, Jason - ATL - K","nfl.t.1","Atlanta","K","200","8",0,0,0,0,"3/5","3","6/7","6","50",0,0,0,0,0
+"nfl.p.3512","Bobby","Engram","B. Engram","Bobby Engram","Engram, Bobby - KAN - WR","nfl.t.12","Kansas City","WR","1456","98",0,"61","20.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8105","Greg","Estandia","G. Estandia","Greg Estandia","Estandia, Greg - CLE - TE","nfl.t.5","Cleveland","TE","1778","95",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5529","Heath","Evans","H. Evans","Heath Evans","Evans, Heath - NOR - RB","nfl.t.18","New Orleans","RB","1562","75","2","74","18.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6772","Lee","Evans","L. Evans","Lee Evans","Evans, Lee - BUF - WR","nfl.t.2","Buffalo","WR","66","24","1","148","37.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6432","Justin","Fargas","J. Fargas","Justin Fargas","Fargas, Justin - OAK - RB","nfl.t.13","Oakland","RB","146","53",0,"42","21.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7802","Anthony","Fasano","A. Fasano","Anthony Fasano","Fasano, Anthony - MIA - TE","nfl.t.15","Miami","TE","156","15",0,"18","4.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4695","Kevin","Faulk","K. Faulk","Kevin Faulk","Faulk, Kevin - NWE - RB","nfl.t.17","New England","RB","216","65",0,"134","33.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.1025","Brett","Favre","B. Favre","Brett Favre","Favre, Brett - MIN - QB","nfl.t.16","Minnesota","QB","150","22","8","836","209.0","104.7",0,0,0,0,0,0,0,"1",0,0
+"nfl.p.5603","A.J.","Feeley","A. Feeley","A.J. Feeley","Feeley, A.J. - CAR - QB","nfl.t.29","Carolina","QB","1976","65",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5447","Jay","Feely","J. Feely","Jay Feely","Feely, Jay - NYJ - K","nfl.t.20","NY Jets","K","269","24",0,0,0,0,"6/6","6","8/8","8","39",0,0,0,0,0
+"nfl.p.8028","Daniel","Fells","D. Fells","Daniel Fells","Fells, Daniel - STL - TE","nfl.t.14","St. Louis","TE","282","34","2","61","20.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8912","Jerome","Felton","J. Felton","Jerome Felton","Felton, Jerome - DET - RB","nfl.t.8","Detroit","RB","1912","128",0,"65","16.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9392","Tony","Fiammetta","T. Fiammetta","Tony Fiammetta","Fiammetta, Tony - CAR - RB","nfl.t.29","Carolina","RB","1700","77",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8922","Derek","Fine","D. Fine","Derek Fine","Fine, Derek - BUF - TE","nfl.t.2","Buffalo","TE","1454","50",0,"34","34.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8868","Jermichael","Finley","J. Finley","Jermichael Finley","Finley, Jermichael - GNB - TE","nfl.t.9","Green Bay","TE","244","27","1","190","63.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4946","Brian","Finneran","B. Finneran","Brian Finneran","Finneran, Brian - ATL - WR","nfl.t.1","Atlanta","WR","1843","156",0,"29","14.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6621","Casey","FitzSimmons","C. FitzSimmons","Casey FitzSimmons","FitzSimmons, Casey - DET - TE","nfl.t.8","Detroit","TE","1680","80",0,"23","7.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6762","Larry","Fitzgerald","L. Fitzgerald","Larry Fitzgerald","Fitzgerald, Larry - ARI - WR","nfl.t.22","Arizona","WR","8","1","2","181","60.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7426","Ryan","Fitzpatrick","R. Fitzpatrick","Ryan Fitzpatrick","Fitzpatrick, Ryan - BUF - QB","nfl.t.2","Buffalo","QB","1824","38",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8795","Joe","Flacco","J. Flacco","Joe Flacco","Flacco, Joe - BAL - QB","nfl.t.33","Baltimore","QB","143","21","8","1131","282.8","94.3",0,0,0,0,0,0,0,"3",0,0
+"nfl.p.7149","Malcom","Floyd","M. Floyd","Malcom Floyd","Floyd, Malcom - SDG - WR","nfl.t.24","San Diego","WR","257","81",0,"127","31.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8986","Matt","Flynn","M. Flynn","Matt Flynn","Flynn, Matt - GNB - QB","nfl.t.9","Green Bay","QB","2015","87",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8432","Nick","Folk","N. Folk","Nick Folk","Folk, Nick - DAL - K","nfl.t.6","Dallas","K","201","9",0,0,0,0,"6/7","6","10/10","10","51",0,0,0,0,0
+"nfl.p.9010","Justin","Forsett","J. Forsett","Justin Forsett","Forsett, Justin - SEA - RB","nfl.t.26","Seattle","RB","1893","118",0,"121","30.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8821","Matt","Forte","M. Forte","Matt Forte","Forte, Matt - CHI - RB","nfl.t.3","Chicago","RB","4","4","1","363","90.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7466","J.P.","Foschi","J. Foschi","J.P. Foschi","Foschi, J.P. - CIN - TE","nfl.t.4","Cincinnati","TE","1536","66",0,"59","19.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9281","Josh","Freeman","J. Freeman","Josh Freeman","Freeman, Josh - TAM - QB","nfl.t.27","Tampa Bay","QB","1981","68",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7243","Charlie","Frye","C. Frye","Charlie Frye","Frye, Charlie - OAK - QB","nfl.t.13","Oakland","QB","1984","69",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6612","Mike","Furrey","M. Furrey","Mike Furrey","Furrey, Mike - CLE - WR","nfl.t.5","Cleveland","WR","1559","111",0,"107","26.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7532","Samkon","Gado","S. Gado","Samkon Gado","Gado, Samkon - STL - RB","nfl.t.14","St. Louis","RB","1857","102",0,"-1","-1.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5919","Jabar","Gaffney","J. Gaffney","Jabar Gaffney","Gaffney, Jabar - DEN - WR","nfl.t.7","Denver","WR","283","85",0,"154","38.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6479","Justin","Gage","J. Gage","Justin Gage","Gage, Justin - TEN - WR","nfl.t.10","Tennessee","WR","177","61","1","157","39.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6991","Michael","Gaines","M. Gaines","Michael Gaines","Gaines, Michael - CHI - TE","nfl.t.3","Chicago","TE","1458","51",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.3135","Joey","Galloway","J. Galloway","Joey Galloway","Galloway, Joey - NWE - WR","nfl.t.17","New England","WR","202","67",0,"67","22.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8982","Pierre","Garcon","P. Garcon","Pierre Garcon","Garcon, Pierre - IND - WR","nfl.t.11","Indianapolis","WR","1426","89","2","224","56.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5994","David","Garrard","D. Garrard","David Garrard","Garrard, David - JAC - QB","nfl.t.30","Jacksonville","QB","112","17","6","1049","262.2","89.1",0,0,0,0,0,0,0,"1",0,0
+"nfl.p.6663","Antonio","Gates","A. Gates","Antonio Gates","Gates, Antonio - SDG - TE","nfl.t.24","San Diego","TE","44","2","2","349","87.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9458","Brandon","Gibson","B. Gibson","Brandon Gibson","Gibson, Brandon - PHI - WR","nfl.t.21","Philadelphia","WR","1665","126",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6131","John","Gilmore","J. Gilmore","John Gilmore","Gilmore, John - TAM - TE","nfl.t.27","Tampa Bay","TE","1535","65",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8263","Ted","Ginn Jr.","T. Ginn Jr.","Ted Ginn Jr.","Ginn Jr., Ted - MIA - WR","nfl.t.15","Miami","WR","123","43",0,"169","42.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8286","Anthony","Gonzalez","A. Gonzalez","Anthony Gonzalez","Gonzalez, Anthony - IND - WR","nfl.t.11","Indianapolis","WR","71","26",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.3950","Tony","Gonzalez","T. Gonzalez","Tony Gonzalez","Gonzalez, Tony - ATL - TE","nfl.t.1","Atlanta","TE","52","3","2","160","53.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9375","Mike","Goodson","M. Goodson","Mike Goodson","Goodson, Mike - CAR - RB","nfl.t.29","Carolina","RB","1911","127",0,"1","0.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7241","Frank","Gore","F. Gore","Frank Gore","Gore, Frank - SFO - RB","nfl.t.25","San Francisco","RB","10","9","4","298","99.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7867","Stephen","Gostkowski","S. Gostkowski","Stephen Gostkowski","Gostkowski, Stephen - NWE - K","nfl.t.17","New England","K","169","1",0,0,0,0,"11/12","11","6/6","6","45",0,0,0,0,0
+"nfl.p.7520","Robbie","Gould","R. Gould","Robbie Gould","Gould, Robbie - CHI - K","nfl.t.3","Chicago","K","219","13",0,0,0,0,"6/7","6","11/11","11","52",0,0,0,0,0
+"nfl.p.7943","Bruce","Gradkowski","B. Gradkowski","Bruce Gradkowski","Gradkowski, Bruce - OAK - QB","nfl.t.13","Oakland","QB","2016","88",0,"17","17.0","102.1",0,0,0,0,0,0,0,0,0,0
+"nfl.p.5907","Daniel","Graham","D. Graham","Daniel Graham","Graham, Daniel - DEN - TE","nfl.t.7","Denver","TE","279","33",0,"112","28.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7108","Earnest","Graham","E. Graham","Earnest Graham","Graham, Earnest - TAM - RB","nfl.t.27","Tampa Bay","RB","127","48",0,"37","12.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5854","Shayne","Graham","S. Graham","Shayne Graham","Graham, Shayne - CIN - K","nfl.t.4","Cincinnati","K","1459","29",0,0,0,0,"3/5","3","7/8","7","40",0,0,0,0,0
+"nfl.p.7635","Ryan","Grant","R. Grant","Ryan Grant","Grant, Ryan - GNB - RB","nfl.t.9","Green Bay","RB","29","17","2","340","85.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9039","BenJarvus","Green-Ellis","B. Green-Ellis","BenJarvus Green-Ellis","Green-Ellis, BenJarvus - NWE - RB","nfl.t.17","New England","RB","1416","70",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9329","Shonn","Greene","S. Greene","Shonn Greene","Greene, Shonn - NYJ - RB","nfl.t.20","NY Jets","RB","103","41",0,"23","23.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6457","Justin","Griffith","J. Griffith","Justin Griffith","Griffith, Justin - SEA - RB","nfl.t.26","Seattle","RB","1917","131",0,"2","1.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6358","Rex","Grossman","R. Grossman","Rex Grossman","Grossman, Rex - HOU - QB","nfl.t.34","Houston","QB","1954","52",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8539","Matt","Gutierrez","M. Gutierrez","Matt Gutierrez","Gutierrez, Matt - KAN - QB","nfl.t.12","Kansas City","QB","2009","82",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7831","Derek","Hagan","D. Hagan","Derek Hagan","Hagan, Derek - NYG - WR","nfl.t.19","NY Giants","WR","1801","145",0,"12","6.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8041","Ahmard","Hall","A. Hall","Ahmard Hall","Hall, Ahmard - TEN - RB","nfl.t.10","Tennessee","RB","1919","133",0,"16","4.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8445","Korey","Hall","K. Hall","Korey Hall","Hall, Korey - GNB - RB","nfl.t.9","Green Bay","RB","1931","138",0,"11","5.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6568","Gibran","Hamdan","G. Hamdan","Gibran Hamdan","Hamdan, Gibran - BUF - QB","nfl.t.2","Buffalo","QB","1973","63",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9126","Lynell","Hamilton","L. Hamilton","Lynell Hamilton","Hamilton, Lynell - NOR - RB","nfl.t.18","New Orleans","RB","281","69","1","24","24.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9033","Caleb","Hanie","C. Hanie","Caleb Hanie","Hanie, Caleb - CHI - QB","nfl.t.3","Chicago","QB","1992","73",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.2034","Jason","Hanson","J. Hanson","Jason Hanson","Hanson, Jason - DET - K","nfl.t.8","Detroit","K","259","20",0,0,0,0,"7/7","7","8/8","8","48",0,0,0,0,0
+"nfl.p.9555","Rod","Harper","R. Harper","Rod Harper","Harper, Rod - NOR - WR","nfl.t.18","New Orleans","WR","1630","124",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7894","Jerome","Harrison","J. Harrison","Jerome Harrison","Harrison, Jerome - CLE - RB","nfl.t.5","Cleveland","RB","172","58",0,"269","89.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8979","Mike","Hart","M. Hart","Mike Hart","Hart, Mike - IND - RB","nfl.t.11","Indianapolis","RB","1887","115",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9372","Brian","Hartline","B. Hartline","Brian Hartline","Hartline, Brian - MIA - WR","nfl.t.15","Miami","WR","1532","106","1","52","17.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6827","Ben","Hartsock","B. Hartsock","Ben Hartsock","Hartsock, Ben - NYJ - TE","nfl.t.20","NY Jets","TE","278","32","1","2","1.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9286","Percy","Harvin","P. Harvin","Percy Harvin","Harvin, Percy - MIN - WR","nfl.t.16","Minnesota","WR","139","48","2","195","48.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4416","Matt","Hasselbeck","M. Hasselbeck","Matt Hasselbeck","Hasselbeck, Matt - SEA - QB","nfl.t.26","Seattle","QB","109","16","3","391","195.5","88.2",0,0,0,0,0,0,0,"2",0,0
+"nfl.p.9066","Steven","Hauschka","S. Hauschka","Steven Hauschka","Hauschka, Steven - BAL - K","nfl.t.33","Baltimore","K","1473","30",0,0,0,0,"4/5","4","16/16","16","44",0,0,0,0,0
+"nfl.p.8177","Spencer","Havner","S. Havner","Spencer Havner","Havner, Spencer - GNB - TE","nfl.t.9","Green Bay","TE","268","30",0,"21","7.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8914","Lavelle","Hawkins","L. Hawkins","Lavelle Hawkins","Hawkins, Lavelle - TEN - WR","nfl.t.10","Tennessee","WR","1797","144",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6053","Verron","Haynes","V. Haynes","Verron Haynes","Haynes, Verron - ATL - RB","nfl.t.1","Atlanta","RB","1742","82",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9129","Joey","Haynos","J. Haynos","Joey Haynos","Haynos, Joey - MIA - TE","nfl.t.15","Miami","TE","1530","64",0,"21","10.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5478","Todd","Heap","T. Heap","Todd Heap","Heap, Todd - BAL - TE","nfl.t.33","Baltimore","TE","236","24","2","170","42.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7427","Madison","Hedgecock","M. Hedgecock","Madison Hedgecock","Hedgecock, Madison - NYG - RB","nfl.t.19","NY Giants","RB","1920","134",0,"9","3.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4719","Steve","Heiden","S. Heiden","Steve Heiden","Heiden, Steve - CLE - TE","nfl.t.5","Cleveland","TE","272","31","1","47","15.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6669","Will","Heller","W. Heller","Will Heller","Heller, Will - DET - TE","nfl.t.8","Detroit","TE","1438","45","1","93","23.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6809","Devery","Henderson","D. Henderson","Devery Henderson","Henderson, Devery - NOR - WR","nfl.t.18","New Orleans","WR","186","62","1","235","58.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8834","Chad","Henne","C. Henne","Chad Henne","Henne, Chad - MIA - QB","nfl.t.15","Miami","QB","1956","53","1","223","111.5","69.9",0,0,0,0,0,0,0,"1",0,0
+"nfl.p.7259","Chris","Henry","C. Henry","Chris Henry","Henry, Chris - CIN - WR","nfl.t.4","Cincinnati","WR","1443","93","1","78","19.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7806","Devin","Hester","D. Hester","Devin Hester","Hester, Devin - CHI - WR","nfl.t.3","Chicago","WR","98","37","2","189","47.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8846","Jacob","Hester","J. Hester","Jacob Hester","Hester, Jacob - SDG - RB","nfl.t.24","San Diego","RB","1909","125",0,"8","4.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9271","Darrius","Heyward-Bey","D. Heyward-Bey","Darrius Heyward-Bey","Heyward-Bey, Darrius - OAK - WR","nfl.t.13","Oakland","WR","171","59",0,"56","14.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8353","Johnnie Lee","Higgins","J. Higgins","Johnnie Lee Higgins","Higgins, Johnnie Lee - OAK - WR","nfl.t.13","Oakland","WR","1748","134",0,"19","6.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8926","Tim","Hightower","T. Hightower","Tim Hightower","Hightower, Tim - ARI - RB","nfl.t.22","Arizona","RB","131","50","1","281","93.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9386","Anthony","Hill","A. Hill","Anthony Hill","Hill, Anthony - HOU - TE","nfl.t.34","Houston","TE","1489","55",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8330","Jason","Hill","J. Hill","Jason Hill","Hill, Jason - SFO - WR","nfl.t.25","San Francisco","WR","1550","107",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6169","Shaun","Hill","S. Hill","Shaun Hill","Hill, Shaun - SFO - QB","nfl.t.25","San Francisco","QB","182","24","5","715","178.8","93.3",0,0,0,0,0,0,0,"1",0,0
+"nfl.p.8981","Lex","Hilliard","L. Hilliard","Lex Hilliard","Hilliard, Lex - MIA - RB","nfl.t.15","Miami","RB","1888","116",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9004","Peyton","Hillis","P. Hillis","Peyton Hillis","Hillis, Peyton - DEN - RB","nfl.t.7","Denver","RB","185","60","1","11","3.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7879","Domenik","Hixon","D. Hixon","Domenik Hixon","Hixon, Domenik - NYG - WR","nfl.t.19","NY Giants","WR","106","40",0,"23","11.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7774","Santonio","Holmes","S. Holmes","Santonio Holmes","Holmes, Santonio - PIT - WR","nfl.t.23","Pittsburgh","WR","64","23","1","291","72.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4654","Torry","Holt","T. Holt","Torry Holt","Holt, Torry - JAC - WR","nfl.t.30","Jacksonville","WR","84","32",0,"211","52.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5355","Brad","Hoover","B. Hoover","Brad Hoover","Hoover, Brad - CAR - RB","nfl.t.29","Carolina","RB","1902","121",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5652","T.J.","Houshmandzadeh","T. Houshmandzadeh","T.J. Houshmandzadeh","Houshmandzadeh, T.J. - SEA - WR","nfl.t.26","Seattle","WR","47","16",0,"248","62.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9547","Brian","Hoyer","B. Hoyer","Brian Hoyer","Hoyer, Brian - NWE - QB","nfl.t.17","New England","QB","1993","74",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8024","Sam","Hurd","S. Hurd","Sam Hurd","Hurd, Sam - DAL - WR","nfl.t.6","Dallas","WR","1760","136",0,"69","23.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9363","Juaquin","Iglesias","J. Iglesias","Juaquin Iglesias","Iglesias, Juaquin - CHI - WR","nfl.t.3","Chicago","WR","211","71",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8317","Brandon","Jackson","B. Jackson","Brandon Jackson","Jackson, Brandon - GNB - RB","nfl.t.9","Green Bay","RB","189","61",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8826","DeSean","Jackson","D. Jackson","DeSean Jackson","Jackson, DeSean - PHI - WR","nfl.t.21","Philadelphia","WR","80","30","2","307","102.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8063","Fred","Jackson","F. Jackson","Fred Jackson","Jackson, Fred - BUF - RB","nfl.t.2","Buffalo","RB","88","38","1","493","123.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6783","Steven","Jackson","S. Jackson","Steven Jackson","Jackson, Steven - STL - RB","nfl.t.14","St. Louis","RB","9","8",0,"434","108.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7813","Tarvaris","Jackson","T. Jackson","Tarvaris Jackson","Jackson, Tarvaris - MIN - QB","nfl.t.16","Minnesota","QB","1943","48",0,"10","5.0","72.9",0,0,0,0,0,0,0,0,0,0
+"nfl.p.7237","Vincent","Jackson","V. Jackson","Vincent Jackson","Jackson, Vincent - SDG - WR","nfl.t.24","San Diego","WR","55","19","2","373","93.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7286","Brandon","Jacobs","B. Jacobs","Brandon Jacobs","Jacobs, Brandon - NYG - RB","nfl.t.19","NY Giants","RB","11","10","1","301","75.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4652","Edgerrin","James","E. James","Edgerrin James","James, Edgerrin - SEA - RB","nfl.t.26","Seattle","RB","215","64",0,"65","16.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5046","Sebastian","Janikowski","S. Janikowski","Sebastian Janikowski","Janikowski, Sebastian - OAK - K","nfl.t.13","Oakland","K","270","25",0,0,0,0,"7/7","7","3/3","3","54",0,0,0,0,0
+"nfl.p.8299","Dwayne","Jarrett","D. Jarrett","Dwayne Jarrett","Jarrett, Dwayne - CAR - WR","nfl.t.29","Carolina","WR","1867","166",0,"19","9.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8612","Justin","Jenkins","J. Jenkins","Justin Jenkins","Jenkins, Justin - BUF - WR","nfl.t.2","Buffalo","WR","1744","133",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6788","Michael","Jenkins","M. Jenkins","Michael Jenkins","Jenkins, Michael - ATL - WR","nfl.t.1","Atlanta","WR","129","45",0,"152","50.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5259","Brian","Jennings","B. Jennings","Brian Jennings","Jennings, Brian - SFO - TE","nfl.t.25","San Francisco","TE","1875","103",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9622","Chris","Jennings","C. Jennings","Chris Jennings","Jennings, Chris - CLE - RB","nfl.t.5","Cleveland","RB","1836","98",0,"10","10.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7801","Greg","Jennings","G. Jennings","Greg Jennings","Jennings, Greg - GNB - WR","nfl.t.9","Green Bay","WR","25","7","1","240","60.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9514","Rashad","Jennings","R. Jennings","Rashad Jennings","Jennings, Rashad - JAC - RB","nfl.t.30","Jacksonville","RB","1780","89",0,"63","21.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6339","Andre","Johnson","A. Johnson","Andre Johnson","Johnson, Andre - HOU - WR","nfl.t.34","Houston","WR","16","2","2","336","84.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6353","Bryant","Johnson","B. Johnson","Bryant Johnson","Johnson, Bryant - DET - WR","nfl.t.8","Detroit","WR","203","68","1","145","36.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8256","Calvin","Johnson","C. Johnson","Calvin Johnson","Johnson, Calvin - DET - WR","nfl.t.8","Detroit","WR","20","5","1","360","90.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8801","Chris","Johnson","C. Johnson","Chris Johnson","Johnson, Chris - TEN - RB","nfl.t.10","Tennessee","RB","12","11","3","551","137.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8127","Darcy","Johnson","D. Johnson","Darcy Johnson","Johnson, Darcy - NYG - TE","nfl.t.19","NY Giants","TE","1450","49",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9505","David","Johnson","D. Johnson","David Johnson","Johnson, David - PIT - TE","nfl.t.23","Pittsburgh","TE","1521","61",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9398","Gartrell","Johnson","G. Johnson","Gartrell Johnson","Johnson, Gartrell - NYG - RB","nfl.t.19","NY Giants","RB","1769","86",0,"23","23.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8970","Jaymar","Johnson","J. Johnson","Jaymar Johnson","Johnson, Jaymar - MIN - WR","nfl.t.16","Minnesota","WR","1850","162",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6454","Jeremi","Johnson","J. Johnson","Jeremi Johnson","Johnson, Jeremi - CIN - RB","nfl.t.4","Cincinnati","RB","1879","110",0,"15","3.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8937","Josh","Johnson","J. Johnson","Josh Johnson","Johnson, Josh - TAM - QB","nfl.t.27","Tampa Bay","QB","1946","49","1","198","99.0","62.2",0,0,0,0,0,0,0,"1",0,0
+"nfl.p.6363","Larry","Johnson","L. Johnson","Larry Johnson","Johnson, Larry - KAN - RB","nfl.t.12","Kansas City","RB","50","24",0,"237","59.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9409","Quinn","Johnson","Q. Johnson","Quinn Johnson","Johnson, Quinn - GNB - RB","nfl.t.9","Green Bay","RB","1719","80",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9001","Steve","Johnson","S. Johnson","Steve Johnson","Johnson, Steve - BUF - WR","nfl.t.2","Buffalo","WR","1567","113",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7272","Brandon","Jones","B. Jones","Brandon Jones","Jones, Brandon - SFO - WR","nfl.t.25","San Francisco","WR","1460","100",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8558","Edgar","Jones","E. Jones","Edgar Jones","Jones, Edgar - BAL - TE","nfl.t.33","Baltimore","TE","1820","97",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8799","Felix","Jones","F. Jones","Felix Jones","Jones, Felix - DAL - RB","nfl.t.6","Dallas","RB","72","33","1","232","77.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6814","Greg","Jones","G. Jones","Greg Jones","Jones, Greg - JAC - RB","nfl.t.30","Jacksonville","RB","1900","120",0,"28","9.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8327","Jacoby","Jones","J. Jones","Jacoby Jones","Jones, Jacoby - HOU - WR","nfl.t.34","Houston","WR","1446","95","2","102","25.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8332","James","Jones","J. Jones","James Jones","Jones, James - GNB - WR","nfl.t.9","Green Bay","WR","1457","99",0,"58","14.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6802","Julius","Jones","J. Jones","Julius Jones","Jones, Julius - SEA - RB","nfl.t.26","Seattle","RB","75","34","3","316","79.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6965","Mark","Jones","M. Jones","Mark Jones","Jones, Mark - TEN - WR","nfl.t.10","Tennessee","WR","1921","171",0,"9","9.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9213","Nate","Jones","N. Jones","Nate Jones","Jones, Nate - STL - WR","nfl.t.14","St. Louis","WR","1589","115",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5036","Thomas","Jones","T. Jones","Thomas Jones","Jones, Thomas - NYJ - RB","nfl.t.20","NY Jets","RB","39","19","3","230","57.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7809","Maurice","Jones-Drew","M. Jones-Drew","Maurice Jones-Drew","Jones-Drew, Maurice - JAC - RB","nfl.t.30","Jacksonville","RB","3","3","5","393","98.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5496","LaMont","Jordan","L. Jordan","LaMont Jordan","Jordan, LaMont - DEN - RB","nfl.t.7","Denver","RB","1420","71",0,"50","12.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6824","Nate","Kaeding","N. Kaeding","Nate Kaeding","Kaeding, Nate - SDG - K","nfl.t.24","San Diego","K","206","10",0,0,0,0,"8/9","8","11/11","11","47",0,0,0,0,0
+"nfl.p.6915","Mike","Karney","M. Karney","Mike Karney","Karney, Mike - STL - RB","nfl.t.14","St. Louis","RB","1933","140",0,"-3","-1.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.1111","John","Kasay","J. Kasay","John Kasay","Kasay, John - CAR - K","nfl.t.29","Carolina","K","196","7",0,0,0,0,"3/3","3","4/4","4","50",0,0,0,0,0
+"nfl.p.8807","Dustin","Keller","D. Keller","Dustin Keller","Keller, Dustin - NYJ - TE","nfl.t.20","NY Jets","TE","130","12","1","171","42.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8828","Malcolm","Kelly","M. Kelly","Malcolm Kelly","Kelly, Malcolm - WAS - WR","nfl.t.28","Washington","WR","1683","131",0,"65","16.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7904","Jeff","King","J. King","Jeff King","King, Jeff - CAR - TE","nfl.t.29","Carolina","TE","1471","52",0,"57","19.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4157","Jon","Kitna","J. Kitna","Jon Kitna","Kitna, Jon - DAL - QB","nfl.t.6","Dallas","QB","1565","34",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4693","Jim","Kleinsasser","J. Kleinsasser","Jim Kleinsasser","Kleinsasser, Jim - MIN - TE","nfl.t.16","Minnesota","TE","1685","82",0,"8","2.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9404","Johnny","Knox","J. Knox","Johnny Knox","Knox, Johnny - CHI - WR","nfl.t.3","Chicago","WR","254","80","2","190","47.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8290","Kevin","Kolb","K. Kolb","Kevin Kolb","Kolb, Kevin - PHI - QB","nfl.t.21","Philadelphia","QB","1904","43","5","740","246.7","88.9",0,0,0,0,0,0,0,"3",0,0
+"nfl.p.5399","Dan","Kreider","D. Kreider","Dan Kreider","Kreider, Dan - ARI - RB","nfl.t.22","Arizona","RB","1873","107",0,"3","1.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7695","John","Kuhn","J. Kuhn","John Kuhn","Kuhn, John - GNB - RB","nfl.t.9","Green Bay","RB","1751","83","2","16","8.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9205","Matt","Lawrence","M. Lawrence","Matt Lawrence","Lawrence, Matt - BAL - RB","nfl.t.33","Baltimore","RB","1877","109",0,"4","2.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9439","Quinten","Lawrence","Q. Lawrence","Quinten Lawrence","Lawrence, Quinten - KAN - WR","nfl.t.12","Kansas City","WR","1803","146",0,"16","16.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7432","Luke","Lawton","L. Lawton","Luke Lawton","Lawton, Luke - OAK - RB","nfl.t.13","Oakland","RB","1905","123",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5381","Mike","Leach","M. Leach","Mike Leach","Leach, Mike - ARI - TE","nfl.t.22","Arizona","TE","1767","93",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7139","Vonta","Leach","V. Leach","Vonta Leach","Leach, Vonta - HOU - RB","nfl.t.34","Houston","RB","1918","132",0,"30","15.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6492","Donald","Lee","D. Lee","Donald Lee","Lee, Donald - GNB - TE","nfl.t.9","Green Bay","TE","1393","35",0,"74","18.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6343","Byron","Leftwich","B. Leftwich","Byron Leftwich","Leftwich, Byron - TAM - QB","nfl.t.27","Tampa Bay","QB","1810","37","4","600","200.0","71.2",0,0,0,0,0,0,0,"3",0,0
+"nfl.p.7759","Matt","Leinart","M. Leinart","Matt Leinart","Leinart, Matt - ARI - QB","nfl.t.22","Arizona","QB","2017","89",0,"26","13.0","69.3",0,0,0,0,0,0,0,0,0,0
+"nfl.p.8306","Brian","Leonard","B. Leonard","Brian Leonard","Leonard, Brian - CIN - RB","nfl.t.4","Cincinnati","RB","1695","76",0,"90","22.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6655","Greg","Lewis","G. Lewis","Greg Lewis","Lewis, Greg - MIN - WR","nfl.t.16","Minnesota","WR","250","79","1","32","32.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5034","Jamal","Lewis","J. Lewis","Jamal Lewis","Lewis, Jamal - CLE - RB","nfl.t.5","Cleveland","RB","65","31",0,"150","75.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7777","Marcedes","Lewis","M. Lewis","Marcedes Lewis","Lewis, Marcedes - JAC - TE","nfl.t.30","Jacksonville","TE","237","25","2","179","44.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5388","Rian","Lindell","R. Lindell","Rian Lindell","Lindell, Rian - BUF - K","nfl.t.2","Buffalo","K","207","11",0,0,0,0,"6/7","6","8/8","8","43",0,0,0,0,0
+"nfl.p.6460","Brandon","Lloyd","B. Lloyd","Brandon Lloyd","Lloyd, Brandon - DEN - WR","nfl.t.7","Denver","WR","1444","94",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8559","Rhys","Lloyd","R. Lloyd","Rhys Lloyd","Lloyd, Rhys - CAR - K","nfl.t.29","Carolina","K","1832","35",0,0,0,0,"0/0",0,"0/0",0,0,0,0,0,0,0
+"nfl.p.9559","Stefan","Logan","S. Logan","Stefan Logan","Logan, Stefan - PIT - RB","nfl.t.23","Pittsburgh","RB","1913","129",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4080","Ryan","Longwell","R. Longwell","Ryan Longwell","Longwell, Ryan - MIN - K","nfl.t.16","Minnesota","K","191","5",0,0,0,0,"6/7","6","14/14","14","52",0,0,0,0,0
+"nfl.p.8266","Marshawn","Lynch","M. Lynch","Marshawn Lynch","Lynch, Marshawn - BUF - RB","nfl.t.2","Buffalo","RB","45","22",0,"47","47.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9283","Jeremy","Maclin","J. Maclin","Jeremy Maclin","Maclin, Jeremy - PHI - WR","nfl.t.21","Philadelphia","WR","162","55",0,"44","22.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6760","Eli","Manning","E. Manning","Eli Manning","Manning, Eli - NYG - QB","nfl.t.19","NY Giants","QB","108","15","8","1047","261.8","104.1",0,0,0,0,0,0,0,"2",0,0
+"nfl.p.4256","Peyton","Manning","P. Manning","Peyton Manning","Manning, Peyton - IND - QB","nfl.t.11","Indianapolis","QB","21","2","9","1333","333.2","114.5",0,0,0,0,0,0,0,"3",0,0
+"nfl.p.8872","Mario","Manningham","M. Manningham","Mario Manningham","Manningham, Mario - NYG - WR","nfl.t.19","NY Giants","WR","265","84","2","306","76.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5577","Brandon","Manumaleuna","B. Manumaleuna","Brandon Manumaleuna","Manumaleuna, Brandon - SDG - TE","nfl.t.24","San Diego","TE","1677","78",0,"5","2.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.3888","Olindo","Mare","O. Mare","Olindo Mare","Mare, Olindo - SEA - K","nfl.t.26","Seattle","K","1391","27",0,0,0,0,"6/8","6","8/8","8","46",0,0,0,0,0
+"nfl.p.7770","Laurence","Maroney","L. Maroney","Laurence Maroney","Maroney, Laurence - NWE - RB","nfl.t.17","New England","RB","160","56",0,"104","26.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7868","Brandon","Marshall","B. Marshall","Brandon Marshall","Marshall, Brandon - DEN - WR","nfl.t.7","Denver","WR","34","12","2","238","59.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7599","Ruvell","Martin","R. Martin","Ruvell Martin","Martin, Ruvell - STL - WR","nfl.t.14","St. Louis","WR","1557","110",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7523","Glenn","Martinez","G. Martinez","Glenn Martinez","Martinez, Glenn - HOU - WR","nfl.t.34","Houston","WR","1864","165",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.3988","Derrick","Mason","D. Mason","Derrick Mason","Mason, Derrick - BAL - WR","nfl.t.33","Baltimore","WR","105","39","2","284","71.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8557","Marcus","Mason","M. Mason","Marcus Mason","Mason, Marcus - WAS - RB","nfl.t.28","Washington","RB","1863","104",0,"13","6.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9314","Mohamed","Massaquoi","M. Massaquoi","Mohamed Massaquoi","Massaquoi, Mohamed - CLE - WR","nfl.t.5","Cleveland","WR","1428","90",0,"179","44.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6102","Chris","Massey","C. Massey","Chris Massey","Massey, Chris - STL - RB","nfl.t.14","St. Louis","RB","1903","122",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8569","Michael","Matthews","M. Matthews","Michael Matthews","Matthews, Michael - NWE - TE","nfl.t.17","New England","TE","1542","67",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8391","Le'Ron","McClain","L. McClain","Le'Ron McClain","McClain, Le'Ron - BAL - RB","nfl.t.33","Baltimore","RB","82","36","1","106","26.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6865","Luke","McCown","L. McCown","Luke McCown","McCown, Luke - JAC - QB","nfl.t.30","Jacksonville","QB","1926","44",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9317","LeSean","McCoy","L. McCoy","LeSean McCoy","McCoy, LeSean - PHI - RB","nfl.t.21","Philadelphia","RB","104","42","1","195","65.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6442","Shaun","McDonald","S. McDonald","Shaun McDonald","McDonald, Shaun - PIT - WR","nfl.t.23","Pittsburgh","WR","1465","103",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8781","Darren","McFadden","D. McFadden","Darren McFadden","McFadden, Darren - OAK - RB","nfl.t.13","Oakland","RB","57","27","1","199","49.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6359","Willis","McGahee","W. McGahee","Willis McGahee","McGahee, Willis - BAL - RB","nfl.t.33","Baltimore","RB","79","35","7","255","63.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9365","Stephen","McGee","S. McGee","Stephen McGee","McGee, Stephen - DAL - QB","nfl.t.6","Dallas","QB","1975","64",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7450","Corey","McIntyre","C. McIntyre","Corey McIntyre","McIntyre, Corey - BUF - RB","nfl.t.2","Buffalo","RB","2004","151",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6303","Jason","McKie","J. McKie","Jason McKie","McKie, Jason - CHI - RB","nfl.t.3","Chicago","RB","1895","119",0,"8","8.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9405","Kenny","McKinley","K. McKinley","Kenny McKinley","McKinley, Kenny - DEN - WR","nfl.t.7","Denver","WR","1844","157",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6000","Randy","McMichael","R. McMichael","Randy McMichael","McMichael, Randy - STL - TE","nfl.t.14","St. Louis","TE","1419","39",0,"99","24.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4650","Donovan","McNabb","D. McNabb","Donovan McNabb","McNabb, Donovan - PHI - QB","nfl.t.21","Philadelphia","QB","51","8","3","106","106.0","80.6",0,0,0,0,0,0,0,"1",0,0
+"nfl.p.8281","Robert","Meachem","R. Meachem","Robert Meachem","Meachem, Robert - NOR - WR","nfl.t.18","New Orleans","WR","224","75","1","109","27.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8800","Rashard","Mendenhall","R. Mendenhall","Rashard Mendenhall","Mendenhall, Rashard - PIT - RB","nfl.t.23","Pittsburgh","RB","89","39","2","249","83.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7206","Heath","Miller","H. Miller","Heath Miller","Miller, Heath - PIT - TE","nfl.t.23","Pittsburgh","TE","153","14","2","181","45.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9546","Nick","Miller","N. Miller","Nick Miller","Miller, Nick - OAK - WR","nfl.t.13","Oakland","WR","1627","123",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9444","Zach","Miller","Z. Miller","Zach Miller","Miller, Zach - JAC - TE","nfl.t.30","Jacksonville","TE","1667","75",0,"17","17.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8292","Zach","Miller","Z. Miller","Zach Miller","Miller, Zach - OAK - TE","nfl.t.13","Oakland","TE","101","9",0,"146","36.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9507","Marko","Mitchell","M. Mitchell","Marko Mitchell","Mitchell, Marko - WAS - WR","nfl.t.28","Washington","WR","1608","120",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7253","Ryan","Moats","R. Moats","Ryan Moats","Moats, Ryan - HOU - RB","nfl.t.34","Houston","RB","1791","92",0,"56","56.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8896","Kenneth","Moore","K. Moore","Kenneth Moore","Moore, Kenneth - CAR - WR","nfl.t.29","Carolina","WR","1783","142",0,"25","8.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7544","Lance","Moore","L. Moore","Lance Moore","Moore, Lance - NOR - WR","nfl.t.18","New Orleans","WR","87","34",0,"39","19.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8544","Matt","Moore","M. Moore","Matt Moore","Moore, Matt - CAR - QB","nfl.t.29","Carolina","QB","2011","84",0,"63","63.0","33.5",0,0,0,0,0,0,0,"1",0,0
+"nfl.p.6878","Mewelde","Moore","M. Moore","Mewelde Moore","Moore, Mewelde - PIT - RB","nfl.t.23","Pittsburgh","RB","225","66","2","115","28.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9276","Knowshon","Moreno","K. Moreno","Knowshon Moreno","Moreno, Knowshon - DEN - RB","nfl.t.7","Denver","RB","60","29","2","282","70.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4891","Sean","Morey","S. Morey","Sean Morey","Morey, Sean - ARI - WR","nfl.t.22","Arizona","WR","1940","174",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8951","Josh","Morgan","J. Morgan","Josh Morgan","Morgan, Josh - SFO - WR","nfl.t.25","San Francisco","WR","260","82","1","124","41.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9512","Cameron","Morrah","C. Morrah","Cameron Morrah","Morrah, Cameron - SEA - TE","nfl.t.26","Seattle","TE","1696","85",0,"3","3.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5940","Maurice","Morris","M. Morris","Maurice Morris","Morris, Maurice - DET - RB","nfl.t.8","Detroit","RB","174","59","1","51","17.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5185","Sammy","Morris","S. Morris","Sammy Morris","Morris, Sammy - NWE - RB","nfl.t.17","New England","RB","107","43","1","136","34.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4262","Randy","Moss","R. Moss","Randy Moss","Moss, Randy - NWE - WR","nfl.t.17","New England","WR","17","3","1","331","82.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5463","Santana","Moss","S. Moss","Santana Moss","Moss, Santana - WAS - WR","nfl.t.28","Washington","WR","63","22","2","293","73.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7793","Sinorice","Moss","S. Moss","Sinorice Moss","Moss, Sinorice - NYG - WR","nfl.t.19","NY Giants","WR","1551","108","1","18","6.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6470","Ovie","Mughelli","O. Mughelli","Ovie Mughelli","Mughelli, Ovie - ATL - RB","nfl.t.1","Atlanta","RB","1464","72","1","22","22.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.3511","Muhsin","Muhammad","M. Muhammad","Muhsin Muhammad","Muhammad, Muhsin - CAR - WR","nfl.t.29","Carolina","WR","126","44",0,"139","46.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9388","Louis","Murphy","L. Murphy","Louis Murphy","Murphy, Louis - OAK - WR","nfl.t.13","Oakland","WR","1435","91","1","165","41.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9466","Brandon","Myers","B. Myers","Brandon Myers","Myers, Brandon - OAK - TE","nfl.t.13","Oakland","TE","1502","60",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8426","Legedu","Naanee","L. Naanee","Legedu Naanee","Naanee, Legedu - SDG - WR","nfl.t.24","San Diego","WR","1818","149",0,"112","28.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9425","John","Nalbone","J. Nalbone","John Nalbone","Nalbone, John - MIA - TE","nfl.t.15","Miami","TE","1486","53",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.3565","Joe","Nedney","J. Nedney","Joe Nedney","Nedney, Joe - SFO - K","nfl.t.25","San Francisco","K","246","16",0,0,0,0,"6/7","6","12/12","12","50",0,0,0,0,0
+"nfl.p.8813","Jordy","Nelson","J. Nelson","Jordy Nelson","Nelson, Jordy - GNB - WR","nfl.t.9","Green Bay","WR","221","73","1","104","26.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9385","Shawn","Nelson","S. Nelson","Shawn Nelson","Nelson, Shawn - BUF - TE","nfl.t.2","Buffalo","TE","1429","41","1","26","13.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9293","Hakeem","Nicks","H. Nicks","Hakeem Nicks","Nicks, Hakeem - NYG - WR","nfl.t.19","NY Giants","WR","167","57","1","72","36.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5563","Moran","Norris","M. Norris","Moran Norris","Norris, Moran - SFO - RB","nfl.t.25","San Francisco","RB","1939","145",0,"49","12.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5061","Dennis","Northcutt","D. Northcutt","Dennis Northcutt","Northcutt, Dennis - DET - WR","nfl.t.8","Detroit","WR","223","74",0,"42","14.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7828","Jerious","Norwood","J. Norwood","Jerious Norwood","Norwood, Jerious - ATL - RB","nfl.t.1","Atlanta","RB","125","47",0,"62","31.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9460","Keith","Null","K. Null","Keith Null","Null, Keith - STL - QB","nfl.t.14","St. Louis","QB","2000","77",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9501","Jake","O'Connell","J. O'Connell","Jake O'Connell","O'Connell, Jake - KAN - TE","nfl.t.12","Kansas City","TE","1525","62",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8871","Kevin","O'Connell","K. O'Connell","Kevin O'Connell","O'Connell, Kevin - NYJ - QB","nfl.t.20","NY Jets","QB","1965","57",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8429","Oren","O'Neal","O. O'Neal","Oren O'Neal","O'Neal, Oren - OAK - RB","nfl.t.13","Oakland","RB","1906","124",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6103","J.T.","O'Sullivan","J. O'Sullivan","J.T. O'Sullivan","O'Sullivan, J.T. - CIN - QB","nfl.t.4","Cincinnati","QB","1901","42",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7998","Ben","Obomanu","B. Obomanu","Ben Obomanu","Obomanu, Ben - SEA - WR","nfl.t.26","Seattle","WR","1813","148",0,"22","11.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5483","Chad","Ochocinco","C. Ochocinco","Chad Ochocinco","Ochocinco, Chad - CIN - WR","nfl.t.4","Cincinnati","WR","58","20","3","266","66.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9534","Kevin","Ogletree","K. Ogletree","Kevin Ogletree","Ogletree, Kevin - DAL - WR","nfl.t.6","Dallas","WR","1626","122",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8285","Greg","Olsen","G. Olsen","Greg Olsen","Olsen, Greg - CHI - TE","nfl.t.3","Chicago","TE","91","6","2","94","23.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8956","Xavier","Omon","X. Omon","Xavier Omon","Omon, Xavier - BUF - RB","nfl.t.2","Buffalo","RB","1858","103",0,"22","7.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7321","Dan","Orlovsky","D. Orlovsky","Dan Orlovsky","Orlovsky, Dan - HOU - QB","nfl.t.34","Houston","QB","1892","41",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7282","Kyle","Orton","K. Orton","Kyle Orton","Orton, Kyle - DEN - QB","nfl.t.7","Denver","QB","116","18","5","908","227.0","97.7",0,0,0,0,0,0,0,0,0,0
+"nfl.p.6664","Kassim","Osgood","K. Osgood","Kassim Osgood","Osgood, Kassim - SDG - WR","nfl.t.24","San Diego","WR","1945","176",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6024","John","Owens","J. Owens","John Owens","Owens, John - SEA - TE","nfl.t.26","Seattle","TE","1754","86",0,"14","4.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8040","Montell","Owens","M. Owens","Montell Owens","Owens, Montell - JAC - RB","nfl.t.30","Jacksonville","RB","1941","146",0,"1","0.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.3664","Terrell","Owens","T. Owens","Terrell Owens","Owens, Terrell - BUF - WR","nfl.t.2","Buffalo","WR","36","13","1","171","42.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9465","Curtis","Painter","C. Painter","Curtis Painter","Painter, Curtis - IND - QB","nfl.t.11","Indianapolis","QB","1986","70",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6337","Carson","Palmer","C. Palmer","Carson Palmer","Palmer, Carson - CIN - QB","nfl.t.4","Cincinnati","QB","76","11","7","869","217.2","75.2",0,0,0,0,0,0,0,"5",0,0
+"nfl.p.8459","Jordan","Palmer","J. Palmer","Jordan Palmer","Palmer, Jordan - CIN - QB","nfl.t.4","Cincinnati","QB","1963","56",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7073","Willie","Parker","W. Parker","Willie Parker","Parker, Willie - PIT - RB","nfl.t.23","Pittsburgh","RB","62","30","1","203","67.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8953","Jalen","Parmele","J. Parmele","Jalen Parmele","Parmele, Jalen - BAL - RB","nfl.t.33","Baltimore","RB","1883","112",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7231","Roscoe","Parrish","R. Parrish","Roscoe Parrish","Parrish, Roscoe - BUF - WR","nfl.t.2","Buffalo","WR","1842","155",0,"18","4.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5989","Justin","Peelle","J. Peelle","Justin Peelle","Peelle, Justin - ATL - TE","nfl.t.1","Atlanta","TE","1445","47",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6134","Adrian","Peterson","A. Peterson","Adrian Peterson","Peterson, Adrian - CHI - RB","nfl.t.3","Chicago","RB","1870","105",0,"39","13.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8261","Adrian","Peterson","A. Peterson","Adrian Peterson","Peterson, Adrian - MIN - RB","nfl.t.16","Minnesota","RB","1","1","5","468","117.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9284","Brandon","Pettigrew","B. Pettigrew","Brandon Pettigrew","Pettigrew, Brandon - DET - TE","nfl.t.8","Detroit","TE","198","20",0,"131","43.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9472","John","Phillips","J. Phillips","John Phillips","Phillips, John - DAL - TE","nfl.t.6","Dallas","TE","1758","90",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7162","Lousaka","Polite","L. Polite","Lousaka Polite","Polite, Lousaka - MIA - RB","nfl.t.15","Miami","RB","1914","130",0,"34","8.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7821","Leonard","Pope","L. Pope","Leonard Pope","Pope, Leonard - KAN - TE","nfl.t.12","Kansas City","TE","1529","63",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5937","Clinton","Portis","C. Portis","Clinton Portis","Portis, Clinton - WAS - RB","nfl.t.28","Washington","RB","13","12",0,"306","76.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8565","Matt","Prater","M. Prater","Matt Prater","Prater, Matt - DEN - K","nfl.t.7","Denver","K","220","14",0,0,0,0,"8/10","8","7/7","7","50",0,0,0,0,0
+"nfl.p.8276","Brady","Quinn","B. Quinn","Brady Quinn","Quinn, Brady - CLE - QB","nfl.t.5","Cleveland","QB","222","26","1","434","144.7","62.9",0,0,0,0,0,0,0,"3",0,0
+"nfl.p.9328","Richard","Quinn","R. Quinn","Richard Quinn","Quinn, Richard - DEN - TE","nfl.t.7","Denver","TE","1488","54",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5198","Neil","Rackers","N. Rackers","Neil Rackers","Rackers, Neil - ARI - K","nfl.t.22","Arizona","K","248","17",0,0,0,0,"5/6","5","6/6","6","45",0,0,0,0,0
+"nfl.p.5948","Antwaan","Randle El","A. Randle El","Antwaan Randle El","Randle El, Antwaan - WAS - WR","nfl.t.28","Washington","WR","218","72",0,"158","39.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8622","Brett","Ratliff","B. Ratliff","Brett Ratliff","Ratliff, Brett - CLE - QB","nfl.t.5","Cleveland","QB","1987","71",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5104","Chris","Redman","C. Redman","Chris Redman","Redman, Chris - ATL - QB","nfl.t.1","Atlanta","QB","1927","45",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6290","Jeff","Reed","J. Reed","Jeff Reed","Reed, Jeff - PIT - K","nfl.t.23","Pittsburgh","K","266","22",0,0,0,0,"5/8","5","10/10","10","46",0,0,0,0,0
+"nfl.p.5922","Josh","Reed","J. Reed","Josh Reed","Reed, Josh - BUF - WR","nfl.t.2","Buffalo","WR","261","83","1","109","36.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9161","Darius","Reynaud","D. Reynaud","Darius Reynaud","Reynaud, Darius - MIN - WR","nfl.t.16","Minnesota","WR","1847","159",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8832","Ray","Rice","R. Rice","Ray Rice","Rice, Ray - BAL - RB","nfl.t.33","Baltimore","RB","128","49","1","429","107.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8298","Sidney","Rice","S. Rice","Sidney Rice","Rice, Sidney - MIN - WR","nfl.t.16","Minnesota","WR","161","54","2","172","43.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.3408","Tony","Richardson","T. Richardson","Tony Richardson","Richardson, Tony - NYJ - RB","nfl.t.20","NY Jets","RB","1936","142",0,"9","4.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9437","Javon","Ringer","J. Ringer","Javon Ringer","Ringer, Javon - TEN - RB","nfl.t.10","Tennessee","RB","1886","114",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6763","Philip","Rivers","P. Rivers","Philip Rivers","Rivers, Philip - SDG - QB","nfl.t.24","San Diego","QB","37","6","7","1260","315.0","90.6",0,0,0,0,0,0,0,"3",0,0
+"nfl.p.8661","Gijon","Robinson","G. Robinson","Gijon Robinson","Robinson, Gijon - IND - TE","nfl.t.11","Indianapolis","TE","1684","81",0,"4","1.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7849","Michael","Robinson","M. Robinson","Michael Robinson","Robinson, Michael - SFO - RB","nfl.t.25","San Francisco","RB","1923","136",0,"12","4.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9300","Brian","Robiskie","B. Robiskie","Brian Robiskie","Robiskie, Brian - CLE - WR","nfl.t.5","Cleveland","WR","152","53",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7244","Courtney","Roby","C. Roby","Courtney Roby","Roby, Courtney - NOR - WR","nfl.t.18","New Orleans","WR","1929","172",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7200","Aaron","Rodgers","A. Rodgers","Aaron Rodgers","Rodgers, Aaron - GNB - QB","nfl.t.9","Green Bay","QB","38","7","7","1202","300.5","101.1",0,0,0,0,0,0,0,"1",0,0
+"nfl.p.6770","Ben","Roethlisberger","B. Roethlisberger","Ben Roethlisberger","Roethlisberger, Ben - PIT - QB","nfl.t.23","Pittsburgh","QB","100","14","7","1208","302.0","98.1",0,0,0,0,0,0,0,"4",0,0
+"nfl.p.6624","Tony","Romo","T. Romo","Tony Romo","Romo, Tony - DAL - QB","nfl.t.6","Dallas","QB","33","4","5","1017","254.2","79.4",0,0,0,0,0,0,0,"4",0,0
+"nfl.p.8409","Dante","Rosario","D. Rosario","Dante Rosario","Rosario, Dante - CAR - TE","nfl.t.29","Carolina","TE","233","23","2","89","29.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5557","Sage","Rosenfels","S. Rosenfels","Sage Rosenfels","Rosenfels, Sage - MIN - QB","nfl.t.16","Minnesota","QB","1561","33",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8819","Eddie","Royal","E. Royal","Eddie Royal","Royal, Eddie - DEN - WR","nfl.t.7","Denver","WR","68","25",0,"58","14.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6046","Robert","Royal","R. Royal","Robert Royal","Royal, Robert - CLE - TE","nfl.t.5","Cleveland","TE","1406","36","1","93","23.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8530","Gary","Russell","G. Russell","Gary Russell","Russell, Gary - OAK - RB","nfl.t.13","Oakland","RB","1806","94",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8255","JaMarcus","Russell","J. Russell","JaMarcus Russell","Russell, JaMarcus - OAK - QB","nfl.t.13","Oakland","QB","228","29","1","531","132.8","42.4",0,0,0,0,0,0,0,"4",0,0
+"nfl.p.8780","Matt","Ryan","M. Ryan","Matt Ryan","Ryan, Matt - ATL - QB","nfl.t.1","Atlanta","QB","83","12","5","646","215.3","100.4",0,0,0,0,0,0,0,"1",0,0
+"nfl.p.6903","Sean","Ryan","S. Ryan","Sean Ryan","Ryan, Sean - KAN - TE","nfl.t.12","Kansas City","TE","1434","44","2","97","24.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9269","Mark","Sanchez","M. Sanchez","Mark Sanchez","Sanchez, Mark - NYJ - QB","nfl.t.20","NY Jets","QB","1792","36","5","782","195.5","71.2",0,0,0,0,0,0,0,"5",0,0
+"nfl.p.9053","Dantrell","Savage","D. Savage","Dantrell Savage","Savage, Dantrell - KAN - RB","nfl.t.12","Kansas City","RB","1852","100",0,"69","69.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7355","Bo","Scaife","B. Scaife","Bo Scaife","Scaife, Bo - TEN - TE","nfl.t.10","Tennessee","TE","213","22",0,"73","36.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6849","Matt","Schaub","M. Schaub","Matt Schaub","Schaub, Matt - HOU - QB","nfl.t.34","Houston","QB","69","9","8","1061","265.2","98.6",0,0,0,0,0,0,0,"3",0,0
+"nfl.p.7810","Tony","Scheffler","T. Scheffler","Tony Scheffler","Scheffler, Tony - DEN - TE","nfl.t.7","Denver","TE","188","19","1","71","17.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9003","Chaz","Schilens","C. Schilens","Chaz Schilens","Schilens, Chaz - OAK - WR","nfl.t.13","Oakland","WR","1462","102",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8940","Owen","Schmitt","O. Schmitt","Owen Schmitt","Schmitt, Owen - SEA - RB","nfl.t.26","Seattle","RB","1840","99","1","13","6.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6896","Josh","Scobee","J. Scobee","Josh Scobee","Scobee, Josh - JAC - K","nfl.t.30","Jacksonville","K","253","19",0,0,0,0,"7/10","7","10/10","10","52",0,0,0,0,0
+"nfl.p.9473","Bernard","Scott","B. Scott","Bernard Scott","Scott, Bernard - CIN - RB","nfl.t.4","Cincinnati","RB","1815","95",0,"42","14.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4546","Mike","Sellers","M. Sellers","Mike Sellers","Sellers, Mike - WAS - RB","nfl.t.28","Washington","RB","1922","135",0,"27","9.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6427","Visanthe","Shiancoe","V. Shiancoe","Visanthe Shiancoe","Shiancoe, Visanthe - MIN - TE","nfl.t.16","Minnesota","TE","148","13","2","67","16.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5900","Jeremy","Shockey","J. Shockey","Jeremy Shockey","Shockey, Jeremy - NOR - TE","nfl.t.18","New Orleans","TE","120","11","2","162","40.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6433","Chris","Simms","C. Simms","Chris Simms","Simms, Chris - DEN - QB","nfl.t.7","Denver","QB","1979","66",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9167","Chad","Simpson","C. Simpson","Chad Simpson","Simpson, Chad - IND - RB","nfl.t.11","Indianapolis","RB","1924","137",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8823","Jerome","Simpson","J. Simpson","Jerome Simpson","Simpson, Jerome - CIN - WR","nfl.t.4","Cincinnati","WR","1649","125",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8333","Mike","Sims-Walker","M. Sims-Walker","Mike Sims-Walker","Sims-Walker, Mike - JAC - WR","nfl.t.30","Jacksonville","WR","199","66","3","278","69.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8930","Matthew","Slater","M. Slater","Matthew Slater","Slater, Matthew - NWE - WR","nfl.t.17","New England","WR","1871","167",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8866","Steve","Slaton","S. Slaton","Steve Slaton","Slaton, Steve - HOU - RB","nfl.t.34","Houston","RB","14","13","2","313","78.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7177","Alex","Smith","A. Smith","Alex Smith","Smith, Alex - SFO - QB","nfl.t.25","San Francisco","QB","2001","78",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7247","Alex","Smith","A. Smith","Alex Smith","Smith, Alex - PHI - TE","nfl.t.21","Philadelphia","TE","1413","38",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7852","Brad","Smith","B. Smith","Brad Smith","Smith, Brad - NYJ - WR","nfl.t.20","NY Jets","WR","1838","153",0,"64","16.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9168","Clifton","Smith","C. Smith","Clifton Smith","Smith, Clifton - TAM - RB","nfl.t.27","Tampa Bay","RB","1934","141",0,"11","2.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8841","Kevin","Smith","K. Smith","Kevin Smith","Smith, Kevin - DET - RB","nfl.t.8","Detroit","RB","31","18","3","335","83.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6397","L.J.","Smith","L. Smith","L.J. Smith","Smith, L.J. - BAL - TE","nfl.t.33","Baltimore","TE","1411","37",0,"26","26.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8305","Steve","Smith","S. Smith","Steve Smith","Smith, Steve - NYG - WR","nfl.t.19","NY Giants","WR","192","64","4","411","102.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5521","Steve","Smith","S. Smith","Steve Smith","Smith, Steve - CAR - WR","nfl.t.29","Carolina","WR","18","4",0,"194","64.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5125","Terrelle","Smith","T. Smith","Terrelle Smith","Smith, Terrelle - DET - RB","nfl.t.8","Detroit","RB","1770","87",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8428","Troy","Smith","T. Smith","Troy Smith","Smith, Troy - BAL - QB","nfl.t.33","Baltimore","QB","2018","90",0,"4","4.0","56.3",0,0,0,0,0,0,0,0,0,0
+"nfl.p.8498","Jason","Snelling","J. Snelling","Jason Snelling","Snelling, Jason - ATL - RB","nfl.t.1","Atlanta","RB","1752","84","1","93","31.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5341","Justin","Snow","J. Snow","Justin Snow","Snow, Justin - IND - TE","nfl.t.11","Indianapolis","TE","1759","91",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6952","Jim","Sorgi","J. Sorgi","Jim Sorgi","Sorgi, Jim - IND - QB","nfl.t.11","Indianapolis","QB","2005","80",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7440","Stephen","Spach","S. Spach","Stephen Spach","Spach, Stephen - ARI - TE","nfl.t.22","Arizona","TE","1672","76",0,"16","5.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8331","Matt","Spaeth","M. Spaeth","Matt Spaeth","Spaeth, Matt - PIT - TE","nfl.t.23","Pittsburgh","TE","1432","43","1","17","5.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7306","Darren","Sproles","D. Sproles","Darren Sproles","Sproles, Darren - SDG - RB","nfl.t.24","San Diego","RB","86","37","2","287","71.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8054","Micheal","Spurlock","M. Spurlock","Micheal Spurlock","Spurlock, Micheal - SFO - WR","nfl.t.25","San Francisco","WR","1861","164",0,"3","3.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5239","Brad","St. Louis","B. St. Louis","Brad St. Louis","St. Louis, Brad - CIN - TE","nfl.t.4","Cincinnati","TE","1862","102",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6499","Brian","St. Pierre","B. St. Pierre","Brian St. Pierre","St. Pierre, Brian - ARI - QB","nfl.t.22","Arizona","QB","1966","58",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9265","Matthew","Stafford","M. Stafford","Matthew Stafford","Stafford, Matthew - DET - QB","nfl.t.8","Detroit","QB","1688","35","4","944","236.0","65.5",0,0,0,0,0,0,0,"6",0,0
+"nfl.p.8297","Drew","Stanton","D. Stanton","Drew Stanton","Stanton, Drew - DET - QB","nfl.t.8","Detroit","QB","1991","72",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9504","LaRod","Stephens-Howling","L. Stephens-Howling","LaRod Stephens-Howling","Stephens-Howling, LaRod - ARI - RB","nfl.t.22","Arizona","RB","1853","101",0,"24","8.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8862","Craig","Stevens","C. Stevens","Craig Stevens","Stevens, Craig - TEN - TE","nfl.t.10","Tennessee","TE","1854","101",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5914","Jerramy","Stevens","J. Stevens","Jerramy Stevens","Stevens, Jerramy - TAM - TE","nfl.t.27","Tampa Bay","TE","251","28","1","71","17.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8790","Jonathan","Stewart","J. Stewart","Jonathan Stewart","Stewart, Jonathan - CAR - RB","nfl.t.29","Carolina","RB","48","23",0,"162","54.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5595","Tony","Stewart","T. Stewart","Tony Stewart","Stewart, Tony - OAK - TE","nfl.t.13","Oakland","TE","1822","98",0,"13","3.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4755","Brandon","Stokley","B. Stokley","Brandon Stokley","Stokley, Brandon - DEN - WR","nfl.t.7","Denver","WR","232","76","1","157","78.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7839","Maurice","Stovall","M. Stovall","Maurice Stovall","Stovall, Maurice - TAM - WR","nfl.t.27","Tampa Bay","WR","1839","154",0,"93","46.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9497","Sammie","Stroughter","S. Stroughter","Sammie Stroughter","Stroughter, Sammie - TAM - WR","nfl.t.27","Tampa Bay","WR","1750","135",0,"68","17.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8489","Chansi","Stuckey","C. Stuckey","Chansi Stuckey","Stuckey, Chansi - CLE - WR","nfl.t.5","Cleveland","WR","1418","88","1","120","30.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9171","Jonathan","Stupar","J. Stupar","Jonathan Stupar","Stupar, Jonathan - BUF - TE","nfl.t.2","Buffalo","TE","1490","56",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9520","Ryan","Succop","R. Succop","Ryan Succop","Succop, Ryan - KAN - K","nfl.t.12","Kansas City","K","1784","32",0,0,0,0,"3/3","3","7/7","7","53",0,0,0,0,0
+"nfl.p.7527","Shaun","Suisham","S. Suisham","Shaun Suisham","Suisham, Shaun - WAS - K","nfl.t.28","Washington","K","1421","28",0,0,0,0,"5/5","5","5/6","5","42",0,0,0,0,0
+"nfl.p.9587","Tyrell","Sutton","T. Sutton","Tyrell Sutton","Sutton, Tyrell - CAR - RB","nfl.t.29","Carolina","RB","1714","79",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8994","Brett","Swain","B. Swain","Brett Swain","Swain, Brett - GNB - WR","nfl.t.9","Green Bay","WR","1848","160",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8830","Limas","Sweed","L. Sweed","Limas Sweed","Sweed, Limas - PIT - WR","nfl.t.23","Pittsburgh","WR","1819","150",0,"5","5.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8078","Naufahu","Tahi","N. Tahi","Naufahu Tahi","Tahi, Naufahu - MIN - RB","nfl.t.16","Minnesota","RB","1957","150",0,"11","3.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8916","Jacob","Tamme","J. Tamme","Jacob Tamme","Tamme, Jacob - IND - TE","nfl.t.11","Indianapolis","TE","1827","99",0,"6","6.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6142","Chester","Taylor","C. Taylor","Chester Taylor","Taylor, Chester - MIN - RB","nfl.t.16","Minnesota","RB","121","45",0,"187","46.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4259","Fred","Taylor","F. Taylor","Fred Taylor","Taylor, Fred - NWE - RB","nfl.t.17","New England","RB","155","55","2","218","54.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9442","Mike","Teel","M. Teel","Mike Teel","Teel, Mike - SEA - QB","nfl.t.26","Seattle","QB","1980","67",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8471","Tyler","Thigpen","T. Thigpen","Tyler Thigpen","Thigpen, Tyler - MIA - QB","nfl.t.15","Miami","QB","1855","39",0,"2","2.0","0.0",0,0,0,0,0,0,0,0,0,0
+"nfl.p.7835","David","Thomas","D. Thomas","David Thomas","Thomas, David - NOR - TE","nfl.t.18","New Orleans","TE","1554","69",0,"52","17.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8811","Devin","Thomas","D. Thomas","Devin Thomas","Thomas, Devin - WAS - WR","nfl.t.28","Washington","WR","1878","168",0,"7","2.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9371","Mike","Thomas","M. Thomas","Mike Thomas","Thomas, Mike - JAC - WR","nfl.t.30","Jacksonville","WR","1461","101",0,"86","43.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8561","Pierre","Thomas","P. Thomas","Pierre Thomas","Thomas, Pierre - NOR - RB","nfl.t.18","New Orleans","RB","24","15","3","254","84.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9043","Mike","Tolbert","M. Tolbert","Mike Tolbert","Tolbert, Mike - SDG - RB","nfl.t.24","San Diego","RB","1872","106",0,"5","1.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5452","LaDainian","Tomlinson","L. Tomlinson","LaDainian Tomlinson","Tomlinson, LaDainian - SDG - RB","nfl.t.24","San Diego","RB","7","7","1","70","35.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6913","Michael","Turner","M. Turner","Michael Turner","Turner, Michael - ATL - RB","nfl.t.1","Atlanta","RB","2","2","2","231","77.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9351","Patrick","Turner","P. Turner","Patrick Turner","Turner, Patrick - MIA - WR","nfl.t.15","Miami","WR","1607","119",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7022","Lawrence","Tynes","L. Tynes","Lawrence Tynes","Tynes, Lawrence - NYG - K","nfl.t.19","NY Giants","K","264","21",0,0,0,0,"10/13","10","11/11","11","45",0,0,0,0,0
+"nfl.p.9517","Tiquan","Underwood","T. Underwood","Tiquan Underwood","Underwood, Tiquan - JAC - WR","nfl.t.30","Jacksonville","WR","1851","163",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6752","Jerheme","Urban","J. Urban","Jerheme Urban","Urban, Jerheme - ARI - WR","nfl.t.22","Arizona","WR","1412","87",0,"113","37.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5448","Michael","Vick","M. Vick","Michael Vick","Vick, Michael - PHI - QB","nfl.t.21","Philadelphia","QB","2013","85",0,"7","7.0","39.6",0,0,0,0,0,0,0,0,0,0
+"nfl.p.7929","Lawrence","Vickers","L. Vickers","Lawrence Vickers","Vickers, Lawrence - CLE - RB","nfl.t.5","Cleveland","RB","1938","144",0,"7","2.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.3727","Adam","Vinatieri","A. Vinatieri","Adam Vinatieri","Vinatieri, Adam - IND - K","nfl.t.11","Indianapolis","K","267","23",0,0,0,0,"5/7","5","13/13","13","48",0,0,0,0,0
+"nfl.p.5339","Billy","Volek","B. Volek","Billy Volek","Volek, Billy - SDG - QB","nfl.t.24","San Diego","QB","2010","83",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6475","Bobby","Wade","B. Wade","Bobby Wade","Wade, Bobby - KAN - WR","nfl.t.12","Kansas City","WR","243","78","2","93","31.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7924","Delanie","Walker","D. Walker","Delanie Walker","Walker, Delanie - SFO - TE","nfl.t.25","San Francisco","TE","1676","77",0,"43","14.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5906","Javon","Walker","J. Walker","Javon Walker","Walker, Javon - OAK - WR","nfl.t.13","Oakland","WR","1777","141",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9348","Mike","Wallace","M. Wallace","Mike Wallace","Wallace, Mike - PIT - WR","nfl.t.23","Pittsburgh","WR","1449","96",0,"194","48.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6446","Seneca","Wallace","S. Wallace","Seneca Wallace","Wallace, Seneca - SEA - QB","nfl.t.26","Seattle","QB","1546","32","4","678","169.5","82.6",0,0,0,0,0,0,0,"2",0,0
+"nfl.p.6591","Kevin","Walter","K. Walter","Kevin Walter","Walter, Kevin - HOU - WR","nfl.t.34","Houston","WR","81","31","1","148","74.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6994","Derrick","Ward","D. Ward","Derrick Ward","Ward, Derrick - TAM - RB","nfl.t.27","Tampa Bay","RB","56","26","1","129","43.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4323","Hines","Ward","H. Ward","Hines Ward","Ward, Hines - PIT - WR","nfl.t.23","Pittsburgh","WR","61","21",0,"355","88.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8524","Danny","Ware","D. Ware","Danny Ware","Ware, Danny - NYG - RB","nfl.t.19","NY Giants","RB","1884","113",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4541","Kurt","Warner","K. Warner","Kurt Warner","Warner, Kurt - ARI - QB","nfl.t.22","Arizona","QB","35","5","4","858","286.0","83.5",0,0,0,0,0,0,0,"4",0,0
+"nfl.p.6401","Kelley","Washington","K. Washington","Kelley Washington","Washington, Kelley - BAL - WR","nfl.t.33","Baltimore","WR","1560","112","1","198","49.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7866","Leon","Washington","L. Washington","Leon Washington","Washington, Leon - NYJ - RB","nfl.t.20","NY Jets","RB","133","51",0,"253","63.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7492","Nate","Washington","N. Washington","Nate Washington","Washington, Nate - TEN - WR","nfl.t.10","Tennessee","WR","151","52","3","149","37.2",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7967","Todd","Watkins","T. Watkins","Todd Watkins","Watkins, Todd - OAK - WR","nfl.t.13","Oakland","WR","1762","138",0,"48","16.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6791","Benjamin","Watson","B. Watson","Benjamin Watson","Watson, Benjamin - NWE - TE","nfl.t.17","New England","TE","238","26","2","174","43.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5477","Reggie","Wayne","R. Wayne","Reggie Wayne","Wayne, Reggie - IND - WR","nfl.t.11","Indianapolis","WR","22","6","3","399","99.8",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7481","Leonard","Weaver","L. Weaver","Leonard Weaver","Weaver, Leonard - PHI - RB","nfl.t.21","Philadelphia","RB","1821","97",0,"22","7.3",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8609","Eric","Weems","E. Weems","Eric Weems","Weems, Eric - ATL - WR","nfl.t.1","Atlanta","WR","1845","158",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7027","Wes","Welker","W. Welker","Wes Welker","Welker, Wes - NWE - WR","nfl.t.17","New England","WR","41","14",0,"141","70.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9295","Beanie","Wells","B. Wells","Beanie Wells","Wells, Beanie - ARI - RB","nfl.t.22","Arizona","RB","59","28",0,"71","23.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5977","Brian","Westbrook","B. Westbrook","Brian Westbrook","Westbrook, Brian - PHI - RB","nfl.t.21","Philadelphia","RB","5","5","1","138","69.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7794","LenDale","White","L. White","LenDale White","White, LenDale - TEN - RB","nfl.t.10","Tennessee","RB","54","25","1","94","23.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9308","Pat","White","P. White","Pat White","White, Pat - MIA - QB","nfl.t.15","Miami","QB","208","25",0,"-1","-0.5","39.6",0,0,0,0,0,0,0,0,0,0
+"nfl.p.7203","Roddy","White","R. White","Roddy White","White, Roddy - ATL - WR","nfl.t.1","Atlanta","WR","27","8","1","119","39.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7830","Charlie","Whitehurst","C. Whitehurst","Charlie Whitehurst","Whitehurst, Charlie - SDG - QB","nfl.t.24","San Diego","QB","1972","62",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6879","Ernest","Wilford","E. Wilford","Ernest Wilford","Wilford, Ernest - JAC - TE","nfl.t.30","Jacksonville","TE","1543","68",0,"42","14.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7181","Carnell","Williams","C. Williams","Carnell Williams","Williams, Carnell - TAM - RB","nfl.t.27","Tampa Bay","RB","229","67","2","272","68.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7776","DeAngelo","Williams","D. Williams","DeAngelo Williams","Williams, DeAngelo - CAR - RB","nfl.t.29","Carolina","RB","6","6","2","264","88.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7860","Demetrius","Williams","D. Williams","Demetrius Williams","Williams, Demetrius - BAL - WR","nfl.t.33","Baltimore","WR","1467","105",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9346","Derrick","Williams","D. Williams","Derrick Williams","Williams, Derrick - DET - WR","nfl.t.8","Detroit","WR","1604","117",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.4653","Ricky","Williams","R. Williams","Ricky Williams","Williams, Ricky - MIA - RB","nfl.t.15","Miami","RB","124","46","3","310","77.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6766","Roy","Williams","R. Williams","Roy Williams","Williams, Roy - DAL - WR","nfl.t.6","Dallas","WR","49","17","1","214","53.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9529","John Parker","Wilson","J. Wilson","John Parker Wilson","Wilson, John Parker - ATL - QB","nfl.t.1","Atlanta","QB","1998","76",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6821","Kris","Wilson","K. Wilson","Kris Wilson","Wilson, Kris - SDG - TE","nfl.t.24","San Diego","TE","1763","92",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6765","Kellen","Winslow","K. Winslow","Kellen Winslow","Winslow, Kellen - TAM - TE","nfl.t.27","Tampa Bay","TE","94","8","2","162","40.5",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.6405","Jason","Witten","J. Witten","Jason Witten","Witten, Jason - DAL - TE","nfl.t.6","Dallas","TE","42","1","1","212","53.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8347","Garrett","Wolfe","G. Wolfe","Garrett Wolfe","Wolfe, Garrett - CHI - RB","nfl.t.3","Chicago","RB","1890","117","1","57","19.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7152","Jason","Wright","J. Wright","Jason Wright","Wright, Jason - ARI - RB","nfl.t.22","Arizona","RB","1802","93","1","14","7.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8134","Wallace","Wright","W. Wright","Wallace Wright","Wright, Wallace - NYJ - WR","nfl.t.20","NY Jets","WR","1942","175",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.8482","DeShawn","Wynn","D. Wynn","DeShawn Wynn","Wynn, DeShawn - GNB - RB","nfl.t.9","Green Bay","RB","1544","74",0,"38","12.7",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.5301","Todd","Yoder","T. Yoder","Todd Yoder","Yoder, Todd - WAS - TE","nfl.t.28","Washington","TE","1776","94",0,0,"0.0",0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9177","Albert","Young","A. Young","Albert Young","Young, Albert - MIN - RB","nfl.t.16","Minnesota","RB","1724","81",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.7752","Vince","Young","V. Young","Vince Young","Young, Vince - TEN - QB","nfl.t.10","Tennessee","QB","1935","47",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"nfl.p.9009","Keith","Zinger","K. Zinger","Keith Zinger","Zinger, Keith - ATL - TE","nfl.t.1","Atlanta","TE","1491","57",0,0,0,0,0,0,0,0,0,0,0,0,0,0

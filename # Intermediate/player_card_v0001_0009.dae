@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+    <asset>
+        <contributor>
+            <authoring_tool>modo 701 [Build 66614], Mac OS X 10.9.1 (10.9.1)</authoring_tool>
+            <comments>
+                Plug-in: [Build 66614];
+                Use Absolute Path: No;
+                Merge Reference Items: No;
+                Save Hidden Items: Yes;
+                Save Cameras: Yes;
+                Save Lights: Yes;
+                Save Locators: Yes;
+                Save Triangles as Triangles: No;
+                Order Vertex Maps Alphabetically: Yes;
+                Bake Matrices: No;
+                Save Vertex Normals: Yes;
+                Save UV Texture Coordinates: Yes;
+                Save Vertex Colors: Yes;
+                Save Vertex Weights: Yes;
+                Save Animation: Yes;
+                Sample Animation: No;
+                Sample Animation Start: 0;
+                Sample Animation End: 120;
+                Save modo Profile: Yes;
+                Save Maya Profile: Yes;
+                Save 3ds Max Profile: Yes;
+                Formatted Arrays: Yes;
+            </comments>
+            <source_data>file:///Users/bstahl/Dropbox/Ben%20Dropbox/Developer/Code/SceneKitTest/player_card_v0001_0008.lxo</source_data>
+        </contributor>
+        <created>2014-02-16T08:48:36Z</created>
+        <modified>2014-02-16T08:48:36Z</modified>
+        <unit name="game" meter="1" />
+        <up_axis>Y_UP</up_axis>
+    </asset>
+    <library_cameras>
+        <camera id="Camera-camera002" name="Camera">
+            <optics>
+                <technique_common>
+                    <perspective>
+                        <xfov sid="HFOV">39.5978</xfov>
+                        <yfov sid="YFOV">26.9915</yfov>
+                        <znear sid="near_clip">0.01</znear>
+                        <zfar sid="far_clip">10000</zfar>
+                    </perspective>
+                </technique_common>
+                <technique profile="modo401">
+                    <param sid="projType" name="Projection_Type" type="Name">persp</param>
+                    <param sid="focalLen" name="Focal_Length" type="float">0.05</param>
+                    <param sid="distort" name="Lens_Distortion" type="float">0</param>
+                    <param sid="squeeze" name="Lens_Squeeze" type="float">1</param>
+                    <param sid="focusDist" name="Focus_Distance" type="float">4</param>
+                    <param sid="fStop" name="F-Stop" type="float">4</param>
+                    <param sid="blurLen" name="Blur_Length" type="float">0.5</param>
+                    <param sid="blurOff" name="Blur_Offset" type="float">0</param>
+                    <param sid="ioDist" name="Interocular_Distance" type="float">0.065</param>
+                    <param sid="convDist" name="Convergence_Distance" type="float">2</param>
+                </technique>
+            </optics>
+            <imager>
+                <technique profile="modo401">
+                    <param sid="apertureX" name="Film_Width" type="float">0.036</param>
+                    <param sid="apertureY" name="Film_Height" type="float">0.024</param>
+                    <param sid="offsetX" name="Film_Offset_X" type="float">0</param>
+                    <param sid="offsetY" name="Film_Offset_Y" type="float">0</param>
+                    <param sid="filmFit" name="Film_Fit" type="Name">fill</param>
+                </technique>
+            </imager>
+        </camera>
+    </library_cameras>
+    <library_images>
+        <image id="Image0001" name="Image0001">
+            <init_from>../%23%20Intermediate/Player%20Card%20Textures/nfl.p.7755.png</init_from>
+        </image>
+        <image id="Image0002" name="Image0002">
+            <init_from>../%23%20Intermediate/Player%20Card%20Textures/pc_hs_bg.png</init_from>
+        </image>
+        <image id="Image0003" name="Image0003">
+            <init_from>../%23%20Intermediate/Player%20Card%20Textures/pc_name_bg.png</init_from>
+        </image>
+        <image id="Image0004" name="Image0004">
+            <init_from>../%23%20Intermediate/Player%20Card%20Textures/pc_stats_bg.png</init_from>
+        </image>
+        <image id="Image0005" name="Image0005">
+            <init_from>../%23%20Intermediate/nfl_t_34_strip.png</init_from>
+        </image>
+    </library_images>
+    <library_materials>
+        <material id="Material-Black_High_Gloss_Plastic.lxp" name="Black_High_Gloss_Plastic.lxp">
+            <instance_effect url="#Effect-Black_High_Gloss_Plastic.lxp" />
+        </material>
+        <material id="Material-player_card_hs" name="player_card_hs">
+            <instance_effect url="#Effect-player_card_hs" />
+        </material>
+        <material id="Material-player_card_name_bg" name="player_card_name_bg">
+            <instance_effect url="#Effect-player_card_name_bg" />
+        </material>
+        <material id="Material-player_card_stats_bg" name="player_card_stats_bg">
+            <instance_effect url="#Effect-player_card_stats_bg" />
+        </material>
+        <material id="Material-player_card_team_strip" name="player_card_team_strip">
+            <instance_effect url="#Effect-player_card_team_strip" />
+        </material>
+    </library_materials>
+    <library_effects>
+        <effect id="Effect-Black_High_Gloss_Plastic.lxp" name="Black_High_Gloss_Plastic.lxp">
+            <profile_COMMON>
+                <technique sid="common">
+                    <phong>
+                        <diffuse>
+                            <color sid="diffuse_effect_rgb">0.012549 0.012549 0.012549 1</color>
+                        </diffuse>
+                        <specular>
+                            <color sid="specular_effect_rgb">0.1 0.1 0.1 1</color>
+                        </specular>
+                        <shininess>
+                            <float sid="specular_effect_rgb">2048</float>
+                        </shininess>
+                        <reflective>
+                            <color sid="reflective_effect_rgb">1 1 1 1</color>
+                        </reflective>
+                        <reflectivity>
+                            <float sid="reflectivity_effect_float">0.1</float>
+                        </reflectivity>
+                    </phong>
+                </technique>
+            </profile_COMMON>
+        </effect>
+        <effect id="Effect-player_card_hs" name="player_card_hs">
+            <profile_COMMON>
+                <newparam sid="Image0001-surface">
+                    <surface type="2D">
+                        <init_from>Image0001</init_from>
+                        <format>A8R8G8B8</format>
+                    </surface>
+                </newparam>
+                <newparam sid="Image0001-sampler">
+                    <sampler2D>
+                        <source>Image0001-surface</source>
+                        <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+                        <magfilter>LINEAR</magfilter>
+                    </sampler2D>
+                </newparam>
+                <technique sid="common">
+                    <phong>
+                        <diffuse>
+                            <texture texture="Image0001-sampler" texcoord="pc_hs_bg_uv" />
+                        </diffuse>
+                        <specular>
+                            <color sid="specular_effect_rgb">0.2 0.2 0.2 1</color>
+                        </specular>
+                        <shininess>
+                            <float sid="specular_effect_rgb">256</float>
+                        </shininess>
+                    </phong>
+                </technique>
+            </profile_COMMON>
+        </effect>
+        <effect id="Effect-player_card_name_bg" name="player_card_name_bg">
+            <profile_COMMON>
+                <newparam sid="Image0003-surface">
+                    <surface type="2D">
+                        <init_from>Image0003</init_from>
+                        <format>A8R8G8B8</format>
+                    </surface>
+                </newparam>
+                <newparam sid="Image0003-sampler">
+                    <sampler2D>
+                        <source>Image0003-surface</source>
+                        <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+                        <magfilter>LINEAR</magfilter>
+                    </sampler2D>
+                </newparam>
+                <technique sid="common">
+                    <phong>
+                        <diffuse>
+                            <texture texture="Image0003-sampler" texcoord="pc_name_bg_uv" />
+                        </diffuse>
+                        <specular>
+                            <color sid="specular_effect_rgb">0.2 0.2 0.2 1</color>
+                        </specular>
+                        <shininess>
+                            <float sid="specular_effect_rgb">256</float>
+                        </shininess>
+                    </phong>
+                </technique>
+            </profile_COMMON>
+        </effect>
+        <effect id="Effect-player_card_stats_bg" name="player_card_stats_bg">
+            <profile_COMMON>
+                <newparam sid="Image0004-surface">
+                    <surface type="2D">
+                        <init_from>Image0004</init_from>
+                        <format>A8R8G8B8</format>
+                    </surface>
+                </newparam>
+                <newparam sid="Image0004-sampler">
+                    <sampler2D>
+                        <source>Image0004-surface</source>
+                        <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+                        <magfilter>LINEAR</magfilter>
+                    </sampler2D>
+                </newparam>
+                <technique sid="common">
+                    <phong>
+                        <diffuse>
+                            <texture texture="Image0004-sampler" texcoord="pc_stats_bg_uv" />
+                        </diffuse>
+                        <specular>
+                            <color sid="specular_effect_rgb">0.2 0.2 0.2 1</color>
+                        </specular>
+                        <shininess>
+                            <float sid="specular_effect_rgb">256</float>
+                        </shininess>
+                    </phong>
+                </technique>
+            </profile_COMMON>
+        </effect>
+        <effect id="Effect-player_card_team_strip" name="player_card_team_strip">
+            <profile_COMMON>
+                <newparam sid="Image0005-surface">
+                    <surface type="2D">
+                        <init_from>Image0005</init_from>
+                        <format>A8R8G8B8</format>
+                    </surface>
+                </newparam>
+                <newparam sid="Image0005-sampler">
+                    <sampler2D>
+                        <source>Image0005-surface</source>
+                        <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+                        <magfilter>LINEAR</magfilter>
+                    </sampler2D>
+                </newparam>
+                <technique sid="common">
+                    <phong>
+                        <diffuse>
+                            <texture texture="Image0005-sampler" texcoord="pc_team_strip_uv" />
+                        </diffuse>
+                        <specular>
+                            <color sid="specular_effect_rgb">0.2 0.2 0.2 1</color>
+                        </specular>
+                        <shininess>
+                            <float sid="specular_effect_rgb">256</float>
+                        </shininess>
+                    </phong>
+                </technique>
+            </profile_COMMON>
+        </effect>
+    </library_effects>
+    <library_geometries>
+        <geometry id="Geometry-mesh020" name="player_card_mesh">
+            <mesh>
+                <source id="Geometry-mesh020-positions" name="positions">
+                    <float_array id="Geometry-mesh020-positions-array" count="336">
+                        200 -20 -270
+                        200 -20 -170
+                        200 -20 -160
+                        200 -20 130
+                        200 -20 140
+                        200 -20 180
+                        200 -20 190
+                        200 -20 270
+                        -200 -20 270
+                        -200 -20 190
+                        -200 -20 180
+                        -200 -20 140
+                        -200 -20 130
+                        -200 -20 -160
+                        -200 -20 -170
+                        -200 -20 -270
+                        -190 -20 -270
+                        -190 -20 -170
+                        -190 -20 -160
+                        -190 -20 130
+                        -190 -20 140
+                        -190 -20 180
+                        -190 -20 190
+                        -190 -20 270
+                        190 -20 -270
+                        190 -20 -170
+                        190 -20 -160
+                        190 -20 130
+                        190 -20 140
+                        190 -20 180
+                        190 -20 190
+                        190 -20 270
+                        200 20 -270
+                        200 20 -170
+                        200 20 -160
+                        200 20 130
+                        200 20 140
+                        200 20 180
+                        200 20 190
+                        200 20 270
+                        -200 20 270
+                        -200 20 190
+                        -200 20 180
+                        -200 20 140
+                        -200 20 130
+                        -200 20 -160
+                        -200 20 -170
+                        -200 20 -270
+                        -190 20 -270
+                        -190 20 -170
+                        -190 20 -160
+                        -190 20 130
+                        -190 20 140
+                        -190 20 180
+                        -190 20 190
+                        -190 20 270
+                        190 20 -270
+                        190 20 -170
+                        190 20 -160
+                        190 20 130
+                        190 20 140
+                        190 20 180
+                        190 20 190
+                        190 20 270
+                        -200 -20 -280
+                        -190 -20 -280
+                        -200 20 -280
+                        -190 20 -280
+                        200 -20 -280
+                        190 -20 -280
+                        200 20 -280
+                        190 20 -280
+                        -200 -20 280
+                        -190 -20 280
+                        -200 20 280
+                        -190 20 280
+                        200 -20 280
+                        190 -20 280
+                        200 20 280
+                        190 20 280
+                        -190 20 -270
+                        -190 20 -170
+                        -190 20 -160
+                        -190 20 130
+                        -190 20 140
+                        -190 20 180
+                        -190 20 190
+                        -190 20 270
+                        190 20 -270
+                        190 20 -170
+                        190 20 -160
+                        190 20 130
+                        190 20 140
+                        190 20 180
+                        190 20 190
+                        190 20 270
+                        -187 10 -267
+                        -187 10 -173
+                        -187 10 -157
+                        -187 10 127
+                        -187 10 143
+                        -187 10 177
+                        -187 10 193
+                        -187 10 267
+                        187 10 -267
+                        187 10 -173
+                        187 10 -157
+                        187 10 127
+                        187 10 143
+                        187 10 177
+                        187 10 193
+                        187 10 267
+                    </float_array>
+                    <technique_common>
+                        <accessor count="112" source="#Geometry-mesh020-positions-array" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-mesh020-normals" name="normals">
+                    <float_array id="Geometry-mesh020-normals-array" count="30">
+                        0 -1 0
+                        1 0 0
+                        -1 0 0
+                        0 1 0
+                        0 0 -1
+                        0 0 1
+                        0.957826 0.287348 0
+                        0 0.287348 -0.957826
+                        -0.957826 0.287348 0
+                        0 0.287348 0.957826
+                    </float_array>
+                    <technique_common>
+                        <accessor count="10" source="#Geometry-mesh020-normals-array" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-mesh020-Texture" name="Texture">
+                    <float_array id="Geometry-mesh020-Texture-array" count="276">
+                        0.25 0.037037
+                        0.333333 0.037037
+                        0.333333 0.0740741
+                        0.25 0.0740741
+                        0.333333 0.111111
+                        0.25 0.111111
+                        0.333333 0.148148
+                        0.25 0.148148
+                        0.333333 0.185185
+                        0.25 0.185185
+                        0.333333 0.222222
+                        0.25 0.222222
+                        0.333333 0.259259
+                        0.25 0.259259
+                        0.333333 0.296296
+                        0.25 0.296296
+                        0.416667 0.037037
+                        0.416667 0.0740741
+                        0.416667 0.111111
+                        0.416667 0.148148
+                        0.416667 0.185185
+                        0.416667 0.222222
+                        0.416667 0.259259
+                        0.416667 0.296296
+                        0.5 0.037037
+                        0.5 0.0740741
+                        0.5 0.111111
+                        0.5 0.148148
+                        0.5 0.185185
+                        0.5 0.222222
+                        0.5 0.259259
+                        0.5 0.296296
+                        0.722222 0.666667
+                        0.694444 0.666667
+                        0.694444 0.333333
+                        0.722222 0.333333
+                        0.666667 0.666667
+                        0.666667 0.333333
+                        0.638889 0.666667
+                        0.638889 0.333333
+                        0.611111 0.666667
+                        0.611111 0.333333
+                        0.583333 0.666667
+                        0.583333 0.333333
+                        0.555556 0.666667
+                        0.555556 0.333333
+                        0.527778 0.666667
+                        0.527778 0.333333
+                        0.222222 0.666667
+                        0.194444 0.666667
+                        0.194444 0.333333
+                        0.222222 0.333333
+                        0.166667 0.666667
+                        0.166667 0.333333
+                        0.138889 0.666667
+                        0.138889 0.333333
+                        0.111111 0.666667
+                        0.111111 0.333333
+                        0.0833333 0.666667
+                        0.0833333 0.333333
+                        0.0555556 0.666667
+                        0.0555556 0.333333
+                        0.0277778 0.666667
+                        0.0277778 0.333333
+                        0.25 0.962963
+                        0.25 0.925926
+                        0.333333 0.925926
+                        0.333333 0.962963
+                        0.25 0.888889
+                        0.333333 0.888889
+                        0.25 0.851852
+                        0.333333 0.851852
+                        0.25 0.814815
+                        0.333333 0.814815
+                        0.25 0.777778
+                        0.333333 0.777778
+                        0.25 0.740741
+                        0.333333 0.740741
+                        0.25 0.703704
+                        0.333333 0.703704
+                        0.416667 0.888889
+                        0.416667 0.925926
+                        0.416667 0.814815
+                        0.416667 0.851852
+                        0.416667 0.740741
+                        0.416667 0.777778
+                        0.416667 0.962963
+                        0.5 0.925926
+                        0.5 0.962963
+                        0.5 0.888889
+                        0.5 0.851852
+                        0.5 0.814815
+                        0.5 0.777778
+                        0.5 0.740741
+                        0.416667 0.703704
+                        0.5 0.703704
+                        0.25 0
+                        0.333333 0
+                        0.333333 0.333333
+                        0.25 0.333333
+                        0.416667 0
+                        0.416667 0.333333
+                        0.5 0
+                        0.5 0.333333
+                        1 0.666667
+                        0.916667 0.666667
+                        0.916667 0.333333
+                        1 0.333333
+                        0.833333 0.666667
+                        0.833333 0.333333
+                        0.75 0.666667
+                        0.75 0.333333
+                        0.5 0.666667
+                        0.416667 0.666667
+                        0.333333 0.666667
+                        0.25 0.666667
+                        0 0.666667
+                        0 0.333333
+                        0.25 1
+                        0.333333 1
+                        0.416667 1
+                        0.5 1
+                        0.33445 0.927043
+                        0.33445 0.961846
+                        0.41555 0.927043
+                        0.41555 0.961846
+                        0.41555 0.739624
+                        0.41555 0.704821
+                        0.33445 0.739624
+                        0.33445 0.704821
+                        0.33445 0.778895
+                        0.33445 0.813698
+                        0.41555 0.778895
+                        0.41555 0.813698
+                        0.33445 0.852969
+                        0.33445 0.887772
+                        0.41555 0.852969
+                        0.41555 0.887772
+                    </float_array>
+                    <technique_common>
+                        <accessor count="138" source="#Geometry-mesh020-Texture-array" stride="2">
+                            <param name="S" type="float" />
+                            <param name="T" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-mesh020-pc_hs_bg_uv" name="pc_hs_bg_uv">
+                    <float_array id="Geometry-mesh020-pc_hs_bg_uv-array" count="8">
+                        0 0
+                        0 1
+                        1 0
+                        1 1
+                    </float_array>
+                    <technique_common>
+                        <accessor count="4" source="#Geometry-mesh020-pc_hs_bg_uv-array" stride="2">
+                            <param name="S" type="float" />
+                            <param name="T" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-mesh020-pc_name_bg_uv" name="pc_name_bg_uv">
+                    <float_array id="Geometry-mesh020-pc_name_bg_uv-array" count="8">
+                        0 0
+                        0 1
+                        1 0
+                        1 1
+                    </float_array>
+                    <technique_common>
+                        <accessor count="4" source="#Geometry-mesh020-pc_name_bg_uv-array" stride="2">
+                            <param name="S" type="float" />
+                            <param name="T" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-mesh020-pc_stats_bg_uv" name="pc_stats_bg_uv">
+                    <float_array id="Geometry-mesh020-pc_stats_bg_uv-array" count="8">
+                        0 0
+                        0 1
+                        1 0
+                        1 1
+                    </float_array>
+                    <technique_common>
+                        <accessor count="4" source="#Geometry-mesh020-pc_stats_bg_uv-array" stride="2">
+                            <param name="S" type="float" />
+                            <param name="T" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-mesh020-pc_team_strip_uv" name="pc_team_strip_uv">
+                    <float_array id="Geometry-mesh020-pc_team_strip_uv-array" count="8">
+                        0 0
+                        0 1
+                        1 0
+                        1 1
+                    </float_array>
+                    <technique_common>
+                        <accessor count="4" source="#Geometry-mesh020-pc_team_strip_uv-array" stride="2">
+                            <param name="S" type="float" />
+                            <param name="T" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <vertices id="Geometry-mesh020-vertices">
+                    <input semantic="POSITION" source="#Geometry-mesh020-positions" />
+                </vertices>
+                <polylist count="1" material="Material-player_card_hs">
+                    <input semantic="VERTEX" source="#Geometry-mesh020-vertices" offset="0" />
+                    <input semantic="NORMAL" source="#Geometry-mesh020-normals" offset="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-Texture" offset="2" set="0" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_hs_bg_uv" offset="3" set="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_name_bg_uv" offset="4" set="2" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_stats_bg_uv" offset="5" set="3" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_team_strip_uv" offset="6" set="4" />
+                    <vcount>4</vcount>
+                    <p>98 3 135 1 0 0 0 99 3 134 0 0 0 0 107 3 136 2 0 0 0 106 3 137 3 0 0 0</p>
+                </polylist>
+                <polylist count="1" material="Material-player_card_name_bg">
+                    <input semantic="VERTEX" source="#Geometry-mesh020-vertices" offset="0" />
+                    <input semantic="NORMAL" source="#Geometry-mesh020-normals" offset="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-Texture" offset="2" set="0" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_hs_bg_uv" offset="3" set="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_name_bg_uv" offset="4" set="2" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_stats_bg_uv" offset="5" set="3" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_team_strip_uv" offset="6" set="4" />
+                    <vcount>4</vcount>
+                    <p>96 3 123 0 1 0 0 97 3 122 0 0 0 0 105 3 124 0 2 0 0 104 3 125 0 3 0 0</p>
+                </polylist>
+                <polylist count="106" material="Material-Black_High_Gloss_Plastic.lxp">
+                    <input semantic="VERTEX" source="#Geometry-mesh020-vertices" offset="0" />
+                    <input semantic="NORMAL" source="#Geometry-mesh020-normals" offset="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-Texture" offset="2" set="0" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_hs_bg_uv" offset="3" set="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_name_bg_uv" offset="4" set="2" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_stats_bg_uv" offset="5" set="3" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_team_strip_uv" offset="6" set="4" />
+                    <vcount>4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</vcount>
+                    <p>15 0 0 0 0 0 0 16 0 1 0 0 0 0 17 0 2 0 0 0 0 14 0 3 0 0 0 0 14 0 3 0 0 0 0 17 0 2 0 0 0 0 18 0 4 0 0 0 0 13 0 5 0 0 0 0 13 0 5 0 0 0 0 18 0 4 0 0 0 0 19 0 6 0 0 0 0 12 0 7 0 0 0 0 12 0 7 0 0 0 0 19 0 6 0 0 0 0 20 0 8 0 0 0 0 11 0 9 0 0 0 0 11 0 9 0 0 0 0 20 0 8 0 0 0 0 21 0 10 0 0 0 0 10 0 11 0 0 0 0 10 0 11 0 0 0 0 21 0 10 0 0 0 0 22 0 12 0 0 0 0 9 0 13 0 0 0 0 9 0 13 0 0 0 0 22 0 12 0 0 0 0 23 0 14 0 0 0 0 8 0 15 0 0 0 0 16 0 1 0 0 0 0 24 0 16 0 0 0 0 25 0 17 0 0 0 0 17 0 2 0 0 0 0 17 0 2 0 0 0 0 25 0 17 0 0 0 0 26 0 18 0 0 0 0 18 0 4 0 0 0 0 18 0 4 0 0 0 0 26 0 18 0 0 0 0 27 0 19 0 0 0 0 19 0 6 0 0 0 0 19 0 6 0 0 0 0 27 0 19 0 0 0 0 28 0 20 0 0 0 0 20 0 8 0 0 0 0 20 0 8 0 0 0 0 28 0 20 0 0 0 0 29 0 21 0 0 0 0 21 0 10 0 0 0 0 21 0 10 0 0 0 0 29 0 21 0 0 0 0 30 0 22 0 0 0 0 22 0 12 0 0 0 0 22 0 12 0 0 0 0 30 0 22 0 0 0 0 31 0 23 0 0 0 0 23 0 14 0 0 0 0 24 0 16 0 0 0 0 0 0 24 0 0 0 0 1 0 25 0 0 0 0 25 0 17 0 0 0 0 25 0 17 0 0 0 0 1 0 25 0 0 0 0 2 0 26 0 0 0 0 26 0 18 0 0 0 0 26 0 18 0 0 0 0 2 0 26 0 0 0 0 3 0 27 0 0 0 0 27 0 19 0 0 0 0 27 0 19 0 0 0 0 3 0 27 0 0 0 0 4 0 28 0 0 0 0 28 0 20 0 0 0 0 28 0 20 0 0 0 0 4 0 28 0 0 0 0 5 0 29 0 0 0 0 29 0 21 0 0 0 0 29 0 21 0 0 0 0 5 0 29 0 0 0 0 6 0 30 0 0 0 0 30 0 22 0 0 0 0 30 0 22 0 0 0 0 6 0 30 0 0 0 0 7 0 31 0 0 0 0 31 0 23 0 0 0 0 32 1 32 0 0 0 0 33 1 33 0 0 0 0 1 1 34 0 0 0 0 0 1 35 0 0 0 0 33 1 33 0 0 0 0 34 1 36 0 0 0 0 2 1 37 0 0 0 0 1 1 34 0 0 0 0 34 1 36 0 0 0 0 35 1 38 0 0 0 0 3 1 39 0 0 0 0 2 1 37 0 0 0 0 35 1 38 0 0 0 0 36 1 40 0 0 0 0 4 1 41 0 0 0 0 3 1 39 0 0 0 0 36 1 40 0 0 0 0 37 1 42 0 0 0 0 5 1 43 0 0 0 0 4 1 41 0 0 0 0 37 1 42 0 0 0 0 38 1 44 0 0 0 0 6 1 45 0 0 0 0 5 1 43 0 0 0 0 38 1 44 0 0 0 0 39 1 46 0 0 0 0 7 1 47 0 0 0 0 6 1 45 0 0 0 0 40 2 48 0 0 0 0 41 2 49 0 0 0 0 9 2 50 0 0 0 0 8 2 51 0 0 0 0 41 2 49 0 0 0 0 42 2 52 0 0 0 0 10 2 53 0 0 0 0 9 2 50 0 0 0 0 42 2 52 0 0 0 0 43 2 54 0 0 0 0 11 2 55 0 0 0 0 10 2 53 0 0 0 0 43 2 54 0 0 0 0 44 2 56 0 0 0 0 12 2 57 0 0 0 0 11 2 55 0 0 0 0 44 2 56 0 0 0 0 45 2 58 0 0 0 0 13 2 59 0 0 0 0 12 2 57 0 0 0 0 45 2 58 0 0 0 0 46 2 60 0 0 0 0 14 2 61 0 0 0 0 13 2 59 0 0 0 0 46 2 60 0 0 0 0 47 2 62 0 0 0 0 15 2 63 0 0 0 0 14 2 61 0 0 0 0 47 3 64 0 0 0 0 46 3 65 0 0 0 0 49 3 66 0 0 0 0 48 3 67 0 0 0 0 46 3 65 0 0 0 0 45 3 68 0 0 0 0 50 3 69 0 0 0 0 49 3 66 0 0 0 0 45 3 68 0 0 0 0 44 3 70 0 0 0 0 51 3 71 0 0 0 0 50 3 69 0 0 0 0 44 3 70 0 0 0 0 43 3 72 0 0 0 0 52 3 73 0 0 0 0 51 3 71 0 0 0 0 43 3 72 0 0 0 0 42 3 74 0 0 0 0 53 3 75 0 0 0 0 52 3 73 0 0 0 0 42 3 74 0 0 0 0 41 3 76 0 0 0 0 54 3 77 0 0 0 0 53 3 75 0 0 0 0 41 3 76 0 0 0 0 40 3 78 0 0 0 0 55 3 79 0 0 0 0 54 3 77 0 0 0 0 49 3 66 0 0 0 0 50 3 69 0 0 0 0 58 3 80 0 0 0 0 57 3 81 0 0 0 0 51 3 71 0 0 0 0 52 3 73 0 0 0 0 60 3 82 0 0 0 0 59 3 83 0 0 0 0 53 3 75 0 0 0 0 54 3 77 0 0 0 0 62 3 84 0 0 0 0 61 3 85 0 0 0 0 56 3 86 0 0 0 0 57 3 81 0 0 0 0 33 3 87 0 0 0 0 32 3 88 0 0 0 0 57 3 81 0 0 0 0 58 3 80 0 0 0 0 34 3 89 0 0 0 0 33 3 87 0 0 0 0 58 3 80 0 0 0 0 59 3 83 0 0 0 0 35 3 90 0 0 0 0 34 3 89 0 0 0 0 59 3 83 0 0 0 0 60 3 82 0 0 0 0 36 3 91 0 0 0 0 35 3 90 0 0 0 0 60 3 82 0 0 0 0 61 3 85 0 0 0 0 37 3 92 0 0 0 0 36 3 91 0 0 0 0 61 3 85 0 0 0 0 62 3 84 0 0 0 0 38 3 93 0 0 0 0 37 3 92 0 0 0 0 62 3 84 0 0 0 0 63 3 94 0 0 0 0 39 3 95 0 0 0 0 38 3 93 0 0 0 0 64 0 96 0 0 0 0 65 0 97 0 0 0 0 16 0 1 0 0 0 0 15 0 0 0 0 0 0 8 0 15 0 0 0 0 23 0 14 0 0 0 0 73 0 98 0 0 0 0 72 0 99 0 0 0 0 65 0 97 0 0 0 0 69 0 100 0 0 0 0 24 0 16 0 0 0 0 16 0 1 0 0 0 0 23 0 14 0 0 0 0 31 0 23 0 0 0 0 77 0 101 0 0 0 0 73 0 98 0 0 0 0 69 0 100 0 0 0 0 68 0 102 0 0 0 0 0 0 24 0 0 0 0 24 0 16 0 0 0 0 31 0 23 0 0 0 0 7 0 31 0 0 0 0 76 0 103 0 0 0 0 77 0 101 0 0 0 0 66 4 104 0 0 0 0 67 4 105 0 0 0 0 65 4 106 0 0 0 0 64 4 107 0 0 0 0 67 4 105 0 0 0 0 71 4 108 0 0 0 0 69 4 109 0 0 0 0 65 4 106 0 0 0 0 71 4 108 0 0 0 0 70 4 110 0 0 0 0 68 4 111 0 0 0 0 69 4 109 0 0 0 0 70 1 110 0 0 0 0 32 1 32 0 0 0 0 0 1 35 0 0 0 0 68 1 111 0 0 0 0 39 1 46 0 0 0 0 78 1 112 0 0 0 0 76 1 103 0 0 0 0 7 1 47 0 0 0 0 78 5 112 0 0 0 0 79 5 113 0 0 0 0 77 5 101 0 0 0 0 76 5 103 0 0 0 0 79 5 113 0 0 0 0 75 5 114 0 0 0 0 73 5 98 0 0 0 0 77 5 101 0 0 0 0 75 5 114 0 0 0 0 74 5 115 0 0 0 0 72 5 99 0 0 0 0 73 5 98 0 0 0 0 74 2 115 0 0 0 0 40 2 48 0 0 0 0 8 2 51 0 0 0 0 72 2 99 0 0 0 0 47 2 62 0 0 0 0 66 2 116 0 0 0 0 64 2 117 0 0 0 0 15 2 63 0 0 0 0 66 3 118 0 0 0 0 47 3 64 0 0 0 0 48 3 67 0 0 0 0 67 3 119 0 0 0 0 40 3 78 0 0 0 0 74 3 115 0 0 0 0 75 3 114 0 0 0 0 55 3 79 0 0 0 0 67 3 119 0 0 0 0 48 3 67 0 0 0 0 56 3 86 0 0 0 0 71 3 120 0 0 0 0 55 3 79 0 0 0 0 75 3 114 0 0 0 0 79 3 113 0 0 0 0 63 3 94 0 0 0 0 71 3 120 0 0 0 0 56 3 86 0 0 0 0 32 3 88 0 0 0 0 70 3 121 0 0 0 0 63 3 94 0 0 0 0 79 3 113 0 0 0 0 78 3 112 0 0 0 0 39 3 95 0 0 0 0 51 3 71 0 0 0 0 59 3 83 0 0 0 0 91 3 83 0 0 0 0 83 3 71 0 0 0 0 59 3 83 0 0 0 0 58 3 80 0 0 0 0 90 3 80 0 0 0 0 91 3 83 0 0 0 0 58 3 80 0 0 0 0 50 3 69 0 0 0 0 82 3 69 0 0 0 0 90 3 80 0 0 0 0 50 3 69 0 0 0 0 51 3 71 0 0 0 0 83 3 71 0 0 0 0 82 3 69 0 0 0 0 48 3 67 0 0 0 0 49 3 66 0 0 0 0 81 3 66 0 0 0 0 80 3 67 0 0 0 0 49 3 66 0 0 0 0 57 3 81 0 0 0 0 89 3 81 0 0 0 0 81 3 66 0 0 0 0 57 3 81 0 0 0 0 56 3 86 0 0 0 0 88 3 86 0 0 0 0 89 3 81 0 0 0 0 56 3 86 0 0 0 0 48 3 67 0 0 0 0 80 3 67 0 0 0 0 88 3 86 0 0 0 0 54 3 77 0 0 0 0 55 3 79 0 0 0 0 87 3 79 0 0 0 0 86 3 77 0 0 0 0 55 3 79 0 0 0 0 63 3 94 0 0 0 0 95 3 94 0 0 0 0 87 3 79 0 0 0 0 63 3 94 0 0 0 0 62 3 84 0 0 0 0 94 3 84 0 0 0 0 95 3 94 0 0 0 0 62 3 84 0 0 0 0 54 3 77 0 0 0 0 86 3 77 0 0 0 0 94 3 84 0 0 0 0 61 3 85 0 0 0 0 60 3 82 0 0 0 0 92 3 82 0 0 0 0 93 3 85 0 0 0 0 60 3 82 0 0 0 0 52 3 73 0 0 0 0 84 3 73 0 0 0 0 92 3 82 0 0 0 0 52 3 73 0 0 0 0 53 3 75 0 0 0 0 85 3 75 0 0 0 0 84 3 73 0 0 0 0 53 3 75 0 0 0 0 61 3 85 0 0 0 0 93 3 85 0 0 0 0 85 3 75 0 0 0 0 80 6 67 0 0 0 0 81 6 66 0 0 0 0 97 6 122 0 0 0 0 96 6 123 0 0 0 0 81 7 66 0 0 0 0 89 7 81 0 0 0 0 105 7 124 0 0 0 0 97 7 122 0 0 0 0 89 8 81 0 0 0 0 88 8 86 0 0 0 0 104 8 125 0 0 0 0 105 8 124 0 0 0 0 88 9 86 0 0 0 0 80 9 67 0 0 0 0 96 9 123 0 0 0 0 104 9 125 0 0 0 0 95 8 94 0 0 0 0 94 8 84 0 0 0 0 110 8 126 0 0 0 0 111 8 127 0 0 0 0 94 9 84 0 0 0 0 86 9 77 0 0 0 0 102 9 128 0 0 0 0 110 9 126 0 0 0 0 86 6 77 0 0 0 0 87 6 79 0 0 0 0 103 6 129 0 0 0 0 102 6 128 0 0 0 0 87 7 79 0 0 0 0 95 7 94 0 0 0 0 111 7 127 0 0 0 0 103 7 129 0 0 0 0 84 6 73 0 0 0 0 85 6 75 0 0 0 0 101 6 130 0 0 0 0 100 6 131 0 0 0 0 85 7 75 0 0 0 0 93 7 85 0 0 0 0 109 7 132 0 0 0 0 101 7 130 0 0 0 0 93 8 85 0 0 0 0 92 8 82 0 0 0 0 108 8 133 0 0 0 0 109 8 132 0 0 0 0 92 9 82 0 0 0 0 84 9 73 0 0 0 0 100 9 131 0 0 0 0 108 9 133 0 0 0 0 82 6 69 0 0 0 0 83 6 71 0 0 0 0 99 6 134 0 0 0 0 98 6 135 0 0 0 0 83 7 71 0 0 0 0 91 7 83 0 0 0 0 107 7 136 0 0 0 0 99 7 134 0 0 0 0 91 8 83 0 0 0 0 90 8 80 0 0 0 0 106 8 137 0 0 0 0 107 8 136 0 0 0 0 90 9 80 0 0 0 0 82 9 69 0 0 0 0 98 9 135 0 0 0 0 106 9 137 0 0 0 0</p>
+                </polylist>
+                <polylist count="1" material="Material-player_card_team_strip">
+                    <input semantic="VERTEX" source="#Geometry-mesh020-vertices" offset="0" />
+                    <input semantic="NORMAL" source="#Geometry-mesh020-normals" offset="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-Texture" offset="2" set="0" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_hs_bg_uv" offset="3" set="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_name_bg_uv" offset="4" set="2" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_stats_bg_uv" offset="5" set="3" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_team_strip_uv" offset="6" set="4" />
+                    <vcount>4</vcount>
+                    <p>100 3 131 0 0 0 1 101 3 130 1 0 0 0 109 3 132 3 0 0 2 108 3 133 2 0 0 3</p>
+                </polylist>
+                <polylist count="1" material="Material-player_card_stats_bg">
+                    <input semantic="VERTEX" source="#Geometry-mesh020-vertices" offset="0" />
+                    <input semantic="NORMAL" source="#Geometry-mesh020-normals" offset="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-Texture" offset="2" set="0" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_hs_bg_uv" offset="3" set="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_name_bg_uv" offset="4" set="2" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_stats_bg_uv" offset="5" set="3" />
+                    <input semantic="TEXCOORD" source="#Geometry-mesh020-pc_team_strip_uv" offset="6" set="4" />
+                    <vcount>4</vcount>
+                    <p>102 3 128 0 0 1 0 103 3 129 0 0 0 0 111 3 127 0 0 2 0 110 3 126 0 0 3 0</p>
+                </polylist>
+                <extra>
+                    <technique profile="modo401">
+                        <param sid="render" name="Render" type="Name">default</param>
+                        <param sid="dissolve" name="Dissolve" type="float">0</param>
+                        <param sid="curves" name="Render_Curves" type="bool">false</param>
+                        <param sid="radius" name="Curve_Radius" type="float">0.05</param>
+                    </technique>
+                </extra>
+            </mesh>
+        </geometry>
+    </library_geometries>
+    <library_lights>
+        <light id="Light-polyRender005" name="Render">
+            <technique_common>
+                <ambient>
+                    <color sid="ambient_light_rgb">0 0 0</color>
+                </ambient>
+            </technique_common>
+        </light>
+        <light id="Light-sunLight011" name="Directional_Light">
+            <technique_common>
+                <directional>
+                    <color sid="directional_light_rgb">1 1 1</color>
+                </directional>
+            </technique_common>
+            <extra>
+                <technique profile="modo401">
+                    <param sid="lightType" name="Light_Type" type="Name">sun_light</param>
+                    <param sid="render" name="Render" type="Name">default</param>
+                    <param sid="visible" name="Display_Visible" type="Name">default</param>
+                    <param sid="size" name="Display_Size" type="float">1</param>
+                    <param sid="dissolve" name="Dissolve" type="float">0</param>
+                    <param sid="radiance" name="Radiant_Intensity" type="float">3</param>
+                    <param sid="samples" name="Samples" type="int">64</param>
+                    <param sid="shadType" name="Shadow_Type" type="Name">raytrace</param>
+                    <param sid="shadRes" name="Shadow_Resolution" type="int">1024</param>
+                    <param sid="fast" name="Simple_Shading" type="bool">true</param>
+                    <param sid="azimuth" name="Azimuth" type="float">0</param>
+                    <param sid="clamp" name="Clamp_Intensity" type="bool">true</param>
+                    <param sid="day" name="Day" type="int">2012173</param>
+                    <param sid="elevation" name="Elevation" type="float">0</param>
+                    <param sid="haze" name="Haze" type="float">2</param>
+                    <param sid="height" name="Height" type="float">10</param>
+                    <param sid="lat" name="Latitude" type="float">0.655057</param>
+                    <param sid="lon" name="Longitude" type="float">-2.13456</param>
+                    <param sid="mapSize" name="Map_Size" type="float">2</param>
+                    <param sid="north" name="North" type="float">0</param>
+                    <param sid="radius" name="Radius" type="float">0.5</param>
+                    <param sid="spread" name="Spread" type="float">0</param>
+                    <param sid="sunPos" name="Sun_Position" type="bool">false</param>
+                    <param sid="time" name="Time" type="float">12</param>
+                    <param sid="timeZone" name="Time_Zone" type="float">-8</param>
+                    <param sid="volumetrics" name="Volumetrics" type="bool">false</param>
+                    <param sid="vdissolve" name="Volumetrics_Dissolve" type="float">0</param>
+                    <param sid="vsamples" name="Volumetric_Samples" type="int">40</param>
+                </technique>
+            </extra>
+        </light>
+    </library_lights>
+    <library_nodes id="shader_tree" name="Shader_Tree">
+        <node sid="shader_tree_render" name="Render">
+            <extra>
+                <technique profile="modo401">
+                    <param sid="first" name="Frame_Range_First" type="int">1</param>
+                    <param sid="last" name="Frame_Range_Last" type="int">188</param>
+                    <param sid="dpi" name="Frame_DPI" type="float">300</param>
+                    <param sid="resUnit" name="Resolution_Unit" type="Name">pixels</param>
+                    <param sid="pAspect" name="Frame_Pixel_Aspect_Ratio" type="float">1</param>
+                    <param sid="bucketX" name="Bucket_Width" type="int">32</param>
+                    <param sid="bucketY" name="Bucket_Height" type="int">32</param>
+                    <param sid="bktOrder" name="Bucket_Order" type="Name">hilbert</param>
+                    <param sid="bktSkip" name="Skip_Existing_Buckets" type="bool">false</param>
+                    <param sid="region" name="Render_Region" type="bool">false</param>
+                    <param sid="regX0" name="Render_Region_Left" type="float">0</param>
+                    <param sid="regX1" name="Render_Region_Right" type="float">1</param>
+                    <param sid="regY0" name="Render_Region_Top" type="float">0</param>
+                    <param sid="regY1" name="Render_Region_Bottom" type="float">1</param>
+                    <param sid="aa" name="Render_Antialiasing" type="Name">s8</param>
+                    <param sid="aaFilter" name="Render_Antialiasing_Filter" type="Name">gaussian</param>
+                    <param sid="fineRate" name="Refinement_Shading_Rate" type="float">0.25</param>
+                    <param sid="fineThresh" name="Refinement_Threshold" type="float">0.1</param>
+                    <param sid="bktRefine" name="Refine_Bucket_Borders" type="bool">false</param>
+                    <param sid="rayShadow" name="Ray_Tracing_Shadows" type="bool">true</param>
+                    <param sid="reflDepth" name="Reflection_Depth" type="int">8</param>
+                    <param sid="refrDepth" name="Refraction_Depth" type="int">8</param>
+                    <param sid="rayThresh" name="Ray_Threshold" type="float">0.001</param>
+                    <param sid="subdAdapt" name="Adaptive_Subdivision" type="bool">false</param>
+                    <param sid="subdRate" name="Subdivision_Rate" type="float">10</param>
+                    <param sid="dispEnable" name="Micropoly_Displacement" type="bool">true</param>
+                    <param sid="dispRate" name="Displacement_Rate" type="float">1</param>
+                    <param sid="dispRatio" name="Displacement_Ratio" type="float">4</param>
+                    <param sid="edgeMin" name="Minimum_Edge_Length" type="float">0.0001</param>
+                    <param sid="dispSmooth" name="Smooth_Positions" type="bool">true</param>
+                    <param sid="ambRad" name="Ambient_Intensity" type="float">0</param>
+                    <param sid="ambColor" name="Ambient_Color" type="color">1 1 1</param>
+                    <param sid="globEnable" name="Enable_Indirect_Illumination" type="bool">true</param>
+                    <param sid="globScope" name="Indirect_Illumination_Scope" type="Name">all</param>
+                    <param sid="globRays" name="Indirect_Rays" type="int">64</param>
+                    <param sid="globLimit" name="Indirect_Bounces" type="int">1</param>
+                    <param sid="globRange" name="Indirect_Range" type="float">0</param>
+                    <param sid="globSubs" name="Subsurface_Scattering" type="int">0</param>
+                    <param sid="globVols" name="Volumetrics_Affect_Indirect" type="bool">false</param>
+                    <param sid="irrCache" name="Enable_Irradiance_Caching" type="bool">true</param>
+                    <param sid="irrRays" name="Irradiance_Rays" type="int">256</param>
+                    <param sid="globSuper" name="Indirect_Supersampling" type="bool">true</param>
+                    <param sid="irrRate" name="Irradiance_Rate" type="float">2.5</param>
+                    <param sid="irrRatio" name="Irradiance_Ratio" type="float">6</param>
+                    <param sid="irrVals" name="Interpolation_Values" type="int">1</param>
+                    <param sid="irrGrads" name="Irradiance_Gradients" type="Name">both</param>
+                    <param sid="irrWalk" name="Walkthrough_Mode" type="bool">false</param>
+                    <param sid="irrLEnable" name="Load_Irradiance_before_Render" type="bool">false</param>
+                    <param sid="irrLName" name="Load_Irradiance_File" type="Name"></param>
+                    <param sid="irrSEnable" name="Save_Irradiance_after_Render" type="bool">false</param>
+                    <param sid="irrSName" name="Save_Irradiance_File" type="Name"></param>
+                    <param sid="causEnable" name="Enable_Direct_Caustics" type="bool">false</param>
+                    <param sid="causTotal" name="Caustics_Total_Photons" type="int">100000</param>
+                    <param sid="causLocal" name="Caustics_Local_Photons" type="int">32</param>
+                    <param sid="globCaus" name="Indirect_Caustics" type="Name">refraction</param>
+                </technique>
+            </extra>
+        </node>
+        <node sid="shader_tree_environment" name="Environment">
+            <extra>
+                <technique profile="modo401">
+                    <param sid="radiance" name="Environment_Intensity" type="float">1</param>
+                    <param sid="visCam" name="Environment_Visible_to_Camera" type="bool">true</param>
+                    <param sid="visInd" name="Environment_Visible_to_Indirect_Rays" type="bool">true</param>
+                    <param sid="visRefl" name="Environment_Visible_to_Reflection_Rays" type="bool">true</param>
+                    <param sid="visRefr" name="Environment_Visible_to_Refraction_Rays" type="bool">true</param>
+                </technique>
+            </extra>
+        </node>
+    </library_nodes>
+    <library_visual_scenes>
+        <visual_scene id="DefaultScene">
+            <node id="polyRender005" name="Render" type="NODE">
+                <instance_light url="#Light-polyRender005" />
+            </node>
+            <node id="Geometry-mesh020Node" name="player_card_mesh" type="NODE">
+                <instance_geometry url="#Geometry-mesh020">
+                    <bind_material>
+                        <technique_common>
+                            <instance_material symbol="Material-Black_High_Gloss_Plastic.lxp" target="#Material-Black_High_Gloss_Plastic.lxp" />
+                            <instance_material symbol="Material-player_card_hs" target="#Material-player_card_hs">
+                                <bind_vertex_input semantic="pc_hs_bg_uv" input_semantic="TEXCOORD" input_set="1" />
+                            </instance_material>
+                            <instance_material symbol="Material-player_card_name_bg" target="#Material-player_card_name_bg">
+                                <bind_vertex_input semantic="pc_name_bg_uv" input_semantic="TEXCOORD" input_set="2" />
+                            </instance_material>
+                            <instance_material symbol="Material-player_card_stats_bg" target="#Material-player_card_stats_bg">
+                                <bind_vertex_input semantic="pc_stats_bg_uv" input_semantic="TEXCOORD" input_set="3" />
+                            </instance_material>
+                            <instance_material symbol="Material-player_card_team_strip" target="#Material-player_card_team_strip">
+                                <bind_vertex_input semantic="pc_team_strip_uv" input_semantic="TEXCOORD" input_set="4" />
+                            </instance_material>
+                        </technique_common>
+                    </bind_material>
+                </instance_geometry>
+            </node>
+            <node id="Camera-camera002Node" name="Camera" type="NODE">
+                <translate sid="translation003">275.544 483.903 696.885</translate>
+                <rotate sid="rotation004Y">0 1 0 24.0642</rotate>
+                <rotate sid="rotation004X">1 0 0 -36.7992</rotate>
+                <rotate sid="rotation004Z">0 0 1 0</rotate>
+                <instance_camera url="#Camera-camera002" />
+            </node>
+            <node id="groupLocator435Node" name="Texture_Group" type="NODE">
+                <node id="txtrLocator068Node" name="nfl.p.7755__Image___2___Texture_" type="NODE">
+                    <translate sid="translation071">0 0 -12</translate>
+                    <rotate sid="rotation070Y">0 1 0 0</rotate>
+                    <rotate sid="rotation070X">1 0 0 0</rotate>
+                    <rotate sid="rotation070Z">0 0 1 0</rotate>
+                    <scale sid="scale069">380 1 -290</scale>
+                </node>
+                <node id="txtrLocator043Node" name="pc_hs_bg__Image___Texture_" type="NODE">
+                    <translate sid="translation046">0 0 -12</translate>
+                    <rotate sid="rotation045Y">0 1 0 0</rotate>
+                    <rotate sid="rotation045X">1 0 0 0</rotate>
+                    <rotate sid="rotation045Z">0 0 1 0</rotate>
+                    <scale sid="scale044">380 1 -290</scale>
+                </node>
+                <node id="txtrLocator038Node" name="pc_stats_bg__Image___Texture_" type="NODE">
+                    <translate sid="translation041">0 0 0</translate>
+                    <rotate sid="rotation040Y">0 1 0 0</rotate>
+                    <rotate sid="rotation040X">1 0 0 0</rotate>
+                    <rotate sid="rotation040Z">0 0 1 0</rotate>
+                    <scale sid="scale039">290 1 -80</scale>
+                </node>
+                <node id="txtrLocator033Node" name="pc_name_bg__Image___Texture_" type="NODE">
+                    <translate sid="translation036">0 0 0</translate>
+                    <rotate sid="rotation035Y">0 1 0 0</rotate>
+                    <rotate sid="rotation035X">1 0 0 0</rotate>
+                    <rotate sid="rotation035Z">0 0 1 0</rotate>
+                    <scale sid="scale034">1 1 1</scale>
+                </node>
+                <node id="txtrLocator008Node" name="nfl_t_34_strip__Image___Texture_" type="NODE">
+                    <translate sid="translation011">0 0 0</translate>
+                    <rotate sid="rotation010Y">0 1 0 0</rotate>
+                    <rotate sid="rotation010X">1 0 0 0</rotate>
+                    <rotate sid="rotation010Z">0 0 1 0</rotate>
+                    <scale sid="scale009">400 1 -40</scale>
+                </node>
+            </node>
+            <node id="Light-sunLight011Node" name="Directional_Light" type="NODE">
+                <translate sid="translation013">-2 2 2</translate>
+                <rotate sid="rotation014Y">0 1 0 -45</rotate>
+                <rotate sid="rotation014X">1 0 0 -30</rotate>
+                <rotate sid="rotation014Z">0 0 1 0</rotate>
+                <instance_light url="#Light-sunLight011" />
+            </node>
+            <extra>
+                <technique profile="modo401">
+                    <param sid="fps" name="Scene_FPS" type="float">30</param>
+                    <param sid="sceneS" name="Scene_Start_Time" type="float">0</param>
+                    <param sid="sceneE" name="Scene_End_Time" type="float">6.25</param>
+                    <param sid="currentS" name="Scene_Current_Start_Time" type="float">0</param>
+                    <param sid="currentE" name="Scene_Current_End_Time" type="float">6.25</param>
+                    <param sid="timeSys" name="Scene_Time_System" type="Name">frames</param>
+                </technique>
+            </extra>
+            <extra>
+                <technique profile="MAX3D">
+                    <frame_rate>30</frame_rate>
+                </technique>
+            </extra>
+            <extra>
+                <technique profile="MAYA">
+                    <start_time>0</start_time>
+                    <end_time>6.25</end_time>
+                </technique>
+            </extra>
+            <extra>
+                <technique profile="OKINO" />
+            </extra>
+            <extra>
+                <technique profile="XSI">
+                    <SI_Scene>
+                        <frame_rate>30</frame_rate>
+                    </SI_Scene>
+                </technique>
+            </extra>
+        </visual_scene>
+    </library_visual_scenes>
+    <scene>
+        <instance_visual_scene url="#DefaultScene" />
+    </scene>
+</COLLADA>

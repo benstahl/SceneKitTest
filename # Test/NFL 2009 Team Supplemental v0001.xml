@@ -1,0 +1,497 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Ben Stahl</Author>
+  <LastAuthor>Ben Stahl</LastAuthor>
+  <Created>2014-02-18T21:45:19Z</Created>
+  <LastSaved>2014-02-19T01:37:22Z</LastSaved>
+  <Company>App Easel</Company>
+  <Version>14.0</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>13720</WindowHeight>
+  <WindowWidth>28780</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Names>
+   <NamedRange ss:Name="FFL_2009_Week_05_Team_Database"
+    ss:RefersTo="=Sheet1!R1C1:R33C5"/>
+  </Names>
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="33" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="50"/>
+   <Column ss:AutoFitWidth="0" ss:Width="94"/>
+   <Column ss:AutoFitWidth="0" ss:Width="106"/>
+   <Column ss:AutoFitWidth="0" ss:Width="120" ss:Span="1"/>
+   <Row>
+    <Cell><Data ss:Type="String">ID</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">TEAM_CODE</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">COLOR_PRIMARY</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">COLOR_SECONDARY</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">COLOR_BG_TINT</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.19</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">NYG</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#192F6B</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#CA001A</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#192F6B</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.23</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">PIT</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#F2C800</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FFFFFF</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#F2C800</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.33</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">BAL</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#280353</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#D0B240</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#280353</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.10</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">TEN</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#648FCC</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#000080</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#648FCC</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.21</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">PHI</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#003B48</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#708090</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#003B48</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.16</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">MIN</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#4F2682</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FFC52F</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#4F2682</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.6</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">DAL</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#002244</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#8C8B8A</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#002244</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.3</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">CHI</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#03202F</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#DD4814</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#03202F</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.15</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">MIA</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#008D97</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#015679</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#008D97</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.20</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">NYJ</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#0C371D</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FFFFFF</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#0C371D</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.17</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">NE</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#0D254C</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#D6D6D6</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#0D254C</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.24</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">SD</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#EEC607</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#5B92E5</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#EEC607</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.29</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">CAR</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#0088CE</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#A5ACAF</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#0088CE</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.27</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">TAM</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#B20032</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#89765F</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#B20032</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.9</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">GB</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#213D30</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FFCC00</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#213D30</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.25</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">SF</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#AF1E2C</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#E6BE8A</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#AF1E2C</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.18</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">NO</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#D2B887</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FFFFFF</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#D2B887</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.11</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">IND</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#003B7B</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FFFFFF</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#003B7B</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.7</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">DEN</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FB4F14</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#002244</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FB4F14</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.22</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">ARI</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#870619</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FFFFFF</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#870619</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.4</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">CIN</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FB4F14</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FFFFFF</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FB4F14</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.26</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">SEA</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#06192E</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#4EAE47</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#06192E</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.1</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">ATL</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#BD0D18</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#DCE0E5</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#BD0D18</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.2</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">BUF</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#00338D</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#C60C30</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#00338D</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.13</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">OAK</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#C4C8CB</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FFFFFF</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#C4C8CB</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.28</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">WAS</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#773141</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FFB612</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#773141</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.30</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">JAC</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#007198</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#D0B239</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#007198</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.5</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">CLE</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#E34912</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#26201E</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#E34912</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.34</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">HOU</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#02253A</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#B31B34</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#02253A</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.12</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">KC</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#B20032</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#FFFFFF</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#B20032</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.8</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">DET</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#006DB0</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#C5C7CF</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#006DB0</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">nfl.t.14</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">STL</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#13264B</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#C9AF74</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+    <Cell><Data ss:Type="String">#13264B</Data><NamedCell
+      ss:Name="FFL_2009_Week_05_Team_Database"/></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>-4</HorizontalResolution>
+    <VerticalResolution>-4</VerticalResolution>
+   </Print>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>32</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <QueryTable xmlns="urn:schemas-microsoft-com:office:excel">
+   <Name>FFL 2009 Week 05 Team Database</Name>
+   <AutoFormatName>Simple</AutoFormatName>
+   <AutoFormatFont/>
+   <AutoFormatPattern/>
+   <QuerySource>
+    <QueryType>Text</QueryType>
+    <TextWizardSettings>
+     <Name
+      x:HRef="Scooby:Users:bstahl:Documents:Clients:Self:Sports Display Test:FFL 2009 Week 05 Team Database.txt"/>
+     <Source>Mac</Source>
+     <Decimal>.</Decimal>
+     <ThousandSeparator>,</ThousandSeparator>
+     <FormatSettings>
+      <FieldType>AutoFormat</FieldType>
+      <FieldType>AutoFormat</FieldType>
+      <FieldType>AutoFormat</FieldType>
+      <FieldType>AutoFormat</FieldType>
+      <FieldType>AutoFormat</FieldType>
+      <FieldType>AutoFormat</FieldType>
+      <FieldType>AutoFormat</FieldType>
+      <FieldType>AutoFormat</FieldType>
+      <FieldType>AutoFormat</FieldType>
+      <FieldType>AutoFormat</FieldType>
+      <FieldType>AutoFormat</FieldType>
+      <FieldType>AutoFormat</FieldType>
+      <FieldType>AutoFormat</FieldType>
+     </FormatSettings>
+     <Delimiters>
+      <Comma/>
+     </Delimiters>
+    </TextWizardSettings>
+   </QuerySource>
+  </QueryTable>
+ </Worksheet>
+</Workbook>
