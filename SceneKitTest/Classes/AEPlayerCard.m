@@ -34,6 +34,7 @@
 		headshotBackgroundMat.diffuse.contents = [NSImage imageNamed:@"pc_hs_bg"];
 		headshotBackgroundMat.reflective.contents = reflectionImg;
 		headshotBackgroundMat.shininess = 0.3;
+//		headshotBackgroundMat.lightingModelName = SCNLightingModelBlinn;
 		_headshotBackgroundNode.geometry.firstMaterial = headshotBackgroundMat;
 
 		// Headshot geometry
