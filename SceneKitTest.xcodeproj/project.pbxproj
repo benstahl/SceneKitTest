@@ -50,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		692DB1C618B84F060047674B /* AEGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEGeometry.h; sourceTree = "<group>"; };
 		699F21B218B551CC006F527B /* ffl_2009_players.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ffl_2009_players.csv; path = Resources/Data/ffl_2009_players.csv; sourceTree = "<group>"; };
 		699F21B318B551CC006F527B /* ffl_2009_teams.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ffl_2009_teams.csv; path = Resources/Data/ffl_2009_teams.csv; sourceTree = "<group>"; };
 		699F21B818B5CCC1006F527B /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
@@ -258,6 +259,7 @@
 		69EAF46A18B4D0E100515D17 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				692DB1C618B84F060047674B /* AEGeometry.h */,
 				699F21BC18B5DF2F006F527B /* AEAppDelegate.h */,
 				699F21BD18B5DF2F006F527B /* AEAppDelegate.m */,
 				699F21BE18B5DF2F006F527B /* AEPlayer.h */,

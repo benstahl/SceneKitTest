@@ -23,7 +23,9 @@
 	NSMutableArray *_playerKeys;
 	NSMutableArray *_teamKeys;
 	NSArray *_playerIDPool;
-	NSMutableArray *_playerCards;
+	NSMutableArray *_displayedCards;
+	SCNNode *_displayedCardsNode;
+	NSUInteger _displayedCardCount;
 //	AEPlayerCard *_playerCard;
 }
 
