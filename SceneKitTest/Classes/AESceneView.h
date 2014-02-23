@@ -15,7 +15,10 @@
 @class AETeam;
 
 @interface AESceneView : SCNView <CHCSVParserDelegate> {
+	SCNNode *_worldPivotNode;
 	SCNNode *_cameraNode;
+	SCNNode *_displayedCardsNode;
+	SCNNode *_sponsorLogoNode;
 	CHCSVParser *_playerParser;
 	CHCSVParser *_teamParser;
 	NSUInteger _currentParserLine;
@@ -25,9 +28,9 @@
 	NSMutableArray *_teamKeys;
 	NSArray *_playerIDPool;
 	NSMutableArray *_displayedCards;
-	SCNNode *_displayedCardsNode;
 	NSUInteger _displayedCardCount;
 	NSDictionary *_cameraPositions;
+	NSDictionary *_sponsorLogoPositions;
 //	AEPlayerCard *_playerCard;
 }
 

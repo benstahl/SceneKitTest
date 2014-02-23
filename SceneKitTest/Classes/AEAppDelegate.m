@@ -16,6 +16,7 @@
 }
 
 - (void)awakeFromNib {
+	self.window.backgroundColor = [NSColor blackColor];
 //	_infoView.layer = [CALayer layer];
 //    _infoView.wantsLayer = YES;
 //

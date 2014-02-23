@@ -12,7 +12,7 @@
 @interface AEAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSView *infoView;
+@property (assign) IBOutlet NSView *menuView;
 @property (assign) IBOutlet SCNView *sceneView;
 
 @end

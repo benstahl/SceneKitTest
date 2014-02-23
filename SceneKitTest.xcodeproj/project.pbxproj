@@ -19,6 +19,10 @@
 		699F21CF18B69FA7006F527B /* ffl_2009_teams_supplemental.csv in Resources */ = {isa = PBXBuildFile; fileRef = 699F21CE18B69FA7006F527B /* ffl_2009_teams_supplemental.csv */; };
 		699F21D118B6DED4006F527B /* PC Team Logos in Resources */ = {isa = PBXBuildFile; fileRef = 699F21D018B6DED4006F527B /* PC Team Logos */; };
 		699F21D318B6FC6E006F527B /* PC Headshots in Resources */ = {isa = PBXBuildFile; fileRef = 699F21D218B6FC6E006F527B /* PC Headshots */; };
+		69BFE8FB18B95CF700DE5164 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 69BFE8F918B95CF700DE5164 /* Images */; };
+		69BFE8FC18B95CF700DE5164 /* Movies in Resources */ = {isa = PBXBuildFile; fileRef = 69BFE8FA18B95CF700DE5164 /* Movies */; };
+		69D3C29D18B97F5D00A0641F /* AEButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D3C29C18B97F5D00A0641F /* AEButton.m */; };
+		69D3C2A018B9D21500A0641F /* AEMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D3C29F18B9D21500A0641F /* AEMenuView.m */; };
 		69DB538118AA26D40083754B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DB538018AA26D40083754B /* Cocoa.framework */; };
 		69DB538B18AA26D40083754B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69DB538918AA26D40083754B /* InfoPlist.strings */; };
 		69DB538D18AA26D40083754B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DB538C18AA26D40083754B /* main.m */; };
@@ -31,12 +35,6 @@
 		69DB53AB18AA26D50083754B /* SceneKitTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DB53AA18AA26D50083754B /* SceneKitTestTests.m */; };
 		69DB53B518AA26FF0083754B /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DB53B418AA26FF0083754B /* SceneKit.framework */; };
 		69DB53B718AA27060083754B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DB53B618AA27060083754B /* QuartzCore.framework */; };
-		69EAF45C18B4A61700515D17 /* pc_base.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EAF45818B4A61700515D17 /* pc_base.png */; };
-		69EAF45D18B4A61700515D17 /* pc_color_stripe_primary.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EAF45918B4A61700515D17 /* pc_color_stripe_primary.png */; };
-		69EAF45E18B4A61700515D17 /* pc_color_stripe_secondary.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EAF45A18B4A61700515D17 /* pc_color_stripe_secondary.png */; };
-		69EAF45F18B4A61700515D17 /* pc_hs_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EAF45B18B4A61700515D17 /* pc_hs_bg.png */; };
-		69EAF46718B4B47800515D17 /* reflection.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EAF46618B4B47800515D17 /* reflection.png */; };
-		69EAF46918B4B7CD00515D17 /* pc_hs_bg_trans.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EAF46818B4B7CD00515D17 /* pc_hs_bg_trans.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +68,12 @@
 		699F21CE18B69FA7006F527B /* ffl_2009_teams_supplemental.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ffl_2009_teams_supplemental.csv; path = Resources/Data/ffl_2009_teams_supplemental.csv; sourceTree = "<group>"; };
 		699F21D018B6DED4006F527B /* PC Team Logos */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "PC Team Logos"; path = "Resources/PC Team Logos"; sourceTree = "<group>"; };
 		699F21D218B6FC6E006F527B /* PC Headshots */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "PC Headshots"; path = "Resources/PC Headshots"; sourceTree = "<group>"; };
+		69BFE8F918B95CF700DE5164 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = Resources/Images; sourceTree = "<group>"; };
+		69BFE8FA18B95CF700DE5164 /* Movies */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Movies; path = Resources/Movies; sourceTree = "<group>"; };
+		69D3C29B18B97F5D00A0641F /* AEButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEButton.h; path = Classes/AEButton.h; sourceTree = "<group>"; };
+		69D3C29C18B97F5D00A0641F /* AEButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEButton.m; path = Classes/AEButton.m; sourceTree = "<group>"; };
+		69D3C29E18B9D21500A0641F /* AEMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEMenuView.h; path = Classes/AEMenuView.h; sourceTree = "<group>"; };
+		69D3C29F18B9D21500A0641F /* AEMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEMenuView.m; path = Classes/AEMenuView.m; sourceTree = "<group>"; };
 		69DB537D18AA26D40083754B /* SceneKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69DB538018AA26D40083754B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		69DB538318AA26D40083754B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -89,12 +93,6 @@
 		69DB53AA18AA26D50083754B /* SceneKitTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneKitTestTests.m; sourceTree = "<group>"; };
 		69DB53B418AA26FF0083754B /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		69DB53B618AA27060083754B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		69EAF45818B4A61700515D17 /* pc_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pc_base.png; path = Resources/Images/pc_base.png; sourceTree = "<group>"; };
-		69EAF45918B4A61700515D17 /* pc_color_stripe_primary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pc_color_stripe_primary.png; path = Resources/Images/pc_color_stripe_primary.png; sourceTree = "<group>"; };
-		69EAF45A18B4A61700515D17 /* pc_color_stripe_secondary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pc_color_stripe_secondary.png; path = Resources/Images/pc_color_stripe_secondary.png; sourceTree = "<group>"; };
-		69EAF45B18B4A61700515D17 /* pc_hs_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pc_hs_bg.png; path = Resources/Images/pc_hs_bg.png; sourceTree = "<group>"; };
-		69EAF46618B4B47800515D17 /* reflection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reflection.png; path = Resources/Images/reflection.png; sourceTree = "<group>"; };
-		69EAF46818B4B7CD00515D17 /* pc_hs_bg_trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pc_hs_bg_trans.png; path = Resources/Images/pc_hs_bg_trans.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,10 +223,11 @@
 		69EAF44718B45C5800515D17 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				69BFE8F918B95CF700DE5164 /* Images */,
+				69BFE8FA18B95CF700DE5164 /* Movies */,
 				699F21D218B6FC6E006F527B /* PC Headshots */,
 				699F21D018B6DED4006F527B /* PC Team Logos */,
 				69EAF44A18B45CF300515D17 /* Data */,
-				69EAF44B18B467AB00515D17 /* Images */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -241,19 +240,6 @@
 				699F21B318B551CC006F527B /* ffl_2009_teams.csv */,
 			);
 			name = Data;
-			sourceTree = "<group>";
-		};
-		69EAF44B18B467AB00515D17 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				69EAF46818B4B7CD00515D17 /* pc_hs_bg_trans.png */,
-				69EAF46618B4B47800515D17 /* reflection.png */,
-				69EAF45818B4A61700515D17 /* pc_base.png */,
-				69EAF45918B4A61700515D17 /* pc_color_stripe_primary.png */,
-				69EAF45A18B4A61700515D17 /* pc_color_stripe_secondary.png */,
-				69EAF45B18B4A61700515D17 /* pc_hs_bg.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 		69EAF46A18B4D0E100515D17 /* Classes */ = {
@@ -272,6 +258,10 @@
 				699F21C318B5DF2F006F527B /* AESceneView.m */,
 				699F21C418B5DF2F006F527B /* AEUtility.h */,
 				699F21C518B5DF2F006F527B /* AEUtility.m */,
+				69D3C29B18B97F5D00A0641F /* AEButton.h */,
+				69D3C29C18B97F5D00A0641F /* AEButton.m */,
+				69D3C29E18B9D21500A0641F /* AEMenuView.h */,
+				69D3C29F18B9D21500A0641F /* AEMenuView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -353,18 +343,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69BFE8FC18B95CF700DE5164 /* Movies in Resources */,
+				69BFE8FB18B95CF700DE5164 /* Images in Resources */,
 				69DB538B18AA26D40083754B /* InfoPlist.strings in Resources */,
 				699F21B418B551CC006F527B /* ffl_2009_players.csv in Resources */,
-				69EAF46918B4B7CD00515D17 /* pc_hs_bg_trans.png in Resources */,
-				69EAF45C18B4A61700515D17 /* pc_base.png in Resources */,
 				699F21B518B551CC006F527B /* ffl_2009_teams.csv in Resources */,
 				69DB539918AA26D40083754B /* Images.xcassets in Resources */,
 				699F21D118B6DED4006F527B /* PC Team Logos in Resources */,
-				69EAF45D18B4A61700515D17 /* pc_color_stripe_primary.png in Resources */,
-				69EAF45F18B4A61700515D17 /* pc_hs_bg.png in Resources */,
 				69DB539118AA26D40083754B /* Credits.rtf in Resources */,
-				69EAF45E18B4A61700515D17 /* pc_color_stripe_secondary.png in Resources */,
-				69EAF46718B4B47800515D17 /* reflection.png in Resources */,
 				699F21CF18B69FA7006F527B /* ffl_2009_teams_supplemental.csv in Resources */,
 				69DB539718AA26D40083754B /* MainMenu.xib in Resources */,
 				699F21D318B6FC6E006F527B /* PC Headshots in Resources */,
@@ -388,7 +374,9 @@
 			files = (
 				699F21CD18B5DF4E006F527B /* AETeam.m in Sources */,
 				699F21CA18B5DF2F006F527B /* AEUtility.m in Sources */,
+				69D3C2A018B9D21500A0641F /* AEMenuView.m in Sources */,
 				699F21BA18B5CCC1006F527B /* CHCSVParser.m in Sources */,
+				69D3C29D18B97F5D00A0641F /* AEButton.m in Sources */,
 				699F21C818B5DF2F006F527B /* AEPlayerCard.m in Sources */,
 				69DB538D18AA26D40083754B /* main.m in Sources */,
 				699F21C618B5DF2F006F527B /* AEAppDelegate.m in Sources */,
@@ -527,6 +515,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SceneKitTest/SceneKitTest-Prefix.pch";
 				INFOPLIST_FILE = "SceneKitTest/SceneKitTest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -540,6 +529,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SceneKitTest/SceneKitTest-Prefix.pch";
 				INFOPLIST_FILE = "SceneKitTest/SceneKitTest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

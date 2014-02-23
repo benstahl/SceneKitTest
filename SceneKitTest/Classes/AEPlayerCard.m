@@ -20,7 +20,7 @@
 	if (self = [super init]) {
 		_cardSize = SCNVector3Make(4.0, 5.6, 0.0);
 		
-		NSImage *reflectionImg = [NSImage imageNamed:@"reflection"];
+//		NSImage *reflectionImg = [NSImage imageNamed:@"reflection"];
 
 		// Headshot BG geometry
 		SCNPlane *headshotBackgroundPlane = [SCNPlane planeWithWidth:_cardSize.x height:_cardSize.y];
@@ -32,10 +32,12 @@
 		SCNMaterial *headshotBackgroundMat = [SCNMaterial material];
 		[AEUtility configureMaterial:headshotBackgroundMat];
 		headshotBackgroundMat.diffuse.contents = [NSImage imageNamed:@"pc_hs_bg"];
-		headshotBackgroundMat.reflective.contents = reflectionImg;
-		headshotBackgroundMat.shininess = 0.3;
+//		headshotBackgroundMat.reflective.contents = reflectionImg;
+//		headshotBackgroundMat.shininess = 1.0;
 //		headshotBackgroundMat.lightingModelName = SCNLightingModelBlinn;
 		_headshotBackgroundNode.geometry.firstMaterial = headshotBackgroundMat;
+
+//		_headshotBackgroundNode.geometry.firstMaterial.reflective.contentsTransform = CATransform3DMakeTranslation(0.0, 0.0, 0.0);
 
 		// Headshot geometry
 		SCNPlane *headshotPlane = [SCNPlane planeWithWidth:_cardSize.x height:_cardSize.y];
@@ -58,6 +60,8 @@
 		SCNMaterial *baseMat = [SCNMaterial material];
 		[AEUtility configureMaterial:baseMat];
 		baseMat.diffuse.contents = [NSImage imageNamed:@"pc_base"];
+//		baseMat.reflective.contents = reflectionImg;
+//		baseMat.shininess = 1.0;
 		_baseNode.geometry.firstMaterial = baseMat;
 
 		// Primary color stripe geometry
@@ -70,8 +74,8 @@
 		SCNMaterial *primaryColorStripeMat = [SCNMaterial material];
 		[AEUtility configureMaterial:primaryColorStripeMat];
 		primaryColorStripeMat.diffuse.contents = [NSImage imageNamed:@"pc_color_stripe_primary"];
-		primaryColorStripeMat.reflective.contents = reflectionImg;
-		primaryColorStripeMat.shininess = 0.3;
+//		primaryColorStripeMat.reflective.contents = reflectionImg;
+//		primaryColorStripeMat.shininess = 0.3;
 		_primaryColorStripeNode.geometry.firstMaterial = primaryColorStripeMat;
 		
 		// Secondary color stripe geometry
@@ -84,8 +88,8 @@
 		SCNMaterial *secondaryColorStripeMat = [SCNMaterial material];
 		[AEUtility configureMaterial:secondaryColorStripeMat];
 		secondaryColorStripeMat.diffuse.contents = [NSImage imageNamed:@"pc_color_stripe_secondary"];
-		secondaryColorStripeMat.reflective.contents = reflectionImg;
-		secondaryColorStripeMat.shininess = 0.3;
+//		secondaryColorStripeMat.reflective.contents = reflectionImg;
+//		secondaryColorStripeMat.shininess = 0.3;
 		_secondaryColorStripeNode.geometry.firstMaterial = secondaryColorStripeMat;
 
 		// Team logo geometry
@@ -123,6 +127,11 @@
 		_firstNameLayer.frame = CGRectMake(0, -10, 400, 560);
 		_firstNameLayer.truncationMode = kCATruncationEnd;
 		_firstNameLayer.string = [NSString stringWithFormat:@"VERNON"];
+		_firstNameLayer.shadowColor = [[NSColor blackColor] CGColor];
+		_firstNameLayer.shadowOpacity = 1.0;
+		_firstNameLayer.shadowOffset = CGSizeMake(6.0, -6.0);
+		_firstNameLayer.shadowRadius = 2.5;
+		_firstNameLayer.shouldRasterize = YES;
 		[textLayer addSublayer:_firstNameLayer];
 
 		_lastNameLayer = [CATextLayer layer];
@@ -132,6 +141,11 @@
 		_lastNameLayer.frame = CGRectMake(0, -60, 400, 560);
 		_lastNameLayer.truncationMode = kCATruncationEnd;
 		_lastNameLayer.string = [NSString stringWithFormat:@"DAVIS"];
+		_lastNameLayer.shadowColor = [[NSColor blackColor] CGColor];
+		_lastNameLayer.shadowOpacity = 1.0;
+		_lastNameLayer.shadowOffset = CGSizeMake(6.0, -6.0);
+		_lastNameLayer.shadowRadius = 2.5;
+		_lastNameLayer.shouldRasterize = YES;
 		[textLayer addSublayer:_lastNameLayer];
 
 		_rankLayer = [CATextLayer layer];
@@ -141,6 +155,11 @@
 		_rankLayer.frame = CGRectMake(0, -478, 400, 560);
 //		_rankLayer.foregroundColor = [[NSColor colorWithCalibratedHue:0.0 saturation:0.0 brightness:75.0 alpha:1.0] CGColor];
 		_rankLayer.string = [NSString stringWithFormat:@"TE RANK 12"];
+		_rankLayer.shadowColor = [[NSColor blackColor] CGColor];
+		_rankLayer.shadowOpacity = 1.0;
+		_rankLayer.shadowOffset = CGSizeMake(6.0, -6.0);
+		_rankLayer.shadowRadius = 2.5;
+		_rankLayer.shouldRasterize = YES;
 		[textLayer addSublayer:_rankLayer];
 
 		// Disable implicit animation on text changes for dynamic layers.
@@ -223,6 +242,56 @@
 //	[_firstNameLayer displayIfNeeded];
 //	[_lastNameLayer displayIfNeeded];
 //	[_rankLayer displayIfNeeded];
+
+//	[SCNTransaction begin];
+//	[SCNTransaction setAnimationDuration:10.0];
+//	[SCNTransaction setCompletionBlock:^{
+//		_headshotBackgroundNode.geometry.firstMaterial.reflective.contentsTransform = CATransform3DMakeTranslation(0.0, 0.0, 0.0);
+//	}];
+//	_headshotBackgroundNode.geometry.firstMaterial.reflective.contentsTransform = CATransform3DMakeTranslation(512.0, 0.0, 0.0);
+//	[SCNTransaction commit];
+//	[self startEnvironmentLoop];
+}
+
+/* ========================================================================== */
+- (void)startEnvironmentLoop {
+	NSLog(@"Starting environment loop.");
+	_animateEnvironment = YES;
+//	_headshotBackgroundNode.geometry.firstMaterial.reflective.contentsTransform = CATransform3DMakeTranslation(-1.0, 0.0, 0.0);
+//	_headshotBackgroundNode.geometry.firstMaterial.diffuse.contentsTransform =  CATransform3DMakeRotation(M_PI * 2, 0.0, 0.0, 1.0);
+	_headshotBackgroundNode.geometry.firstMaterial.reflective.contentsTransform =  CATransform3DMakeScale(1.0, 1.0, 1.0);
+	[SCNTransaction begin];
+	[SCNTransaction setAnimationDuration:3.0];
+	[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+	[SCNTransaction setCompletionBlock:^{
+		NSLog(@"Finished environment loop, resetting.");
+		if (_animateEnvironment) {
+			[self performSelector:@selector(startEnvironmentLoop)];
+		}
+	}];
+//	_headshotBackgroundNode.geometry.firstMaterial.reflective.contentsTransform = CATransform3DMakeTranslation(1.0, 0.0, 0.0);
+//	_headshotBackgroundNode.geometry.firstMaterial.diffuse.contentsTransform = CATransform3DMakeRotation(0.0, 0.0, 0.0, 1.0);
+	_headshotBackgroundNode.geometry.firstMaterial.reflective.contentsTransform =  CATransform3DMakeScale(1.5, 1.5, 1.0);
+	[SCNTransaction commit];
+}
+
+/* ========================================================================== */
+- (void)stopEnvironmentLoop {
+	[_headshotBackgroundNode.geometry.firstMaterial removeAllAnimations];
+}
+
+/* ========================================================================== */
+- (void)fadeOutReflectionAfterDelay:(NSTimeInterval)delayInSeconds {
+	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+	NSImage *blackImg = [NSImage imageNamed:@"black_pixel"];
+	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+		[SCNTransaction begin];
+		[SCNTransaction setAnimationDuration:1.0];
+//		[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+		_headshotBackgroundNode.geometry.firstMaterial.reflective.contents = blackImg;
+		_headshotBackgroundNode.geometry.firstMaterial.reflective.contents = blackImg;
+		[SCNTransaction commit];
+	});
 }
 
 /* ========================================================================== */

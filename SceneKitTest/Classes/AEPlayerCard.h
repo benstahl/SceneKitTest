@@ -24,8 +24,11 @@
 @property (strong) CATextLayer *lastNameLayer;
 @property (strong) CATextLayer *rankLayer;
 @property (strong) SCNNode *nameNode;
+@property BOOL animateEnvironment;
 
 - (id)init;
 - (void)configureWithPlayer:(AEPlayer*)player;
+- (void)stopEnvironmentLoop;
+- (void)fadeOutReflectionAfterDelay:(NSTimeInterval)delayInSeconds;
 
 @end

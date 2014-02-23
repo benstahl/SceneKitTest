@@ -21,5 +21,6 @@ CGFloat AERandFloat(CGFloat minimum, CGFloat maximum);
 + (NSDictionary*)dictionaryFromJSONFileNamed:(NSString*)filename;
 + (void)configureMaterial:(SCNMaterial*)material;
 + (NSColor*)colorFromHexString:(NSString*)hexString;
++ (void)listAvailableFonts;
 
 @end

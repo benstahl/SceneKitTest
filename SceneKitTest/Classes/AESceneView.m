@@ -20,12 +20,7 @@
 @implementation AESceneView
 
 -(void)awakeFromNib {
-    self.backgroundColor = [NSColor darkGrayColor];
-
-//	NSURL *url = [[NSBundle mainBundle] URLForResource:@"ex_player_card_v0001_0016" withExtension:@"dae"];
-//
-//	NSError * __autoreleasing error;
-//	SCNScene *scene = [SCNScene sceneWithURL:url options:nil error:&error];
+//	[AEUtility listAvailableFonts];
 
 	_displayedCards = [NSMutableArray arrayWithCapacity:5];
 	_players = [NSMutableDictionary dictionary];
@@ -37,11 +32,11 @@
 
 	_playerIDPool = @[@"nfl.p.2914", @"nfl.p.3116", @"nfl.p.3664", @"nfl.p.4262", @"nfl.p.4659", @"nfl.p.5036", @"nfl.p.5228", @"nfl.p.5474", @"nfl.p.5652", @"nfl.p.5900", @"nfl.p.6353", @"nfl.p.6427", @"nfl.p.6492", @"nfl.p.6802", @"nfl.p.6994", @"nfl.p.7073", @"nfl.p.7200", @"nfl.p.7203", @"nfl.p.7241", @"nfl.p.7247", @"nfl.p.7406", @"nfl.p.7434", @"nfl.p.7809", @"nfl.p.7860", @"nfl.p.7868", @"nfl.p.7904", @"nfl.p.8255", @"nfl.p.8261", @"nfl.p.8263", @"nfl.p.8286", @"nfl.p.8298", @"nfl.p.8306", @"nfl.p.8327", @"nfl.p.8330", @"nfl.p.8346", @"nfl.p.8391", @"nfl.p.8416", @"nfl.p.8432", @"nfl.p.8815", @"nfl.p.8821", @"nfl.p.8850", @"nfl.p.8872", @"nfl.p.8902", @"nfl.p.8926", @"nfl.p.9030", @"nfl.p.9037", @"nfl.p.9039", @"nfl.p.9265", @"nfl.p.9271", @"nfl.p.9274", @"nfl.p.9293", @"nfl.p.9295", @"nfl.p.9314", @"nfl.p.9496", @"nfl.p.9497"];
 
-	_cameraPositions = @{@"0" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 1.2, 20.0)], // 0 cards
-						 @"2" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.7, 12.0)], // 2 cards
-						 @"3" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.25, 14.0)], // 3 cards
-						 @"4" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 1.7, 16.0)], // 4 cards
-						 @"5" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 1.2, 18.0)], // 5 cards
+	_cameraPositions = @{@"0" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 1.6, 17.0)], // 0 cards
+						 @"2" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.9, 11.0)], // 2 cards
+						 @"3" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.5, 12.0)], // 3 cards
+						 @"4" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.1, 13.0)], // 4 cards
+						 @"5" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 1.6, 15.0)], // 5 cards
 						 };
 
 //	for (NSString *s in _playerIDPool) {
@@ -93,27 +88,71 @@
     spotNode.rotation = SCNVector4Make(1, 0, 0, -M_PI_2);
 	spotNode.light = [SCNLight light];
 	spotNode.light.color = [NSColor colorWithCalibratedHue:.60 saturation:100.0 brightness:0.30 alpha:1.0];
+//	spotNode.light.color = [NSColor colorWithCalibratedHue:0.0 saturation:0.0 brightness:0.30 alpha:1.0];
 	spotNode.light.type = SCNLightTypeSpot;
-    spotNode.light.shadowRadius = 10;
-    [spotNode.light setAttribute:@30 forKey:SCNLightShadowNearClippingKey];
-    [spotNode.light setAttribute:@50 forKey:SCNLightShadowFarClippingKey];
+	spotNode.light.castsShadow = NO;
+//    spotNode.light.shadowRadius = 10;
+//    [spotNode.light setAttribute:@30 forKey:SCNLightShadowNearClippingKey];
+//    [spotNode.light setAttribute:@50 forKey:SCNLightShadowFarClippingKey];
     [spotNode.light setAttribute:@8 forKey:SCNLightSpotInnerAngleKey];
-    [spotNode.light setAttribute:@40 forKey:SCNLightSpotOuterAngleKey];
+    [spotNode.light setAttribute:@45 forKey:SCNLightSpotOuterAngleKey];
 	[root addChildNode:spotNode];
+
+//	SCNNode *ambientNode = [SCNNode node];
+//	SCNLight *ambientLight = [SCNLight light];
+//	ambientNode.light = ambientLight;
+//	ambientLight.color = [NSColor colorWithCalibratedHue:0.0 saturation:0.0 brightness:0.20 alpha:1.0];
+//	[root addChildNode:ambientNode];
 
 	// floor geometry
 	SCNFloor *floor = [SCNFloor floor];
 	SCNMaterial *floorMaterial = [SCNMaterial material];
-	floorMaterial.ambient.contents = [NSColor darkGrayColor];
+	[AEUtility configureMaterial:floorMaterial];
+//	NSString *floorTexPath = [[[NSBundle mainBundle] URLForResource:[NSString stringWithFormat:@"Images/floor_tex_seamless"] withExtension:@"png"] path];
+//	NSImage *floorTexImg = [[NSImage alloc] initWithContentsOfFile:floorTexPath];
+//	floorTexImg.size = CGSizeMake(10.0, 10.0);
+//	floorMaterial.diffuse.contents = floorTexImg; //[NSColor darkGrayColor];
+//	floorMaterial.diffuse.contentsTransform = CATransform3DMakeScale(5.0, 5.0, 1.0);
+//	floorMaterial.emission.contents = floorTexImg;
 	floor.reflectivity = 0.30;
-	floor.reflectionFalloffStart = 1.0;
-	floor.reflectionFalloffEnd = 5.5;
+	floor.reflectionFalloffStart = 0.5;
+	floor.reflectionFalloffEnd = 3.0;
 	floor.firstMaterial = floorMaterial;
 	SCNNode *floorNode = [SCNNode nodeWithGeometry:floor];
 	[root addChildNode:floorNode];
 
 	_displayedCardsNode = [SCNNode node];
 	[root addChildNode:_displayedCardsNode];
+
+	// Sponsor logo geometry
+	NSSize sponsorLogoPlaneSize = NSMakeSize(8.0, 4.0);
+	SCNPlane *sponsorLogoPlane = [SCNPlane planeWithWidth:sponsorLogoPlaneSize.width height:sponsorLogoPlaneSize.height];
+	_sponsorLogoNode = [SCNNode nodeWithGeometry:sponsorLogoPlane];
+	_sponsorLogoNode.position = SCNVector3Make(0.0, 0.0, 0.0);
+	[root addChildNode:_sponsorLogoNode];
+
+	// Sponsor logo materials
+	SCNMaterial *sponsorLogoMat = [SCNMaterial material];
+	[AEUtility configureMaterial:sponsorLogoMat];
+	NSString *sponsorLogoFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/logo_tropicana" withExtension:@"png"] path];
+	NSImage *sponsorLogoImg = [[NSImage alloc] initWithContentsOfFile:sponsorLogoFilePath];
+	sponsorLogoMat.diffuse.contents = sponsorLogoImg;
+
+	_sponsorLogoPositions = @{
+		@"out" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, sponsorLogoPlaneSize.height / 2 + .1, -20.0)],
+		@"in" :  [NSValue valueWithSCNVector3:SCNVector3Make(0.0, sponsorLogoPlaneSize.height / 2 + .1, 5.0)]
+	};
+
+//	sponsorLogoMat.emission.contents = sponsorLogoImg;
+//	sponsorLogoMat.diffuse.contents = [NSImage imageNamed:@"logo_tropicana"];
+//	sponsorLogoMat.reflective.contents = reflectionImg;
+//	sponsorLogoMat.shininess = 0.3;
+	_sponsorLogoNode.opacity = 0.0;
+	_sponsorLogoNode.position = [_sponsorLogoPositions[@"out"] SCNVector3Value];
+	_sponsorLogoNode.geometry.firstMaterial = sponsorLogoMat;
+
+
+	[self animateLogoIn];
 
 	// debug info
 ////	self.layer = [CALayer layer];
@@ -143,6 +182,12 @@
 //	textNode.position = SCNVector3Make(0, 1, 0);
 //	textNode.transform = CATransform3DScale(textNode.transform, .01f, .01f, .01f);
 //	[root addChildNode:textNode];
+
+//	[SCNTransaction begin];
+//	[SCNTransaction setAnimationDuration:300.0];
+////	[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+//	_displayedCardsNode.rotation = SCNVector4Make(0.0, 1.0, 0.0, (M_PI * 2) * 10.0);
+//	[SCNTransaction commit];
 }
 
 /* ========================================================================== */
@@ -158,18 +203,20 @@
 	if (_displayedCardCount == 0) {
 		NSInteger randomPlayerCount = AERandInt(2, 5);
 		NSArray *randomPlayers = [self randomUniquePlayersWithCount:randomPlayerCount];
+		[self animateLogoOut];
 		[self animateCardsInForPlayers:randomPlayers];
 		[self animateCameraForCardCount:randomPlayers.count];
 	} else {
 		[self animateCardsOut];
 		[self animateCameraForCardCount:0];
+		[self animateLogoIn];
 	}
 }
 
 /* ========================================================================== */
 - (void)animateCameraForCardCount:(NSUInteger)cardCount {
 	NSInteger cardDelta = abs((int)cardCount - (int)_displayedCardCount);
-	NSLog(@"Card count = %@ | Displayed card count = %@ | Card delta = %@", @(cardCount), @(_displayedCardCount), @(cardDelta));
+//	NSLog(@"Card count = %@ | Displayed card count = %@ | Card delta = %@", @(cardCount), @(_displayedCardCount), @(cardDelta));
 
 	[SCNTransaction begin];
 	[SCNTransaction setAnimationDuration:0.5 + (.25 * cardDelta)];
@@ -226,13 +273,14 @@
 			card.rotation = SCNVector4Make(0.0, 0.0, 0.0, 0.0);
 			[SCNTransaction commit];
 //			[card addAnimation:animation forKey:nil];
+//			[card fadeOutReflectionAfterDelay:2.0];
 		});
 	}
 }
 
 /* ========================================================================== */
 - (void)animateCardsOut {
-	CGFloat cardSpacingEndX = 6.0;
+//	CGFloat cardSpacingEndX = 6.0;
 //	CGFloat totalWidthEnd = (_displayedCardCount - 1) * cardSpacingEndX;
 	NSArray *orderOfCards = nil;
 
@@ -258,20 +306,21 @@
 			[SCNTransaction setCompletionBlock:^{
 				static NSUInteger cardsCompleted = 0;
 				cardsCompleted++;
-				NSLog(@"completed = %@/%@", @(cardsCompleted), @(_displayedCardCount));
+//				NSLog(@"completed = %@/%@", @(cardsCompleted), @(_displayedCardCount));
 				if (cardsCompleted >= _displayedCardCount) {
 //					NSLog(@"animation complete.");
 //					[_displayedCards removeAllObjects];
 					_displayedCardCount = 0;
 					cardsCompleted = 0;
 				}
+				card.animateEnvironment = NO;
 				[card removeFromParentNode];
 				[_displayedCards removeObject:card];
 			}];
 
 			AEPlayerCard *card = _displayedCards[[orderOfCards[i] intValue]];
 //			AEPlayerCard *card = _displayedCards[i];
-			card.position = SCNVector3Make(card.position.x + 20.0, 0.5, 5.0);
+			card.position = SCNVector3Make(card.position.x + 20.0, 0.5, 10.0 - (1.5 * i));
 //			card.position = SCNVector3Make(-(totalWidthEnd / 2.0) + cardSpacingEndX * i, 2.0, 22.0);
 			card.rotation = SCNVector4Make(1.0, 1.0, 0.0, AEDegToRad(-90.0));
 //			card.rotation = SCNVector4Make(0.0, 0.0, 0.0, 0.0);
@@ -282,11 +331,39 @@
 }
 
 /* ========================================================================== */
+- (void)animateLogoIn {
+	double delayInSeconds = 1.0;
+	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+		[SCNTransaction begin];
+		[SCNTransaction setAnimationDuration:0.75];
+		[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+		_sponsorLogoNode.opacity = 1.0;
+		_sponsorLogoNode.position = [_sponsorLogoPositions[@"in"] SCNVector3Value];
+		[SCNTransaction commit];
+	});
+}
+
+/* ========================================================================== */
+- (void)animateLogoOut {
+	double delayInSeconds = 0.15;
+	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+		[SCNTransaction begin];
+		[SCNTransaction setAnimationDuration:0.75];
+		[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+		_sponsorLogoNode.opacity = 0.0;
+		_sponsorLogoNode.position = [_sponsorLogoPositions[@"out"] SCNVector3Value];
+		[SCNTransaction commit];
+	});
+}
+
+/* ========================================================================== */
 - (NSArray*)randomUniquePlayersWithCount:(NSUInteger)playerCount {
 	NSMutableArray *result = [NSMutableArray arrayWithCapacity:playerCount];
 	NSMutableArray *tempPlayerPool = [NSMutableArray arrayWithArray:_playerIDPool];
 	for (int i = 0; i < playerCount; i++) {
-		NSInteger randomPlayerIndex =  AERandInt(0, tempPlayerPool.count - 1);
+		NSInteger randomPlayerIndex = AERandInt(0, tempPlayerPool.count - 1);
 		AEPlayer *player = [self playerWithID:tempPlayerPool[randomPlayerIndex]];
 //		[_displayedCards[i] configureWithPlayer:player];
 		[result addObject:player];
@@ -413,7 +490,7 @@
 
 /* ========================================================================== */
 - (void)parserDidBeginDocument:(CHCSVParser *)parser {
-	NSLog(@"parserDidBeginDocument:");
+//	NSLog(@"parserDidBeginDocument:");
 	_currentParserLine = 0;
 	if (parser == _playerParser) {
 		_playerKeys = [NSMutableArray array];
@@ -424,7 +501,7 @@
 
 /* ========================================================================== */
 - (void)parserDidEndDocument:(CHCSVParser *)parser {
-	NSLog(@"parserDidEndDocument:");
+//	NSLog(@"parserDidEndDocument:");
 	if (parser == _playerParser) {
 		_playerKeys = nil;
 	} else if (parser == _teamParser) {
@@ -455,12 +532,12 @@
 
 /* ========================================================================== */
 - (void)parser:(CHCSVParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
-	NSLog(@"parser:didStartElement: %@ namespaceURI: %@ qualifiedName: %@ attributes: %@", elementName, namespaceURI, qName, attributeDict);
+//	NSLog(@"parser:didStartElement: %@ namespaceURI: %@ qualifiedName: %@ attributes: %@", elementName, namespaceURI, qName, attributeDict);
 }
 
 /* ========================================================================== */
 - (void)parser:(CHCSVParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-	NSLog(@"parser:didEndElement: %@ namespaceURI: %@ qualifiedName: %@", elementName, namespaceURI, qName);
+//	NSLog(@"parser:didEndElement: %@ namespaceURI: %@ qualifiedName: %@", elementName, namespaceURI, qName);
 }
 
 @end
