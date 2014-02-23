@@ -5,8 +5,8 @@
 #import <Foundation/Foundation.h>
 #import "inttypes.h"
 
-#ifndef Emerald_AEGeometry_h
-#define Emerald_AEGeometry_h
+#ifndef SceneKitTest_AEGeometry_h
+#define SceneKitTest_AEGeometry_h
 
 struct AEGridPoint {
 	NSInteger x;

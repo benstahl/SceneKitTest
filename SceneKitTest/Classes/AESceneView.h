@@ -40,4 +40,6 @@
 - (AEPlayer*)playerWithID:(NSString*)playerID;
 - (AETeam*)teamWithID:(NSString*)teamID;
 
+- (IBAction)newSetButtonClicked:(id)sender;
+
 @end

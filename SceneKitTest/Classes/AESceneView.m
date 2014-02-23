@@ -125,16 +125,18 @@
 	[root addChildNode:_displayedCardsNode];
 
 	// Sponsor logo geometry
-	NSSize sponsorLogoPlaneSize = NSMakeSize(8.0, 4.0);
+	CGSize sponsorLogoPlaneSize = CGSizeMake(8.0, 4.0);
+	CGFloat sponsorLogoScale = 1.2;
 	SCNPlane *sponsorLogoPlane = [SCNPlane planeWithWidth:sponsorLogoPlaneSize.width height:sponsorLogoPlaneSize.height];
 	_sponsorLogoNode = [SCNNode nodeWithGeometry:sponsorLogoPlane];
 	_sponsorLogoNode.position = SCNVector3Make(0.0, 0.0, 0.0);
+	_sponsorLogoNode.scale = SCNVector3Make(sponsorLogoScale, sponsorLogoScale, sponsorLogoScale);
 	[root addChildNode:_sponsorLogoNode];
 
 	// Sponsor logo materials
 	SCNMaterial *sponsorLogoMat = [SCNMaterial material];
 	[AEUtility configureMaterial:sponsorLogoMat];
-	NSString *sponsorLogoFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/logo_tropicana" withExtension:@"png"] path];
+	NSString *sponsorLogoFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/logo_ffl" withExtension:@"png"] path];
 	NSImage *sponsorLogoImg = [[NSImage alloc] initWithContentsOfFile:sponsorLogoFilePath];
 	sponsorLogoMat.diffuse.contents = sponsorLogoImg;
 
@@ -190,28 +192,28 @@
 //	[SCNTransaction commit];
 }
 
-/* ========================================================================== */
-- (void)mouseDown:(NSEvent *)theEvent {
-//	CGFloat cardSpacingX = 10.0;
-//	for (int i = 0; i < _displayedCards.count; i++) {
-//		NSInteger randomPlayerIndex =  AERandInt(0, _playerIDPool.count - 1);
-//		AEPlayer *player = [self playerWithID:_playerIDPool[randomPlayerIndex]];
-//		NSLog(@"Showing player card for player with id %@, data = %@", _playerIDPool[randomPlayerIndex], player.data);
-//		[_displayedCards[i] configureWithPlayer:player];
+///* ========================================================================== */
+//- (void)mouseDown:(NSEvent *)theEvent {
+////	CGFloat cardSpacingX = 10.0;
+////	for (int i = 0; i < _displayedCards.count; i++) {
+////		NSInteger randomPlayerIndex =  AERandInt(0, _playerIDPool.count - 1);
+////		AEPlayer *player = [self playerWithID:_playerIDPool[randomPlayerIndex]];
+////		NSLog(@"Showing player card for player with id %@, data = %@", _playerIDPool[randomPlayerIndex], player.data);
+////		[_displayedCards[i] configureWithPlayer:player];
+////	}
+//
+//	if (_displayedCardCount == 0) {
+//		NSInteger randomPlayerCount = AERandInt(2, 5);
+//		NSArray *randomPlayers = [self randomUniquePlayersWithCount:randomPlayerCount];
+//		[self animateLogoOut];
+//		[self animateCardsInForPlayers:randomPlayers];
+//		[self animateCameraForCardCount:randomPlayers.count];
+//	} else {
+//		[self animateCardsOut];
+//		[self animateCameraForCardCount:0];
+//		[self animateLogoIn];
 //	}
-
-	if (_displayedCardCount == 0) {
-		NSInteger randomPlayerCount = AERandInt(2, 5);
-		NSArray *randomPlayers = [self randomUniquePlayersWithCount:randomPlayerCount];
-		[self animateLogoOut];
-		[self animateCardsInForPlayers:randomPlayers];
-		[self animateCameraForCardCount:randomPlayers.count];
-	} else {
-		[self animateCardsOut];
-		[self animateCameraForCardCount:0];
-		[self animateLogoIn];
-	}
-}
+//}
 
 /* ========================================================================== */
 - (void)animateCameraForCardCount:(NSUInteger)cardCount {
@@ -332,11 +334,11 @@
 
 /* ========================================================================== */
 - (void)animateLogoIn {
-	double delayInSeconds = 1.0;
+	double delayInSeconds = 0.5;
 	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
 	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
 		[SCNTransaction begin];
-		[SCNTransaction setAnimationDuration:0.75];
+		[SCNTransaction setAnimationDuration:0.6];
 		[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
 		_sponsorLogoNode.opacity = 1.0;
 		_sponsorLogoNode.position = [_sponsorLogoPositions[@"in"] SCNVector3Value];
@@ -346,16 +348,16 @@
 
 /* ========================================================================== */
 - (void)animateLogoOut {
-	double delayInSeconds = 0.15;
-	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//	double delayInSeconds = 0.15;
+//	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+//	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
 		[SCNTransaction begin];
-		[SCNTransaction setAnimationDuration:0.75];
+		[SCNTransaction setAnimationDuration:0.6];
 		[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
 		_sponsorLogoNode.opacity = 0.0;
 		_sponsorLogoNode.position = [_sponsorLogoPositions[@"out"] SCNVector3Value];
 		[SCNTransaction commit];
-	});
+//	});
 }
 
 /* ========================================================================== */
@@ -538,6 +540,22 @@
 /* ========================================================================== */
 - (void)parser:(CHCSVParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
 //	NSLog(@"parser:didEndElement: %@ namespaceURI: %@ qualifiedName: %@", elementName, namespaceURI, qName);
+}
+
+/* ========================================================================== */
+- (IBAction)newSetButtonClicked:(id)sender {
+	//	NSLog(@"Button clicked.");
+	if (_displayedCardCount == 0) {
+		NSInteger randomPlayerCount = AERandInt(2, 5);
+		NSArray *randomPlayers = [self randomUniquePlayersWithCount:randomPlayerCount];
+		[self animateLogoOut];
+		[self animateCardsInForPlayers:randomPlayers];
+		[self animateCameraForCardCount:randomPlayers.count];
+	} else {
+		[self animateCardsOut];
+		[self animateCameraForCardCount:0];
+		[self animateLogoIn];
+	}
 }
 
 @end

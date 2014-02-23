@@ -15,7 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
 		[self setWantsLayer:YES];
-		self.layer.backgroundColor = [[NSColor colorWithCalibratedHue:0.0 saturation:0.0 brightness:1.0 alpha:0.1] CGColor];
+//		self.layer.backgroundColor = [[NSColor colorWithCalibratedHue:0.0 saturation:0.0 brightness:1.0 alpha:0.1] CGColor];
 		self.layer.contentsGravity = kCAGravityCenter;
 		self.layer.cornerRadius = 12.0;
     }

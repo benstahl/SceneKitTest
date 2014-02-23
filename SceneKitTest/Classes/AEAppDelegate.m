@@ -28,4 +28,10 @@
 //	[_infoView.layer addSublayer:infoLayer];
 }
 
+/* ========================================================================== */
+- (IBAction)newSetButtonClicked:(id)sender {
+//	NSLog(@"Button clicked.");
+//	[_sceneView]
+}
+
 @end
