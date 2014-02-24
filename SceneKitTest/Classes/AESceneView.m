@@ -12,6 +12,7 @@
 #import "AEPlayer.h"
 #import "AETeam.h"
 #import "AEPlayerCard.h"
+#import "AEPlayerPickSet.h"
 #import "AEUtility.h"
 #import "CHCSVParser.h"
 
@@ -25,6 +26,8 @@
 	_displayedCards = [NSMutableArray arrayWithCapacity:5];
 	_players = [NSMutableDictionary dictionary];
 	_teams = [NSMutableDictionary dictionary];
+	_playerPickSets = [NSMutableArray array];
+	_currentPickSet = nil;
 	_currentParserLine = 0;
 	_cardsAnimating = NO;
 
@@ -462,6 +465,43 @@
 //	});
 }
 
+#pragma mark - player pick sets
+
+/* ========================================================================== */
+- (AEPlayerPickSet*)randomPickSet {
+	NSUInteger randomPositionIndex = AERandInt(0, _validPlayerPositions.count - 1);
+	NSString *randomPosition = _validPlayerPositions[randomPositionIndex];
+
+	NSUInteger maxPlayers = 5;
+
+	// Limit kickers to 3 cards max.
+	if ([randomPosition isEqualToString:@"K"]) {
+		maxPlayers = 3;
+	}
+
+	static NSArray *teamOwnerNames;
+	static NSArray *teamOwnerLocations;
+	static NSArray *fantasyTeamNames;
+
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		teamOwnerNames = @[@"Benjamin", @"Howard", @"E.J.", @"Brian", @"Joel", @"Ruby", @"Ricky", @"Brad", @"Geoff", @"Lisa", @"Lawrence", @"Alan", @"Evan", @"Mike", @"Victor", @"Consuela", @"Gabrielle", @"Ernesto", @"Kim", @"Kojiro", @"Franky"];
+		teamOwnerLocations = @[@"Brooklyn", @"Sunnyvale", @"Ft. Lauderdale", @"Chicago", @"New York", @"Buffalo", @"Indianapolis", @"Tucson", @"San Francisco", @"San Rafael", @"Texas", @"Colorado", @"Paris", @"Tokyo", @"Madrid", @"Calgary", @"Toronto", @"Cairo", @"Santiago", @"Boise", @"New Orleans"];
+		fantasyTeamNames = @[@"Montezuma's Revenge", @"The Agony Of Defeat", @"Fail Whale", @"Cholula Luvrs Anonymous", @"Couch Potatos", @"Mingo Ate My Baby", @"Jamaal Charles In Charge", @"What Would Jones-Drew", @"My Favorite Marshawn", @"There's Gore In Dem Hills", @"Vladimir Putin's Bling Ring", @"Injured Head & Shoulders", @"Butt-Fumbling Foot Fetishers", @"Connecticut Cholos", @"White Cassel", @"Back that Asomugha Up", @"James Starks of Winterfell", @"Van Buren Boys", @"Somewhere Over Dwayne Bowe", @"Somewhere Over Dwayne Bowe", @"Straight Cash Homey"];
+	});
+
+	AEPlayerPickSet *result = [[AEPlayerPickSet alloc] init];
+	result.fantasyTeamName = fantasyTeamNames[AERandInt(0, fantasyTeamNames.count - 1)];
+	result.fantasyTeamOwnerName = teamOwnerLocations[AERandInt(0, teamOwnerLocations.count - 1)];
+	result.fantasyTeamOwnerLocation = teamOwnerLocations[AERandInt(0, teamOwnerLocations.count - 1)];
+	result.cardCount = AERandInt(2, maxPlayers);
+	result.players = [self randomUniquePlayersWithCount:result.cardCount position:randomPosition];
+	result.playerPosition = randomPosition;
+	result.needCount = AERandInt(1, result.cardCount - 1);
+
+	return result;
+}
+
 /* ========================================================================== */
 - (NSArray*)randomUniquePlayersWithCount:(NSUInteger)playerCount {
 	NSMutableArray *result = [NSMutableArray arrayWithCapacity:playerCount];
@@ -677,22 +717,24 @@
 	if (_cardsAnimating) { return; }
 
 	if (_displayedCardCount == 0) {
-		NSUInteger randomPositionIndex = AERandInt(0, _validPlayerPositions.count - 1);
-		NSString *randomPosition = _validPlayerPositions[randomPositionIndex];
+//		NSUInteger randomPositionIndex = AERandInt(0, _validPlayerPositions.count - 1);
+//		NSString *randomPosition = _validPlayerPositions[randomPositionIndex];
+//
+//		NSUInteger maxPlayers = 5;
+//
+//		// Limit kickers to 3 cards max.
+//		if ([randomPosition isEqualToString:@"K"]) {
+//			maxPlayers = 3;
+//		}
+//
+//		NSInteger randomPlayerCount = AERandInt(2, maxPlayers);
+////		NSLog(@"Showing %@ cards for position %@", @(randomPlayerCount), randomPosition);
+//		NSArray *randomPlayers = [self randomUniquePlayersWithCount:randomPlayerCount position:randomPosition];
 
-		NSUInteger maxPlayers = 5;
-
-		// Limit kickers to 3 cards max.
-		if ([randomPosition isEqualToString:@"K"]) {
-			maxPlayers = 3;
-		}
-
-		NSInteger randomPlayerCount = AERandInt(2, maxPlayers);
-//		NSLog(@"Showing %@ cards for position %@", @(randomPlayerCount), randomPosition);
-		NSArray *randomPlayers = [self randomUniquePlayersWithCount:randomPlayerCount position:randomPosition];
+		_currentPickSet = [self randomPickSet];
 		[self animateLogoOut];
-		[self animateCardsInForPlayers:randomPlayers];
-		[self animateCameraForCardCount:randomPlayers.count];
+		[self animateCardsInForPlayers:_currentPickSet.players];
+		[self animateCameraForCardCount:_currentPickSet.cardCount];
 	} else {
 		[self animateCardsOut];
 		[self animateCameraForCardCount:0];

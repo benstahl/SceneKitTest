@@ -10,4 +10,13 @@
 
 @interface AEPlayerPickSet : NSObject
 
+@property (strong) NSArray *players;
+@property (copy) NSString *fantasyTeamOwnerName;
+@property (copy) NSString *fantasyTeamOwnerLocation;
+@property (copy) NSString *fantasyTeamName;
+@property (copy) NSString *playerPosition;
+@property NSUInteger cardCount;
+@property NSUInteger needCount;
+@property NSUInteger remainingCount;
+
 @end

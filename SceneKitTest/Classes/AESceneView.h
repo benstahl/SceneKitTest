@@ -13,12 +13,14 @@
 @class AEPlayer;
 @class AEPlayerCard;
 @class AETeam;
+@class AEPlayerPickSet;
 
 @interface AESceneView : SCNView <CHCSVParserDelegate> {
 	SCNNode *_worldPivotNode;
 	SCNNode *_cameraNode;
 	SCNNode *_displayedCardsNode;
 	SCNNode *_sponsorLogoNode;
+
 	CHCSVParser *_playerParser;
 	CHCSVParser *_teamParser;
 	NSUInteger _currentParserLine;
@@ -26,6 +28,7 @@
 	NSMutableDictionary *_currentParsingTeamData;
 	NSMutableArray *_playerKeys;
 	NSMutableArray *_teamKeys;
+	
 	NSArray *_playerIDPool;
 	NSMutableArray *_displayedCards;
 	NSUInteger _displayedCardCount;
@@ -35,6 +38,9 @@
 	NSArray *_validPlayerPositions;
 //	AEPlayerCard *_playerCard;
 	BOOL _cardsAnimating;
+
+	NSMutableArray *_playerPickSets;
+	AEPlayerPickSet *_currentPickSet;
 }
 
 @property (strong) NSMutableDictionary *players;

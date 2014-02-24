@@ -10,4 +10,12 @@
 
 @implementation AEPlayerPickSet
 
+/* ========================================================================== */
+- (id)init {
+	if (self = [super init]) {
+		_players = nil;
+	}
+	return self;
+}
+
 @end
