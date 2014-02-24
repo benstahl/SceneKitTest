@@ -15,6 +15,7 @@
 #import "AEPlayerPickSet.h"
 #import "AEUtility.h"
 #import "CHCSVParser.h"
+#import "AEHeaderView.h"
 
 #define kMasterKey	@"ID"
 
@@ -22,6 +23,9 @@
 
 -(void)awakeFromNib {
 //	[AEUtility listAvailableFonts];
+
+	self.layer.borderWidth = 0.5;
+	self.layer.borderColor = [[NSColor darkGrayColor] CGColor];
 
 	_displayedCards = [NSMutableArray arrayWithCapacity:5];
 	_players = [NSMutableDictionary dictionary];
@@ -37,11 +41,11 @@
 	_validPlayerPositions = @[@"QB", @"WR", @"RB", @"TE", @"K"];
 	_playerIDPool = @[@"nfl.p.2914", @"nfl.p.3116", @"nfl.p.3511", @"nfl.p.3664", @"nfl.p.4262", @"nfl.p.4269", @"nfl.p.4653", @"nfl.p.4659", @"nfl.p.4878", @"nfl.p.4695", @"nfl.p.5034", @"nfl.p.5036", @"nfl.p.5104", @"nfl.p.5228", @"nfl.p.5388", @"nfl.p.5474", @"nfl.p.5482", @"nfl.p.5521", @"nfl.p.5652", @"nfl.p.5557", @"nfl.p.5900", @"nfl.p.5919", @"nfl.p.5922", @"nfl.p.6046", @"nfl.p.6103", @"nfl.p.6119", @"nfl.p.6142", @"nfl.p.6169", @"nfl.p.6353", @"nfl.p.6355", @"nfl.p.6359", @"nfl.p.6410", @"nfl.p.6427", @"nfl.p.6475", @"nfl.p.6479", @"nfl.p.6492", @"nfl.p.6591", @"nfl.p.6669", @"nfl.p.6752", @"nfl.p.6788", @"nfl.p.6802", @"nfl.p.6824", @"nfl.p.6827", @"nfl.p.6837", @"nfl.p.6840", @"nfl.p.6845", @"nfl.p.6867", @"nfl.p.6913", @"nfl.p.6994", @"nfl.p.7073", @"nfl.p.7108", @"nfl.p.7149", @"nfl.p.7178", @"nfl.p.7179", @"nfl.p.7200", @"nfl.p.7203", @"nfl.p.7215", @"nfl.p.7237", @"nfl.p.7241", @"nfl.p.7247", @"nfl.p.7253", @"nfl.p.7259", @"nfl.p.7282", @"nfl.p.7306", @"nfl.p.7406", @"nfl.p.7426", @"nfl.p.7434", @"nfl.p.7492", @"nfl.p.7527", @"nfl.p.7544", @"nfl.p.7635", @"nfl.p.7657", @"nfl.p.7776", @"nfl.p.7777", @"nfl.p.7802", @"nfl.p.7809", @"nfl.p.7810", @"nfl.p.7821", @"nfl.p.7858", @"nfl.p.7860", @"nfl.p.7868", @"nfl.p.7879", @"nfl.p.7894", @"nfl.p.7904", @"nfl.p.8021", @"nfl.p.8063", @"nfl.p.8177", @"nfl.p.8255", @"nfl.p.8256", @"nfl.p.8261", @"nfl.p.8263", @"nfl.p.8266", @"nfl.p.8276", @"nfl.p.8277", @"nfl.p.8281", @"nfl.p.8285", @"nfl.p.8286", @"nfl.p.8292", @"nfl.p.8298", @"nfl.p.8306", @"nfl.p.8317", @"nfl.p.8327", @"nfl.p.8330", @"nfl.p.8331", @"nfl.p.8346", @"nfl.p.8354", @"nfl.p.8391", @"nfl.p.8396", @"nfl.p.8407", @"nfl.p.8409", @"nfl.p.8416", @"nfl.p.8432", @"nfl.p.8447", @"nfl.p.8471", @"nfl.p.8482", @"nfl.p.8504", @"nfl.p.8561", @"nfl.p.8780", @"nfl.p.8781", @"nfl.p.8790", @"nfl.p.8795", @"nfl.p.8800", @"nfl.p.8801", @"nfl.p.8807", @"nfl.p.8810", @"nfl.p.8813", @"nfl.p.8815", @"nfl.p.8819", @"nfl.p.8821", @"nfl.p.8826", @"nfl.p.8850", @"nfl.p.8866", @"nfl.p.8868", @"nfl.p.8872", @"nfl.p.8926", @"nfl.p.8935", @"nfl.p.8951", @"nfl.p.8979", @"nfl.p.8981", @"nfl.p.8982", @"nfl.p.9004", @"nfl.p.9030", @"nfl.p.9037", @"nfl.p.9039", @"nfl.p.9126", @"nfl.p.9265", @"nfl.p.9271", @"nfl.p.9274", @"nfl.p.9284", @"nfl.p.9293", @"nfl.p.9294", @"nfl.p.9295", @"nfl.p.9314", @"nfl.p.9348", @"nfl.p.9404", @"nfl.p.9496", @"nfl.p.9497"];
 
-	_cameraPositions = @{@"0" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.5, 44.5)], // 0 cards
-						 @"2" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.9, 32.0)], // 2 cards
-						 @"3" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.6, 34.0)], // 3 cards
-						 @"4" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.3, 36.0)], // 4 cards
-						 @"5" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.0, 42.5)], // 5 cards
+	_cameraPositions = @{@"0" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 1.9, 44.5)], // 0 cards
+						 @"2" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 3.15, 32.0)], // 2 cards
+						 @"3" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.95, 34.0)], // 3 cards
+						 @"4" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.7, 36.0)], // 4 cards
+						 @"5" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.5, 42.5)], // 5 cards
 	};
 
 	CGFloat cardSpacingX = 4.25;
@@ -485,19 +489,20 @@
 
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-		teamOwnerNames = @[@"Benjamin", @"Howard", @"E.J.", @"Brian", @"Joel", @"Ruby", @"Ricky", @"Brad", @"Geoff", @"Lisa", @"Lawrence", @"Alan", @"Evan", @"Mike", @"Victor", @"Consuela", @"Gabrielle", @"Ernesto", @"Kim", @"Kojiro", @"Franky"];
-		teamOwnerLocations = @[@"Brooklyn", @"Sunnyvale", @"Ft. Lauderdale", @"Chicago", @"New York", @"Buffalo", @"Indianapolis", @"Tucson", @"San Francisco", @"San Rafael", @"Texas", @"Colorado", @"Paris", @"Tokyo", @"Madrid", @"Calgary", @"Toronto", @"Cairo", @"Santiago", @"Boise", @"New Orleans"];
-		fantasyTeamNames = @[@"Montezuma's Revenge", @"The Agony Of Defeat", @"Fail Whale", @"Cholula Luvrs Anonymous", @"Couch Potatos", @"Mingo Ate My Baby", @"Jamaal Charles In Charge", @"What Would Jones-Drew", @"My Favorite Marshawn", @"There's Gore In Dem Hills", @"Vladimir Putin's Bling Ring", @"Injured Head & Shoulders", @"Butt-Fumbling Foot Fetishers", @"Connecticut Cholos", @"White Cassel", @"Back that Asomugha Up", @"James Starks of Winterfell", @"Van Buren Boys", @"Somewhere Over Dwayne Bowe", @"Somewhere Over Dwayne Bowe", @"Straight Cash Homey"];
+		teamOwnerNames = @[@"Benjamin", @"Howard", @"E.J.", @"Brian", @"Joel", @"Ruby", @"Ricky", @"Brad", @"Geoff", @"Lisa", @"Lawrence", @"Alan", @"Evan", @"Mike", @"Victor", @"Consuela", @"Gabrielle", @"Ernesto", @"Kim", @"Kojiro", @"Franky", @"Simone", @"Felipe", @"Muhammad", @"Matthew", @"The Ghost", @"El Guapo", @"Sweet Caroline", @"Finklestein", @"Captain Kirk", @"Spock", @"The Terminator", @"Dirty Sanchez", @"Lonely Heart", @"Stone Cold Killa", @"Mighty Morphin Power Ranger", @"James Bond", @"Cosmo Kramer", @"Gilligan", @"Captain Stubing", @"Ricardo Nixon"];
+		teamOwnerLocations = @[@"Brooklyn", @"Sunnyvale", @"Ft. Lauderdale", @"Chicago", @"New York", @"Buffalo", @"Indianapolis", @"Tucson", @"San Francisco", @"San Rafael", @"Texas", @"Colorado", @"Paris", @"Tokyo", @"Madrid", @"Calgary", @"Toronto", @"Cairo", @"Santiago", @"Boise", @"New Orleans", @"Germany", @"Oslo", @"South Africa", @"Perth", @"Magagascar", @"Baghdad", @"London", @"Vancouver", @"Sonoma", @"Honolulu", @"Death Valley", @"Santa Monica", @"Boston", @"Potsdam", @"Albuquerque", @"Atlanta", @"Springfield", @"The North Pole", @"Iowa", @"Seattle", @"Houston", @"Austin", @"Oklahoma City", @"Portland"];
+		fantasyTeamNames = @[@"Montezuma's Revenge", @"The Agony Of Defeat", @"Fail Whale", @"Cholula Luvrs Anonymous", @"Couch Potatos", @"Mingo Ate My Baby", @"Jamaal Charles In Charge", @"What Would Jones-Drew?", @"My Favorite Marshawn", @"There's Gore In Dem Hills", @"Vladimir Putin's Bling Ring", @"Injured Head & Shoulders", @"Butt-Fumbling Foot Fetishers", @"Connecticut Cholos", @"White Cassel", @"Back that Asomugha Up", @"James Starks of Winterfell", @"Van Buren Boys", @"Somewhere Over Dwayne Bowe", @"Somewhere Over Dwayne Bowe", @"Straight Cash Homey", @"Livin' On A Prayer", @"Bone Breakers"];
 	});
 
 	AEPlayerPickSet *result = [[AEPlayerPickSet alloc] init];
 	result.fantasyTeamName = fantasyTeamNames[AERandInt(0, fantasyTeamNames.count - 1)];
-	result.fantasyTeamOwnerName = teamOwnerLocations[AERandInt(0, teamOwnerLocations.count - 1)];
+	result.fantasyTeamOwnerName = teamOwnerNames[AERandInt(0, teamOwnerNames.count - 1)];
 	result.fantasyTeamOwnerLocation = teamOwnerLocations[AERandInt(0, teamOwnerLocations.count - 1)];
 	result.cardCount = AERandInt(2, maxPlayers);
 	result.players = [self randomUniquePlayersWithCount:result.cardCount position:randomPosition];
 	result.playerPosition = randomPosition;
 	result.needCount = AERandInt(1, result.cardCount - 1);
+	result.remainingCount = AERandInt(1, result.cardCount - 1);
 
 	return result;
 }
@@ -712,7 +717,7 @@
 }
 
 /* ========================================================================== */
-- (IBAction)newSetButtonClicked:(id)sender {
+- (IBAction)newPickSetButtonClicked:(id)sender {
 //	NSLog(@"Button clicked (scene view).");
 	if (_cardsAnimating) { return; }
 
@@ -732,6 +737,34 @@
 //		NSArray *randomPlayers = [self randomUniquePlayersWithCount:randomPlayerCount position:randomPosition];
 
 		_currentPickSet = [self randomPickSet];
+		_headerView.topLabel.stringValue = [NSString stringWithFormat:@"\"%@\"", _currentPickSet.fantasyTeamName];
+		NSString *bottomLabelString = _currentPickSet.headerPickString;
+//		_headerView.bottomLabel.stringValue = bottomLabelString;
+
+		NSLog(@"Header string = %@", bottomLabelString);
+
+		NSUInteger needsCountIndex = (_currentPickSet.fantasyTeamOwnerName.length) + 6 + _currentPickSet.fantasyTeamOwnerLocation.length + 7;
+		NSUInteger cardsCountIndex = needsCountIndex + 5;
+
+		NSLog(@"needsCountIndex = %@ | cardsCountIndex = %@", @(needsCountIndex), @(cardsCountIndex));
+
+//		NSDictionary *attr = @{NSForegroundColorAttributeName : [NSValue valueWithRange:NSMakeRange(0, 0)]};
+		NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:bottomLabelString];
+//		NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:bottomLabelString attributes:attr];
+
+		// center the text
+		NSMutableParagraphStyle *mutParaStyle=[[NSMutableParagraphStyle alloc] init];
+		[mutParaStyle setAlignment:NSCenterTextAlignment];
+		[attrString addAttribute:NSParagraphStyleAttributeName value:mutParaStyle range:NSMakeRange(0, attrString.length)];
+
+		// highlight the needs and card count letters.
+		NSColor *highlightColor = [NSColor colorWithHue:0.13 saturation:1.0 brightness:1.0 alpha:1.0];
+		[attrString addAttribute:NSForegroundColorAttributeName value:highlightColor range:NSMakeRange(needsCountIndex, 1)];
+		[attrString addAttribute:NSForegroundColorAttributeName value:highlightColor range:NSMakeRange(cardsCountIndex, 1)];
+
+		[_headerView.bottomLabel setAttributedStringValue:attrString];
+
+		[_headerView fadeIn];
 		[self animateLogoOut];
 		[self animateCardsInForPlayers:_currentPickSet.players];
 		[self animateCameraForCardCount:_currentPickSet.cardCount];
@@ -739,6 +772,15 @@
 		[self animateCardsOut];
 		[self animateCameraForCardCount:0];
 		[self animateLogoIn];
+		[_headerView fadeOut];
+
+		// Wait until after fade out to blank labels.
+		double delayInSeconds = kHeaderFadeOutTime + 0.1;
+		dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+		dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+			_headerView.topLabel.stringValue = @"";
+			_headerView.bottomLabel.stringValue = @"";
+		});
 	}
 }
 

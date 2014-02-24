@@ -18,4 +18,17 @@
 	return self;
 }
 
+/* ========================================================================== */
+- (NSString*)headerPickString {
+	return [NSString stringWithFormat:@"%@ from %@ needs %@ of %@", _fantasyTeamOwnerName, _fantasyTeamOwnerLocation, @(_needCount), @(_cardCount)];
+}
+
+/* ========================================================================== */
+- (NSString*)description {
+	NSMutableString *s = [NSMutableString string];
+	[s appendString:_fantasyTeamOwnerName];
+	[s appendString:[NSString stringWithFormat:@"\n%@", [self headerPickString]]];
+	return [NSString stringWithString:s];
+}
+
 @end

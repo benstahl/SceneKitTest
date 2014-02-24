@@ -14,6 +14,7 @@
 @class AEPlayerCard;
 @class AETeam;
 @class AEPlayerPickSet;
+@class AEHeaderView;
 
 @interface AESceneView : SCNView <CHCSVParserDelegate> {
 	SCNNode *_worldPivotNode;
@@ -46,9 +47,11 @@
 @property (strong) NSMutableDictionary *players;
 @property (strong) NSMutableDictionary *teams;
 
+@property (strong) IBOutlet AEHeaderView *headerView;
+
 - (AEPlayer*)playerWithID:(NSString*)playerID;
 - (AETeam*)teamWithID:(NSString*)teamID;
 
-- (IBAction)newSetButtonClicked:(id)sender;
+- (IBAction)newPickSetButtonClicked:(id)sender;
 
 @end

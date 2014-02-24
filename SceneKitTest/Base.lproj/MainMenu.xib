@@ -660,19 +660,52 @@
                         <rect key="frame" x="0.0" y="80" width="800" height="450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="headerBottomLine" destination="oIc-8f-skZ" id="oAY-5a-6VE"/>
+                            <outlet property="headerTopLine" destination="VRf-b8-I7s" id="Vp0-fI-2cZ"/>
+                            <outlet property="headerView" destination="IG5-XV-8wh" id="YaM-3l-pc8"/>
+                        </connections>
                     </sceneView>
                     <customView wantsLayer="YES" id="2ij-dZ-86K" userLabel="Menu View" customClass="AEMenuView">
-                        <rect key="frame" x="20" y="106" width="760" height="78"/>
+                        <rect key="frame" x="20" y="100" width="760" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <customView wantsLayer="YES" id="7ho-7S-LrK" customClass="AEButton">
-                                <rect key="frame" x="295" y="14" width="170" height="50"/>
+                                <rect key="frame" x="295" y="5" width="170" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="newSetButtonClicked:" target="cH1-iw-d1T" id="hBc-3f-Us4"/>
+                                    <action selector="newPickSetButtonClicked:" target="cH1-iw-d1T" id="Lsr-vQ-ggc"/>
                                 </connections>
                             </customView>
                         </subviews>
+                    </customView>
+                    <customView wantsLayer="YES" id="IG5-XV-8wh" userLabel="Header View" customClass="AEHeaderView">
+                        <rect key="frame" x="0.0" y="410" width="800" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="VRf-b8-I7s">
+                                <rect key="frame" x="18" y="43" width="764" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="&quot;Some Long Team Name Here&quot;" placeholderString="" id="oRU-3T-xnq">
+                                    <font key="font" size="48" name="DIN-Regular"/>
+                                    <color key="textColor" red="0.99699395895004272" green="0.84737390279769897" blue="0.038252402096986771" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="oIc-8f-skZ">
+                                <rect key="frame" x="18" y="-10" width="764" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="Joe from Brooklyn needs 2 of 5" placeholderString="" id="LeQ-KA-4Jc">
+                                    <font key="font" size="40" name="DIN-Regular"/>
+                                    <color key="textColor" red="0.99963301420211792" green="0.99960309267044067" blue="0.99962007999420166" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <connections>
+                            <outlet property="bottomLabel" destination="oIc-8f-skZ" id="PMu-FK-YDe"/>
+                            <outlet property="topLabel" destination="VRf-b8-I7s" id="VnM-Wn-RZg"/>
+                        </connections>
                     </customView>
                 </subviews>
             </view>

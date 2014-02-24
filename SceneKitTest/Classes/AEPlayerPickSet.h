@@ -19,4 +19,6 @@
 @property NSUInteger needCount;
 @property NSUInteger remainingCount;
 
+- (NSString*)headerPickString;
+
 @end

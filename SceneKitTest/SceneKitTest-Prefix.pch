@@ -9,3 +9,6 @@
 #endif
 
 #import "AEGeometry.h"
+
+#define kHeaderFadeInTime	0.35
+#define kHeaderFadeOutTime	0.65

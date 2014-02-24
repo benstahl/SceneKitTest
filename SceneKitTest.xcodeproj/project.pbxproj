@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		691B9C0918BBE1D00073F01F /* AEHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691B9C0818BBE1D00073F01F /* AEHeaderView.m */; };
 		699F21BA18B5CCC1006F527B /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21B918B5CCC1006F527B /* CHCSVParser.m */; };
 		699F21C618B5DF2F006F527B /* AEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21BD18B5DF2F006F527B /* AEAppDelegate.m */; };
 		699F21C718B5DF2F006F527B /* AEPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21BF18B5DF2F006F527B /* AEPlayer.m */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		691B9C0718BBE1D00073F01F /* AEHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEHeaderView.h; path = Classes/AEHeaderView.h; sourceTree = "<group>"; };
+		691B9C0818BBE1D00073F01F /* AEHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEHeaderView.m; path = Classes/AEHeaderView.m; sourceTree = "<group>"; };
 		692DB1C618B84F060047674B /* AEGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEGeometry.h; sourceTree = "<group>"; };
 		699F21B818B5CCC1006F527B /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		699F21B918B5CCC1006F527B /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 				69D3C29B18B97F5D00A0641F /* AEButton.h */,
 				69D3C29C18B97F5D00A0641F /* AEButton.m */,
 				692DB1C618B84F060047674B /* AEGeometry.h */,
+				691B9C0718BBE1D00073F01F /* AEHeaderView.h */,
+				691B9C0818BBE1D00073F01F /* AEHeaderView.m */,
 				69D3C29E18B9D21500A0641F /* AEMenuView.h */,
 				69D3C29F18B9D21500A0641F /* AEMenuView.m */,
 				699F21BE18B5DF2F006F527B /* AEPlayer.h */,
@@ -372,6 +377,7 @@
 				699F21BA18B5CCC1006F527B /* CHCSVParser.m in Sources */,
 				69D3C29D18B97F5D00A0641F /* AEButton.m in Sources */,
 				699F21C818B5DF2F006F527B /* AEPlayerCard.m in Sources */,
+				691B9C0918BBE1D00073F01F /* AEHeaderView.m in Sources */,
 				69DB538D18AA26D40083754B /* main.m in Sources */,
 				699F21C618B5DF2F006F527B /* AEAppDelegate.m in Sources */,
 				699F21C718B5DF2F006F527B /* AEPlayer.m in Sources */,

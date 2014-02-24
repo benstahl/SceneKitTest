@@ -32,7 +32,7 @@
 /* ========================================================================== */
 - (IBAction)newSetButtonClicked:(id)sender {
 	NSLog(@"Button clicked (app delegate).");
-	[_sceneView newSetButtonClicked:sender];
+	[_sceneView newPickSetButtonClicked:sender];
 }
 
 @end

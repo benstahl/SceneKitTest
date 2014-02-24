@@ -16,9 +16,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-		SEL actionSelector = @selector(newSetButtonClicked:);
-		[self sendActionOn:NSLeftMouseUpMask];
-		[self setAction:actionSelector];
+//		SEL actionSelector = @selector(newPickSetButtonClicked:);
+//		[self sendActionOn:NSLeftMouseUpMask];
+//		[self setAction:actionSelector];
 		[self setWantsLayer:YES];
 
 		_baseLayer = [CALayer layer];
@@ -108,7 +108,7 @@
 	[scale setFillMode:kCAFillModeForwards];
 	[_baseLayer addAnimation:scale forKey:@"scaleUp"];
 
-	[self sendAction:@selector(newSetButtonClicked:) to:self.target];
+	[self sendAction:@selector(newPickSetButtonClicked:) to:self.target];
 //	[(AEAppDelegate*)self.window.delegate newSetButtonClicked:self];
 //	[self sendAction:@selector(newSetButtonClicked:) to:_target];
 }
