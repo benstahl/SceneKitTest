@@ -31,7 +31,10 @@
 	NSUInteger _displayedCardCount;
 	NSDictionary *_cameraPositions;
 	NSDictionary *_sponsorLogoPositions;
+	NSDictionary *_cardPositions;
+	NSArray *_validPlayerPositions;
 //	AEPlayerCard *_playerCard;
+	BOOL _cardsAnimating;
 }
 
 @property (strong) NSMutableDictionary *players;

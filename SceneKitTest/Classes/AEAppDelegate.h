@@ -9,10 +9,14 @@
 #import <Cocoa/Cocoa.h>
 #import <SceneKit/SceneKit.h>
 
+@class AESceneView;
+
 @interface AEAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSView *menuView;
-@property (assign) IBOutlet SCNView *sceneView;
+@property (assign) IBOutlet AESceneView *sceneView;
+
+- (IBAction)newSetButtonClicked:(id)sender;
 
 @end

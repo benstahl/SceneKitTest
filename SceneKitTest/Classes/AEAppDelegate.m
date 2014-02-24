@@ -7,6 +7,7 @@
 //
 
 #import "AEAppDelegate.h"
+#import "AESceneView.h"
 
 @implementation AEAppDelegate
 
@@ -30,8 +31,8 @@
 
 /* ========================================================================== */
 - (IBAction)newSetButtonClicked:(id)sender {
-//	NSLog(@"Button clicked.");
-//	[_sceneView]
+	NSLog(@"Button clicked (app delegate).");
+	[_sceneView newSetButtonClicked:sender];
 }
 
 @end

@@ -669,8 +669,7 @@
                                 <rect key="frame" x="295" y="14" width="170" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="newSetButtonClicked:" target="494" id="Ss9-MW-2ba"/>
-                                    <outlet property="target" destination="cH1-iw-d1T" id="118-7w-VoQ"/>
+                                    <action selector="newSetButtonClicked:" target="cH1-iw-d1T" id="hBc-3f-Us4"/>
                                 </connections>
                             </customView>
                         </subviews>
@@ -681,11 +680,12 @@
         <customObject id="494" customClass="AEAppDelegate">
             <connections>
                 <outlet property="infoView" destination="2ij-dZ-86K" id="Rv9-Fs-Hep"/>
-                <outlet property="menuView" destination="2ij-dZ-86K" id="lxG-ze-G7E"/>
-                <outlet property="sceneView" destination="cH1-iw-d1T" id="GfO-Z3-FOd"/>
+                <outlet property="menuView" destination="2ij-dZ-86K" id="ae8-rf-N3i"/>
+                <outlet property="sceneView" destination="cH1-iw-d1T" id="dpd-eJ-ANU"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
+        <viewController id="Z8s-MS-E7M"/>
     </objects>
 </document>

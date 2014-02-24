@@ -23,7 +23,7 @@
 @property (strong) CATextLayer *firstNameLayer;
 @property (strong) CATextLayer *lastNameLayer;
 @property (strong) CATextLayer *rankLayer;
-@property (strong) SCNNode *nameNode;
+@property (strong) SCNNode *textNode;
 @property BOOL animateEnvironment;
 
 - (id)init;

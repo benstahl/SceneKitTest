@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 App Easel. All rights reserved.
 //
 
+#import "AEAppDelegate.h"
 #import "AEButton.h"
 #import "AEUtility.h"
 
@@ -15,8 +16,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+		SEL actionSelector = @selector(newSetButtonClicked:);
 		[self sendActionOn:NSLeftMouseUpMask];
-//		[self setAction:@selector(newSetButtonClicked:)];
+		[self setAction:actionSelector];
 		[self setWantsLayer:YES];
 
 		_baseLayer = [CALayer layer];
@@ -29,7 +31,7 @@
 		_baseLayer.borderColor = [[NSColor whiteColor] CGColor];
 		_baseLayer.borderWidth = 2.5;
 		_baseLayer.cornerRadius = 10.0;
-//		_baseLayer.backgroundColor = [[NSColor colorWithCalibratedHue:0.62 saturation:0.85 brightness:0.50 alpha:0.25] CGColor];
+//		_baseLayer.backgroundColor = [[NSColor colorWithHue:0.62 saturation:0.85 brightness:0.50 alpha:0.25] CGColor];
 		_baseLayer.backgroundColor = [[NSColor colorWithHue:0.62 saturation:0.0 brightness:0.0 alpha:0.50] CGColor];
 		_baseLayer.contentsGravity = kCAGravityCenter;
 
@@ -80,12 +82,14 @@
 /* ========================================================================== */
 - (void)mouseDown:(NSEvent *)theEvent {
 //	NSLog(@"mouseDown.");
+	[_baseLayer removeAllAnimations];
 	CABasicAnimation *scale = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-	[scale setFromValue:[NSValue valueWithCATransform3D:CATransform3DIdentity]];
-	[scale setToValue:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.85, 0.85, 1.0)]];
-	[scale setDuration:0.125f];
+//	[scale setFromValue:[NSValue valueWithCATransform3D:CATransform3DIdentity]];
+	[scale setFromValue:[NSValue valueWithCATransform3D:_baseLayer.transform]];
+	[scale setToValue:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.80, 0.80, 1.0)]];
+	[scale setDuration:0.165f];
 	[scale setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
-//	[scale setRemovedOnCompletion:NO];
+	[scale setRemovedOnCompletion:NO];
 	[scale setFillMode:kCAFillModeForwards];
 	[_baseLayer addAnimation:scale forKey:@"scaleDown"];
 }
@@ -93,15 +97,19 @@
 /* ========================================================================== */
 - (void)mouseUp:(NSEvent *)theEvent {
 //	NSLog(@"mouseUp.");
+	[_baseLayer removeAllAnimations];
 	CABasicAnimation *scale = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-	[scale setFromValue:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.85, 0.85, 1.0)]];
+//	[scale setFromValue:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.85, 0.85, 1.0)]];
+	[scale setFromValue:[NSValue valueWithCATransform3D:_baseLayer.transform]];
 	[scale setToValue:[NSValue valueWithCATransform3D:CATransform3DIdentity]];
-	[scale setDuration:0.125f];
+	[scale setDuration:0.2f];
 	[scale setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
-//	[scale setRemovedOnCompletion:NO];
+	[scale setRemovedOnCompletion:NO];
 	[scale setFillMode:kCAFillModeForwards];
 	[_baseLayer addAnimation:scale forKey:@"scaleUp"];
 
+	[self sendAction:@selector(newSetButtonClicked:) to:self.target];
+//	[(AEAppDelegate*)self.window.delegate newSetButtonClicked:self];
 //	[self sendAction:@selector(newSetButtonClicked:) to:_target];
 }
 

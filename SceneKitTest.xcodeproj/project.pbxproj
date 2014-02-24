@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		699F21B418B551CC006F527B /* ffl_2009_players.csv in Resources */ = {isa = PBXBuildFile; fileRef = 699F21B218B551CC006F527B /* ffl_2009_players.csv */; };
-		699F21B518B551CC006F527B /* ffl_2009_teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = 699F21B318B551CC006F527B /* ffl_2009_teams.csv */; };
 		699F21BA18B5CCC1006F527B /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21B918B5CCC1006F527B /* CHCSVParser.m */; };
 		699F21C618B5DF2F006F527B /* AEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21BD18B5DF2F006F527B /* AEAppDelegate.m */; };
 		699F21C718B5DF2F006F527B /* AEPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21BF18B5DF2F006F527B /* AEPlayer.m */; };
@@ -16,7 +14,6 @@
 		699F21C918B5DF2F006F527B /* AESceneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21C318B5DF2F006F527B /* AESceneView.m */; };
 		699F21CA18B5DF2F006F527B /* AEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21C518B5DF2F006F527B /* AEUtility.m */; };
 		699F21CD18B5DF4E006F527B /* AETeam.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21CC18B5DF4E006F527B /* AETeam.m */; };
-		699F21CF18B69FA7006F527B /* ffl_2009_teams_supplemental.csv in Resources */ = {isa = PBXBuildFile; fileRef = 699F21CE18B69FA7006F527B /* ffl_2009_teams_supplemental.csv */; };
 		699F21D118B6DED4006F527B /* PC Team Logos in Resources */ = {isa = PBXBuildFile; fileRef = 699F21D018B6DED4006F527B /* PC Team Logos */; };
 		699F21D318B6FC6E006F527B /* PC Headshots in Resources */ = {isa = PBXBuildFile; fileRef = 699F21D218B6FC6E006F527B /* PC Headshots */; };
 		69BFE8FB18B95CF700DE5164 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 69BFE8F918B95CF700DE5164 /* Images */; };
@@ -35,6 +32,9 @@
 		69DB53AB18AA26D50083754B /* SceneKitTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DB53AA18AA26D50083754B /* SceneKitTestTests.m */; };
 		69DB53B518AA26FF0083754B /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DB53B418AA26FF0083754B /* SceneKit.framework */; };
 		69DB53B718AA27060083754B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DB53B618AA27060083754B /* QuartzCore.framework */; };
+		69F0FB1318BAFFAF00169F0C /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 69F0FB1218BAFFAF00169F0C /* Fonts */; };
+		69F0FB1518BAFFF600169F0C /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 69F0FB1418BAFFF600169F0C /* Data */; };
+		69F0FB1818BB325900169F0C /* AEPlayerPickSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F0FB1718BB325900169F0C /* AEPlayerPickSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +49,6 @@
 
 /* Begin PBXFileReference section */
 		692DB1C618B84F060047674B /* AEGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEGeometry.h; sourceTree = "<group>"; };
-		699F21B218B551CC006F527B /* ffl_2009_players.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ffl_2009_players.csv; path = Resources/Data/ffl_2009_players.csv; sourceTree = "<group>"; };
-		699F21B318B551CC006F527B /* ffl_2009_teams.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ffl_2009_teams.csv; path = Resources/Data/ffl_2009_teams.csv; sourceTree = "<group>"; };
 		699F21B818B5CCC1006F527B /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		699F21B918B5CCC1006F527B /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		699F21BC18B5DF2F006F527B /* AEAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEAppDelegate.h; path = Classes/AEAppDelegate.h; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 		699F21C518B5DF2F006F527B /* AEUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEUtility.m; path = Classes/AEUtility.m; sourceTree = "<group>"; };
 		699F21CB18B5DF4E006F527B /* AETeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AETeam.h; path = Classes/AETeam.h; sourceTree = "<group>"; };
 		699F21CC18B5DF4E006F527B /* AETeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AETeam.m; path = Classes/AETeam.m; sourceTree = "<group>"; };
-		699F21CE18B69FA7006F527B /* ffl_2009_teams_supplemental.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ffl_2009_teams_supplemental.csv; path = Resources/Data/ffl_2009_teams_supplemental.csv; sourceTree = "<group>"; };
 		699F21D018B6DED4006F527B /* PC Team Logos */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "PC Team Logos"; path = "Resources/PC Team Logos"; sourceTree = "<group>"; };
 		699F21D218B6FC6E006F527B /* PC Headshots */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "PC Headshots"; path = "Resources/PC Headshots"; sourceTree = "<group>"; };
 		69BFE8F918B95CF700DE5164 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = Resources/Images; sourceTree = "<group>"; };
@@ -93,6 +90,10 @@
 		69DB53AA18AA26D50083754B /* SceneKitTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneKitTestTests.m; sourceTree = "<group>"; };
 		69DB53B418AA26FF0083754B /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		69DB53B618AA27060083754B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		69F0FB1218BAFFAF00169F0C /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = Resources/Fonts; sourceTree = "<group>"; };
+		69F0FB1418BAFFF600169F0C /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = Resources/Data; sourceTree = "<group>"; };
+		69F0FB1618BB325900169F0C /* AEPlayerPickSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEPlayerPickSet.h; path = Classes/AEPlayerPickSet.h; sourceTree = "<group>"; };
+		69F0FB1718BB325900169F0C /* AEPlayerPickSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEPlayerPickSet.m; path = Classes/AEPlayerPickSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,45 +224,38 @@
 		69EAF44718B45C5800515D17 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				69F0FB1418BAFFF600169F0C /* Data */,
+				69F0FB1218BAFFAF00169F0C /* Fonts */,
 				69BFE8F918B95CF700DE5164 /* Images */,
 				69BFE8FA18B95CF700DE5164 /* Movies */,
 				699F21D218B6FC6E006F527B /* PC Headshots */,
 				699F21D018B6DED4006F527B /* PC Team Logos */,
-				69EAF44A18B45CF300515D17 /* Data */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		69EAF44A18B45CF300515D17 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				699F21CE18B69FA7006F527B /* ffl_2009_teams_supplemental.csv */,
-				699F21B218B551CC006F527B /* ffl_2009_players.csv */,
-				699F21B318B551CC006F527B /* ffl_2009_teams.csv */,
-			);
-			name = Data;
 			sourceTree = "<group>";
 		};
 		69EAF46A18B4D0E100515D17 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				692DB1C618B84F060047674B /* AEGeometry.h */,
 				699F21BC18B5DF2F006F527B /* AEAppDelegate.h */,
 				699F21BD18B5DF2F006F527B /* AEAppDelegate.m */,
-				699F21BE18B5DF2F006F527B /* AEPlayer.h */,
-				699F21BF18B5DF2F006F527B /* AEPlayer.m */,
-				699F21CB18B5DF4E006F527B /* AETeam.h */,
-				699F21CC18B5DF4E006F527B /* AETeam.m */,
-				699F21C018B5DF2F006F527B /* AEPlayerCard.h */,
-				699F21C118B5DF2F006F527B /* AEPlayerCard.m */,
-				699F21C218B5DF2F006F527B /* AESceneView.h */,
-				699F21C318B5DF2F006F527B /* AESceneView.m */,
-				699F21C418B5DF2F006F527B /* AEUtility.h */,
-				699F21C518B5DF2F006F527B /* AEUtility.m */,
 				69D3C29B18B97F5D00A0641F /* AEButton.h */,
 				69D3C29C18B97F5D00A0641F /* AEButton.m */,
+				692DB1C618B84F060047674B /* AEGeometry.h */,
 				69D3C29E18B9D21500A0641F /* AEMenuView.h */,
 				69D3C29F18B9D21500A0641F /* AEMenuView.m */,
+				699F21BE18B5DF2F006F527B /* AEPlayer.h */,
+				699F21BF18B5DF2F006F527B /* AEPlayer.m */,
+				699F21C018B5DF2F006F527B /* AEPlayerCard.h */,
+				699F21C118B5DF2F006F527B /* AEPlayerCard.m */,
+				69F0FB1618BB325900169F0C /* AEPlayerPickSet.h */,
+				69F0FB1718BB325900169F0C /* AEPlayerPickSet.m */,
+				699F21C218B5DF2F006F527B /* AESceneView.h */,
+				699F21C318B5DF2F006F527B /* AESceneView.m */,
+				699F21CB18B5DF4E006F527B /* AETeam.h */,
+				699F21CC18B5DF4E006F527B /* AETeam.m */,
+				699F21C418B5DF2F006F527B /* AEUtility.h */,
+				699F21C518B5DF2F006F527B /* AEUtility.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -345,13 +339,12 @@
 			files = (
 				69BFE8FC18B95CF700DE5164 /* Movies in Resources */,
 				69BFE8FB18B95CF700DE5164 /* Images in Resources */,
+				69F0FB1518BAFFF600169F0C /* Data in Resources */,
 				69DB538B18AA26D40083754B /* InfoPlist.strings in Resources */,
-				699F21B418B551CC006F527B /* ffl_2009_players.csv in Resources */,
-				699F21B518B551CC006F527B /* ffl_2009_teams.csv in Resources */,
+				69F0FB1318BAFFAF00169F0C /* Fonts in Resources */,
 				69DB539918AA26D40083754B /* Images.xcassets in Resources */,
 				699F21D118B6DED4006F527B /* PC Team Logos in Resources */,
 				69DB539118AA26D40083754B /* Credits.rtf in Resources */,
-				699F21CF18B69FA7006F527B /* ffl_2009_teams_supplemental.csv in Resources */,
 				69DB539718AA26D40083754B /* MainMenu.xib in Resources */,
 				699F21D318B6FC6E006F527B /* PC Headshots in Resources */,
 			);
@@ -375,6 +368,7 @@
 				699F21CD18B5DF4E006F527B /* AETeam.m in Sources */,
 				699F21CA18B5DF2F006F527B /* AEUtility.m in Sources */,
 				69D3C2A018B9D21500A0641F /* AEMenuView.m in Sources */,
+				69F0FB1818BB325900169F0C /* AEPlayerPickSet.m in Sources */,
 				699F21BA18B5CCC1006F527B /* CHCSVParser.m in Sources */,
 				69D3C29D18B97F5D00A0641F /* AEButton.m in Sources */,
 				699F21C818B5DF2F006F527B /* AEPlayerCard.m in Sources */,

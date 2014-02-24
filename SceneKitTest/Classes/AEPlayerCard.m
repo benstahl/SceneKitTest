@@ -31,7 +31,9 @@
 		// Headshot BG materials
 		SCNMaterial *headshotBackgroundMat = [SCNMaterial material];
 		[AEUtility configureMaterial:headshotBackgroundMat];
-		headshotBackgroundMat.diffuse.contents = [NSImage imageNamed:@"pc_hs_bg"];
+		NSString *headshotBackgroundFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/pc_hs_bg" withExtension:@"png"] path];
+		NSImage *headshotBackgroundImage = [[NSImage alloc] initWithContentsOfFile:headshotBackgroundFilePath];
+		headshotBackgroundMat.diffuse.contents = headshotBackgroundImage;
 //		headshotBackgroundMat.reflective.contents = reflectionImg;
 //		headshotBackgroundMat.shininess = 1.0;
 //		headshotBackgroundMat.lightingModelName = SCNLightingModelBlinn;
@@ -59,7 +61,11 @@
 		// Base materials (card outline, bg, etc.)
 		SCNMaterial *baseMat = [SCNMaterial material];
 		[AEUtility configureMaterial:baseMat];
-		baseMat.diffuse.contents = [NSImage imageNamed:@"pc_base"];
+
+		[AEUtility configureMaterial:headshotBackgroundMat];
+		NSString *baseFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/pc_base" withExtension:@"png"] path];
+		NSImage *baseImage = [[NSImage alloc] initWithContentsOfFile:baseFilePath];
+		baseMat.diffuse.contents = baseImage;
 //		baseMat.reflective.contents = reflectionImg;
 //		baseMat.shininess = 1.0;
 		_baseNode.geometry.firstMaterial = baseMat;
@@ -73,7 +79,9 @@
 		// Primary color stripe materials
 		SCNMaterial *primaryColorStripeMat = [SCNMaterial material];
 		[AEUtility configureMaterial:primaryColorStripeMat];
-		primaryColorStripeMat.diffuse.contents = [NSImage imageNamed:@"pc_color_stripe_primary"];
+		NSString *primaryColorStripeFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/pc_color_stripe_primary" withExtension:@"png"] path];
+		NSImage *primaryColorStripeImage = [[NSImage alloc] initWithContentsOfFile:primaryColorStripeFilePath];
+		primaryColorStripeMat.diffuse.contents = primaryColorStripeImage;
 //		primaryColorStripeMat.reflective.contents = reflectionImg;
 //		primaryColorStripeMat.shininess = 0.3;
 		_primaryColorStripeNode.geometry.firstMaterial = primaryColorStripeMat;
@@ -87,7 +95,9 @@
 		// Secondary color stripe materials
 		SCNMaterial *secondaryColorStripeMat = [SCNMaterial material];
 		[AEUtility configureMaterial:secondaryColorStripeMat];
-		secondaryColorStripeMat.diffuse.contents = [NSImage imageNamed:@"pc_color_stripe_secondary"];
+		NSString *secondaryColorStripeFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/pc_color_stripe_secondary" withExtension:@"png"] path];
+		NSImage *secondaryColorStripeImage = [[NSImage alloc] initWithContentsOfFile:secondaryColorStripeFilePath];
+		secondaryColorStripeMat.diffuse.contents = secondaryColorStripeImage;
 //		secondaryColorStripeMat.reflective.contents = reflectionImg;
 //		secondaryColorStripeMat.shininess = 0.3;
 		_secondaryColorStripeNode.geometry.firstMaterial = secondaryColorStripeMat;
@@ -153,7 +163,7 @@
 		_rankLayer.fontSize = 48.0;
 		_rankLayer.alignmentMode = kCAAlignmentCenter;
 		_rankLayer.frame = CGRectMake(0, -478, 400, 560);
-//		_rankLayer.foregroundColor = [[NSColor colorWithCalibratedHue:0.0 saturation:0.0 brightness:75.0 alpha:1.0] CGColor];
+//		_rankLayer.foregroundColor = [[NSColor colorWithHue:0.0 saturation:0.0 brightness:75.0 alpha:1.0] CGColor];
 		_rankLayer.string = [NSString stringWithFormat:@"TE RANK 12"];
 		_rankLayer.shadowColor = [[NSColor blackColor] CGColor];
 		_rankLayer.shadowOpacity = 1.0;
@@ -162,28 +172,31 @@
 		_rankLayer.shouldRasterize = YES;
 		[textLayer addSublayer:_rankLayer];
 
-		// Disable implicit animation on text changes for dynamic layers.
-		NSDictionary *newActions = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNull null], @"contents", nil];
-		_firstNameLayer.actions = newActions;
-		_lastNameLayer.actions = newActions;
-		_rankLayer.actions = newActions;
+//		// Disable implicit animation on text changes for dynamic layers.
+//		NSDictionary *newActions = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNull null], @"contents", nil];
+//		_firstNameLayer.actions = newActions;
+//		_lastNameLayer.actions = newActions;
+//		_rankLayer.actions = newActions;
 
 //		[infoLayer setNeedsDisplay];
 //		[baseLayer setNeedsDisplay];
 
-		SCNPlane *namePlane = [SCNPlane planeWithWidth:_cardSize.x height:_cardSize.y];
-		_nameNode = [SCNNode nodeWithGeometry:namePlane];
-		_nameNode.position = SCNVector3Make(0.0, 0.0, 0.012);
-		[self addChildNode:_nameNode];
+		SCNPlane *textPlane = [SCNPlane planeWithWidth:_cardSize.x height:_cardSize.y];
+		_textNode = [SCNNode nodeWithGeometry:textPlane];
+		_textNode.position = SCNVector3Make(0.0, 0.0, 0.012);
+		[self addChildNode:_textNode];
 
-		SCNMaterial *nameMat = [SCNMaterial material];
-		[AEUtility configureMaterial:nameMat];
-		nameMat.diffuse.contents = textLayer;
-//		nameMat.transparent.contents = baseLayer;
+		SCNMaterial *textMat = [SCNMaterial material];
+		[AEUtility configureMaterial:textMat];
+		textMat.diffuse.contents = textLayer;
+//		textMat.lightingModelName = SCNLightingModelLambert;
+//		textMat.lightingModelName = SCNLightingModelBlinn;
+//		textMat.emission.contents = textLayer;
+//		textMat.transparent.contents = textLayer;
 		//	nameMat.reflective.contents = reflectionImg;
 		//	nameMat.shininess = 0.2;
 		//	nameMat.multiply.contents = [AEUtility colorFromHexString:team.data[@"COLOR_SECONDARY"]];
-		_nameNode.geometry.firstMaterial = nameMat;
+		_textNode.geometry.firstMaterial = textMat;
 
 
 //		[self configureWithPlayer:player];
