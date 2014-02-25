@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 App Easel. All rights reserved.
 //
 
-#import "AEMenuView.h"
+#import "AEModuleMenuView.h"
 
-@implementation AEMenuView
+@implementation AEModuleMenuView
 
 /* ========================================================================== */
 - (id)initWithFrame:(NSRect)frame

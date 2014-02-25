@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		691B9C0918BBE1D00073F01F /* AEHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691B9C0818BBE1D00073F01F /* AEHeaderView.m */; };
+		691B9C0C18BC2A320073F01F /* FFLModuleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 691B9C0A18BC2A320073F01F /* FFLModuleView.xib */; };
 		699F21BA18B5CCC1006F527B /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21B918B5CCC1006F527B /* CHCSVParser.m */; };
 		699F21C618B5DF2F006F527B /* AEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21BD18B5DF2F006F527B /* AEAppDelegate.m */; };
 		699F21C718B5DF2F006F527B /* AEPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21BF18B5DF2F006F527B /* AEPlayer.m */; };
@@ -20,7 +21,7 @@
 		69BFE8FB18B95CF700DE5164 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 69BFE8F918B95CF700DE5164 /* Images */; };
 		69BFE8FC18B95CF700DE5164 /* Movies in Resources */ = {isa = PBXBuildFile; fileRef = 69BFE8FA18B95CF700DE5164 /* Movies */; };
 		69D3C29D18B97F5D00A0641F /* AEButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D3C29C18B97F5D00A0641F /* AEButton.m */; };
-		69D3C2A018B9D21500A0641F /* AEMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D3C29F18B9D21500A0641F /* AEMenuView.m */; };
+		69D3C2A018B9D21500A0641F /* AEModuleMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D3C29F18B9D21500A0641F /* AEModuleMenuView.m */; };
 		69DB538118AA26D40083754B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DB538018AA26D40083754B /* Cocoa.framework */; };
 		69DB538B18AA26D40083754B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69DB538918AA26D40083754B /* InfoPlist.strings */; };
 		69DB538D18AA26D40083754B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DB538C18AA26D40083754B /* main.m */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		691B9C0718BBE1D00073F01F /* AEHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEHeaderView.h; path = Classes/AEHeaderView.h; sourceTree = "<group>"; };
 		691B9C0818BBE1D00073F01F /* AEHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEHeaderView.m; path = Classes/AEHeaderView.m; sourceTree = "<group>"; };
+		691B9C0B18BC2A320073F01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FFLModuleView.xib; sourceTree = "<group>"; };
 		692DB1C618B84F060047674B /* AEGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEGeometry.h; sourceTree = "<group>"; };
 		699F21B818B5CCC1006F527B /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		699F21B918B5CCC1006F527B /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
@@ -72,8 +74,8 @@
 		69BFE8FA18B95CF700DE5164 /* Movies */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Movies; path = Resources/Movies; sourceTree = "<group>"; };
 		69D3C29B18B97F5D00A0641F /* AEButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEButton.h; path = Classes/AEButton.h; sourceTree = "<group>"; };
 		69D3C29C18B97F5D00A0641F /* AEButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEButton.m; path = Classes/AEButton.m; sourceTree = "<group>"; };
-		69D3C29E18B9D21500A0641F /* AEMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEMenuView.h; path = Classes/AEMenuView.h; sourceTree = "<group>"; };
-		69D3C29F18B9D21500A0641F /* AEMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEMenuView.m; path = Classes/AEMenuView.m; sourceTree = "<group>"; };
+		69D3C29E18B9D21500A0641F /* AEModuleMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModuleMenuView.h; path = Classes/AEModuleMenuView.h; sourceTree = "<group>"; };
+		69D3C29F18B9D21500A0641F /* AEModuleMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEModuleMenuView.m; path = Classes/AEModuleMenuView.m; sourceTree = "<group>"; };
 		69DB537D18AA26D40083754B /* SceneKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69DB538018AA26D40083754B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		69DB538318AA26D40083754B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -247,8 +249,8 @@
 				692DB1C618B84F060047674B /* AEGeometry.h */,
 				691B9C0718BBE1D00073F01F /* AEHeaderView.h */,
 				691B9C0818BBE1D00073F01F /* AEHeaderView.m */,
-				69D3C29E18B9D21500A0641F /* AEMenuView.h */,
-				69D3C29F18B9D21500A0641F /* AEMenuView.m */,
+				69D3C29E18B9D21500A0641F /* AEModuleMenuView.h */,
+				69D3C29F18B9D21500A0641F /* AEModuleMenuView.m */,
 				699F21BE18B5DF2F006F527B /* AEPlayer.h */,
 				699F21BF18B5DF2F006F527B /* AEPlayer.m */,
 				699F21C018B5DF2F006F527B /* AEPlayerCard.h */,
@@ -261,6 +263,7 @@
 				699F21CC18B5DF4E006F527B /* AETeam.m */,
 				699F21C418B5DF2F006F527B /* AEUtility.h */,
 				699F21C518B5DF2F006F527B /* AEUtility.m */,
+				691B9C0A18BC2A320073F01F /* FFLModuleView.xib */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				691B9C0C18BC2A320073F01F /* FFLModuleView.xib in Resources */,
 				69BFE8FC18B95CF700DE5164 /* Movies in Resources */,
 				69BFE8FB18B95CF700DE5164 /* Images in Resources */,
 				69F0FB1518BAFFF600169F0C /* Data in Resources */,
@@ -372,7 +376,7 @@
 			files = (
 				699F21CD18B5DF4E006F527B /* AETeam.m in Sources */,
 				699F21CA18B5DF2F006F527B /* AEUtility.m in Sources */,
-				69D3C2A018B9D21500A0641F /* AEMenuView.m in Sources */,
+				69D3C2A018B9D21500A0641F /* AEModuleMenuView.m in Sources */,
 				69F0FB1818BB325900169F0C /* AEPlayerPickSet.m in Sources */,
 				699F21BA18B5CCC1006F527B /* CHCSVParser.m in Sources */,
 				69D3C29D18B97F5D00A0641F /* AEButton.m in Sources */,
@@ -404,6 +408,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		691B9C0A18BC2A320073F01F /* FFLModuleView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				691B9C0B18BC2A320073F01F /* Base */,
+			);
+			name = FFLModuleView.xib;
+			sourceTree = "<group>";
+		};
 		69DB538918AA26D40083754B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

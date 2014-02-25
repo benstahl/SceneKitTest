@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AEMenuView : NSView
+@interface AEModuleMenuView : NSView
 
 @end

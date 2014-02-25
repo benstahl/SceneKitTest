@@ -330,10 +330,6 @@
 		[card configureWithPlayer:players[i]];
 		card.pivot = CATransform3DMakeTranslation(0.0, -2.8, 0.0);
 		card.position = SCNVector3Make(-(-(totalWidthStart / 2.0) + cardSpacingStartX * i), .5, 48.0);
-//		card.position = SCNVector3Make(-(totalWidthEnd / 2.0) + cardSpacingEndX * i, .025, 0.0);
-//		card.position = SCNVector3Make(-(totalWidthStart / 2.0) + cardSpacingStartX * i, (card.cardSize.y * 1.5) + .025, 18.0);
-//		card.position = SCNVector3Make(-(totalWidthStart / 2.0) + cardSpacingStartX * i, (card.cardSize.y / 2.0) + .025, 18.0);
-//		card.position = SCNVector3Make(-(totalWidthEnd / 2.0) + cardSpacingEndX * i, (card.cardSize.y / 2.0) + .025, 0.0);
 		card.rotation = SCNVector4Make(1.0, 0.75, 0.0, AEDegToRad(-80.0));
 		[_displayedCards addObject:card];
 		[_displayedCardsNode addChildNode:card];
@@ -379,7 +375,7 @@
 //			card.position = SCNVector3Make(-(totalWidthEnd / 2.0) + cardSpacingEndX * i, (card.cardSize.y / 2.0) + .025, 0.0);
 //			card.rotation = SCNVector4Make(0.0, 0.0, 0.0, 0.0);
 			card.rotation = SCNVector4Make(0.0, 1.0, 0.0, -posX * 0.075);
-			NSLog(@"Moving card at index %@ to %f", @(i), fabs(posX) * 0.30);
+//			NSLog(@"Moving card at index %@ to %f", @(i), fabs(posX) * 0.30);
 			[SCNTransaction commit];
 //			[card addAnimation:animation forKey:nil];
 //			[card fadeOutReflectionAfterDelay:2.0];
@@ -722,47 +718,48 @@
 	if (_cardsAnimating) { return; }
 
 	if (_displayedCardCount == 0) {
-//		NSUInteger randomPositionIndex = AERandInt(0, _validPlayerPositions.count - 1);
-//		NSString *randomPosition = _validPlayerPositions[randomPositionIndex];
-//
-//		NSUInteger maxPlayers = 5;
-//
-//		// Limit kickers to 3 cards max.
-//		if ([randomPosition isEqualToString:@"K"]) {
-//			maxPlayers = 3;
-//		}
-//
-//		NSInteger randomPlayerCount = AERandInt(2, maxPlayers);
-////		NSLog(@"Showing %@ cards for position %@", @(randomPlayerCount), randomPosition);
-//		NSArray *randomPlayers = [self randomUniquePlayersWithCount:randomPlayerCount position:randomPosition];
-
 		_currentPickSet = [self randomPickSet];
-		_headerView.topLabel.stringValue = [NSString stringWithFormat:@"\"%@\"", _currentPickSet.fantasyTeamName];
+		NSString *topLabelString = [NSString stringWithFormat:@"\"%@\"", _currentPickSet.fantasyTeamName];
 		NSString *bottomLabelString = _currentPickSet.headerPickString;
-//		_headerView.bottomLabel.stringValue = bottomLabelString;
 
-		NSLog(@"Header string = %@", bottomLabelString);
+//		NSLog(@"Header string = %@", bottomLabelString);
 
+		NSColor *highlightColor = [NSColor colorWithHue:0.135 saturation:1.0 brightness:1.0 alpha:1.0];
+
+		// text centering paragraph style
+		NSMutableParagraphStyle *centeringParagraphStyle = [[NSMutableParagraphStyle alloc] init];
+		[centeringParagraphStyle setAlignment:NSCenterTextAlignment];
+
+		/* --- Top label --- */
+		NSMutableAttributedString *topAttrString = [[NSMutableAttributedString alloc] initWithString:topLabelString];
+
+		// center string
+		[topAttrString addAttribute:NSParagraphStyleAttributeName value:centeringParagraphStyle range:NSMakeRange(0, topAttrString.length)];
+
+		// highlight and stroke the entire line.
+		[topAttrString addAttribute:NSForegroundColorAttributeName value:highlightColor range:NSMakeRange(0, topAttrString.length)];
+//		[topAttrString addAttribute:NSForegroundColorAttributeName value:[NSColor clearColor] range:NSMakeRange(0, topAttrString.length)];
+//		[topAttrString addAttribute:NSStrokeColorAttributeName value:highlightColor range:NSMakeRange(0, topAttrString.length)];
+//		[topAttrString addAttribute:NSStrokeWidthAttributeName value:@5.0 range:NSMakeRange(0, topAttrString.length)];
+
+		[_headerView.topLabel setAttributedStringValue:topAttrString];
+
+		/* --- Bottom label --- */
 		NSUInteger needsCountIndex = (_currentPickSet.fantasyTeamOwnerName.length) + 6 + _currentPickSet.fantasyTeamOwnerLocation.length + 7;
 		NSUInteger cardsCountIndex = needsCountIndex + 5;
 
-		NSLog(@"needsCountIndex = %@ | cardsCountIndex = %@", @(needsCountIndex), @(cardsCountIndex));
+//		NSLog(@"needsCountIndex = %@ | cardsCountIndex = %@", @(needsCountIndex), @(cardsCountIndex));
 
-//		NSDictionary *attr = @{NSForegroundColorAttributeName : [NSValue valueWithRange:NSMakeRange(0, 0)]};
-		NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:bottomLabelString];
-//		NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:bottomLabelString attributes:attr];
+		NSMutableAttributedString *bottomAttrString = [[NSMutableAttributedString alloc] initWithString:bottomLabelString];
 
-		// center the text
-		NSMutableParagraphStyle *mutParaStyle=[[NSMutableParagraphStyle alloc] init];
-		[mutParaStyle setAlignment:NSCenterTextAlignment];
-		[attrString addAttribute:NSParagraphStyleAttributeName value:mutParaStyle range:NSMakeRange(0, attrString.length)];
+		// center string
+		[bottomAttrString addAttribute:NSParagraphStyleAttributeName value:centeringParagraphStyle range:NSMakeRange(0, bottomAttrString.length)];
 
 		// highlight the needs and card count letters.
-		NSColor *highlightColor = [NSColor colorWithHue:0.13 saturation:1.0 brightness:1.0 alpha:1.0];
-		[attrString addAttribute:NSForegroundColorAttributeName value:highlightColor range:NSMakeRange(needsCountIndex, 1)];
-		[attrString addAttribute:NSForegroundColorAttributeName value:highlightColor range:NSMakeRange(cardsCountIndex, 1)];
+		[bottomAttrString addAttribute:NSForegroundColorAttributeName value:highlightColor range:NSMakeRange(needsCountIndex, 1)];
+		[bottomAttrString addAttribute:NSForegroundColorAttributeName value:highlightColor range:NSMakeRange(cardsCountIndex, 1)];
 
-		[_headerView.bottomLabel setAttributedStringValue:attrString];
+		[_headerView.bottomLabel setAttributedStringValue:bottomAttrString];
 
 		[_headerView fadeIn];
 		[self animateLogoOut];
