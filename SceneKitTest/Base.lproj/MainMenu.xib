@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
-        <plugIn identifier="com.apple.SceneKitIBPlugin" version="3338"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -656,16 +655,90 @@
                 <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <sceneView wantsLayer="YES" horizontalHuggingPriority="1" verticalHuggingPriority="1" loops="YES" id="cH1-iw-d1T" customClass="AESceneView">
+                    <customView wantsLayer="YES" id="szr-Hj-q4p" userLabel="Background View" customClass="AEMainMenuView">
                         <rect key="frame" x="0.0" y="80" width="800" height="450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="headerBottomLine" destination="oIc-8f-skZ" id="oAY-5a-6VE"/>
-                            <outlet property="headerTopLine" destination="VRf-b8-I7s" id="Vp0-fI-2cZ"/>
-                            <outlet property="headerView" destination="IG5-XV-8wh" id="YaM-3l-pc8"/>
-                        </connections>
-                    </sceneView>
+                        <subviews>
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="tdB-zf-aF1">
+                                <rect key="frame" x="60" y="353" width="680" height="57"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="Module Select" placeholderString="" id="aRT-MP-QGf">
+                                    <font key="font" size="48" name="HelveticaNeue-Light"/>
+                                    <color key="textColor" red="0.99963301419999995" green="0.99960309270000003" blue="0.99962008000000002" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box wantsLayer="YES" borderWidth="0.0" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" id="uXx-HH-UYl" userLabel="Header Divider Line">
+                                <rect key="frame" x="60" y="343" width="680" height="2"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="680" height="2"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" red="0.99963301419999995" green="0.99960309270000003" blue="0.99962008000000002" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                            </box>
+                            <customView wantsLayer="YES" id="bYM-gD-PYZ" userLabel="Logo View">
+                                <rect key="frame" x="566" y="348" width="195" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="caI-BM-JTy">
+                                        <rect key="frame" x="32" y="4" width="147" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="© 2014 App Easel LLC" placeholderString="" id="7B3-Mf-w7b">
+                                            <font key="font" size="16" name="HelveticaNeue-Condensed"/>
+                                            <color key="textColor" red="0.99963301419999995" green="0.99960309270000003" blue="0.99962008000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="pAx-iM-rlH">
+                                        <rect key="frame" x="159" y="23" width="32" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="™" placeholderString="" id="T0r-sx-auU">
+                                            <font key="font" size="14" name="HelveticaNeue-Condensed"/>
+                                            <color key="textColor" red="0.43453362579999999" green="0.74065297839999999" blue="0.99156391619999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="4dO-h1-h0V">
+                                        <rect key="frame" x="38" y="23" width="134" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="DataCaster" id="cPd-p4-NUV">
+                                            <font key="font" size="32" name="HelveticaNeue-Condensed"/>
+                                            <color key="textColor" red="0.43453362579999999" green="0.74065297839999999" blue="0.99156391619999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="XPn-5s-XfK">
+                                <rect key="frame" x="62" y="92" width="421" height="235"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <clipView key="contentView" id="4WU-sl-7nm">
+                                    <rect key="frame" x="1" y="1" width="419" height="233"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView id="p7O-v2-P1I">
+                                            <rect key="frame" x="0.0" y="0.0" width="419" height="233"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <outlet property="itemPrototype" destination="rgX-Ai-FyP" id="huG-yz-kg6"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="xe4-AE-VBq">
+                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="A2G-Rk-c0j">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                    </customView>
                     <customView wantsLayer="YES" id="2ij-dZ-86K" userLabel="Menu View" customClass="AEModuleMenuView">
                         <rect key="frame" x="20" y="100" width="760" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -673,52 +746,58 @@
                             <customView wantsLayer="YES" id="7ho-7S-LrK" customClass="AEButton">
                                 <rect key="frame" x="295" y="5" width="170" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="newPickSetButtonClicked:" target="cH1-iw-d1T" id="Lsr-vQ-ggc"/>
-                                </connections>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="actionSelectorString" value="newPickSetButtonClicked:"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabelText" value="CHOOSE"/>
+                                </userDefinedRuntimeAttributes>
                             </customView>
                         </subviews>
                     </customView>
-                    <customView wantsLayer="YES" id="IG5-XV-8wh" userLabel="Header View" customClass="AEHeaderView">
-                        <rect key="frame" x="0.0" y="410" width="800" height="120"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <subviews>
-                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="VRf-b8-I7s">
-                                <rect key="frame" x="18" y="43" width="764" height="60"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="&quot;Some Long Team Name Here&quot;" placeholderString="" id="oRU-3T-xnq">
-                                    <font key="font" size="48" name="DIN-Regular"/>
-                                    <color key="textColor" red="0.99417614936828613" green="0.71542185544967651" blue="0.056148923933506012" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="oIc-8f-skZ">
-                                <rect key="frame" x="18" y="-10" width="764" height="60"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="Joe from Brooklyn needs 2 of 5" placeholderString="" id="LeQ-KA-4Jc">
-                                    <font key="font" size="40" name="DIN-Regular"/>
-                                    <color key="textColor" red="0.99963301420211792" green="0.99960309267044067" blue="0.99962007999420166" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                        </subviews>
-                        <connections>
-                            <outlet property="bottomLabel" destination="oIc-8f-skZ" id="PMu-FK-YDe"/>
-                            <outlet property="topLabel" destination="VRf-b8-I7s" id="VnM-Wn-RZg"/>
-                        </connections>
-                    </customView>
                 </subviews>
             </view>
+            <connections>
+                <outlet property="delegate" destination="494" id="etS-9N-MQO"/>
+            </connections>
         </window>
         <customObject id="494" customClass="AEAppDelegate">
             <connections>
                 <outlet property="infoView" destination="2ij-dZ-86K" id="Rv9-Fs-Hep"/>
                 <outlet property="menuView" destination="2ij-dZ-86K" id="ae8-rf-N3i"/>
-                <outlet property="sceneView" destination="cH1-iw-d1T" id="dpd-eJ-ANU"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
         <viewController id="Z8s-MS-E7M"/>
+        <collectionViewItem id="rgX-Ai-FyP">
+            <connections>
+                <outlet property="imageView" destination="Rg6-3e-faj" id="psV-B0-cqY"/>
+                <outlet property="textField" destination="grf-Ls-iwC" id="tfj-zE-xuC"/>
+                <outlet property="view" destination="grI-0V-evR" id="kYG-7K-yMx"/>
+            </connections>
+        </collectionViewItem>
+        <view id="grI-0V-evR" userLabel="Module View Item">
+            <rect key="frame" x="0.0" y="0.0" width="567" height="124"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Rg6-3e-faj">
+                    <rect key="frame" x="17" y="17" width="160" height="90"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="Tbb-gr-vcb"/>
+                    <connections>
+                        <binding destination="494" name="value" keyPath="self.modules.modulePreviewImage" id="ENa-Ap-60O"/>
+                    </connections>
+                </imageView>
+                <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="grf-Ls-iwC">
+                    <rect key="frame" x="180" y="47" width="369" height="57"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="Module Select" placeholderString="" id="U6W-sp-VO3">
+                        <font key="font" size="24" name="HelveticaNeue-Light"/>
+                        <color key="textColor" red="0.99963301419999995" green="0.99960309270000003" blue="0.99962008000000002" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+        </view>
+        <userDefaultsController representsSharedInstance="YES" id="5ym-Th-oBr"/>
     </objects>
 </document>

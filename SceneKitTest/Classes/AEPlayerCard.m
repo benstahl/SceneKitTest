@@ -7,7 +7,7 @@
 //
 
 #import "AEAppDelegate.h"
-#import "AESceneView.h"
+#import "AEFFLSceneView.h"
 #import "AEPlayerCard.h"
 #import "AEPlayer.h"
 #import "AETeam.h"
@@ -208,7 +208,7 @@
 - (void)configureWithPlayer:(AEPlayer*)player {
 	_player = player;
 
-	AESceneView *sceneView = (AESceneView*)((AEAppDelegate*)[NSApp delegate]).sceneView;
+	AEFFLSceneView *sceneView = (AEFFLSceneView*)((AEAppDelegate*)[NSApp delegate]).sceneView;
 	AETeam *team = [sceneView teamWithID:player.data[@"TEAM_ID"]];
 
 	_headshotBackgroundNode.geometry.firstMaterial.multiply.contents = [AEUtility colorFromHexString:team.data[@"COLOR_BG_TINT"]];

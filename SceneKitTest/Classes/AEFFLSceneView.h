@@ -16,7 +16,7 @@
 @class AEPlayerPickSet;
 @class AEHeaderView;
 
-@interface AESceneView : SCNView <CHCSVParserDelegate> {
+@interface AEFFLSceneView : SCNView <CHCSVParserDelegate> {
 	SCNNode *_worldPivotNode;
 	SCNNode *_cameraNode;
 	SCNNode *_displayedCardsNode;

@@ -8,18 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		691B9C0918BBE1D00073F01F /* AEHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691B9C0818BBE1D00073F01F /* AEHeaderView.m */; };
-		691B9C0C18BC2A320073F01F /* FFLModuleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 691B9C0A18BC2A320073F01F /* FFLModuleView.xib */; };
+		691B9C1018BC2C790073F01F /* AEModuleFFLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 691B9C0E18BC2C790073F01F /* AEModuleFFLViewController.m */; };
+		691B9C1418BC2CC90073F01F /* AEModuleFFL.xib in Resources */ = {isa = PBXBuildFile; fileRef = 691B9C1218BC2CC90073F01F /* AEModuleFFL.xib */; };
 		699F21BA18B5CCC1006F527B /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21B918B5CCC1006F527B /* CHCSVParser.m */; };
 		699F21C618B5DF2F006F527B /* AEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21BD18B5DF2F006F527B /* AEAppDelegate.m */; };
 		699F21C718B5DF2F006F527B /* AEPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21BF18B5DF2F006F527B /* AEPlayer.m */; };
 		699F21C818B5DF2F006F527B /* AEPlayerCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21C118B5DF2F006F527B /* AEPlayerCard.m */; };
-		699F21C918B5DF2F006F527B /* AESceneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21C318B5DF2F006F527B /* AESceneView.m */; };
+		699F21C918B5DF2F006F527B /* AEFFLSceneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21C318B5DF2F006F527B /* AEFFLSceneView.m */; };
 		699F21CA18B5DF2F006F527B /* AEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21C518B5DF2F006F527B /* AEUtility.m */; };
 		699F21CD18B5DF4E006F527B /* AETeam.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F21CC18B5DF4E006F527B /* AETeam.m */; };
 		699F21D118B6DED4006F527B /* PC Team Logos in Resources */ = {isa = PBXBuildFile; fileRef = 699F21D018B6DED4006F527B /* PC Team Logos */; };
 		699F21D318B6FC6E006F527B /* PC Headshots in Resources */ = {isa = PBXBuildFile; fileRef = 699F21D218B6FC6E006F527B /* PC Headshots */; };
 		69BFE8FB18B95CF700DE5164 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 69BFE8F918B95CF700DE5164 /* Images */; };
 		69BFE8FC18B95CF700DE5164 /* Movies in Resources */ = {isa = PBXBuildFile; fileRef = 69BFE8FA18B95CF700DE5164 /* Movies */; };
+		69C11C0318BC499D00E2AD0B /* AEMainMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C11C0218BC499D00E2AD0B /* AEMainMenuView.m */; };
+		69C11C0618BC6A6400E2AD0B /* AEModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C11C0518BC6A6400E2AD0B /* AEModule.m */; };
 		69D3C29D18B97F5D00A0641F /* AEButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D3C29C18B97F5D00A0641F /* AEButton.m */; };
 		69D3C2A018B9D21500A0641F /* AEModuleMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D3C29F18B9D21500A0641F /* AEModuleMenuView.m */; };
 		69DB538118AA26D40083754B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DB538018AA26D40083754B /* Cocoa.framework */; };
@@ -52,7 +55,9 @@
 /* Begin PBXFileReference section */
 		691B9C0718BBE1D00073F01F /* AEHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEHeaderView.h; path = Classes/AEHeaderView.h; sourceTree = "<group>"; };
 		691B9C0818BBE1D00073F01F /* AEHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEHeaderView.m; path = Classes/AEHeaderView.m; sourceTree = "<group>"; };
-		691B9C0B18BC2A320073F01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FFLModuleView.xib; sourceTree = "<group>"; };
+		691B9C0D18BC2C790073F01F /* AEModuleFFLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModuleFFLViewController.h; path = Classes/AEModuleFFLViewController.h; sourceTree = "<group>"; };
+		691B9C0E18BC2C790073F01F /* AEModuleFFLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEModuleFFLViewController.m; path = Classes/AEModuleFFLViewController.m; sourceTree = "<group>"; };
+		691B9C1318BC2CC90073F01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AEModuleFFL.xib; sourceTree = "<group>"; };
 		692DB1C618B84F060047674B /* AEGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEGeometry.h; sourceTree = "<group>"; };
 		699F21B818B5CCC1006F527B /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		699F21B918B5CCC1006F527B /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
@@ -62,8 +67,8 @@
 		699F21BF18B5DF2F006F527B /* AEPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEPlayer.m; path = Classes/AEPlayer.m; sourceTree = "<group>"; };
 		699F21C018B5DF2F006F527B /* AEPlayerCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEPlayerCard.h; path = Classes/AEPlayerCard.h; sourceTree = "<group>"; };
 		699F21C118B5DF2F006F527B /* AEPlayerCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEPlayerCard.m; path = Classes/AEPlayerCard.m; sourceTree = "<group>"; };
-		699F21C218B5DF2F006F527B /* AESceneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AESceneView.h; path = Classes/AESceneView.h; sourceTree = "<group>"; };
-		699F21C318B5DF2F006F527B /* AESceneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AESceneView.m; path = Classes/AESceneView.m; sourceTree = "<group>"; };
+		699F21C218B5DF2F006F527B /* AEFFLSceneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEFFLSceneView.h; path = Classes/AEFFLSceneView.h; sourceTree = "<group>"; };
+		699F21C318B5DF2F006F527B /* AEFFLSceneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEFFLSceneView.m; path = Classes/AEFFLSceneView.m; sourceTree = "<group>"; };
 		699F21C418B5DF2F006F527B /* AEUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEUtility.h; path = Classes/AEUtility.h; sourceTree = "<group>"; };
 		699F21C518B5DF2F006F527B /* AEUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEUtility.m; path = Classes/AEUtility.m; sourceTree = "<group>"; };
 		699F21CB18B5DF4E006F527B /* AETeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AETeam.h; path = Classes/AETeam.h; sourceTree = "<group>"; };
@@ -72,6 +77,10 @@
 		699F21D218B6FC6E006F527B /* PC Headshots */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "PC Headshots"; path = "Resources/PC Headshots"; sourceTree = "<group>"; };
 		69BFE8F918B95CF700DE5164 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = Resources/Images; sourceTree = "<group>"; };
 		69BFE8FA18B95CF700DE5164 /* Movies */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Movies; path = Resources/Movies; sourceTree = "<group>"; };
+		69C11C0118BC499D00E2AD0B /* AEMainMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEMainMenuView.h; path = Classes/AEMainMenuView.h; sourceTree = "<group>"; };
+		69C11C0218BC499D00E2AD0B /* AEMainMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEMainMenuView.m; path = Classes/AEMainMenuView.m; sourceTree = "<group>"; };
+		69C11C0418BC6A6300E2AD0B /* AEModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModule.h; path = Classes/AEModule.h; sourceTree = "<group>"; };
+		69C11C0518BC6A6400E2AD0B /* AEModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEModule.m; path = Classes/AEModule.m; sourceTree = "<group>"; };
 		69D3C29B18B97F5D00A0641F /* AEButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEButton.h; path = Classes/AEButton.h; sourceTree = "<group>"; };
 		69D3C29C18B97F5D00A0641F /* AEButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEButton.m; path = Classes/AEButton.m; sourceTree = "<group>"; };
 		69D3C29E18B9D21500A0641F /* AEModuleMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModuleMenuView.h; path = Classes/AEModuleMenuView.h; sourceTree = "<group>"; };
@@ -190,6 +199,7 @@
 				699F21B618B5CCA3006F527B /* External Libraries */,
 				69EAF44718B45C5800515D17 /* Resources */,
 				69DB539518AA26D40083754B /* MainMenu.xib */,
+				691B9C1218BC2CC90073F01F /* AEModuleFFL.xib */,
 				69DB539818AA26D40083754B /* Images.xcassets */,
 				69DB538718AA26D40083754B /* Supporting Files */,
 			);
@@ -246,9 +256,17 @@
 				699F21BD18B5DF2F006F527B /* AEAppDelegate.m */,
 				69D3C29B18B97F5D00A0641F /* AEButton.h */,
 				69D3C29C18B97F5D00A0641F /* AEButton.m */,
+				699F21C218B5DF2F006F527B /* AEFFLSceneView.h */,
+				699F21C318B5DF2F006F527B /* AEFFLSceneView.m */,
 				692DB1C618B84F060047674B /* AEGeometry.h */,
 				691B9C0718BBE1D00073F01F /* AEHeaderView.h */,
 				691B9C0818BBE1D00073F01F /* AEHeaderView.m */,
+				69C11C0118BC499D00E2AD0B /* AEMainMenuView.h */,
+				69C11C0218BC499D00E2AD0B /* AEMainMenuView.m */,
+				69C11C0418BC6A6300E2AD0B /* AEModule.h */,
+				69C11C0518BC6A6400E2AD0B /* AEModule.m */,
+				691B9C0D18BC2C790073F01F /* AEModuleFFLViewController.h */,
+				691B9C0E18BC2C790073F01F /* AEModuleFFLViewController.m */,
 				69D3C29E18B9D21500A0641F /* AEModuleMenuView.h */,
 				69D3C29F18B9D21500A0641F /* AEModuleMenuView.m */,
 				699F21BE18B5DF2F006F527B /* AEPlayer.h */,
@@ -257,13 +275,10 @@
 				699F21C118B5DF2F006F527B /* AEPlayerCard.m */,
 				69F0FB1618BB325900169F0C /* AEPlayerPickSet.h */,
 				69F0FB1718BB325900169F0C /* AEPlayerPickSet.m */,
-				699F21C218B5DF2F006F527B /* AESceneView.h */,
-				699F21C318B5DF2F006F527B /* AESceneView.m */,
 				699F21CB18B5DF4E006F527B /* AETeam.h */,
 				699F21CC18B5DF4E006F527B /* AETeam.m */,
 				699F21C418B5DF2F006F527B /* AEUtility.h */,
 				699F21C518B5DF2F006F527B /* AEUtility.m */,
-				691B9C0A18BC2A320073F01F /* FFLModuleView.xib */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -345,10 +360,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				691B9C0C18BC2A320073F01F /* FFLModuleView.xib in Resources */,
 				69BFE8FC18B95CF700DE5164 /* Movies in Resources */,
 				69BFE8FB18B95CF700DE5164 /* Images in Resources */,
 				69F0FB1518BAFFF600169F0C /* Data in Resources */,
+				691B9C1418BC2CC90073F01F /* AEModuleFFL.xib in Resources */,
 				69DB538B18AA26D40083754B /* InfoPlist.strings in Resources */,
 				69F0FB1318BAFFAF00169F0C /* Fonts in Resources */,
 				69DB539918AA26D40083754B /* Images.xcassets in Resources */,
@@ -377,15 +392,18 @@
 				699F21CD18B5DF4E006F527B /* AETeam.m in Sources */,
 				699F21CA18B5DF2F006F527B /* AEUtility.m in Sources */,
 				69D3C2A018B9D21500A0641F /* AEModuleMenuView.m in Sources */,
+				69C11C0618BC6A6400E2AD0B /* AEModule.m in Sources */,
 				69F0FB1818BB325900169F0C /* AEPlayerPickSet.m in Sources */,
 				699F21BA18B5CCC1006F527B /* CHCSVParser.m in Sources */,
+				691B9C1018BC2C790073F01F /* AEModuleFFLViewController.m in Sources */,
 				69D3C29D18B97F5D00A0641F /* AEButton.m in Sources */,
 				699F21C818B5DF2F006F527B /* AEPlayerCard.m in Sources */,
 				691B9C0918BBE1D00073F01F /* AEHeaderView.m in Sources */,
 				69DB538D18AA26D40083754B /* main.m in Sources */,
 				699F21C618B5DF2F006F527B /* AEAppDelegate.m in Sources */,
 				699F21C718B5DF2F006F527B /* AEPlayer.m in Sources */,
-				699F21C918B5DF2F006F527B /* AESceneView.m in Sources */,
+				69C11C0318BC499D00E2AD0B /* AEMainMenuView.m in Sources */,
+				699F21C918B5DF2F006F527B /* AEFFLSceneView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,12 +426,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		691B9C0A18BC2A320073F01F /* FFLModuleView.xib */ = {
+		691B9C1218BC2CC90073F01F /* AEModuleFFL.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				691B9C0B18BC2A320073F01F /* Base */,
+				691B9C1318BC2CC90073F01F /* Base */,
 			);
-			name = FFLModuleView.xib;
+			name = AEModuleFFL.xib;
 			sourceTree = "<group>";
 		};
 		69DB538918AA26D40083754B /* InfoPlist.strings */ = {
@@ -526,6 +544,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SceneKitTest/SceneKitTest-Prefix.pch";
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				INFOPLIST_FILE = "SceneKitTest/SceneKitTest-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,6 +559,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SceneKitTest/SceneKitTest-Prefix.pch";
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				INFOPLIST_FILE = "SceneKitTest/SceneKitTest-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";

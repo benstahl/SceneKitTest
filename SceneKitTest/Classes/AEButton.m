@@ -12,8 +12,11 @@
 
 @implementation AEButton
 
-- (id)initWithFrame:(NSRect)frame
-{
+@synthesize actionSelectorString = _actionSelectorString;
+@synthesize buttonLabelText = _buttonLabelText;
+
+/* ========================================================================== */
+- (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
 //		SEL actionSelector = @selector(newPickSetButtonClicked:);
@@ -37,7 +40,6 @@
 
 		CGFloat fontSize = frame.size.height * 0.5;
 		CFTypeRef labelFont = CGFontCreateWithFontName((CFStringRef)@"HelveticaNeue");
-		NSString *buttonLabel = @"NEW SET";
 //		CGSize labelTextSize = [buttonLabel sizeWithAttributes:@{NSFontNameAttribute:@"DIN-Bold", NSFontSizeAttribute:@(fontSize)}];
 //		NSLog(@"Label text size = %@", NSStringFromSize(labelTextSize));
 
@@ -50,7 +52,7 @@
 		_labelLayer.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
 //		_labelLayer.bounds = CGRectMake(0, 0, frame.size.width, frame.size.height);
 		_labelLayer.truncationMode = kCATruncationMiddle;
-		_labelLayer.string = [NSString stringWithFormat:@"%@", buttonLabel];
+		_labelLayer.string = @""; // Since we're pulling from the .xib file, needs to be set in awakeFromNib:
 		_labelLayer.shadowColor = [[NSColor blackColor] CGColor];
 		_labelLayer.shadowOpacity = 0.65;
 		_labelLayer.shadowOffset = CGSizeMake(3.0, -3.0);
@@ -72,6 +74,11 @@
 }
 
 /* ========================================================================== */
+- (void)awakeFromNib {
+	_labelLayer.string = [NSString stringWithFormat:@"%@", _buttonLabelText];
+}
+
+/* ========================================================================== */
 - (void)drawRect:(NSRect)dirtyRect
 {
 	[super drawRect:dirtyRect];
@@ -84,7 +91,6 @@
 //	NSLog(@"mouseDown.");
 	[_baseLayer removeAllAnimations];
 	CABasicAnimation *scale = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-//	[scale setFromValue:[NSValue valueWithCATransform3D:CATransform3DIdentity]];
 	[scale setFromValue:[NSValue valueWithCATransform3D:_baseLayer.transform]];
 	[scale setToValue:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.80, 0.80, 1.0)]];
 	[scale setDuration:0.165f];
@@ -99,7 +105,6 @@
 //	NSLog(@"mouseUp.");
 	[_baseLayer removeAllAnimations];
 	CABasicAnimation *scale = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-//	[scale setFromValue:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.85, 0.85, 1.0)]];
 	[scale setFromValue:[NSValue valueWithCATransform3D:_baseLayer.transform]];
 	[scale setToValue:[NSValue valueWithCATransform3D:CATransform3DIdentity]];
 	[scale setDuration:0.2f];
@@ -108,14 +113,7 @@
 	[scale setFillMode:kCAFillModeForwards];
 	[_baseLayer addAnimation:scale forKey:@"scaleUp"];
 
-	[self sendAction:@selector(newPickSetButtonClicked:) to:self.target];
-//	[(AEAppDelegate*)self.window.delegate newSetButtonClicked:self];
-//	[self sendAction:@selector(newSetButtonClicked:) to:_target];
+	[self sendAction:NSSelectorFromString(_actionSelectorString) to:self.target];
 }
-
-/* ========================================================================== */
-//- (void)mouseDragged:(NSEvent *)theEvent:(NSEvent *)theEvent {
-//	NSLog(@"mouseDragged.");
-//}
 
 @end

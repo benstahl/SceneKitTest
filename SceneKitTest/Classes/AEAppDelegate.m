@@ -7,7 +7,8 @@
 //
 
 #import "AEAppDelegate.h"
-#import "AESceneView.h"
+#import "AEFFLSceneView.h"
+#import "AEModule.h"
 
 @implementation AEAppDelegate
 
@@ -18,6 +19,18 @@
 
 - (void)awakeFromNib {
 	self.window.backgroundColor = [NSColor blackColor];
+
+	AEModule *fflModule = [[AEModule alloc] init];
+	fflModule.moduleDisplayName = @"Fantasy Football Live";
+	fflModule.moduleXibName = @"AEModuleFFL";
+	NSString *modulePreviewImageFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/logo_ffl" withExtension:@"png"] path];
+	NSImage *modulePreviewImage = [[NSImage alloc] initWithContentsOfFile:modulePreviewImageFilePath];
+	fflModule.modulePreviewImage = modulePreviewImage;
+
+//	fflModule.modulePreviewImage = @"logo_ffl";
+
+	_modules = [NSArray arrayWithObjects:fflModule, nil];
+	
 //	_infoView.layer = [CALayer layer];
 //    _infoView.wantsLayer = YES;
 //

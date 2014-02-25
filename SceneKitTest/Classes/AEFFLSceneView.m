@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "AESceneView.h"
+#import "AEFFLSceneView.h"
 #import "AEPlayer.h"
 #import "AETeam.h"
 #import "AEPlayerCard.h"
@@ -19,7 +19,7 @@
 
 #define kMasterKey	@"ID"
 
-@implementation AESceneView
+@implementation AEFFLSceneView
 
 -(void)awakeFromNib {
 //	[AEUtility listAvailableFonts];

@@ -9,13 +9,14 @@
 #import <Cocoa/Cocoa.h>
 #import <SceneKit/SceneKit.h>
 
-@class AESceneView;
+@class AEFFLSceneView;
 
 @interface AEAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSView *menuView;
-@property (assign) IBOutlet AESceneView *sceneView;
+@property (assign) IBOutlet AEFFLSceneView *sceneView;
+@property (strong) IBOutlet NSArray *modules;
 
 - (IBAction)newSetButtonClicked:(id)sender;
 
