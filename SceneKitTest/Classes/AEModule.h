@@ -10,7 +10,7 @@
 
 @interface AEModule : NSObject
 
-@property (copy) NSString *moduleDisplayName;
+@property (copy) NSString *moduleDisplayedName;
 @property (copy) NSString *moduleXibName;
 @property (strong) NSImage *modulePreviewImage;
 

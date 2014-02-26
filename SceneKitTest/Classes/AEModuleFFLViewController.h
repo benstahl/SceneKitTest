@@ -8,6 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class AEFFLSceneView;
+@class AEHeaderView;
+
 @interface AEModuleFFLViewController : NSViewController
+
+@property (assign) IBOutlet NSView *menuView;
+@property (assign) IBOutlet AEFFLSceneView *sceneView;
+@property (strong) IBOutlet AEHeaderView *headerView;
+
+- (IBAction)showCardsButtonClicked:(id)sender;
 
 @end

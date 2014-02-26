@@ -16,6 +16,7 @@
 #import "AEUtility.h"
 #import "CHCSVParser.h"
 #import "AEHeaderView.h"
+#import "AEModuleFFLViewController.h"
 
 #define kMasterKey	@"ID"
 
@@ -23,6 +24,12 @@
 
 -(void)awakeFromNib {
 //	[AEUtility listAvailableFonts];
+
+	if (!_vc) {
+		NSLog(@"(scene)vc is nil.");
+	} else {
+		NSLog(@"(scene)vc is not nil.");
+	}
 
 	self.layer.borderWidth = 0.5;
 	self.layer.borderColor = [[NSColor darkGrayColor] CGColor];
@@ -326,7 +333,7 @@
 
 	// First create cards and place them in their starting positions.
 	for (int i = 0; i < playerCount; i++) {
-		AEPlayerCard *card = [[AEPlayerCard alloc] init];
+		AEPlayerCard *card = [[AEPlayerCard alloc] initWithViewController:_vc];
 		[card configureWithPlayer:players[i]];
 		card.pivot = CATransform3DMakeTranslation(0.0, -2.8, 0.0);
 		card.position = SCNVector3Make(-(-(totalWidthStart / 2.0) + cardSpacingStartX * i), .5, 48.0);
@@ -485,9 +492,9 @@
 
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-		teamOwnerNames = @[@"Benjamin", @"Howard", @"E.J.", @"Brian", @"Joel", @"Ruby", @"Ricky", @"Brad", @"Geoff", @"Lisa", @"Lawrence", @"Alan", @"Evan", @"Mike", @"Victor", @"Consuela", @"Gabrielle", @"Ernesto", @"Kim", @"Kojiro", @"Franky", @"Simone", @"Felipe", @"Muhammad", @"Matthew", @"The Ghost", @"El Guapo", @"Sweet Caroline", @"Finklestein", @"Captain Kirk", @"Spock", @"The Terminator", @"Dirty Sanchez", @"Lonely Heart", @"Stone Cold Killa", @"Mighty Morphin Power Ranger", @"James Bond", @"Cosmo Kramer", @"Gilligan", @"Captain Stubing", @"Ricardo Nixon"];
-		teamOwnerLocations = @[@"Brooklyn", @"Sunnyvale", @"Ft. Lauderdale", @"Chicago", @"New York", @"Buffalo", @"Indianapolis", @"Tucson", @"San Francisco", @"San Rafael", @"Texas", @"Colorado", @"Paris", @"Tokyo", @"Madrid", @"Calgary", @"Toronto", @"Cairo", @"Santiago", @"Boise", @"New Orleans", @"Germany", @"Oslo", @"South Africa", @"Perth", @"Magagascar", @"Baghdad", @"London", @"Vancouver", @"Sonoma", @"Honolulu", @"Death Valley", @"Santa Monica", @"Boston", @"Potsdam", @"Albuquerque", @"Atlanta", @"Springfield", @"The North Pole", @"Iowa", @"Seattle", @"Houston", @"Austin", @"Oklahoma City", @"Portland"];
-		fantasyTeamNames = @[@"Montezuma's Revenge", @"The Agony Of Defeat", @"Fail Whale", @"Cholula Luvrs Anonymous", @"Couch Potatos", @"Mingo Ate My Baby", @"Jamaal Charles In Charge", @"What Would Jones-Drew?", @"My Favorite Marshawn", @"There's Gore In Dem Hills", @"Vladimir Putin's Bling Ring", @"Injured Head & Shoulders", @"Butt-Fumbling Foot Fetishers", @"Connecticut Cholos", @"White Cassel", @"Back that Asomugha Up", @"James Starks of Winterfell", @"Van Buren Boys", @"Somewhere Over Dwayne Bowe", @"Somewhere Over Dwayne Bowe", @"Straight Cash Homey", @"Livin' On A Prayer", @"Bone Breakers"];
+		teamOwnerNames = @[@"Benjamin", @"Howard", @"E.J.", @"Brian", @"Joel", @"Ruby", @"Ricky", @"Brad", @"Geoff", @"Lisa", @"Lawrence", @"Alan", @"Evan", @"Mike", @"Victor", @"Consuela", @"Gabrielle", @"Ernesto", @"Kim", @"Kojiro", @"Franky", @"Simone", @"Felipe", @"Muhammad", @"Matthew", @"The Ghost", @"El Guapo", @"Sweet Caroline", @"Finklestein", @"Captain Kirk", @"Spock", @"The Terminator", @"Dirty Sanchez", @"Lonely Heart", @"Stone Cold Killa", @"James Bond", @"Cosmo Kramer", @"Gilligan", @"Captain Stubing", @"Ricardo Nixon", @"Buster McThunderstick", @"MacGyver", @"Homer Simpson", @"Troy McClure"];
+		teamOwnerLocations = @[@"Brooklyn", @"Sunnyvale", @"Ft. Lauderdale", @"Chicago", @"New York", @"Buffalo", @"Indianapolis", @"Tucson", @"San Francisco", @"San Rafael", @"Texas", @"Colorado", @"Paris", @"Tokyo", @"Madrid", @"Calgary", @"Toronto", @"Cairo", @"Santiago", @"Boise", @"New Orleans", @"Germany", @"Oslo", @"South Africa", @"Perth", @"Magagascar", @"Baghdad", @"London", @"Vancouver", @"Sonoma", @"Honolulu", @"Death Valley", @"Santa Monica", @"Boston", @"Potsdam", @"Albuquerque", @"Atlanta", @"Springfield", @"The North Pole", @"Iowa", @"Seattle", @"Houston", @"Austin", @"Oklahoma City", @"Portland", @"Westeros", @"New Zealand"];
+		fantasyTeamNames = @[@"Montezuma's Revenge", @"The Agony Of Defeat", @"Fail Whale", @"Cholula Luvrs Anonymous", @"Couch Potatos", @"Mingo Ate My Baby", @"Jamaal Charles In Charge", @"What Would Jones-Drew?", @"My Favorite Marshawn", @"There's Gore In Dem Hills", @"Vladimir Putin's Bling Ring", @"Injured Head & Shoulders", @"Butt-Fumbling Foot Fetishers", @"Connecticut Cholos", @"White Cassel", @"Back that Asomugha Up", @"James Starks of Winterfell", @"Van Buren Boys", @"Somewhere Over Dwayne Bowe", @"Somewhere Over Dwayne Bowe", @"Straight Cash Homey", @"Livin' On A Prayer", @"Bone Breakers", @"Addai late, Amendola short", @"Pop a Kaep", @"Badonkagronk", @"Multiple Scorgasms", @"Victorious Secret", @"Big Test Icicles", @"Wii Not Fit", @"Fire Breathing Rubber Duckies", @"The Mighty Morphin Flower Arrangers", @"The Muffin Stuffers", @"Cow Tipping Dwarfs", @"Viscious and Delicious", @"The Cereal Killers", @"Swamp Donkeys", @"Walla Walla Weasel Wackers", @"Super Heroes In Training", @"Red Hot Oompa-Loompas", @"Blue Balls of Destiny", @"One Hit Wonders", @"Brew Crew", @"Spinal Tappers", @"The Untouchables", @"Smokin Aces", @"Pigs Might Fly", @"The Y-Nots!", @"The Cheezeweasels", @"Wood Chuckers!", @"Wrecking Crew", @"Smooth Operators", @"Eleven Wise Monkeys", @"Unfrozen Caveman Lawyers"];
 	});
 
 	AEPlayerPickSet *result = [[AEPlayerPickSet alloc] init];
@@ -562,8 +569,8 @@
 /* ========================================================================== */
 - (void)initPlayersFromCSVFileWithBaseFilenames:(NSArray*)filenames {
 	for (NSString *filename in filenames) {
-		NSString *filePath = [[[NSBundle mainBundle] URLForResource:filename withExtension:@"csv"] path];
-//		NSLog(@"File path = %@", filePath);
+		NSString *filePath = [[[NSBundle mainBundle] URLForResource:[NSString stringWithFormat:@"Data/%@", filename] withExtension:@"csv"] path];
+//		NSLog(@"Player CSV file path = %@", filePath);
 		CHCSVParser *parser = [[CHCSVParser alloc] initWithContentsOfCSVFile:filePath];
 		_playerParser = parser;
 		parser.sanitizesFields = YES;
@@ -589,7 +596,8 @@
 /* ========================================================================== */
 - (void)initTeamsFromCSVFileWithBaseFilenames:(NSArray*)filenames {
 	for (NSString *filename in filenames) {
-		NSString *filePath = [[[NSBundle mainBundle] URLForResource:filename withExtension:@"csv"] path];
+//		NSString *filePath = [[[NSBundle mainBundle] URLForResource:filename withExtension:@"csv"] path];
+		NSString *filePath = [[[NSBundle mainBundle] URLForResource:[NSString stringWithFormat:@"Data/%@", filename] withExtension:@"csv"] path];
 //		NSLog(@"File path = %@", filePath);
 		CHCSVParser *parser = [[CHCSVParser alloc] initWithContentsOfCSVFile:filePath];
 		_teamParser = parser;
@@ -599,8 +607,8 @@
 		[parser parse];
 	}
 
-//	NSLog(@"%@ teams found.", @(_teams.allKeys.count));
-//
+	NSLog(@"%@ teams found.", @(_teams.allKeys.count));
+
 //	for (NSString *key in [_teams allKeys]) {
 //		AEPlayer *t = _teams[key];
 //		NSLog(@"%@", t.data);
@@ -713,8 +721,8 @@
 }
 
 /* ========================================================================== */
-- (IBAction)newPickSetButtonClicked:(id)sender {
-//	NSLog(@"Button clicked (scene view).");
+- (IBAction)showCardsButtonClicked:(id)sender {
+	NSLog(@"Button clicked (scene view).");
 	if (_cardsAnimating) { return; }
 
 	if (_displayedCardCount == 0) {
@@ -742,7 +750,7 @@
 //		[topAttrString addAttribute:NSStrokeColorAttributeName value:highlightColor range:NSMakeRange(0, topAttrString.length)];
 //		[topAttrString addAttribute:NSStrokeWidthAttributeName value:@5.0 range:NSMakeRange(0, topAttrString.length)];
 
-		[_headerView.topLabel setAttributedStringValue:topAttrString];
+		[_vc.headerView.topLabel setAttributedStringValue:topAttrString];
 
 		/* --- Bottom label --- */
 		NSUInteger needsCountIndex = (_currentPickSet.fantasyTeamOwnerName.length) + 6 + _currentPickSet.fantasyTeamOwnerLocation.length + 7;
@@ -759,9 +767,9 @@
 		[bottomAttrString addAttribute:NSForegroundColorAttributeName value:highlightColor range:NSMakeRange(needsCountIndex, 1)];
 		[bottomAttrString addAttribute:NSForegroundColorAttributeName value:highlightColor range:NSMakeRange(cardsCountIndex, 1)];
 
-		[_headerView.bottomLabel setAttributedStringValue:bottomAttrString];
+		[_vc.headerView.bottomLabel setAttributedStringValue:bottomAttrString];
 
-		[_headerView fadeIn];
+		[_vc.headerView fadeIn];
 		[self animateLogoOut];
 		[self animateCardsInForPlayers:_currentPickSet.players];
 		[self animateCameraForCardCount:_currentPickSet.cardCount];
@@ -769,14 +777,14 @@
 		[self animateCardsOut];
 		[self animateCameraForCardCount:0];
 		[self animateLogoIn];
-		[_headerView fadeOut];
+		[_vc.headerView fadeOut];
 
 		// Wait until after fade out to blank labels.
 		double delayInSeconds = kHeaderFadeOutTime + 0.1;
 		dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
 		dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-			_headerView.topLabel.stringValue = @"";
-			_headerView.bottomLabel.stringValue = @"";
+			_vc.headerView.topLabel.stringValue = @"";
+			_vc.headerView.bottomLabel.stringValue = @"";
 		});
 	}
 }

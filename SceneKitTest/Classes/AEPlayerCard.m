@@ -12,12 +12,14 @@
 #import "AEPlayer.h"
 #import "AETeam.h"
 #import "AEUtility.h"
+#import "AEModuleFFLViewController.h"
 
 @implementation AEPlayerCard
 
 /* ========================================================================== */
-- (id)init {
+- (id)initWithViewController:(AEModuleFFLViewController*)vc {
 	if (self = [super init]) {
+		_vc = vc;
 		_cardSize = SCNVector3Make(4.0, 5.6, 0.0);
 		
 //		NSImage *reflectionImg = [NSImage imageNamed:@"reflection"];
@@ -208,7 +210,9 @@
 - (void)configureWithPlayer:(AEPlayer*)player {
 	_player = player;
 
-	AEFFLSceneView *sceneView = (AEFFLSceneView*)((AEAppDelegate*)[NSApp delegate]).sceneView;
+//	AEFFLSceneView *sceneView = sceneView;
+
+	AEFFLSceneView *sceneView = _vc.sceneView;
 	AETeam *team = [sceneView teamWithID:player.data[@"TEAM_ID"]];
 
 	_headshotBackgroundNode.geometry.firstMaterial.multiply.contents = [AEUtility colorFromHexString:team.data[@"COLOR_BG_TINT"]];

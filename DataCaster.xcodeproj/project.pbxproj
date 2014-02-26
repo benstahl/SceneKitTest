@@ -85,7 +85,7 @@
 		69D3C29C18B97F5D00A0641F /* AEButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEButton.m; path = Classes/AEButton.m; sourceTree = "<group>"; };
 		69D3C29E18B9D21500A0641F /* AEModuleMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModuleMenuView.h; path = Classes/AEModuleMenuView.h; sourceTree = "<group>"; };
 		69D3C29F18B9D21500A0641F /* AEModuleMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEModuleMenuView.m; path = Classes/AEModuleMenuView.m; sourceTree = "<group>"; };
-		69DB537D18AA26D40083754B /* SceneKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69DB537D18AA26D40083754B /* DataCaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataCaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69DB538018AA26D40083754B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		69DB538318AA26D40083754B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		69DB538418AA26D40083754B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -97,7 +97,7 @@
 		69DB539018AA26D40083754B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		69DB539618AA26D40083754B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		69DB539818AA26D40083754B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		69DB539E18AA26D50083754B /* SceneKitTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SceneKitTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69DB539E18AA26D50083754B /* SceneKitTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SceneKitTestTests.xctest; path = DataCasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69DB539F18AA26D50083754B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		69DB53A618AA26D50083754B /* SceneKitTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SceneKitTestTests-Info.plist"; sourceTree = "<group>"; };
 		69DB53A818AA26D50083754B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -133,6 +133,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		690A3FC418BD57880067F6E2 /* Module Select */ = {
+			isa = PBXGroup;
+			children = (
+				69C11C0118BC499D00E2AD0B /* AEMainMenuView.h */,
+				69C11C0218BC499D00E2AD0B /* AEMainMenuView.m */,
+				69C11C0418BC6A6300E2AD0B /* AEModule.h */,
+				69C11C0518BC6A6400E2AD0B /* AEModule.m */,
+				69D3C29E18B9D21500A0641F /* AEModuleMenuView.h */,
+				69D3C29F18B9D21500A0641F /* AEModuleMenuView.m */,
+			);
+			name = "Module Select";
+			sourceTree = "<group>";
+		};
+		690A3FC518BD57930067F6E2 /* FFL Module */ = {
+			isa = PBXGroup;
+			children = (
+				699F21C218B5DF2F006F527B /* AEFFLSceneView.h */,
+				699F21C318B5DF2F006F527B /* AEFFLSceneView.m */,
+				691B9C0718BBE1D00073F01F /* AEHeaderView.h */,
+				691B9C0818BBE1D00073F01F /* AEHeaderView.m */,
+				691B9C0D18BC2C790073F01F /* AEModuleFFLViewController.h */,
+				691B9C0E18BC2C790073F01F /* AEModuleFFLViewController.m */,
+				699F21BE18B5DF2F006F527B /* AEPlayer.h */,
+				699F21BF18B5DF2F006F527B /* AEPlayer.m */,
+				699F21C018B5DF2F006F527B /* AEPlayerCard.h */,
+				699F21C118B5DF2F006F527B /* AEPlayerCard.m */,
+				69F0FB1618BB325900169F0C /* AEPlayerPickSet.h */,
+				69F0FB1718BB325900169F0C /* AEPlayerPickSet.m */,
+				699F21CB18B5DF4E006F527B /* AETeam.h */,
+				699F21CC18B5DF4E006F527B /* AETeam.m */,
+			);
+			name = "FFL Module";
+			sourceTree = "<group>";
+		};
 		699F21B618B5CCA3006F527B /* External Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +198,7 @@
 		69DB537E18AA26D40083754B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				69DB537D18AA26D40083754B /* SceneKitTest.app */,
+				69DB537D18AA26D40083754B /* DataCaster.app */,
 				69DB539E18AA26D50083754B /* SceneKitTestTests.xctest */,
 			);
 			name = Products;
@@ -201,6 +235,7 @@
 				69DB539518AA26D40083754B /* MainMenu.xib */,
 				691B9C1218BC2CC90073F01F /* AEModuleFFL.xib */,
 				69DB539818AA26D40083754B /* Images.xcassets */,
+				69DB538918AA26D40083754B /* InfoPlist.strings */,
 				69DB538718AA26D40083754B /* Supporting Files */,
 			);
 			path = SceneKitTest;
@@ -210,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				69DB538818AA26D40083754B /* SceneKitTest-Info.plist */,
-				69DB538918AA26D40083754B /* InfoPlist.strings */,
 				69DB538C18AA26D40083754B /* main.m */,
 				69DB538E18AA26D40083754B /* SceneKitTest-Prefix.pch */,
 				69DB538F18AA26D40083754B /* Credits.rtf */,
@@ -252,31 +286,13 @@
 		69EAF46A18B4D0E100515D17 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				690A3FC418BD57880067F6E2 /* Module Select */,
+				690A3FC518BD57930067F6E2 /* FFL Module */,
 				699F21BC18B5DF2F006F527B /* AEAppDelegate.h */,
 				699F21BD18B5DF2F006F527B /* AEAppDelegate.m */,
 				69D3C29B18B97F5D00A0641F /* AEButton.h */,
 				69D3C29C18B97F5D00A0641F /* AEButton.m */,
-				699F21C218B5DF2F006F527B /* AEFFLSceneView.h */,
-				699F21C318B5DF2F006F527B /* AEFFLSceneView.m */,
 				692DB1C618B84F060047674B /* AEGeometry.h */,
-				691B9C0718BBE1D00073F01F /* AEHeaderView.h */,
-				691B9C0818BBE1D00073F01F /* AEHeaderView.m */,
-				69C11C0118BC499D00E2AD0B /* AEMainMenuView.h */,
-				69C11C0218BC499D00E2AD0B /* AEMainMenuView.m */,
-				69C11C0418BC6A6300E2AD0B /* AEModule.h */,
-				69C11C0518BC6A6400E2AD0B /* AEModule.m */,
-				691B9C0D18BC2C790073F01F /* AEModuleFFLViewController.h */,
-				691B9C0E18BC2C790073F01F /* AEModuleFFLViewController.m */,
-				69D3C29E18B9D21500A0641F /* AEModuleMenuView.h */,
-				69D3C29F18B9D21500A0641F /* AEModuleMenuView.m */,
-				699F21BE18B5DF2F006F527B /* AEPlayer.h */,
-				699F21BF18B5DF2F006F527B /* AEPlayer.m */,
-				699F21C018B5DF2F006F527B /* AEPlayerCard.h */,
-				699F21C118B5DF2F006F527B /* AEPlayerCard.m */,
-				69F0FB1618BB325900169F0C /* AEPlayerPickSet.h */,
-				69F0FB1718BB325900169F0C /* AEPlayerPickSet.m */,
-				699F21CB18B5DF4E006F527B /* AETeam.h */,
-				699F21CC18B5DF4E006F527B /* AETeam.m */,
 				699F21C418B5DF2F006F527B /* AEUtility.h */,
 				699F21C518B5DF2F006F527B /* AEUtility.m */,
 			);
@@ -286,9 +302,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		69DB537C18AA26D40083754B /* SceneKitTest */ = {
+		69DB537C18AA26D40083754B /* DataCaster */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69DB53AE18AA26D50083754B /* Build configuration list for PBXNativeTarget "SceneKitTest" */;
+			buildConfigurationList = 69DB53AE18AA26D50083754B /* Build configuration list for PBXNativeTarget "DataCaster" */;
 			buildPhases = (
 				69DB537918AA26D40083754B /* Sources */,
 				69DB537A18AA26D40083754B /* Frameworks */,
@@ -298,14 +314,14 @@
 			);
 			dependencies = (
 			);
-			name = SceneKitTest;
+			name = DataCaster;
 			productName = SceneKitTest;
-			productReference = 69DB537D18AA26D40083754B /* SceneKitTest.app */;
+			productReference = 69DB537D18AA26D40083754B /* DataCaster.app */;
 			productType = "com.apple.product-type.application";
 		};
-		69DB539D18AA26D50083754B /* SceneKitTestTests */ = {
+		69DB539D18AA26D50083754B /* DataCasterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69DB53B118AA26D50083754B /* Build configuration list for PBXNativeTarget "SceneKitTestTests" */;
+			buildConfigurationList = 69DB53B118AA26D50083754B /* Build configuration list for PBXNativeTarget "DataCasterTests" */;
 			buildPhases = (
 				69DB539A18AA26D50083754B /* Sources */,
 				69DB539B18AA26D50083754B /* Frameworks */,
@@ -316,7 +332,7 @@
 			dependencies = (
 				69DB53A318AA26D50083754B /* PBXTargetDependency */,
 			);
-			name = SceneKitTestTests;
+			name = DataCasterTests;
 			productName = SceneKitTestTests;
 			productReference = 69DB539E18AA26D50083754B /* SceneKitTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -336,7 +352,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 69DB537818AA26D40083754B /* Build configuration list for PBXProject "SceneKitTest" */;
+			buildConfigurationList = 69DB537818AA26D40083754B /* Build configuration list for PBXProject "DataCaster" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -349,8 +365,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				69DB537C18AA26D40083754B /* SceneKitTest */,
-				69DB539D18AA26D50083754B /* SceneKitTestTests */,
+				69DB537C18AA26D40083754B /* DataCaster */,
+				69DB539D18AA26D50083754B /* DataCasterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -420,7 +436,7 @@
 /* Begin PBXTargetDependency section */
 		69DB53A318AA26D50083754B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 69DB537C18AA26D40083754B /* SceneKitTest */;
+			target = 69DB537C18AA26D40083754B /* DataCaster */;
 			targetProxy = 69DB53A218AA26D50083754B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -610,7 +626,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		69DB537818AA26D40083754B /* Build configuration list for PBXProject "SceneKitTest" */ = {
+		69DB537818AA26D40083754B /* Build configuration list for PBXProject "DataCaster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69DB53AC18AA26D50083754B /* Debug */,
@@ -619,7 +635,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69DB53AE18AA26D50083754B /* Build configuration list for PBXNativeTarget "SceneKitTest" */ = {
+		69DB53AE18AA26D50083754B /* Build configuration list for PBXNativeTarget "DataCaster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69DB53AF18AA26D50083754B /* Debug */,
@@ -628,7 +644,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69DB53B118AA26D50083754B /* Build configuration list for PBXNativeTarget "SceneKitTestTests" */ = {
+		69DB53B118AA26D50083754B /* Build configuration list for PBXNativeTarget "DataCasterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69DB53B218AA26D50083754B /* Debug */,

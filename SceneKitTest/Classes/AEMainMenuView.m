@@ -17,17 +17,18 @@
     if (self) {
 		[self setWantsLayer:YES];
 		//		self.layer.backgroundColor = [[NSColor colorWithHue:0.0 saturation:0.0 brightness:1.0 alpha:0.1] CGColor];
-		self.layer.contentsGravity = kCAGravityCenter;
+		self.layer.contentsGravity = kCAGravityResizeAspect; //kCAGravityCenter;
 		//		self.layer.cornerRadius = 12.0;
-		self.layer.backgroundColor = [[NSColor darkGrayColor] CGColor];
-		self.layer.borderWidth = 0.5;
-		self.layer.borderColor = [[NSColor colorWithHue:0.0 saturation:1.0 brightness:0.25 alpha:1.0] CGColor];
+//		self.layerContentsPlacement = NSViewLayerContentsPlacementScaleProportionallyToFit;
     }
     return self;
 }
 
 /* ========================================================================== */
 - (void)awakeFromNib {
+	self.layer.backgroundColor = [[NSColor colorWithHue:0.0 saturation:0.0 brightness:0.20 alpha:1.0] CGColor];
+	self.layer.borderWidth = 0.5;
+	self.layer.borderColor = [[NSColor colorWithHue:0.0 saturation:0.0 brightness:1.0 alpha:1.0] CGColor];
 }
 
 /* ========================================================================== */

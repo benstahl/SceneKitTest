@@ -14,10 +14,11 @@
 @interface AEAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSView *menuView;
-@property (assign) IBOutlet AEFFLSceneView *sceneView;
-@property (strong) IBOutlet NSArray *modules;
+@property (strong) IBOutlet NSMutableArray *modules;
+@property (strong) IBOutlet NSArrayController *modulesArrayController;
+@property (strong) IBOutlet NSViewController *contentViewController;
 
-- (IBAction)newSetButtonClicked:(id)sender;
+- (IBAction)launchSelectedModule:(id)sender;
+//- (IBAction)newSetButtonClicked:(id)sender;
 
 @end

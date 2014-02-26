@@ -7,6 +7,7 @@
 //
 
 #import "AEModuleFFLViewController.h"
+#import "AEFFLSceneView.h"
 
 @interface AEModuleFFLViewController ()
 
@@ -14,13 +15,25 @@
 
 @implementation AEModuleFFLViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Initialization code here.
     }
     return self;
+}
+
+/* ========================================================================== */
+- (void)awakeFromNib {
+	NSLog(@"FFL Module View Controller awakeFromNib:");
+}
+
+#pragma mark - controls
+
+/* ========================================================================== */
+- (IBAction)showCardsButtonClicked:(id)sender {
+	NSLog(@"Button clicked (view controller).");
+	[_sceneView showCardsButtonClicked:sender];
 }
 
 @end

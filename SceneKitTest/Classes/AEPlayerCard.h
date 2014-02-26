@@ -8,9 +8,12 @@
 
 #import <SceneKit/SceneKit.h>
 
+@class AEModuleFFLViewController;
 @class AEPlayer;
 
 @interface AEPlayerCard : SCNNode
+
+@property (weak) AEModuleFFLViewController *vc;
 
 @property (strong) AEPlayer *player;
 @property SCNVector3 cardSize;
@@ -26,7 +29,7 @@
 @property (strong) SCNNode *textNode;
 @property BOOL animateEnvironment;
 
-- (id)init;
+- (id)initWithViewController:(AEModuleFFLViewController*)vc;
 - (void)configureWithPlayer:(AEPlayer*)player;
 - (void)stopEnvironmentLoop;
 - (void)fadeOutReflectionAfterDelay:(NSTimeInterval)delayInSeconds;

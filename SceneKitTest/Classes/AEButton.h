@@ -11,7 +11,8 @@
 
 @interface AEButton : NSControl <NSWindowDelegate>
 
-//@property (strong) IBOutlet id target;
+@property (strong) IBOutlet id target;
+
 @property (copy) NSString *actionSelectorString;
 @property (copy) NSString *buttonLabelText;
 
