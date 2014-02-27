@@ -38,6 +38,8 @@
 		69DB53AB18AA26D50083754B /* SceneKitTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DB53AA18AA26D50083754B /* SceneKitTestTests.m */; };
 		69DB53B518AA26FF0083754B /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DB53B418AA26FF0083754B /* SceneKit.framework */; };
 		69DB53B718AA27060083754B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DB53B618AA27060083754B /* QuartzCore.framework */; };
+		69EF5F4718BF277A005E7A5F /* AEModuleFFLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EF5F4618BF277A005E7A5F /* AEModuleFFLView.m */; };
+		69EF5F4A18BF294C005E7A5F /* AEMainMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EF5F4918BF294C005E7A5F /* AEMainMenuView.m */; };
 		69F0FB1318BAFFAF00169F0C /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 69F0FB1218BAFFAF00169F0C /* Fonts */; };
 		69F0FB1518BAFFF600169F0C /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 69F0FB1418BAFFF600169F0C /* Data */; };
 		69F0FB1818BB325900169F0C /* AEPlayerPickSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F0FB1718BB325900169F0C /* AEPlayerPickSet.m */; };
@@ -106,6 +108,10 @@
 		69DB53AA18AA26D50083754B /* SceneKitTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneKitTestTests.m; sourceTree = "<group>"; };
 		69DB53B418AA26FF0083754B /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		69DB53B618AA27060083754B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		69EF5F4518BF277A005E7A5F /* AEModuleFFLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModuleFFLView.h; path = Classes/AEModuleFFLView.h; sourceTree = "<group>"; };
+		69EF5F4618BF277A005E7A5F /* AEModuleFFLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEModuleFFLView.m; path = Classes/AEModuleFFLView.m; sourceTree = "<group>"; };
+		69EF5F4818BF294C005E7A5F /* AEMainMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEMainMenuView.h; path = Classes/AEMainMenuView.h; sourceTree = "<group>"; };
+		69EF5F4918BF294C005E7A5F /* AEMainMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEMainMenuView.m; path = Classes/AEMainMenuView.m; sourceTree = "<group>"; };
 		69F0FB1218BAFFAF00169F0C /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = Resources/Fonts; sourceTree = "<group>"; };
 		69F0FB1418BAFFF600169F0C /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = Resources/Data; sourceTree = "<group>"; };
 		69F0FB1618BB325900169F0C /* AEPlayerPickSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEPlayerPickSet.h; path = Classes/AEPlayerPickSet.h; sourceTree = "<group>"; };
@@ -155,6 +161,8 @@
 				699F21C318B5DF2F006F527B /* AEFFLSceneView.m */,
 				691B9C0718BBE1D00073F01F /* AEHeaderView.h */,
 				691B9C0818BBE1D00073F01F /* AEHeaderView.m */,
+				69EF5F4518BF277A005E7A5F /* AEModuleFFLView.h */,
+				69EF5F4618BF277A005E7A5F /* AEModuleFFLView.m */,
 				691B9C0D18BC2C790073F01F /* AEModuleFFLViewController.h */,
 				691B9C0E18BC2C790073F01F /* AEModuleFFLViewController.m */,
 				699F21BE18B5DF2F006F527B /* AEPlayer.h */,
@@ -296,6 +304,8 @@
 				69D3C29B18B97F5D00A0641F /* AEButton.h */,
 				69D3C29C18B97F5D00A0641F /* AEButton.m */,
 				6992E9F218BDF80600EE155E /* AEGeometry.h */,
+				69EF5F4818BF294C005E7A5F /* AEMainMenuView.h */,
+				69EF5F4918BF294C005E7A5F /* AEMainMenuView.m */,
 				699F21C418B5DF2F006F527B /* AEUtility.h */,
 				699F21C518B5DF2F006F527B /* AEUtility.m */,
 			);
@@ -410,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				699F21CD18B5DF4E006F527B /* AETeam.m in Sources */,
+				69EF5F4A18BF294C005E7A5F /* AEMainMenuView.m in Sources */,
 				699F21CA18B5DF2F006F527B /* AEUtility.m in Sources */,
 				69C11C0618BC6A6400E2AD0B /* AEModule.m in Sources */,
 				6992E9F018BDF72200EE155E /* AEModuleSelectViewController.m in Sources */,
@@ -420,6 +431,7 @@
 				699F21C818B5DF2F006F527B /* AEPlayerCard.m in Sources */,
 				691B9C0918BBE1D00073F01F /* AEHeaderView.m in Sources */,
 				69DB538D18AA26D40083754B /* main.m in Sources */,
+				69EF5F4718BF277A005E7A5F /* AEModuleFFLView.m in Sources */,
 				699F21C618B5DF2F006F527B /* AEAppDelegate.m in Sources */,
 				699F21C718B5DF2F006F527B /* AEPlayer.m in Sources */,
 				69C11C0318BC499D00E2AD0B /* AEModuleSelectView.m in Sources */,

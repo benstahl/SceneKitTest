@@ -13,8 +13,15 @@
 /* ========================================================================== */
 - (void)awakeFromNib {
 	NSLog(@"App delegate awakeFromNib:");
-	self.window.backgroundColor = [NSColor magentaColor];
-
+//	_window.backgroundColor = [NSColor magentaColor];
+//	[((NSView*)_window.contentView) setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
+//	[self.window.contentView setFrame:viewBounds];
+//	- (void)windowControllerDidLoadNib:(NSWindowController *)aController
+//	{
+//		[super windowControllerDidLoadNib:aController];
+	[_window setBackgroundColor:[NSColor blackColor]];
+//	[_window setAspectRatio:NSMakeSize(16.0, 9.0)];
+	[_window setContentAspectRatio:NSMakeSize(16.0, 9.0)];
 }
 
 /* ========================================================================== */
@@ -24,6 +31,16 @@
 	[self launchModuleNamed:@"AEModuleSelect"];
 }
 
+/* =============================================================================
+ We don't actually do anything here, but for some reason, returning the passed
+ in argument makes sure the window's content view will be full screen. Without
+ overriding this method, the content view gets sized down.
+ ============================================================================ */
+-(NSSize)window:(NSWindow *)window willUseFullScreenContentSize:(NSSize)proposedSize {
+//	NSLog(@"Proposed window size = %f, %f", proposedSize.width, proposedSize.height);
+	return proposedSize;
+}
+
 /* ========================================================================== */
 - (IBAction)launchModuleNamed:(NSString*)moduleName {
 	NSLog(@"Launching module named %@", moduleName);
@@ -31,6 +48,9 @@
 	NSViewController *moduleVC = [[NSViewController alloc] initWithNibName:moduleName bundle:[NSBundle mainBundle]];
 
 	NSView *mainView = [[self window] contentView];
+//	[mainView setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
+
+	CGRect viewBounds = [mainView bounds];
 
 	for (NSView *subview in mainView.subviews) {
 		[subview removeFromSuperview];
@@ -39,14 +59,30 @@
 	// fade out
 	[mainView animator].alphaValue = 0.0;
 
-	// make the sub view the same size as our super view
-//	[moduleVC.view setFrame:[mainView bounds]];
-	// *push* our new sub view
+	self.contentViewController = moduleVC;
+
+//	CGSize newSize = CGSizeMake(viewBounds.size.width, viewBounds.size.width * 0.5625);
+//	[moduleVC.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable | NSViewMinXMargin | NSViewMaxXMargin | NSViewMinYMargin | NSViewMaxYMargin];
+//	[moduleVC.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
+
+	[moduleVC.view setFrame:viewBounds];
+//	[moduleVC.view setFrame:NSMakeRect(0.0, 0.0, newSize.width, newSize.height)];
+//	[moduleVC.view setFrameOrigin:NSMakePoint(-newSize.width / 2, -newSize.height / 2)];
+
+	mainView.layer.contentsGravity = kCAGravityResizeAspectFill;
 	[mainView addSubview:moduleVC.view];
+
+//	// make the sub view the same size as our super view
+//	CGRect viewBounds = [mainView bounds];
+//	//	[moduleVC.view setFrame:[mainView bounds]];
+//	//	NSLog(@"New view size = %f,%f", viewBounds.size.width, viewBounds.size.width * 0.5625);
+//	CGSize newSize = CGSizeMake(viewBounds.size.width, viewBounds.size.width * 0.5625);
+//	[moduleVC.view setFrame:CGRectMake(viewBounds.origin.x, viewBounds.origin.y, newSize.width, newSize.height)];
+	// *push* our new sub view
+
 	//	[self window].contentView = moduleVC.view;
 
 //	self.contentViewController.view = moduleVC.view;
-	self.contentViewController = moduleVC;
 
 	//	[self prepareViews];
 

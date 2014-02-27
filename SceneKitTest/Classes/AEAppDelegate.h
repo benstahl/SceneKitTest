@@ -11,7 +11,7 @@
 
 @class AEFFLSceneView;
 
-@interface AEAppDelegate : NSObject <NSApplicationDelegate>
+@interface AEAppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSViewController *contentViewController;

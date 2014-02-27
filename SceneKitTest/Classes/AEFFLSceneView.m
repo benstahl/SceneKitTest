@@ -31,6 +31,7 @@
 //		NSLog(@"(scene)vc is not nil.");
 //	}
 
+	self.layer.contentsGravity = kCAGravityResizeAspectFill;
 	self.layer.borderWidth = 0.5;
 	self.layer.borderColor = [[NSColor darkGrayColor] CGColor];
 
@@ -254,7 +255,7 @@
 	_sponsorLogoNode.position = [_sponsorLogoPositions[@"out"] SCNVector3Value];
 	_sponsorLogoNode.geometry.firstMaterial = sponsorLogoMat;
 
-	[self animateLogoIn];
+	[self animateLogoInAfterDelay:0.0];
 
 //	SCNPlane *infoPlane = [SCNPlane planeWithWidth:4.0 height:5.6];
 //	SCNNode *infoNode = [SCNNode nodeWithGeometry:infoPlane];
@@ -445,8 +446,7 @@
 }
 
 /* ========================================================================== */
-- (void)animateLogoIn {
-	double delayInSeconds = 0.5;
+- (void)animateLogoInAfterDelay:(CFTimeInterval)delayInSeconds {
 	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
 	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
 		[SCNTransaction begin];
@@ -776,7 +776,7 @@
 	} else {
 		[self animateCardsOut];
 		[self animateCameraForCardCount:0];
-		[self animateLogoIn];
+		[self animateLogoInAfterDelay:0.5];
 		[_vc.headerView fadeOut];
 
 		// Wait until after fade out to blank labels.

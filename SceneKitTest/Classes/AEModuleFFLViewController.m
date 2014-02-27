@@ -38,4 +38,13 @@
 	[_sceneView showCardsButtonClicked:sender];
 }
 
+/* ========================================================================== */
+- (IBAction)exitButtonClicked:(id)sender {
+	NSLog(@"Exit button clicked (view controller).");
+
+//	[self launchModuleNamed:@"AEModuleSelect"];
+
+	[[NSApp delegate] performSelector:@selector(launchModuleNamed:) withObject:@"AEModuleSelect"];
+}
+
 @end
