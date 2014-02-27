@@ -25,11 +25,11 @@
 -(void)awakeFromNib {
 //	[AEUtility listAvailableFonts];
 
-	if (!_vc) {
-		NSLog(@"(scene)vc is nil.");
-	} else {
-		NSLog(@"(scene)vc is not nil.");
-	}
+//	if (!_vc) {
+//		NSLog(@"(scene)vc is nil.");
+//	} else {
+//		NSLog(@"(scene)vc is not nil.");
+//	}
 
 	self.layer.borderWidth = 0.5;
 	self.layer.borderColor = [[NSColor darkGrayColor] CGColor];

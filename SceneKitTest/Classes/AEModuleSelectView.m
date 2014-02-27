@@ -6,15 +6,16 @@
 //  Copyright (c) 2014 App Easel. All rights reserved.
 //
 
-#import "AEMainMenuView.h"
+#import "AEModuleSelectView.h"
 #import <QuartzCore/QuartzCore.h>
 
-@implementation AEMainMenuView
+@implementation AEModuleSelectView
 
 /* ========================================================================== */
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+		NSLog(@"Module Select View initWithFrame:");
 		[self setWantsLayer:YES];
 		//		self.layer.backgroundColor = [[NSColor colorWithHue:0.0 saturation:0.0 brightness:1.0 alpha:0.1] CGColor];
 		self.layer.contentsGravity = kCAGravityResizeAspect; //kCAGravityCenter;
@@ -26,6 +27,7 @@
 
 /* ========================================================================== */
 - (void)awakeFromNib {
+	NSLog(@"Module Select View awakeFromNib:");
 	self.layer.backgroundColor = [[NSColor colorWithHue:0.0 saturation:0.0 brightness:0.20 alpha:1.0] CGColor];
 	self.layer.borderWidth = 0.5;
 	self.layer.borderColor = [[NSColor colorWithHue:0.0 saturation:0.0 brightness:1.0 alpha:1.0] CGColor];

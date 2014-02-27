@@ -16,6 +16,8 @@
 @implementation AEModuleFFLViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+	NSLog(@"FFL View Controller initWithNibName:%@ bundle:", nibNameOrNil);
+
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Initialization code here.

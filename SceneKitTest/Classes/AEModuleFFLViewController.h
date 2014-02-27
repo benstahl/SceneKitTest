@@ -15,7 +15,7 @@
 
 @property (assign) IBOutlet NSView *menuView;
 @property (assign) IBOutlet AEFFLSceneView *sceneView;
-@property (strong) IBOutlet AEHeaderView *headerView;
+@property (assign) IBOutlet AEHeaderView *headerView;
 
 - (IBAction)showCardsButtonClicked:(id)sender;
 
