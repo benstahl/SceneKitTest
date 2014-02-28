@@ -7,7 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "AEModuleView.h"
 
-@interface AEModuleSelectView : NSView
+@interface AEModuleSelectView : AEModuleView
 
 @end

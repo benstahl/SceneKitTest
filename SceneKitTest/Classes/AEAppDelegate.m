@@ -20,8 +20,8 @@
 //	{
 //		[super windowControllerDidLoadNib:aController];
 	[_window setBackgroundColor:[NSColor blackColor]];
-//	[_window setAspectRatio:NSMakeSize(16.0, 9.0)];
-	[_window setContentAspectRatio:NSMakeSize(16.0, 9.0)];
+//	[_window setAspectRatio:NSMakeSize(kOutputAspectH, kOutputAspectV)];
+	[_window setContentAspectRatio:NSMakeSize(kOutputAspectH, kOutputAspectV)];
 }
 
 /* ========================================================================== */
@@ -31,13 +31,14 @@
 	[self launchModuleNamed:@"AEModuleSelect"];
 }
 
-/* =============================================================================
- We don't actually do anything here, but for some reason, returning the passed
- in argument makes sure the window's content view will be full screen. Without
- overriding this method, the content view gets sized down.
- ============================================================================ */
+/* ========================================================================== */
 -(NSSize)window:(NSWindow *)window willUseFullScreenContentSize:(NSSize)proposedSize {
 //	NSLog(@"Proposed window size = %f, %f", proposedSize.width, proposedSize.height);
+	/* --------------------------------------------------------------------------
+	 We don't actually do anything here, but for some reason, returning the passed
+	 in argument makes sure the window's content view will be full screen. Without
+	 overriding this method, the content view gets sized down.
+	 ------------------------------------------------------------------------- */
 	return proposedSize;
 }
 

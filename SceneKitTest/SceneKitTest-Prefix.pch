@@ -10,7 +10,13 @@
 
 #import "AEGeometry.h"
 
-#define kOutputAspectRatio			(16.0 / 9.0)
-#define kOutputAspectRatioInverted	(9.0 / 16.0)
-#define kHeaderFadeInTime			0.35
-#define kHeaderFadeOutTime			0.65
+/* --- Aspect ratio --- */
+//#define kOutputAspectH					4.0
+//#define kOutputAspectV					3.0
+#define kOutputAspectH					16.0
+#define kOutputAspectV					9.0
+#define kOutputAspectRatio				(kOutputAspectH / kOutputAspectV)
+#define kOutputAspectRatioInverted		1.0 / kOutputAspectRatio
+
+#define kHeaderFadeInTime				0.35
+#define kHeaderFadeOutTime				0.65

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69116FDF18C1423000BE4A27 /* AEModuleCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69116FDE18C1423000BE4A27 /* AEModuleCollectionViewItem.m */; };
 		691B9C0918BBE1D00073F01F /* AEHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691B9C0818BBE1D00073F01F /* AEHeaderView.m */; };
 		691B9C1018BC2C790073F01F /* AEModuleFFLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 691B9C0E18BC2C790073F01F /* AEModuleFFLViewController.m */; };
 		691B9C1418BC2CC90073F01F /* AEModuleFFL.xib in Resources */ = {isa = PBXBuildFile; fileRef = 691B9C1218BC2CC90073F01F /* AEModuleFFL.xib */; };
@@ -35,7 +36,7 @@
 		69DB53A018AA26D50083754B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DB539F18AA26D50083754B /* XCTest.framework */; };
 		69DB53A118AA26D50083754B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DB538018AA26D40083754B /* Cocoa.framework */; };
 		69DB53A918AA26D50083754B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69DB53A718AA26D50083754B /* InfoPlist.strings */; };
-		69DB53AB18AA26D50083754B /* SceneKitTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DB53AA18AA26D50083754B /* SceneKitTestTests.m */; };
+		69DB53AB18AA26D50083754B /* DataCasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DB53AA18AA26D50083754B /* DataCasterTests.m */; };
 		69DB53B518AA26FF0083754B /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DB53B418AA26FF0083754B /* SceneKit.framework */; };
 		69DB53B718AA27060083754B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DB53B618AA27060083754B /* QuartzCore.framework */; };
 		69EF5F4718BF277A005E7A5F /* AEModuleFFLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EF5F4618BF277A005E7A5F /* AEModuleFFLView.m */; };
@@ -43,6 +44,10 @@
 		69F0FB1318BAFFAF00169F0C /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 69F0FB1218BAFFAF00169F0C /* Fonts */; };
 		69F0FB1518BAFFF600169F0C /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 69F0FB1418BAFFF600169F0C /* Data */; };
 		69F0FB1818BB325900169F0C /* AEPlayerPickSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F0FB1718BB325900169F0C /* AEPlayerPickSet.m */; };
+		69F86B6618BFF94A00D92618 /* AEModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F86B6518BFF94A00D92618 /* AEModuleView.m */; };
+		69F86B6A18BFFB1500D92618 /* AEModuleTestPatternsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F86B6818BFFB1500D92618 /* AEModuleTestPatternsViewController.m */; };
+		69F86B6F18BFFB7200D92618 /* AEModuleTestPatterns.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F86B6D18BFFB7200D92618 /* AEModuleTestPatterns.xib */; };
+		69F86BA718BFFC1800D92618 /* AEModuleTestPatternsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F86BA618BFFC1800D92618 /* AEModuleTestPatternsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69116FDD18C1423000BE4A27 /* AEModuleCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModuleCollectionViewItem.h; path = Classes/AEModuleCollectionViewItem.h; sourceTree = "<group>"; };
+		69116FDE18C1423000BE4A27 /* AEModuleCollectionViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEModuleCollectionViewItem.m; path = Classes/AEModuleCollectionViewItem.m; sourceTree = "<group>"; };
 		691B9C0718BBE1D00073F01F /* AEHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEHeaderView.h; path = Classes/AEHeaderView.h; sourceTree = "<group>"; };
 		691B9C0818BBE1D00073F01F /* AEHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEHeaderView.m; path = Classes/AEHeaderView.m; sourceTree = "<group>"; };
 		691B9C0D18BC2C790073F01F /* AEModuleFFLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModuleFFLViewController.h; path = Classes/AEModuleFFLViewController.h; sourceTree = "<group>"; };
@@ -101,11 +108,11 @@
 		69DB539018AA26D40083754B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		69DB539618AA26D40083754B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		69DB539818AA26D40083754B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		69DB539E18AA26D50083754B /* SceneKitTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SceneKitTestTests.xctest; path = DataCasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69DB539E18AA26D50083754B /* DataCasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataCasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69DB539F18AA26D50083754B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		69DB53A618AA26D50083754B /* SceneKitTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SceneKitTestTests-Info.plist"; sourceTree = "<group>"; };
+		69DB53A618AA26D50083754B /* DataCasterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DataCasterTests-Info.plist"; sourceTree = "<group>"; };
 		69DB53A818AA26D50083754B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		69DB53AA18AA26D50083754B /* SceneKitTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneKitTestTests.m; sourceTree = "<group>"; };
+		69DB53AA18AA26D50083754B /* DataCasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataCasterTests.m; sourceTree = "<group>"; };
 		69DB53B418AA26FF0083754B /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		69DB53B618AA27060083754B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		69EF5F4518BF277A005E7A5F /* AEModuleFFLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModuleFFLView.h; path = Classes/AEModuleFFLView.h; sourceTree = "<group>"; };
@@ -116,6 +123,13 @@
 		69F0FB1418BAFFF600169F0C /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = Resources/Data; sourceTree = "<group>"; };
 		69F0FB1618BB325900169F0C /* AEPlayerPickSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEPlayerPickSet.h; path = Classes/AEPlayerPickSet.h; sourceTree = "<group>"; };
 		69F0FB1718BB325900169F0C /* AEPlayerPickSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEPlayerPickSet.m; path = Classes/AEPlayerPickSet.m; sourceTree = "<group>"; };
+		69F86B6418BFF94A00D92618 /* AEModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModuleView.h; path = Classes/AEModuleView.h; sourceTree = "<group>"; };
+		69F86B6518BFF94A00D92618 /* AEModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEModuleView.m; path = Classes/AEModuleView.m; sourceTree = "<group>"; };
+		69F86B6718BFFB1500D92618 /* AEModuleTestPatternsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModuleTestPatternsViewController.h; path = Classes/AEModuleTestPatternsViewController.h; sourceTree = "<group>"; };
+		69F86B6818BFFB1500D92618 /* AEModuleTestPatternsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEModuleTestPatternsViewController.m; path = Classes/AEModuleTestPatternsViewController.m; sourceTree = "<group>"; };
+		69F86B6E18BFFB7200D92618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AEModuleTestPatterns.xib; sourceTree = "<group>"; };
+		69F86BA518BFFC1800D92618 /* AEModuleTestPatternsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModuleTestPatternsView.h; path = Classes/AEModuleTestPatternsView.h; sourceTree = "<group>"; };
+		69F86BA618BFFC1800D92618 /* AEModuleTestPatternsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEModuleTestPatternsView.m; path = Classes/AEModuleTestPatternsView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,12 +158,15 @@
 		690A3FC418BD57880067F6E2 /* Module Select */ = {
 			isa = PBXGroup;
 			children = (
+				6992E9F318BDF82A00EE155E /* AEModuleSelect.xib */,
 				69C11C0418BC6A6300E2AD0B /* AEModule.h */,
 				69C11C0518BC6A6400E2AD0B /* AEModule.m */,
 				69C11C0118BC499D00E2AD0B /* AEModuleSelectView.h */,
 				69C11C0218BC499D00E2AD0B /* AEModuleSelectView.m */,
 				6992E9ED18BDF72200EE155E /* AEModuleSelectViewController.h */,
 				6992E9EE18BDF72200EE155E /* AEModuleSelectViewController.m */,
+				69116FDD18C1423000BE4A27 /* AEModuleCollectionViewItem.h */,
+				69116FDE18C1423000BE4A27 /* AEModuleCollectionViewItem.m */,
 			);
 			name = "Module Select";
 			sourceTree = "<group>";
@@ -157,6 +174,7 @@
 		690A3FC518BD57930067F6E2 /* FFL Module */ = {
 			isa = PBXGroup;
 			children = (
+				691B9C1218BC2CC90073F01F /* AEModuleFFL.xib */,
 				699F21C218B5DF2F006F527B /* AEFFLSceneView.h */,
 				699F21C318B5DF2F006F527B /* AEFFLSceneView.m */,
 				691B9C0718BBE1D00073F01F /* AEHeaderView.h */,
@@ -209,7 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				69DB537D18AA26D40083754B /* DataCaster.app */,
-				69DB539E18AA26D50083754B /* SceneKitTestTests.xctest */,
+				69DB539E18AA26D50083754B /* DataCasterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,8 +261,6 @@
 				699F21B618B5CCA3006F527B /* External Libraries */,
 				69EAF44718B45C5800515D17 /* Resources */,
 				69DB539518AA26D40083754B /* MainMenu.xib */,
-				691B9C1218BC2CC90073F01F /* AEModuleFFL.xib */,
-				6992E9F318BDF82A00EE155E /* AEModuleSelect.xib */,
 				69DB539818AA26D40083754B /* Images.xcassets */,
 				69DB538918AA26D40083754B /* InfoPlist.strings */,
 				69DB538718AA26D40083754B /* Supporting Files */,
@@ -266,7 +282,7 @@
 		69DB53A418AA26D50083754B /* SceneKitTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				69DB53AA18AA26D50083754B /* SceneKitTestTests.m */,
+				69DB53AA18AA26D50083754B /* DataCasterTests.m */,
 				69DB53A518AA26D50083754B /* Supporting Files */,
 			);
 			path = SceneKitTestTests;
@@ -275,7 +291,7 @@
 		69DB53A518AA26D50083754B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				69DB53A618AA26D50083754B /* SceneKitTestTests-Info.plist */,
+				69DB53A618AA26D50083754B /* DataCasterTests-Info.plist */,
 				69DB53A718AA26D50083754B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -299,6 +315,7 @@
 			children = (
 				690A3FC418BD57880067F6E2 /* Module Select */,
 				690A3FC518BD57930067F6E2 /* FFL Module */,
+				69F86B6C18BFFB1F00D92618 /* Test Patterns Module */,
 				699F21BC18B5DF2F006F527B /* AEAppDelegate.h */,
 				699F21BD18B5DF2F006F527B /* AEAppDelegate.m */,
 				69D3C29B18B97F5D00A0641F /* AEButton.h */,
@@ -306,10 +323,24 @@
 				6992E9F218BDF80600EE155E /* AEGeometry.h */,
 				69EF5F4818BF294C005E7A5F /* AEMainMenuView.h */,
 				69EF5F4918BF294C005E7A5F /* AEMainMenuView.m */,
+				69F86B6418BFF94A00D92618 /* AEModuleView.h */,
+				69F86B6518BFF94A00D92618 /* AEModuleView.m */,
 				699F21C418B5DF2F006F527B /* AEUtility.h */,
 				699F21C518B5DF2F006F527B /* AEUtility.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		69F86B6C18BFFB1F00D92618 /* Test Patterns Module */ = {
+			isa = PBXGroup;
+			children = (
+				69F86B6D18BFFB7200D92618 /* AEModuleTestPatterns.xib */,
+				69F86B6718BFFB1500D92618 /* AEModuleTestPatternsViewController.h */,
+				69F86B6818BFFB1500D92618 /* AEModuleTestPatternsViewController.m */,
+				69F86BA518BFFC1800D92618 /* AEModuleTestPatternsView.h */,
+				69F86BA618BFFC1800D92618 /* AEModuleTestPatternsView.m */,
+			);
+			name = "Test Patterns Module";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,7 +378,7 @@
 			);
 			name = DataCasterTests;
 			productName = SceneKitTestTests;
-			productReference = 69DB539E18AA26D50083754B /* SceneKitTestTests.xctest */;
+			productReference = 69DB539E18AA26D50083754B /* DataCasterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -393,6 +424,7 @@
 				69BFE8FB18B95CF700DE5164 /* Images in Resources */,
 				69F0FB1518BAFFF600169F0C /* Data in Resources */,
 				6992E9F518BDF82A00EE155E /* AEModuleSelect.xib in Resources */,
+				69F86B6F18BFFB7200D92618 /* AEModuleTestPatterns.xib in Resources */,
 				691B9C1418BC2CC90073F01F /* AEModuleFFL.xib in Resources */,
 				69DB538B18AA26D40083754B /* InfoPlist.strings in Resources */,
 				69F0FB1318BAFFAF00169F0C /* Fonts in Resources */,
@@ -421,10 +453,14 @@
 			files = (
 				699F21CD18B5DF4E006F527B /* AETeam.m in Sources */,
 				69EF5F4A18BF294C005E7A5F /* AEMainMenuView.m in Sources */,
+				69F86B6618BFF94A00D92618 /* AEModuleView.m in Sources */,
 				699F21CA18B5DF2F006F527B /* AEUtility.m in Sources */,
 				69C11C0618BC6A6400E2AD0B /* AEModule.m in Sources */,
+				69F86BA718BFFC1800D92618 /* AEModuleTestPatternsView.m in Sources */,
 				6992E9F018BDF72200EE155E /* AEModuleSelectViewController.m in Sources */,
+				69F86B6A18BFFB1500D92618 /* AEModuleTestPatternsViewController.m in Sources */,
 				69F0FB1818BB325900169F0C /* AEPlayerPickSet.m in Sources */,
+				69116FDF18C1423000BE4A27 /* AEModuleCollectionViewItem.m in Sources */,
 				699F21BA18B5CCC1006F527B /* CHCSVParser.m in Sources */,
 				691B9C1018BC2C790073F01F /* AEModuleFFLViewController.m in Sources */,
 				69D3C29D18B97F5D00A0641F /* AEButton.m in Sources */,
@@ -443,7 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69DB53AB18AA26D50083754B /* SceneKitTestTests.m in Sources */,
+				69DB53AB18AA26D50083754B /* DataCasterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +540,14 @@
 				69DB53A818AA26D50083754B /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		69F86B6D18BFFB7200D92618 /* AEModuleTestPatterns.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69F86B6E18BFFB7200D92618 /* Base */,
+			);
+			name = AEModuleTestPatterns.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -610,19 +654,19 @@
 		69DB53B218AA26D50083754B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SceneKitTest.app/Contents/MacOS/SceneKitTest";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DataCaster.app/Contents/MacOS/DataCaster";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SceneKitTest/SceneKitTest-Prefix.pch";
+				GCC_PREFIX_HEADER = "DataCasterTest/DataCaster-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SceneKitTestTests/SceneKitTestTests-Info.plist";
+				INFOPLIST_FILE = "DataCasterTests/DataCasterTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -632,15 +676,15 @@
 		69DB53B318AA26D50083754B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SceneKitTest.app/Contents/MacOS/SceneKitTest";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DataCaster.app/Contents/MacOS/DataCaster";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SceneKitTest/SceneKitTest-Prefix.pch";
-				INFOPLIST_FILE = "SceneKitTestTests/SceneKitTestTests-Info.plist";
+				GCC_PREFIX_HEADER = "DataCasterTest/DataCaster-Prefix.pch";
+				INFOPLIST_FILE = "DataCasterTests/DataCasterTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

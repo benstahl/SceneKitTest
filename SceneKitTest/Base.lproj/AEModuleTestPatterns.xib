@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AEModuleTestPatternsViewController">
+            <connections>
+                <outlet property="view" destination="1" id="2"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1" customClass="AEModuleTestPatternsView">
+            <rect key="frame" x="0.0" y="0.0" width="640" height="359"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button wantsLayer="YES" verticalHuggingPriority="750" id="Nj9-Hc-9yw">
+                    <rect key="frame" x="14" y="13" width="93" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <buttonCell key="cell" type="push" title="Previous" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WbG-aq-MkQ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="previousPicture:" target="PT4-tZ-V4u" id="inv-YU-gPo"/>
+                    </connections>
+                </button>
+                <button wantsLayer="YES" verticalHuggingPriority="750" id="pJC-7v-7gp">
+                    <rect key="frame" x="556" y="13" width="70" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <buttonCell key="cell" type="push" title="Next" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Yu3-Eo-m1Y">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="nextPicture:" target="PT4-tZ-V4u" id="6Te-XW-kXv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <connections>
+                <outlet property="controller" destination="PT4-tZ-V4u" id="AbM-ns-W5q"/>
+            </connections>
+        </customView>
+        <viewController title="Module Test Patterns VC" id="PT4-tZ-V4u" userLabel="Module Test Patterns VC" customClass="AEModuleTestPatternsViewController">
+            <connections>
+                <outlet property="view" destination="1" id="utu-re-7e0"/>
+            </connections>
+        </viewController>
+        <arrayController id="EPX-E8-Yy6" userLabel="Images Controller">
+            <connections>
+                <binding destination="PT4-tZ-V4u" name="contentArray" keyPath="images" id="Syt-Fx-JdS"/>
+            </connections>
+        </arrayController>
+        <userDefaultsController representsSharedInstance="YES" id="Vwo-Qd-Coa"/>
+        <splitView wantsLayer="YES" dividerStyle="thin" vertical="YES" id="koK-xt-Fpl">
+            <rect key="frame" x="0.0" y="0.0" width="640" height="360"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView wantsLayer="YES" id="Wvu-2v-xlS">
+                    <rect key="frame" x="0.0" y="0.0" width="322" height="360"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </customView>
+                <customView wantsLayer="YES" id="d18-6L-Mxt">
+                    <rect key="frame" x="323" y="0.0" width="317" height="360"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </customView>
+            </subviews>
+            <holdingPriorities>
+                <real value="250"/>
+                <real value="250"/>
+            </holdingPriorities>
+        </splitView>
+    </objects>
+</document>

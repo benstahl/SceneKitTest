@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment version="1070" identifier="macosx"/>
+        <deployment version="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
     </dependencies>
     <objects>
@@ -21,6 +21,8 @@
         </viewController>
         <collectionViewItem id="eXm-la-m29">
             <connections>
+                <outlet property="imageView" destination="HQY-Kl-zpv" id="C4b-hh-P7n"/>
+                <outlet property="textField" destination="zNH-i2-BfV" id="8Hx-kb-plD"/>
                 <outlet property="view" destination="sgR-nb-XWH" id="Uzn-ls-y2z"/>
             </connections>
         </collectionViewItem>
@@ -31,7 +33,8 @@
                 <string>count</string>
             </declaredKeys>
             <connections>
-                <binding destination="Lrn-S0-73S" name="contentArray" keyPath="modules" id="1Pd-pi-IOp"/>
+                <binding destination="Lrn-S0-73S" name="contentArrayForMultipleSelection" keyPath="modules" previousBinding="Van-21-SGg" id="twD-ej-Hyc"/>
+                <binding destination="Lrn-S0-73S" name="contentArray" keyPath="modules" id="Van-21-SGg"/>
             </connections>
         </arrayController>
         <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xzE-gO-b49" userLabel="Module View" customClass="AEModuleSelectView">
@@ -61,7 +64,7 @@
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" red="0.99963301419999995" green="0.99960309270000003" blue="0.99962008000000002" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                 </box>
-                <scrollView borderType="groove" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" horizontalScrollElasticity="none" id="gwR-dE-Cw5" userLabel="Scroll View - Modules">
+                <scrollView borderType="groove" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" id="gwR-dE-Cw5" userLabel="Scroll View - Modules">
                     <rect key="frame" x="60" y="47" width="500" height="280"/>
                     <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                     <clipView key="contentView" id="JH2-UJ-wfr" userLabel="Clip View - Modules">
@@ -71,9 +74,10 @@
                             <collectionView selectable="YES" maxNumberOfColumns="1" id="7az-Ms-YOK" userLabel="Modules Collection View">
                                 <rect key="frame" x="0.0" y="0.0" width="496" height="276"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="primaryBackgroundColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                                <color key="primaryBackgroundColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
                                     <binding destination="chG-5D-WfY" name="content" keyPath="arrangedObjects" id="CXr-HC-8ZC"/>
+                                    <binding destination="chG-5D-WfY" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="CXr-HC-8ZC" id="WIi-vP-mh5"/>
                                     <outlet property="itemPrototype" destination="eXm-la-m29" id="lbk-nk-Ol5"/>
                                 </connections>
                             </collectionView>
@@ -162,26 +166,42 @@
                 </customView>
             </subviews>
         </customView>
-        <view id="sgR-nb-XWH" userLabel="Module View Item">
+        <view wantsLayer="YES" id="sgR-nb-XWH" userLabel="Module View Item">
             <rect key="frame" x="0.0" y="0.0" width="567" height="124"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
             <subviews>
-                <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="none" id="zwA-3e-zLw">
+                <box autoresizesSubviews="NO" wantsLayer="YES" title="Box" boxType="custom" borderType="none" id="zwA-3e-zLw">
                     <rect key="frame" x="0.0" y="0.0" width="567" height="126"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <view key="contentView">
                         <rect key="frame" x="0.0" y="0.0" width="567" height="126"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
+                    <shadow key="shadow" blurRadius="3">
+                        <size key="offset" width="2" height="2"/>
+                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </shadow>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" red="0.99417614939999999" green="0.71542185540000003" blue="0.056148923929999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <binding destination="eXm-la-m29" name="transparent" keyPath="selected" id="M1M-pZ-hSw">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                            </dictionary>
+                        </binding>
+                    </connections>
                 </box>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="HQY-Kl-zpv">
                     <rect key="frame" x="20" y="20" width="154" height="84"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <imageCell key="cell" lineBreakMode="truncatingTail" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="cn4-K1-3i5"/>
                     <connections>
-                        <binding destination="chG-5D-WfY" name="value" keyPath="selection.modulePreviewImage" id="WF1-Fr-C0s"/>
+                        <binding destination="eXm-la-m29" name="value" keyPath="representedObject.modulePreviewImage" id="qiY-mA-qFE">
+                            <dictionary key="options">
+                                <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                <bool key="NSConditionallySetsEnabled" value="NO"/>
+                            </dictionary>
+                        </binding>
                     </connections>
                 </imageView>
                 <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="zNH-i2-BfV">
@@ -193,7 +213,11 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <binding destination="chG-5D-WfY" name="value" keyPath="selection.moduleDisplayedName" id="ucH-Gn-X5Z"/>
+                        <binding destination="eXm-la-m29" name="value" keyPath="representedObject.moduleDisplayedName" id="R56-it-dKx">
+                            <dictionary key="options">
+                                <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                            </dictionary>
+                        </binding>
                     </connections>
                 </textField>
             </subviews>

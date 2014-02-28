@@ -1,5 +1,5 @@
 //
-//  AEModuleFFLView.h
+//  AEModuleView.h
 //  DataCaster
 //
 //  Created by Ben Stahl on 2/27/14.
@@ -7,8 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "AEModuleView.h"
 
-@interface AEModuleFFLView : AEModuleView
+@interface AEModuleView : NSView
 
 @end

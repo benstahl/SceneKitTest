@@ -34,23 +34,24 @@
 - (void)awakeFromNib {
 	NSLog(@"Module Select View Controller awakeFromNib:");
 
+	AEModule *testPatternsModule = [[AEModule alloc] init];
+	testPatternsModule.moduleDisplayedName = @"Test patterns";
+	testPatternsModule.moduleXibName = @"AEModuleTestPatterns";
+	NSString *testPatternsModulePreviewImageFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/module_preview_test_patterns" withExtension:@"png"] path];
+	NSImage *testPatternsModulePreviewImage = [[NSImage alloc] initWithContentsOfFile:testPatternsModulePreviewImageFilePath];
+	testPatternsModule.modulePreviewImage = testPatternsModulePreviewImage;
+
 	AEModule *fflModule = [[AEModule alloc] init];
 	fflModule.moduleDisplayedName = @"Fantasy Football Live";
 	fflModule.moduleXibName = @"AEModuleFFL";
-	NSString *modulePreviewImageFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/module_preview_ffl" withExtension:@"png"] path];
-	NSImage *modulePreviewImage = [[NSImage alloc] initWithContentsOfFile:modulePreviewImageFilePath];
-	fflModule.modulePreviewImage = modulePreviewImage;
+	NSString *fflModulePreviewImageFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/module_preview_ffl" withExtension:@"png"] path];
+	NSImage *fflModulePreviewImage = [[NSImage alloc] initWithContentsOfFile:fflModulePreviewImageFilePath];
+	fflModule.modulePreviewImage = fflModulePreviewImage;
 
-	//	fflModule.modulePreviewImage = @"logo_ffl";
-
-	NSLog(@"Module Select View Controller awakeFromNib: (1)");
-
-//	sleep(2.0);
-
-	[self setModules:[NSMutableArray arrayWithObjects:fflModule, nil]];
+//	_modulesArrayController.selectsInsertedObjects = NO;
+	[self setModules:[NSMutableArray arrayWithObjects:testPatternsModule, fflModule, nil]];
+	_modulesArrayController.selectionIndex = 0;
 	NSLog(@"Array count = %@", @(self.modules.count));
-
-//	sleep(2.0);
 
 	//	_infoView.layer = [CALayer layer];
 	//    _infoView.wantsLayer = YES;
@@ -70,9 +71,9 @@
 /* ========================================================================== */
 - (IBAction)launchModuleButtonClicked:(id)sender {
 
-	NSLog(@"Array: %@", _modules);
-	NSLog(@"Array controller: %@", _modulesArrayController);
-	NSLog(@"Launch module button clicked: %@", _modulesArrayController.selectedObjects);
+//	NSLog(@"Array: %@", _modules);
+//	NSLog(@"Array controller: %@", _modulesArrayController);
+//	NSLog(@"Launch module button clicked: %@", _modulesArrayController.selectedObjects);
 	if (_modulesArrayController.selectedObjects.count == 0) { return; }
 
 
@@ -100,7 +101,7 @@
 }
 
 /* ========================================================================== */
--(NSArray*)modules {
+-(NSMutableArray*)modules {
     return _modules;
 }
 
