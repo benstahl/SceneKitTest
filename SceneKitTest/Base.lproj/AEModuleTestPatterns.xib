@@ -44,6 +44,7 @@
         </customView>
         <viewController title="Module Test Patterns VC" id="PT4-tZ-V4u" userLabel="Module Test Patterns VC" customClass="AEModuleTestPatternsViewController">
             <connections>
+                <outlet property="testPatternsView" destination="1" id="K0F-Kp-jTs"/>
                 <outlet property="view" destination="1" id="utu-re-7e0"/>
             </connections>
         </viewController>

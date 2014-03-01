@@ -14,5 +14,6 @@
 @interface AEModuleTestPatternsView : AEModuleView
 
 @property (weak) IBOutlet AEModuleTestPatternsViewController *controller;
+@property (strong) CALayer *picLayer;
 
 @end

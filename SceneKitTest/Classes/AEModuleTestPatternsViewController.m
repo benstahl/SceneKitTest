@@ -7,6 +7,7 @@
 //
 
 #import "AEModuleTestPatternsViewController.h"
+#import "AEModuleTestPatternsView.h"
 
 @implementation AEModuleTestPatternsViewController
 
@@ -50,22 +51,28 @@
 }
 
 /* ========================================================================== */
+- (void)resizeLayerFrames {
+	_testPatternsView.picLayer.contentsGravity = kCAGravityResizeAspectFill;
+	_testPatternsView.picLayer.frame = self.view.layer.frame;
+}
+
+/* ========================================================================== */
 - (void)awakeFromNib {
 //	NSLog(@"Images array = %@", _controller.images);
-	_picLayer = [CALayer layer];
-	_picLayer.contentsGravity = kCAGravityResizeAspectFill;
-	_picLayer.frame = self.view.layer.frame;
+	_testPatternsView.picLayer = [CALayer layer];
+	_testPatternsView.picLayer.contentsGravity = kCAGravityResizeAspectFill;
+	_testPatternsView.picLayer.frame = self.view.layer.frame;
 	if (_images && _images.count > 0) {
-		_picLayer.contents = _images[1];
+		_testPatternsView.picLayer.contents = _images[1];
 	}
-	[self.view.layer insertSublayer:_picLayer atIndex:1];
+	[self.view.layer insertSublayer:_testPatternsView.picLayer atIndex:1];
 }
 
 /* ========================================================================== */
 - (IBAction)nextPicture:(id)sender {
 	NSLog(@"Next picture.");
 	if (_imageIndex < _images.count - 1) {
-		_picLayer.contents = _images[_imageIndex++];
+		_testPatternsView.picLayer.contents = _images[_imageIndex++];
 	}
 }
 
@@ -73,7 +80,7 @@
 - (IBAction)previousPicture:(id)sender {
 	NSLog(@"Previous picture.");
 	if (_imageIndex > 0) {
-		_picLayer.contents = _images[_imageIndex--];
+		_testPatternsView.picLayer.contents = _images[_imageIndex--];
 	}
 }
 

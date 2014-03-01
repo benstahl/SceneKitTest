@@ -8,10 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AEModuleTestPatternsViewController : NSViewController {
-	CALayer *_picLayer;
-}
+@class AEModuleTestPatternsView;
 
+@interface AEModuleTestPatternsViewController : NSViewController
+
+@property (weak) IBOutlet AEModuleTestPatternsView *testPatternsView;
 @property (strong) NSMutableArray *images;
 @property NSUInteger imageIndex;
 @property (weak) IBOutlet NSButton *nextButton;
@@ -19,5 +20,7 @@
 
 - (IBAction)nextPicture:(id)sender;
 - (IBAction)previousPicture:(id)sender;
+
+- (void)resizeLayerFrames;
 
 @end
