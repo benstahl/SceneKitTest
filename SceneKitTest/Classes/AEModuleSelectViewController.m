@@ -23,33 +23,38 @@
 
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Initialization code here.
-    }
+	}
     return self;
 }
 
+/* ========================================================================== */
+- (id)initWithCoder:(NSCoder *)aDecoder {
+	if (self = [super initWithCoder:aDecoder]) {
+		AEModule *testPatternsModule = [[AEModule alloc] init];
+		testPatternsModule.moduleDisplayedName = @"Test patterns";
+		testPatternsModule.moduleXibName = @"AEModuleTestPatterns";
+		NSString *testPatternsModulePreviewImageFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/module_preview_test_patterns" withExtension:@"png"] path];
+		NSImage *testPatternsModulePreviewImage = [[NSImage alloc] initWithContentsOfFile:testPatternsModulePreviewImageFilePath];
+		testPatternsModule.modulePreviewImage = testPatternsModulePreviewImage;
+
+		AEModule *fflModule = [[AEModule alloc] init];
+		fflModule.moduleDisplayedName = @"Fantasy Football Live";
+		fflModule.moduleXibName = @"AEModuleFFL";
+		NSString *fflModulePreviewImageFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/module_preview_ffl" withExtension:@"png"] path];
+		NSImage *fflModulePreviewImage = [[NSImage alloc] initWithContentsOfFile:fflModulePreviewImageFilePath];
+		fflModule.modulePreviewImage = fflModulePreviewImage;
+
+		//	_modulesArrayController.selectsInsertedObjects = NO;
+		[self setModules:[NSMutableArray arrayWithObjects:fflModule, testPatternsModule, nil]]; 	}
+	return self;
+}
 //@synthesize modules = _modules;
 
 /* ========================================================================== */
 - (void)awakeFromNib {
 	NSLog(@"Module Select View Controller awakeFromNib:");
 
-	AEModule *testPatternsModule = [[AEModule alloc] init];
-	testPatternsModule.moduleDisplayedName = @"Test patterns";
-	testPatternsModule.moduleXibName = @"AEModuleTestPatterns";
-	NSString *testPatternsModulePreviewImageFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/module_preview_test_patterns" withExtension:@"png"] path];
-	NSImage *testPatternsModulePreviewImage = [[NSImage alloc] initWithContentsOfFile:testPatternsModulePreviewImageFilePath];
-	testPatternsModule.modulePreviewImage = testPatternsModulePreviewImage;
 
-	AEModule *fflModule = [[AEModule alloc] init];
-	fflModule.moduleDisplayedName = @"Fantasy Football Live";
-	fflModule.moduleXibName = @"AEModuleFFL";
-	NSString *fflModulePreviewImageFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/module_preview_ffl" withExtension:@"png"] path];
-	NSImage *fflModulePreviewImage = [[NSImage alloc] initWithContentsOfFile:fflModulePreviewImageFilePath];
-	fflModule.modulePreviewImage = fflModulePreviewImage;
-
-//	_modulesArrayController.selectsInsertedObjects = NO;
-	[self setModules:[NSMutableArray arrayWithObjects:testPatternsModule, fflModule, nil]];
 	_modulesArrayController.selectionIndex = 0;
 	NSLog(@"Array count = %@", @(self.modules.count));
 

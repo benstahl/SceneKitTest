@@ -33,8 +33,8 @@
                 <string>count</string>
             </declaredKeys>
             <connections>
-                <binding destination="Lrn-S0-73S" name="contentArrayForMultipleSelection" keyPath="modules" previousBinding="Van-21-SGg" id="twD-ej-Hyc"/>
                 <binding destination="Lrn-S0-73S" name="contentArray" keyPath="modules" id="Van-21-SGg"/>
+                <binding destination="Lrn-S0-73S" name="contentArrayForMultipleSelection" keyPath="modules" previousBinding="Van-21-SGg" id="twD-ej-Hyc"/>
             </connections>
         </arrayController>
         <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xzE-gO-b49" userLabel="Module View" customClass="AEModuleSelectView">
@@ -176,6 +176,21 @@
                     <view key="contentView">
                         <rect key="frame" x="0.0" y="0.0" width="567" height="126"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="HQY-Kl-zpv">
+                                <rect key="frame" x="16" y="21" width="154" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" lineBreakMode="truncatingTail" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="cn4-K1-3i5"/>
+                                <connections>
+                                    <binding destination="eXm-la-m29" name="value" keyPath="representedObject.modulePreviewImage" id="qiY-mA-qFE">
+                                        <dictionary key="options">
+                                            <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                            <bool key="NSConditionallySetsEnabled" value="NO"/>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </imageView>
+                        </subviews>
                     </view>
                     <shadow key="shadow" blurRadius="3">
                         <size key="offset" width="2" height="2"/>
@@ -191,19 +206,6 @@
                         </binding>
                     </connections>
                 </box>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="HQY-Kl-zpv">
-                    <rect key="frame" x="20" y="20" width="154" height="84"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <imageCell key="cell" lineBreakMode="truncatingTail" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="cn4-K1-3i5"/>
-                    <connections>
-                        <binding destination="eXm-la-m29" name="value" keyPath="representedObject.modulePreviewImage" id="qiY-mA-qFE">
-                            <dictionary key="options">
-                                <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
-                                <bool key="NSConditionallySetsEnabled" value="NO"/>
-                            </dictionary>
-                        </binding>
-                    </connections>
-                </imageView>
                 <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="zNH-i2-BfV">
                     <rect key="frame" x="180" y="75" width="369" height="29"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>

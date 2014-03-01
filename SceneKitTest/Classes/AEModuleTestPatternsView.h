@@ -13,7 +13,7 @@
 
 @interface AEModuleTestPatternsView : AEModuleView
 
-@property (weak) IBOutlet AEModuleTestPatternsViewController *controller;
-@property (strong) CALayer *picLayer;
+// This MUST be a strong reference or this outlet will be nil!
+@property (strong) IBOutlet AEModuleTestPatternsViewController *testPatternsController;
 
 @end

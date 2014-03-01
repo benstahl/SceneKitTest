@@ -26,7 +26,10 @@
     // Drawing code here.
 }
 
-/* ========================================================================== */
+/* =============================================================================
+ Adjust the module view frame to maintain the current output  aspect ratio,
+ and fill to whichever edge is closest to the superview.
+ ============================================================================ */
 - (void)adjustFrame {
 	if (!self.superview) { return; }
 
@@ -68,7 +71,7 @@
 	//	NSLog(@"Module Select View viewDidEndLiveResize:");
 	//	self.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
 
-	[self adjustFrame];
+//	[self adjustFrame];
 }
 
 /* ========================================================================== */
