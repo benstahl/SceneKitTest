@@ -13,9 +13,9 @@
 /* --- Aspect ratio --- */
 //#define kOutputAspectH					4.0
 //#define kOutputAspectV					3.0
-#define kOutputAspectH					16.0
-#define kOutputAspectV					9.0
-#define kOutputAspectRatio				(kOutputAspectH / kOutputAspectV)
+#define kOutputPixelsH					1920.0
+#define kOutputPixelsV					1080.0
+#define kOutputAspectRatio				(kOutputPixelsH / kOutputPixelsV)
 #define kOutputAspectRatioInverted		1.0 / kOutputAspectRatio
 
 #define kHeaderFadeInTime				0.35

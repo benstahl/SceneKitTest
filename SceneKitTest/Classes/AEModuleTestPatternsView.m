@@ -10,6 +10,7 @@
 #import "AEModuleTestPatternsViewController.h"
 #import "AEPatternImagePane.h"
 #import "AEPatternSelectPane.h"
+#import "AETestPattern.h"
 
 @implementation AEModuleTestPatternsView
 
@@ -52,48 +53,65 @@
 
 /* ========================================================================== */
 - (void)adjustFrame {
-	NSLog(@"Adjusting frames.");
-	NSLog(@"  Old view frame = %@", NSStringFromRect(self.frame));
+//	NSLog(@"Adjusting frames.");
+//	NSLog(@"  Old view frame = %@", NSStringFromRect(self.frame));
 	[super adjustFrame];
-	NSLog(@"  New view frame = %@", NSStringFromRect(self.frame));
+//	NSLog(@"  New view frame = %@", NSStringFromRect(self.frame));
 
+	AEModuleTestPatternsViewController *vc = _testPatternsController;
 //	self.frame = self.superview.frame;
 //	[_testPatternsController resizeLayerFrames];
 
 	// resize your layers based on the view's new bounds
-	_testPatternsController.patternSelectPane.autoresizingMask = NSViewHeightSizable;
-//	_testPatternsController.patternSelectPane.frame = NSMakeRect(0.0, 0.0, kTestPatternDrawerPosX, self.frame.size.height);
-//	_testPatternsController.patternSelectPane.frame = self.frame;
+	vc.patternSelectPane.autoresizingMask = NSViewHeightSizable;
+//	vc.patternSelectPane.frame = NSMakeRect(0.0, 0.0, kTestPatternDrawerPosX, self.frame.size.height);
+//	vc.patternSelectPane.frame = self.frame;
 //	NSLog(@"Layout subviews, bounds size = %f,%f", self.bounds.size.width, self.bounds.size.height);
 
 	// Disable implicit animation on text changes for dynamic layers.
-//	NSDictionary *newActions = @{@"contents" : [NSNull null], @"bounds" : [NSNull null], @"frame" : [NSNull null], @"position" : [NSNull null]};
-//	_testPatternsController.patternImagePane.layer.actions = newActions;
+	NSDictionary *newActions = @{@"contents" : [NSNull null], @"bounds" : [NSNull null], @"frame" : [NSNull null], @"position" : [NSNull null]};
+	vc.patternImagePane.layer.actions = newActions;
 
-//	_testPatternsController.patternImagePane.frame = self.superview.frame;
-////	_testPatternsController.patternSelectPane.frame = self.superview.frame;
+//	vc.patternImagePane.frame = self.superview.frame;
+////	vc.patternSelectPane.frame = self.superview.frame;
 //
-//	_testPatternsController.patternImagePane.picLayer.frame = self.bounds;
+//	vc.patternImagePane.picLayer.frame = self.bounds;
 //	NSLog(@"New pic pane bounds size = %f, %f", self.bounds.size.width, self.bounds.size.height);
 
-//	_testPatternsController.patternImagePane.layer.hidden = NO;
-	_testPatternsController.patternImagePane.layer.contentsGravity = kCAGravityResizeAspect;
+//	vc.patternImagePane.layer.hidden = NO;
+//	vc.patternImagePane.layer.contentsGravity = kCAGravityResizeAspect;
 
-//	_testPatternsController.patternImagePane.autoresizesSubviews = YES;
+//	CGFloat viewScale = self.frame.size.height / 1080.0;
+//	NSLog(@"  View scale = %f", viewScale);
 
-	if (_testPatternsController.selectDrawerOpen == YES) {
-		_testPatternsController.patternSelectPane.frame = NSMakeRect(0.0,0.0, kTestPatternDrawerPosX, self.frame.size.height);
-		_testPatternsController.patternImagePane.frame = NSMakeRect(_testPatternsController.patternSelectPane.frame.size.width, 0.0, self.frame.size.width, self.frame.size.height);
+//	vc.patternImagePane.layer.transform = CATransform3DMakeScale(viewScale, viewScale, 1.0);
+//	vc.patternImagePane.layer.transform = CATransform3DIdentity;
+
+//	vc.patternImagePane.autoresizesSubviews = YES;
+
+//	vc.patternImagePane.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
+//	vc.patternImagePane.layer.contentsGravity = kCAGravityResizeAspectFill;
+
+//	CGFloat newImageHeight = round(self.frame.size.height);
+//	CGFloat newImageWidth = newImageHeight * kOutputAspectRatio;
+
+	[vc reassignPatternImage];
+
+	if (vc.selectDrawerOpen == YES) {
+		vc.patternSelectPane.frame = NSMakeRect(0.0,0.0, kTestPatternDrawerPosX, self.frame.size.height);
+//		vc.patternImagePane.frame = NSMakeRect(round(vc.patternSelectPane.frame.size.width), 0.0, newImageWidth, newImageHeight);
+		vc.patternImagePane.frame = NSMakeRect(vc.patternSelectPane.frame.size.width, 0.0, self.frame.size.width, self.frame.size.height);
 	} else {
-		_testPatternsController.patternSelectPane.frame = NSMakeRect(-kTestPatternDrawerPosX, 0.0, kTestPatternDrawerPosX, self.frame.size.height);
-		_testPatternsController.patternImagePane.frame = NSMakeRect(0.0, 0.0, self.frame.size.width, self.frame.size.height);
+		vc.patternSelectPane.frame = NSMakeRect(-kTestPatternDrawerPosX, 0.0, kTestPatternDrawerPosX, self.frame.size.height);
+//		vc.patternImagePane.frame = NSMakeRect(0.0, 0.0, newImageWidth, newImageHeight);
+		vc.patternImagePane.frame = NSMakeRect(0.0, 0.0, self.frame.size.width, self.frame.size.height);
 	}
 
-//	NSLog(@"  New select pane frame = %@", NSStringFromRect(_testPatternsController.patternSelectPane.frame));
-	NSLog(@"  New image pane frame = %@", NSStringFromRect(_testPatternsController.patternImagePane.frame));
-	NSLog(@"  New image layer frame = %@", NSStringFromRect(_testPatternsController.patternImagePane.layer.frame));
-//	NSLog(@"  New image layer bounds = %@", NSStringFromRect(_testPatternsController.patternImagePane.layer.bounds));
-	NSLog(@"  Image pane contents = %@", _testPatternsController.patternImagePane.layer.contents);
+//	NSLog(@"  New select pane frame = %@", NSStringFromRect(vc.patternSelectPane.frame));
+//	NSLog(@"  New image pane frame = %@", NSStringFromRect(vc.patternImagePane.frame));
+//	NSLog(@"  New image layer frame = %@", NSStringFromRect(vc.patternImagePane.layer.frame));
+//	NSLog(@"  New image layer bounds = %@", NSStringFromRect(vc.patternImagePane.layer.bounds));
+//	NSLog(@"  Image pane contents = %@", vc.patternImagePane.layer.contents);
 }
 
 /* ========================================================================== */

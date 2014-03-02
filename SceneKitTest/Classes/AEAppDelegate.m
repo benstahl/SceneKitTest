@@ -21,7 +21,9 @@
 //		[super windowControllerDidLoadNib:aController];
 	[_window setBackgroundColor:[NSColor blackColor]];
 //	[_window setAspectRatio:NSMakeSize(kOutputAspectH, kOutputAspectV)];
-	[_window setContentAspectRatio:NSMakeSize(kOutputAspectH, kOutputAspectV)];
+	[_window setContentAspectRatio:NSMakeSize(kOutputPixelsH, kOutputPixelsV)];
+	// Set window size to exactly 1/2 output resolution.
+	[_window setContentSize:NSMakeSize(kOutputPixelsH * 0.5, kOutputPixelsV * 0.5)];
 }
 
 /* ========================================================================== */
@@ -51,27 +53,56 @@
 	NSView *mainView = [[self window] contentView];
 //	[mainView setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
 
-	CGRect viewBounds = [mainView bounds];
+	NSView *topView = nil;
 
-	for (NSView *subview in mainView.subviews) {
-		[subview removeFromSuperview];
+	if ([mainView subviews].count > 0) {
+		topView = [mainView subviews][0];
 	}
 
-	// fade out
-	[mainView animator].alphaValue = 0.0;
+	CGRect viewBounds = [mainView bounds];
 
-	self.contentViewController = moduleVC;
+//	for (NSView *subview in mainView.subviews) {
+//		[subview removeFromSuperview];
+//	}
+//
+//	[mainView addSubview:moduleVC.view atI];
+//	[mainView addSubview:moduleVC.view];
+
+	[moduleVC.view setFrame:viewBounds];
+
+	[NSAnimationContext currentContext].duration = 0.4;
+	[NSAnimationContext currentContext].timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+	[NSAnimationContext currentContext].completionHandler = ^(){
+		NSLog(@"Transition complete.");
+		self.contentViewController = moduleVC;
+		mainView.layer.contentsGravity = kCAGravityResizeAspectFill;
+	};
+	[NSAnimationContext beginGrouping];
+	[mainView animator].alphaValue = 0.0;
+	if (topView) {
+		[[mainView animator] replaceSubview:topView with:moduleVC.view];
+	} else {
+		[[mainView animator] addSubview:moduleVC.view];
+	}
+	[mainView animator].alphaValue = 1.0;
+	[NSAnimationContext endGrouping];
+
+
+	// fade out
+//	[mainView animator].alphaValue = 0.0;
+
+//	self.contentViewController = moduleVC;
 
 //	CGSize newSize = CGSizeMake(viewBounds.size.width, viewBounds.size.width * 0.5625);
 //	[moduleVC.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable | NSViewMinXMargin | NSViewMaxXMargin | NSViewMinYMargin | NSViewMaxYMargin];
 //	[moduleVC.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
 
-	[moduleVC.view setFrame:viewBounds];
+//	[moduleVC.view setFrame:viewBounds];
 //	[moduleVC.view setFrame:NSMakeRect(0.0, 0.0, newSize.width, newSize.height)];
 //	[moduleVC.view setFrameOrigin:NSMakePoint(-newSize.width / 2, -newSize.height / 2)];
 
-	mainView.layer.contentsGravity = kCAGravityResizeAspectFill;
-	[mainView addSubview:moduleVC.view];
+//	mainView.layer.contentsGravity = kCAGravityResizeAspectFill;
+//	[mainView addSubview:moduleVC.view];
 
 //	// make the sub view the same size as our super view
 //	CGRect viewBounds = [mainView bounds];

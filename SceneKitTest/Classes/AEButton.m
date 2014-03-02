@@ -53,10 +53,10 @@
 //		_labelLayer.bounds = CGRectMake(0, 0, frame.size.width, frame.size.height);
 		_labelLayer.truncationMode = kCATruncationMiddle;
 		_labelLayer.string = @""; // Since we're pulling from the .xib file, needs to be set in awakeFromNib:
-		_labelLayer.shadowColor = [[NSColor blackColor] CGColor];
-		_labelLayer.shadowOpacity = 0.65;
-		_labelLayer.shadowOffset = CGSizeMake(3.0, -3.0);
-		_labelLayer.shadowRadius = 2.0;
+//		_labelLayer.shadowColor = [[NSColor blackColor] CGColor];
+//		_labelLayer.shadowOpacity = 0.65;
+//		_labelLayer.shadowOffset = CGSizeMake(3.0, -3.0);
+//		_labelLayer.shadowRadius = 2.0;
 		_labelLayer.shouldRasterize = YES;
 //		_labelLayer.bounds = CGRectMake(_labelLayer.bounds.origin.x, _labelLayer.bounds.origin.y - fontSize * 5.0, _labelLayer.bounds.size.width, _labelLayer.bounds.size.height);
 		_labelLayer.position = CGPointMake(_labelLayer.position.x, fontSize * 0.6);

@@ -32,6 +32,7 @@
 //	self.layer.autoresizingMask = NSViewHeightSizable;
 	self.wantsLayer = YES;
 	self.layer.backgroundColor = [[NSColor darkGrayColor] CGColor];
+//	self.layer.backgroundColor = [[NSColor colorWithHue:0.0 saturation:0.0 brightness:0.2 alpha:1.0] CGColor];
 	self.layer.frame = self.frame;
 }
 

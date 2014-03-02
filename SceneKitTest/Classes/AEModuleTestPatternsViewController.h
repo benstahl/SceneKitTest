@@ -31,6 +31,7 @@
 //- (IBAction)nextPicture:(id)sender;
 //- (IBAction)previousPicture:(id)sender;
 
+- (void)reassignPatternImage;
 - (void)resizeLayerFrames;
 
 - (IBAction)exitButtonClicked:(id)sender;

@@ -42,11 +42,22 @@
             </connections>
         </collectionViewItem>
         <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wvu-2v-xlS" customClass="AEPatternSelectPane">
-            <rect key="frame" x="0.0" y="0.0" width="260" height="400"/>
+            <rect key="frame" x="0.0" y="0.0" width="260" height="422"/>
             <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
             <subviews>
+                <customView wantsLayer="YES" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="50" id="HRM-FT-KJL" userLabel="Launch Module Button" customClass="AEButton">
+                    <rect key="frame" x="55" y="20" width="150" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="actionSelectorString" value="exitButtonClicked:"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="buttonLabelText" value="MENUS"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="target" destination="PT4-tZ-V4u" id="afd-Rw-Smw"/>
+                    </connections>
+                </customView>
                 <scrollView borderType="groove" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" id="sLx-1g-xuY">
-                    <rect key="frame" x="20" y="66" width="220" height="314"/>
+                    <rect key="frame" x="20" y="88" width="220" height="314"/>
                     <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                     <clipView key="contentView" id="TRe-3b-hW7">
                         <rect key="frame" x="2" y="2" width="216" height="310"/>
@@ -55,7 +66,7 @@
                             <collectionView selectable="YES" maxNumberOfColumns="1" id="XR3-OM-Oj0">
                                 <rect key="frame" x="0.0" y="0.0" width="216" height="310"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="primaryBackgroundColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="primaryBackgroundColor" red="0.19116055965423584" green="0.19115482270717621" blue="0.19115808606147766" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <binding destination="EPX-E8-Yy6" name="content" keyPath="arrangedObjects" id="tfu-TW-ps1"/>
                                     <binding destination="EPX-E8-Yy6" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="tfu-TW-ps1" id="b4E-cX-1ji"/>
@@ -74,17 +85,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
-                <button id="sfC-zP-0K2">
-                    <rect key="frame" x="45" y="20" width="170" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                    <buttonCell key="cell" type="square" title="Exit to main menu" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pnI-jo-wtG">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="18"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="exitButtonClicked:" target="PT4-tZ-V4u" id="R6s-zG-4lz"/>
-                    </connections>
-                </button>
             </subviews>
         </customView>
         <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="68O-2w-DOd" userLabel="Pattern Image Pane" customClass="AEPatternImagePane">

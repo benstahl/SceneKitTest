@@ -139,6 +139,16 @@
 
 #pragma mark - layer management
 
+/* =============================================================================
+ When window is resized, if the resulting image pane would have a size that does
+ not exactly match the aspect ration of the original image, it will disappear.
+ This is a shortcut to re-assign the image pane contents when resized.
+ ============================================================================ */
+- (void)reassignPatternImage {
+	NSUInteger imageIndex = _testPatternsArrayController.selectionIndex;
+	_patternImagePane.layer.contents = ((AETestPattern*)_testPatterns[imageIndex]).patternImage;
+}
+
 /* ========================================================================== */
 - (void)resizeLayerFrames {
 //	_splitView.frame = _splitView.superview.frame;
@@ -188,17 +198,31 @@
 
 /* ========================================================================== */
 - (IBAction)openSelectDrawer:(id)sender {
+ 	// Disable implicit animation on changes for dynamic layers.
+//	NSDictionary *newActions = @{@"bounds" : [NSNull null]};
+//	_patternImagePane.layer.actions = newActions;
+
+	[NSAnimationContext currentContext].duration = 0.3;
+	[NSAnimationContext currentContext].timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+	[NSAnimationContext beginGrouping];
 	[[_patternSelectPane animator] setFrame:NSMakeRect(0.0, _patternSelectPane.frame.origin.y, kTestPatternDrawerPosX, _testPatternsView.frame.size.height)];
 	[[_patternImagePane animator] setFrame:NSMakeRect(_patternSelectPane.frame.size.width, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height)];
+	[NSAnimationContext endGrouping];
 	_selectDrawerOpen = YES;
 }
 
 /* ========================================================================== */
 - (IBAction)closeSelectDrawer:(id)sender {
+ 	// Disable implicit animation on changes for dynamic layers.
+//	NSDictionary *newActions = @{@"bounds" : [NSNull null]};
+//	_patternImagePane.layer.actions = newActions;
+
+	[NSAnimationContext currentContext].duration = 0.15;
+	[NSAnimationContext currentContext].timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+	[NSAnimationContext beginGrouping];
 	[[_patternSelectPane animator] setFrame:NSMakeRect(-kTestPatternDrawerPosX, _patternSelectPane.frame.origin.y, kTestPatternDrawerPosX, _testPatternsView.frame.size.height)];
 	[[_patternImagePane animator] setFrame:NSMakeRect(0.0, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height)];
-//	[[_patternSelectPane animator] setFrame:NSMakeRect(_patternSelectPane.frame.origin.x - kTestPatternDrawerPosX, _patternSelectPane.frame.origin.y, _patternSelectPane.frame.size.width, _patternSelectPane.frame.size.height)];
-//	[[_patternImagePane animator] setFrame:NSMakeRect(_patternImagePane.frame.origin.x - kTestPatternDrawerPosX, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height)];
+	[NSAnimationContext endGrouping];
 	_selectDrawerOpen = NO;
 }
 
@@ -213,7 +237,6 @@
 		[self closeSelectDrawer:self];
 	}
 }
-
 
 #pragma mark - KVO
 
@@ -243,8 +266,8 @@
 	NSUInteger newValue = _testPatternsArrayController.selectionIndex;
 	_patternImagePane.layer.contents = ((AETestPattern*)_testPatterns[newValue]).patternImage;
 
-//	[self closeSelectDrawer:self];
-	[self performSelector:@selector(closeSelectDrawer:) withObject:self afterDelay:0.15];
+	[self closeSelectDrawer:self];
+//	[self performSelector:@selector(closeSelectDrawer:) withObject:self afterDelay:0.15];
 }
 
 @end
