@@ -35,7 +35,7 @@
 
 	self.superview.layer.contentsGravity = kCAGravityResizeAspectFill;
 	self.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
-	self.autoresizesSubviews = YES;
+//	self.autoresizesSubviews = YES;
 
 	CGRect superviewBounds = [[self superview] bounds];
 	//	NSLog(@"Content view bounds = %f, %f", superviewBounds.size.width, superviewBounds.size.height);
@@ -48,7 +48,7 @@
 		//		NSLog(@"aspect = %f, letterboxing", superviewAspect);
 		CGSize newSize = CGSizeMake(superviewBounds.size.width, superviewBounds.size.width / kOutputAspectRatio);
 		CGFloat leftoverHeight = superviewBounds.size.height - newSize.height;
-		[self setFrame:CGRectMake(superviewBounds.origin.x, superviewBounds.origin.y + leftoverHeight / 2, newSize.width, newSize.height)];
+		[self setFrame:CGRectMake(superviewBounds.origin.x, leftoverHeight / 2, newSize.width, newSize.height)];
 		//		NSLog(@"New size = %f, %f", self.frame.size.width, self.frame.size.height);
 	} else {
 		// pillarbox
@@ -56,7 +56,7 @@
 		CGSize newSize = CGSizeMake(superviewBounds.size.height * kOutputAspectRatio, superviewBounds.size.height);
 		CGFloat leftoverWidth = superviewBounds.size.width - newSize.width;
 		//		NSLog(@"Bounds width = %f | new width = %f | leftover width = %f", superviewBounds.size.width, newSize.width, leftoverWidth);
-		[self setFrame:CGRectMake(superviewBounds.origin.x + leftoverWidth / 2, superviewBounds.origin.y, newSize.width, newSize.height)];
+		[self setFrame:CGRectMake(superviewBounds.origin.x + leftoverWidth / 2, 0.0, newSize.width, newSize.height)];
 		//		NSLog(@"New size = %f, %f", self.frame.size.width, self.frame.size.height);
 	}
 }

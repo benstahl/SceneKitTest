@@ -125,9 +125,11 @@
 //		_patternImagePane.picLayer.contents = _images[_imageIndex];
 //	}
 
+//	_testPatternsView.layer.bounds = NSMakeRect(0.0, 0.0, _testPatternsView.layer.frame.size.width + kTestPatternDrawerPosX, _testPatternsView.layer.frame.size.height);
 	_patternSelectPane.layer.frame = NSMakeRect(0.0, 0.0, kTestPatternDrawerPosX, _testPatternsView.frame.size.height);
 	[_testPatternsView addSubview:_patternSelectPane];
 	_patternImagePane.layer.frame = NSMakeRect(kTestPatternDrawerPosX, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
+//	_patternImagePane.layer.bounds = NSMakeRect(0.0, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
 	[_testPatternsView addSubview:_patternImagePane];
 
 	[_testPatternsArrayController addObserver:self forKeyPath:@"selectionIndexes" options:0 context:nil];
@@ -144,16 +146,16 @@
 //	_splitView.frame = NSMakeRect(0.0, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
 //	[_splitView display];
 //	_patternImagePane.frame = _testPatternsView.frame;
+// Disable implicit animation on text changes for dynamic layers.
+//	NSDictionary *newActions = @{@"contents" : [NSNull null], @"bounds" : [NSNull null], @"frame" : [NSNull null], @"position" : [NSNull null]};
+//	_patternImagePane.layer.actions = newActions;
+
 	_patternSelectPane.layer.frame = NSMakeRect(0.0, 0.0, kTestPatternDrawerPosX, _testPatternsView.frame.size.height);
 //	[_testPatternsView addSubview:_patternImagePane];
 	_patternImagePane.layer.frame = NSMakeRect(kTestPatternDrawerPosX, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
 
 //	_patternImagePane.frame = NSMakeRect(0.0, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
 //	[_patternImagePane display];
-
-	// Disable implicit animation on text changes for dynamic layers.
-	NSDictionary *newActions = @{@"contents" : [NSNull null], @"bounds" : [NSNull null], @"frame" : [NSNull null], @"position" : [NSNull null]};
-	_patternImagePane.layer.actions = newActions;
 
 //	_controller.patternImagePane.frame = self.superview.frame;
 //	_controller.patternSelectPane.frame = self.superview.frame;
@@ -171,22 +173,6 @@
 //	NSLog(@"_splitView.frame = %@",  NSStringFromRect(_splitView.frame));
 }
 
-///* ========================================================================== */
-//- (IBAction)nextPicture:(id)sender {
-//	NSLog(@"Next picture.");
-//	if (_imageIndex < _images.count - 1) {
-//		_patternImagePane.picLayer.contents = _images[_imageIndex++];
-//	}
-//}
-//
-///* ========================================================================== */
-//- (IBAction)previousPicture:(id)sender {
-//	NSLog(@"Previous picture.");
-//	if (_imageIndex > 0) {
-//		_patternImagePane.picLayer.contents = _images[_imageIndex--];
-//	}
-//}
-
 #pragma mark - actions
 
 /* ========================================================================== */
@@ -202,24 +188,28 @@
 
 /* ========================================================================== */
 - (IBAction)openSelectDrawer:(id)sender {
-	[[_patternSelectPane animator] setFrame:NSMakeRect(_patternSelectPane.frame.origin.x + kTestPatternDrawerPosX, _patternSelectPane.frame.origin.y, _patternSelectPane.frame.size.width, _patternSelectPane.frame.size.height)];
-	[[_patternImagePane animator] setFrame:NSMakeRect(_patternImagePane.frame.origin.x + kTestPatternDrawerPosX, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height)];
+	[[_patternSelectPane animator] setFrame:NSMakeRect(0.0, _patternSelectPane.frame.origin.y, kTestPatternDrawerPosX, _testPatternsView.frame.size.height)];
+	[[_patternImagePane animator] setFrame:NSMakeRect(_patternSelectPane.frame.size.width, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height)];
+	_selectDrawerOpen = YES;
 }
 
 /* ========================================================================== */
 - (IBAction)closeSelectDrawer:(id)sender {
-	[[_patternSelectPane animator] setFrame:NSMakeRect(_patternSelectPane.frame.origin.x - kTestPatternDrawerPosX, _patternSelectPane.frame.origin.y, _patternSelectPane.frame.size.width, _patternSelectPane.frame.size.height)];
-	[[_patternImagePane animator] setFrame:NSMakeRect(_patternImagePane.frame.origin.x - kTestPatternDrawerPosX, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height)];
+	[[_patternSelectPane animator] setFrame:NSMakeRect(-kTestPatternDrawerPosX, _patternSelectPane.frame.origin.y, kTestPatternDrawerPosX, _testPatternsView.frame.size.height)];
+	[[_patternImagePane animator] setFrame:NSMakeRect(0.0, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height)];
+//	[[_patternSelectPane animator] setFrame:NSMakeRect(_patternSelectPane.frame.origin.x - kTestPatternDrawerPosX, _patternSelectPane.frame.origin.y, _patternSelectPane.frame.size.width, _patternSelectPane.frame.size.height)];
+//	[[_patternImagePane animator] setFrame:NSMakeRect(_patternImagePane.frame.origin.x - kTestPatternDrawerPosX, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height)];
+	_selectDrawerOpen = NO;
 }
 
 /* ========================================================================== */
 - (IBAction)toggleSelectDrawer:(id)sender {
 	_selectDrawerOpen = !_selectDrawerOpen;
 	if (_selectDrawerOpen) {
-		NSLog(@"Opening.");
+//		NSLog(@"Opening.");
 		[self openSelectDrawer:self];
 	} else {
-		NSLog(@"Closing.");
+//		NSLog(@"Closing.");
 		[self closeSelectDrawer:self];
 	}
 }
@@ -252,6 +242,9 @@
 //	NSLog(@"Property %@ changed, change dict = %@", keyPath, change);
 	NSUInteger newValue = _testPatternsArrayController.selectionIndex;
 	_patternImagePane.layer.contents = ((AETestPattern*)_testPatterns[newValue]).patternImage;
+
+//	[self closeSelectDrawer:self];
+	[self performSelector:@selector(closeSelectDrawer:) withObject:self afterDelay:0.15];
 }
 
 @end

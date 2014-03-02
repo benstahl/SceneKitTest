@@ -53,7 +53,7 @@
 						 @"2" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 3.15, 32.0)], // 2 cards
 						 @"3" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.95, 34.0)], // 3 cards
 						 @"4" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.7, 36.0)], // 4 cards
-						 @"5" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.5, 42.5)], // 5 cards
+						 @"5" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.5, 44.5)], // 5 cards
 	};
 
 	CGFloat cardSpacingX = 4.25;
@@ -337,7 +337,7 @@
 		AEPlayerCard *card = [[AEPlayerCard alloc] initWithViewController:_vc];
 		[card configureWithPlayer:players[i]];
 		card.pivot = CATransform3DMakeTranslation(0.0, -2.8, 0.0);
-		card.position = SCNVector3Make(-(-(totalWidthStart / 2.0) + cardSpacingStartX * i), .5, 48.0);
+		card.position = SCNVector3Make(-(-(totalWidthStart / 2.0) + cardSpacingStartX * i), .5, 50.0);
 		card.rotation = SCNVector4Make(1.0, 0.75, 0.0, AEDegToRad(-80.0));
 		[_displayedCards addObject:card];
 		[_displayedCardsNode addChildNode:card];
