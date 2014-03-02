@@ -166,18 +166,18 @@
                 </customView>
             </subviews>
         </customView>
-        <view wantsLayer="YES" id="sgR-nb-XWH" userLabel="Module View Item">
+        <view id="sgR-nb-XWH" userLabel="Module View Item">
             <rect key="frame" x="0.0" y="0.0" width="567" height="124"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
             <subviews>
-                <box autoresizesSubviews="NO" wantsLayer="YES" title="Box" boxType="custom" borderType="none" id="zwA-3e-zLw">
+                <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" id="zwA-3e-zLw">
                     <rect key="frame" x="0.0" y="0.0" width="567" height="126"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <view key="contentView">
                         <rect key="frame" x="0.0" y="0.0" width="567" height="126"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="HQY-Kl-zpv">
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="HQY-Kl-zpv">
                                 <rect key="frame" x="16" y="21" width="154" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" lineBreakMode="truncatingTail" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="cn4-K1-3i5"/>
@@ -192,10 +192,6 @@
                             </imageView>
                         </subviews>
                     </view>
-                    <shadow key="shadow" blurRadius="3">
-                        <size key="offset" width="2" height="2"/>
-                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </shadow>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" red="0.99417614939999999" green="0.71542185540000003" blue="0.056148923929999997" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
@@ -206,12 +202,12 @@
                         </binding>
                     </connections>
                 </box>
-                <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="zNH-i2-BfV">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="zNH-i2-BfV">
                     <rect key="frame" x="180" y="75" width="369" height="29"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="Module Select" placeholderString="" id="bWu-BH-jJt">
-                        <font key="font" size="24" name="HelveticaNeue-Light"/>
-                        <color key="textColor" red="0.99963301419999995" green="0.99960309270000003" blue="0.99962008000000002" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
+                        <font key="font" size="24" name="HelveticaNeue"/>
+                        <color key="textColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>

@@ -10,6 +10,6 @@
 
 @interface AEPatternImagePane : NSView
 
-@property (strong) CALayer *picLayer;
+//@property (strong) CALayer *picLayer;
 
 @end

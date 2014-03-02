@@ -106,12 +106,12 @@
 	//	_splitView.frame = _testPatternsView.frame;
 
 	//	_testPatternsView.controller = self;
-	[_splitView addSubview:_patternSelectPane];
-	_patternSelectPane.frame = _splitView.frame;
-	[_splitView addSubview:_patternImagePane];
-	_patternImagePane.frame = _splitView.frame;
-	[_splitView adjustSubviews];
-	_splitView.frame = _splitView.superview.frame;
+//	[_splitView addSubview:_patternSelectPane];
+//	_patternSelectPane.frame = _splitView.frame;
+//	[_splitView addSubview:_patternImagePane];
+//	_patternImagePane.frame = _splitView.frame;
+//	[_splitView adjustSubviews];
+//	_splitView.frame = _splitView.superview.frame;
 
 //	if (!_patternImagePane) {
 //		NSLog(@"_patternImagePane is nil.");
@@ -122,8 +122,15 @@
 //	if (_images && _images.count > 0) {
 //		_patternImagePane.picLayer.contents = _images[_imageIndex];
 //	}
+
+	_patternSelectPane.layer.frame = NSMakeRect(0.0, 0.0, kTestPatternDrawerPosX, _testPatternsView.frame.size.height);
+	[_testPatternsView addSubview:_patternSelectPane];
+	_patternImagePane.layer.frame = NSMakeRect(kTestPatternDrawerPosX, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
+	[_testPatternsView addSubview:_patternImagePane];
+
 	[_testPatternsArrayController addObserver:self forKeyPath:@"selectionIndexes" options:0 context:nil];
 	[_testPatternsArrayController setSelectionIndex:0];
+	_patternImagePane.layer.contents = ((AETestPattern*)_testPatterns[0]).patternImage;
 }
 
 #pragma mark - layer management
@@ -132,15 +139,19 @@
 - (void)resizeLayerFrames {
 //	_splitView.frame = _splitView.superview.frame;
 //	_splitView.frame = _testPatternsView.frame;
-	_splitView.frame = NSMakeRect(0.0, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
+//	_splitView.frame = NSMakeRect(0.0, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
 //	[_splitView display];
 //	_patternImagePane.frame = _testPatternsView.frame;
-	_patternImagePane.frame = NSMakeRect(0.0, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
+	_patternSelectPane.layer.frame = NSMakeRect(0.0, 0.0, kTestPatternDrawerPosX, _testPatternsView.frame.size.height);
+//	[_testPatternsView addSubview:_patternImagePane];
+	_patternImagePane.layer.frame = NSMakeRect(kTestPatternDrawerPosX, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
+
+//	_patternImagePane.frame = NSMakeRect(0.0, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
 //	[_patternImagePane display];
 
 	// Disable implicit animation on text changes for dynamic layers.
 	NSDictionary *newActions = @{@"contents" : [NSNull null], @"bounds" : [NSNull null], @"frame" : [NSNull null], @"position" : [NSNull null]};
-	_patternImagePane.picLayer.actions = newActions;
+	_patternImagePane.layer.actions = newActions;
 
 //	_controller.patternImagePane.frame = self.superview.frame;
 //	_controller.patternSelectPane.frame = self.superview.frame;
@@ -153,7 +164,8 @@
 //	_patternImagePane.frame = _testPatternsView.frame;
 //	_patternImagePane.layer.frame = _patternImagePane.superview.frame;
 //	_patternImagePane.picLayer.frame = _testPatternsView.frame;
-	_patternImagePane.picLayer.frame = NSMakeRect(0.0, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
+
+//	_patternImagePane.layer.frame = NSMakeRect(0.0, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
 //	NSLog(@"_splitView.frame = %@",  NSStringFromRect(_splitView.frame));
 }
 
@@ -227,9 +239,9 @@
 
 /* ========================================================================== */
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-	NSLog(@"Property %@ changed, change dict = %@", keyPath, change);
+//	NSLog(@"Property %@ changed, change dict = %@", keyPath, change);
 	NSUInteger newValue = _testPatternsArrayController.selectionIndex;
-	_patternImagePane.picLayer.contents = ((AETestPattern*)_testPatterns[newValue]).patternImage;
+	_patternImagePane.layer.contents = ((AETestPattern*)_testPatterns[newValue]).patternImage;
 }
 
 @end

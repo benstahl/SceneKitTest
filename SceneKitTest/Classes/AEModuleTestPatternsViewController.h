@@ -18,9 +18,6 @@
 @property (assign) IBOutlet NSArrayController *testPatternsArrayController;
 
 @property (weak) IBOutlet AEModuleTestPatternsView *testPatternsView;
-@property (weak) IBOutlet NSSplitView *splitView;
-@property (weak) IBOutlet NSButton *nextButton;
-@property (weak) IBOutlet NSButton *previousButton;
 
 // These MUST be strong references or these outlets will be nil!
 @property (strong) IBOutlet AEPatternSelectPane *patternSelectPane;

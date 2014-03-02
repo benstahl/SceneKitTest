@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		69116FDF18C1423000BE4A27 /* AEModuleCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69116FDE18C1423000BE4A27 /* AEModuleCollectionViewItem.m */; };
+		690BEB3518C2C7D500D1FB0E /* AEViewItemBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 690BEB3418C2C7D500D1FB0E /* AEViewItemBox.m */; };
 		691B9C0918BBE1D00073F01F /* AEHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691B9C0818BBE1D00073F01F /* AEHeaderView.m */; };
 		691B9C1018BC2C790073F01F /* AEModuleFFLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 691B9C0E18BC2C790073F01F /* AEModuleFFLViewController.m */; };
 		691B9C1418BC2CC90073F01F /* AEModuleFFL.xib in Resources */ = {isa = PBXBuildFile; fileRef = 691B9C1218BC2CC90073F01F /* AEModuleFFL.xib */; };
@@ -64,8 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		69116FDD18C1423000BE4A27 /* AEModuleCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModuleCollectionViewItem.h; path = Classes/AEModuleCollectionViewItem.h; sourceTree = "<group>"; };
-		69116FDE18C1423000BE4A27 /* AEModuleCollectionViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEModuleCollectionViewItem.m; path = Classes/AEModuleCollectionViewItem.m; sourceTree = "<group>"; };
+		690BEB3318C2C7D500D1FB0E /* AEViewItemBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEViewItemBox.h; path = Classes/AEViewItemBox.h; sourceTree = "<group>"; };
+		690BEB3418C2C7D500D1FB0E /* AEViewItemBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEViewItemBox.m; path = Classes/AEViewItemBox.m; sourceTree = "<group>"; };
 		691B9C0718BBE1D00073F01F /* AEHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEHeaderView.h; path = Classes/AEHeaderView.h; sourceTree = "<group>"; };
 		691B9C0818BBE1D00073F01F /* AEHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEHeaderView.m; path = Classes/AEHeaderView.m; sourceTree = "<group>"; };
 		691B9C0D18BC2C790073F01F /* AEModuleFFLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModuleFFLViewController.h; path = Classes/AEModuleFFLViewController.h; sourceTree = "<group>"; };
@@ -174,8 +174,6 @@
 				69C11C0218BC499D00E2AD0B /* AEModuleSelectView.m */,
 				6992E9ED18BDF72200EE155E /* AEModuleSelectViewController.h */,
 				6992E9EE18BDF72200EE155E /* AEModuleSelectViewController.m */,
-				69116FDD18C1423000BE4A27 /* AEModuleCollectionViewItem.h */,
-				69116FDE18C1423000BE4A27 /* AEModuleCollectionViewItem.m */,
 			);
 			name = "Module Select";
 			sourceTree = "<group>";
@@ -336,6 +334,8 @@
 				69F86B6518BFF94A00D92618 /* AEModuleView.m */,
 				699F21C418B5DF2F006F527B /* AEUtility.h */,
 				699F21C518B5DF2F006F527B /* AEUtility.m */,
+				690BEB3318C2C7D500D1FB0E /* AEViewItemBox.h */,
+				690BEB3418C2C7D500D1FB0E /* AEViewItemBox.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -475,7 +475,6 @@
 				6992E9F018BDF72200EE155E /* AEModuleSelectViewController.m in Sources */,
 				69F86B6A18BFFB1500D92618 /* AEModuleTestPatternsViewController.m in Sources */,
 				69F0FB1818BB325900169F0C /* AEPlayerPickSet.m in Sources */,
-				69116FDF18C1423000BE4A27 /* AEModuleCollectionViewItem.m in Sources */,
 				699F21BA18B5CCC1006F527B /* CHCSVParser.m in Sources */,
 				691B9C1018BC2C790073F01F /* AEModuleFFLViewController.m in Sources */,
 				69D3C29D18B97F5D00A0641F /* AEButton.m in Sources */,
@@ -486,6 +485,7 @@
 				6946E90018C17FD100809A0A /* AEPatternImagePane.m in Sources */,
 				69DB538D18AA26D40083754B /* main.m in Sources */,
 				69EF5F4718BF277A005E7A5F /* AEModuleFFLView.m in Sources */,
+				690BEB3518C2C7D500D1FB0E /* AEViewItemBox.m in Sources */,
 				699F21C618B5DF2F006F527B /* AEAppDelegate.m in Sources */,
 				699F21C718B5DF2F006F527B /* AEPlayer.m in Sources */,
 				69C11C0318BC499D00E2AD0B /* AEModuleSelectView.m in Sources */,
