@@ -29,6 +29,8 @@
 /* ========================================================================== */
 - (void)awakeFromNib {
 //	self.frame = NSMakeRect(self.frame.origin.x, self.frame.origin.y, 200.0, self.frame.size.height);
+//	self.layer.autoresizingMask = NSViewHeightSizable;
+	self.wantsLayer = YES;
 	self.layer.backgroundColor = [[NSColor darkGrayColor] CGColor];
 	self.layer.frame = self.frame;
 }

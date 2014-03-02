@@ -12,12 +12,14 @@
 @class AEPatternSelectPane;
 @class AEPatternImagePane;
 
-@interface AEModuleTestPatternsViewController : NSViewController <NSSplitViewDelegate>
+@interface AEModuleTestPatternsViewController : NSViewController
 
 @property (strong) NSMutableArray *testPatterns;
 @property (assign) IBOutlet NSArrayController *testPatternsArrayController;
 
 @property (weak) IBOutlet AEModuleTestPatternsView *testPatternsView;
+
+@property BOOL selectDrawerOpen;
 
 // These MUST be strong references or these outlets will be nil!
 @property (strong) IBOutlet AEPatternSelectPane *patternSelectPane;
@@ -32,5 +34,6 @@
 - (void)resizeLayerFrames;
 
 - (IBAction)exitButtonClicked:(id)sender;
+- (IBAction)toggleSelectDrawer:(id)sender;
 
 @end

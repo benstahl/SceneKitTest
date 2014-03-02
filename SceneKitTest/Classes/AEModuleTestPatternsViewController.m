@@ -27,6 +27,8 @@
 /* ========================================================================== */
 - (id)initWithCoder:(NSCoder *)aDecoder {
 	if (self = [super initWithCoder:aDecoder]) {
+		_selectDrawerOpen = YES;
+
 		AETestPattern *colorBars = [[AETestPattern alloc] init];
 		NSString *colorBarsImageFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/test_pattern_color_bars" withExtension:@"png"] path];
 		colorBars.patternImage = [[NSImage alloc] initWithContentsOfFile:colorBarsImageFilePath];
@@ -198,22 +200,30 @@
 	[[NSApp delegate] performSelector:@selector(launchModuleNamed:) withObject:@"AEModuleSelect"];
 }
 
-#pragma mark - NSSplitViewDelegate
-
 /* ========================================================================== */
-- (BOOL)splitView:(NSSplitView *)splitView shouldHideDividerAtIndex:(NSInteger)dividerIndex {
-	return YES;
+- (IBAction)openSelectDrawer:(id)sender {
+	[[_patternSelectPane animator] setFrame:NSMakeRect(_patternSelectPane.frame.origin.x + kTestPatternDrawerPosX, _patternSelectPane.frame.origin.y, _patternSelectPane.frame.size.width, _patternSelectPane.frame.size.height)];
+	[[_patternImagePane animator] setFrame:NSMakeRect(_patternImagePane.frame.origin.x + kTestPatternDrawerPosX, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height)];
 }
 
 /* ========================================================================== */
-- (NSRect)splitView:(NSSplitView *)splitView effectiveRect:(NSRect)proposedEffectiveRect forDrawnRect:(NSRect)drawnRect ofDividerAtIndex:(NSInteger)dividerIndex {
-	return CGRectZero;
+- (IBAction)closeSelectDrawer:(id)sender {
+	[[_patternSelectPane animator] setFrame:NSMakeRect(_patternSelectPane.frame.origin.x - kTestPatternDrawerPosX, _patternSelectPane.frame.origin.y, _patternSelectPane.frame.size.width, _patternSelectPane.frame.size.height)];
+	[[_patternImagePane animator] setFrame:NSMakeRect(_patternImagePane.frame.origin.x - kTestPatternDrawerPosX, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height)];
 }
 
 /* ========================================================================== */
-- (BOOL)splitView:(NSSplitView *)splitView shouldAdjustSizeOfSubview:(NSView *)view {
-	return NO;
+- (IBAction)toggleSelectDrawer:(id)sender {
+	_selectDrawerOpen = !_selectDrawerOpen;
+	if (_selectDrawerOpen) {
+		NSLog(@"Opening.");
+		[self openSelectDrawer:self];
+	} else {
+		NSLog(@"Closing.");
+		[self closeSelectDrawer:self];
+	}
 }
+
 
 #pragma mark - KVO
 

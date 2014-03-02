@@ -43,12 +43,12 @@
         </collectionViewItem>
         <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wvu-2v-xlS" customClass="AEPatternSelectPane">
             <rect key="frame" x="0.0" y="0.0" width="260" height="400"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+            <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
             <subviews>
-                <scrollView wantsLayer="YES" borderType="groove" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" id="sLx-1g-xuY">
+                <scrollView borderType="groove" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" id="sLx-1g-xuY">
                     <rect key="frame" x="20" y="66" width="220" height="314"/>
                     <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
-                    <clipView key="contentView" wantsLayer="YES" id="TRe-3b-hW7">
+                    <clipView key="contentView" id="TRe-3b-hW7">
                         <rect key="frame" x="2" y="2" width="216" height="310"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -91,20 +91,30 @@
             <rect key="frame" x="0.0" y="0.0" width="278" height="284"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
         </customView>
-        <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MmC-Oh-7R2" userLabel="Pattern Select View Item">
-            <rect key="frame" x="0.0" y="0.0" width="235" height="201"/>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="MmC-Oh-7R2" userLabel="Pattern Select View Item">
+            <rect key="frame" x="0.0" y="0.0" width="175" height="141"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <customView wantsLayer="YES" id="M2h-ZW-Wbq" customClass="AEViewItemBox">
-                    <rect key="frame" x="20" y="20" width="195" height="161"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" id="Gp7-sJ-U7O">
+                    <rect key="frame" x="0.0" y="0.0" width="175" height="141"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView">
+                        <rect key="frame" x="0.0" y="0.0" width="175" height="141"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="fillColor" red="0.99417614939999999" green="0.71542185540000003" blue="0.056148923929999997" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
-                        <binding destination="cdX-Nl-Lh9" name="toolTip" keyPath="selected" id="H92-TB-3Zt"/>
+                        <binding destination="cdX-Nl-Lh9" name="transparent" keyPath="selected" id="rzV-Ub-UuS">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                            </dictionary>
+                        </binding>
                     </connections>
-                </customView>
-                <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ImV-HG-pa5" userLabel="Pattern Item Image">
-                    <rect key="frame" x="37" y="68" width="160" height="90"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                </box>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ImV-HG-pa5" userLabel="Pattern Item Image">
+                    <rect key="frame" x="7" y="40" width="160" height="90"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="2e2-fX-O5R"/>
                     <connections>
                         <binding destination="cdX-Nl-Lh9" name="value" keyPath="representedObject.patternImage" id="em4-Hf-VkC">
@@ -115,9 +125,9 @@
                         </binding>
                     </connections>
                 </imageView>
-                <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="S5v-72-TNX">
-                    <rect key="frame" x="18" y="37" width="199" height="23"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="S5v-72-TNX">
+                    <rect key="frame" x="5" y="9" width="164" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="hW8-c2-3qI">
                         <font key="font" size="18" name="HelveticaNeue"/>
                         <color key="textColor" red="1" green="0.9999358057975769" blue="0.99995356798171997" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,9 +138,6 @@
                     </connections>
                 </textField>
             </subviews>
-            <shadow key="shadow">
-                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-            </shadow>
         </customView>
         <userDefaultsController representsSharedInstance="YES" id="Vwo-Qd-Coa"/>
     </objects>

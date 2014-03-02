@@ -9,6 +9,7 @@
 #import "AEModuleTestPatternsView.h"
 #import "AEModuleTestPatternsViewController.h"
 #import "AEPatternImagePane.h"
+#import "AEPatternSelectPane.h"
 
 @implementation AEModuleTestPatternsView
 
@@ -25,7 +26,8 @@
 - (void)awakeFromNib {
 //	self.translatesAutoresizingMaskIntoConstraints = YES;
 //	self.layer.contentsGravity = kCAGravityResizeAspectFill;
-	self.layer.backgroundColor = [[NSColor orangeColor] CGColor];
+//	self.layer.backgroundColor = [[NSColor orangeColor] CGColor];
+	self.layer.backgroundColor = [[NSColor blackColor] CGColor];
 //	self.layer.backgroundColor = [[NSColor colorWithHue:0.0 saturation:1.0 brightness:1.0 alpha:1.0] CGColor];
 //	self.layer.borderWidth = 0.5;
 //	self.layer.borderColor = [[NSColor colorWithHue:0.0 saturation:0.0 brightness:1.0 alpha:1.0] CGColor];
@@ -53,7 +55,10 @@
 	[super adjustFrame];
 
 	[_testPatternsController resizeLayerFrames];
+
 	// resize your layers based on the view's new bounds
+	_testPatternsController.patternSelectPane.autoresizingMask = NSViewHeightSizable;
+	_testPatternsController.patternSelectPane.frame = self.frame;
 //	NSLog(@"Layout subviews, bounds size = %f,%f", self.bounds.size.width, self.bounds.size.height);
 
 //	// Disable implicit animation on text changes for dynamic layers.
@@ -84,11 +89,6 @@
 //}
 
 ///* ========================================================================== */
-//- (void)viewDidMoveToSuperview {
-//	[self adjustFrame];
-//}
-
-///* ========================================================================== */
 //- (void)mouseDragged:(NSEvent *)theEvent {
 //	NSLog(@"Mouse dragged.");
 //
@@ -96,8 +96,8 @@
 
 /* ========================================================================== */
 - (void)mouseDown:(NSEvent *)theEvent {
-	NSLog(@"Mouse down.");
-	
+//	NSLog(@"Mouse down.");
+	[_testPatternsController toggleSelectDrawer:self];
 }
 
 @end
