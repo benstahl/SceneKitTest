@@ -27,7 +27,7 @@
 /* ========================================================================== */
 - (id)initWithCoder:(NSCoder *)aDecoder {
 	if (self = [super initWithCoder:aDecoder]) {
-		_selectDrawerOpen = YES;
+		_selectDrawerOpen = NO;
 
 		AETestPattern *colorBars = [[AETestPattern alloc] init];
 		NSString *colorBarsImageFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/test_pattern_color_bars" withExtension:@"png"] path];
@@ -126,15 +126,19 @@
 //	}
 
 //	_testPatternsView.layer.bounds = NSMakeRect(0.0, 0.0, _testPatternsView.layer.frame.size.width + kTestPatternDrawerPosX, _testPatternsView.layer.frame.size.height);
-	_patternSelectPane.layer.frame = NSMakeRect(0.0, 0.0, kTestPatternDrawerPosX, _testPatternsView.frame.size.height);
+	_patternSelectPane.layer.frame = NSMakeRect(-kTestPatternDrawerPosX, 0.0, kTestPatternDrawerPosX, _testPatternsView.frame.size.height);
 	[_testPatternsView addSubview:_patternSelectPane];
-	_patternImagePane.layer.frame = NSMakeRect(kTestPatternDrawerPosX, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
+	_patternImagePane.layer.frame = NSMakeRect(0.0, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
 //	_patternImagePane.layer.bounds = NSMakeRect(0.0, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height);
 	[_testPatternsView addSubview:_patternImagePane];
 
 	[_testPatternsArrayController addObserver:self forKeyPath:@"selectionIndexes" options:0 context:nil];
 	[_testPatternsArrayController setSelectionIndex:0];
 	_patternImagePane.layer.contents = ((AETestPattern*)_testPatterns[0]).patternImage;
+
+	[self performSelector:@selector(openSelectDrawer:) withObject:self afterDelay:0.125];
+//	[self openSelectDrawer:self];
+//	[self performSelector:@selector(openSelectDrawer:)];
 }
 
 #pragma mark - layer management
@@ -202,11 +206,16 @@
 //	NSDictionary *newActions = @{@"bounds" : [NSNull null]};
 //	_patternImagePane.layer.actions = newActions;
 
+	if (_selectDrawerOpen) { return; }
+
+	NSLog(@"Opening drawer...");
 	[NSAnimationContext currentContext].duration = 0.3;
 	[NSAnimationContext currentContext].timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
 	[NSAnimationContext currentContext].completionHandler = ^(){
-		CGDisplayShowCursor(kCGNullDirectDisplay);
+//		CGDisplayShowCursor(kCGNullDirectDisplay);
 		_selectDrawerOpen = YES;
+		NSLog(@"Drawer open.");
+//		[self performSelector:@selector(toggleSelectDrawer:) withObject:self afterDelay:0.25];
 	};
 	[NSAnimationContext beginGrouping];
 	[[_patternSelectPane animator] setFrame:NSMakeRect(0.0, _patternSelectPane.frame.origin.y, kTestPatternDrawerPosX, _testPatternsView.frame.size.height)];
@@ -220,13 +229,16 @@
 //	NSDictionary *newActions = @{@"bounds" : [NSNull null]};
 //	_patternImagePane.layer.actions = newActions;
 
-//	NSLog(@"Closing drawer...");
-	[NSAnimationContext currentContext].duration = 2.15;
+	if (!_selectDrawerOpen) { return; }
+
+	NSLog(@"Closing drawer...");
+	[NSAnimationContext currentContext].duration = 0.15;
 	[NSAnimationContext currentContext].timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
 	[NSAnimationContext currentContext].completionHandler = ^(){
-		CGDisplayHideCursor(kCGNullDirectDisplay);
+//		CGDisplayHideCursor(kCGNullDirectDisplay);
 		_selectDrawerOpen = NO;
-//		NSLog(@"Drawer closed.");
+		NSLog(@"Drawer closed.");
+//		[self performSelector:@selector(toggleSelectDrawer:) withObject:self afterDelay:0.25];
 	};
 	[NSAnimationContext beginGrouping];
 	[[_patternSelectPane animator] setFrame:NSMakeRect(-kTestPatternDrawerPosX, _patternSelectPane.frame.origin.y, kTestPatternDrawerPosX, _testPatternsView.frame.size.height)];
@@ -236,12 +248,16 @@
 
 /* ========================================================================== */
 - (IBAction)toggleSelectDrawer:(id)sender {
-	_selectDrawerOpen = !_selectDrawerOpen;
-	if (_selectDrawerOpen) {
-//		NSLog(@"Opening.");
+//	_selectDrawerOpen = !_selectDrawerOpen;
+	if (!_selectDrawerOpen) {
+		NSLog(@"Opening.");
+//		[self performSelectorOnMainThread:@selector(openSelectDrawer:) withObject:nil waitUntilDone:NO];
+//		[self performSelector:@selector(openSelectDrawer:) withObject:self afterDelay:0.025];
 		[self openSelectDrawer:self];
 	} else {
-//		NSLog(@"Closing.");
+		NSLog(@"Closing.");
+//		[self performSelectorOnMainThread:@selector(closeSelectDrawer:) withObject:nil waitUntilDone:NO];
+//		[self performSelector:@selector(closeSelectDrawer:) withObject:self afterDelay:0.025];
 		[self closeSelectDrawer:self];
 	}
 }
@@ -274,8 +290,8 @@
 	NSUInteger newValue = _testPatternsArrayController.selectionIndex;
 	_patternImagePane.layer.contents = ((AETestPattern*)_testPatterns[newValue]).patternImage;
 
-	[self closeSelectDrawer:self];
-//	[self performSelector:@selector(closeSelectDrawer:) withObject:self afterDelay:0.15];
+	//	[self closeSelectDrawer:self];
+	[self performSelector:@selector(closeSelectDrawer:) withObject:self afterDelay:0.025];
 }
 
 @end

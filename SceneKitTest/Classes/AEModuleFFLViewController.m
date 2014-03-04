@@ -35,6 +35,7 @@
 //	[self.view addSubview:_headerView];
 //	_headerView.frame = self.view.frame;
 	[((AEModuleFFLView*)self.view) adjustHeaderLabels];
+//	[_headerView adjustHeaderLabels];
 }
 
 #pragma mark - controls

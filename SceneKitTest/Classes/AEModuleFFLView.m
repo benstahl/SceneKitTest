@@ -39,44 +39,65 @@
 	// Drawing code here.
 }
 
-/* ========================================================================== */
+///* ========================================================================== */
 - (void)adjustHeaderLabels {
-	NSLog(@"Adjusting header labels...");
-
-	AEModuleFFLViewController *vc = _fflViewController;
-
-	CGFloat newTopFontSize = round(vc.headerView.frame.size.height * 0.35);
-//	NSApplicationPresentationOptions currentOptions = [NSApp currentSystemPresentationOptions];
-//	if (currentOptions &= NSApplicationPresentationFullScreen) {
-//		NSLog(@"Full screen = YES");
-//		newTopFontSize *= 2.0;
-//	} else {
-//		NSLog(@"Full screen = NO");
-//	}
-
-	NSLog(@"  Header view frame = %@", NSStringFromRect(vc.headerView.frame));
-	NSLog(@"  Old top label font size = %@, new size = %@", @(vc.headerView.topLabel.font.pointSize), @(newTopFontSize));
-
-	if (newTopFontSize != vc.headerView.topLabel.font.pointSize) {
-		NSLog(@"  Resizing fonts...");
-		//		vc.headerView.topLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(vc.headerView.frame.origin.x, vc.headerView.frame.origin.y, vc.headerView.frame.size.width, vc.headerView.frame.size.height * 0.65)];
-		NSFont *topLabelFont = [NSFont fontWithName:@"DIN-Bold" size:newTopFontSize];
-		[vc.headerView.topLabel setFont:topLabelFont];
-		NSLog(@"    New top label font size = %@", @(vc.headerView.topLabel.font.pointSize));
-		//		[vc.headerView.topLabel setStringValue:[NSString stringWithFormat:@"[TOP NSTEXTFIELD SIZE = %@]", @(newTopFontSize)]];
-		[vc.headerView.topLabel setNeedsDisplay];
-		//		[vc.headerView.topLabel display];
-
-		CGFloat newBottomFontSize = round(newTopFontSize * 0.75);
-//		CGFloat offsetY = newBottomFontSize * 1.0;
-		NSFont *bottomLabelFont = [NSFont fontWithName:@"DIN-Bold" size:newBottomFontSize];
-//		vc.headerView.bottomLabel.frame = NSMakeRect(vc.headerView.bottomLabel.frame.origin.x, vc.headerView.topLabel.frame.origin.y - offsetY, vc.headerView.bottomLabel.frame.size.width, vc.headerView.bottomLabel.frame.size.height);
-		//		[vc.headerView.bottomLabel setStringValue:[NSString stringWithFormat:@"[BOTTOM NSTEXTFIELD SIZE = %@]", @(newBottomFontSize)]];
-		[vc.headerView.bottomLabel setFont:bottomLabelFont];
-		[vc.headerView.bottomLabel setNeedsDisplay];
-
-		[vc.headerView setNeedsDisplay:YES];
-	}
+//	NSLog(@"Adjusting header labels...");
+//
+//	AEModuleFFLViewController *vc = _fflViewController;
+//
+//	CGFloat newTopFontSize = round(vc.headerView.frame.size.height * 0.35);
+////	NSApplicationPresentationOptions currentOptions = [NSApp currentSystemPresentationOptions];
+////	if (currentOptions &= NSApplicationPresentationFullScreen) {
+////		NSLog(@"Full screen = YES");
+////		newTopFontSize *= 2.0;
+////	} else {
+////		NSLog(@"Full screen = NO");
+////	}
+//
+//	NSFont *topLabelFont = vc.headerView.topLabel.font;
+//	CGFloat oldTopFontSize = topLabelFont.pointSize;
+//
+//	NSLog(@"  Header view frame = %@", NSStringFromRect(vc.headerView.frame));
+//	NSLog(@"  Old top label font size = %@, new size = %@", @(oldTopFontSize), @(newTopFontSize));
+//
+//
+////	if (newTopFontSize != oldTopFontSize) {
+//		NSLog(@"  Resizing fonts...");
+//
+//		// Set the header view height to 20% of the scene view, and position it aligned witht he top of the scene frame.
+//		CGFloat newHeaderHeight = self.frame.size.height * 0.2;
+//		vc.headerView.layer.borderColor = [[NSColor whiteColor] CGColor];
+//		vc.headerView.layer.borderWidth = 2.0;
+////		vc.headerView.frame = NSMakeRect(0.0, self.frame.size.height - newHeaderHeight, self.frame.size.width, newHeaderHeight);
+//
+//		topLabelFont = [NSFont fontWithName:@"DIN-Bold" size:newTopFontSize];
+//		CGFloat topLabelFontHeight = [vc.headerView heightOfLabelWithFont:topLabelFont];
+//		CGFloat offsetY = topLabelFontHeight; //vc.headerView.frame.size.height * 0.6;
+//		NSLog(@"  Top label height = %f", topLabelFontHeight);
+////		vc.headerView.topLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(vc.headerView.frame.origin.x, vc.headerView.frame.origin.y, vc.headerView.frame.size.width, vc.headerView.frame.size.height * 0.65)];
+//		[vc.headerView.topLabel setFont:topLabelFont];
+//		NSLog(@"    New top label font size = %@", @(newTopFontSize));
+////		[vc.headerView.topLabel setStringValue:[NSString stringWithFormat:@"[TOP NSTEXTFIELD SIZE = %@]", @(newTopFontSize)]];
+//		NSLog(@"offsetY = %f", offsetY);
+//		[vc.headerView.topLabel setFrameOrigin:NSMakePoint(vc.headerView.topLabel.frame.origin.x, vc.headerView.frame.size.height - offsetY)];
+//		[vc.headerView.topLabel setNeedsDisplay];
+////		[vc.headerView.topLabel display];
+//
+//		CGFloat newBottomFontSize = round(newTopFontSize * 0.75);
+//		NSFont *bottomLabelFont = [NSFont fontWithName:@"DIN-Bold" size:newBottomFontSize];
+//		CGFloat bottomLabelFontHeight = [vc.headerView heightOfLabelWithFont:bottomLabelFont];
+//		NSLog(@"  Bottom label height = %f", [vc.headerView heightOfLabelWithFont:bottomLabelFont]);
+////		CGFloat offsetY = 0.0; // newBottomFontSize * vc.headerView.frame.size.height * 0.0;
+//		NSLog(@"New Y = %f", vc.headerView.bottomLabel.frame.origin.y);
+////		vc.headerView.bottomLabel.frame = NSMakeRect(vc.headerView.bottomLabel.frame.origin.x, vc.headerView.bottomLabel.frame.origin.y + offsetY, vc.headerView.bottomLabel.frame.size.width, vc.headerView.bottomLabel.frame.size.height);
+////		[vc.headerView.bottomLabel setStringValue:[NSString stringWithFormat:@"[BOTTOM NSTEXTFIELD SIZE = %@]", @(newBottomFontSize)]];
+//		[vc.headerView.bottomLabel setFont:bottomLabelFont];
+////		CGSize *bottomLabelRenderedSize = [vc.headerView.bottomLabel.stringValue sizeWithAttributes:];
+//		[vc.headerView.bottomLabel setFrameOrigin:NSMakePoint(vc.headerView.bottomLabel.frame.origin.x, vc.headerView.topLabel.frame.origin.y - (bottomLabelFontHeight * 1.5))];
+//		[vc.headerView.bottomLabel setNeedsDisplay];
+//
+////		[vc.headerView setNeedsDisplay:YES];
+////	}
 }
 
 /* ========================================================================== */
@@ -85,9 +106,9 @@
 
 //	NSLog(@"Adjusting frames...");
 
-//	AEModuleFFLViewController *vc = _fflViewController;
+	AEModuleFFLViewController *vc = _fflViewController;
 
-	[self adjustHeaderLabels];
+	[vc.headerView adjustHeaderLabels];
 //	vc.headerView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
 
 //	NSDictionary *newActions = @{@"contents" : [NSNull null], @"bounds" : [NSNull null], @"frame" : [NSNull null], @"position" : [NSNull null]};
@@ -97,6 +118,8 @@
 //	CGFloat newHeaderWidth = round(self.frame.size.width * viewScale);
 //	CGFloat newHeaderHeight = round(self.frame.size.height * viewScale);
 
+//	vc.headerView.frame = self.frame;
+//	NSLog(@"New frame size = %@", NSStringFromRect(vc.headerView.frame));
 }
 
 ///* ========================================================================== */

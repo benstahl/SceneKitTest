@@ -13,12 +13,16 @@
 	CALayer *_baseLayer;
 }
 
-@property (strong) IBOutlet NSTextField *topLabel;
-@property (strong) IBOutlet NSTextField *bottomLabel;
+//@property (strong) IBOutlet NSTextField *topLabel;
+//@property (strong) IBOutlet NSTextField *bottomLabel;
 
-//@property (strong) CATextLayer *topLabel;
-//@property (strong) CATextLayer *bottomLabel;
+@property (strong) NSDictionary *topLabelAttributes;
 
+@property (strong) CATextLayer *topLabel;
+@property (strong) CATextLayer *bottomLabel;
+
+- (void)adjustHeaderLabels;
+- (CGFloat)heightOfLabelWithFont:(NSFont*)font;
 - (void)fadeIn;
 - (void)fadeOut;
 

@@ -58,33 +58,9 @@
                         </customView>
                     </subviews>
                 </customView>
-                <customView id="rBt-CH-i5O" userLabel="Header View" customClass="AEHeaderView">
+                <customView wantsLayer="YES" id="rBt-CH-i5O" userLabel="Header View" customClass="AEHeaderView">
                     <rect key="frame" x="0.0" y="350" width="800" height="100"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                    <subviews>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="2Qo-7f-ilb">
-                            <rect key="frame" x="18" y="13" width="764" height="84"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Very Long Team Name Here" id="gGw-65-ogL">
-                                <font key="font" size="42" name="DIN-Bold"/>
-                                <color key="textColor" red="1" green="0.99989163875579834" blue="0.99991035461425781" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                            </textFieldCell>
-                        </textField>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Fmv-IE-epR">
-                            <rect key="frame" x="18" y="-27" width="764" height="64"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Somebody from Somewhere needs X of Y" id="D2a-lG-TJb">
-                                <font key="font" size="24" name="DIN-Bold"/>
-                                <color key="textColor" red="1" green="0.99989163875579834" blue="0.99991035461425781" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                            </textFieldCell>
-                        </textField>
-                    </subviews>
-                    <connections>
-                        <outlet property="bottomLabel" destination="Fmv-IE-epR" id="krT-QP-2Fa"/>
-                        <outlet property="topLabel" destination="2Qo-7f-ilb" id="W2O-ln-0GD"/>
-                    </connections>
                 </customView>
             </subviews>
             <connections>

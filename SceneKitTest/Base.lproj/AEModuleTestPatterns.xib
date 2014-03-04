@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="patternImagePane" destination="68O-2w-DOd" id="mza-dG-DKu"/>
                 <outlet property="patternSelectPane" destination="Wvu-2v-xlS" id="zdQ-3w-BD1"/>
+                <outlet property="testPatternsArrayController" destination="EPX-E8-Yy6" id="GoD-kA-fgW"/>
                 <outlet property="testPatternsView" destination="H1T-QE-LDP" id="V90-Gw-Zag"/>
                 <outlet property="view" destination="H1T-QE-LDP" id="yYN-A5-JzG"/>
             </connections>
