@@ -31,6 +31,7 @@
 //	self.frame = NSMakeRect(self.frame.origin.x, self.frame.origin.y, 200.0, self.frame.size.height);
 //	self.layer.autoresizingMask = NSViewHeightSizable;
 	self.wantsLayer = YES;
+	self.layer.opaque = YES;
 	self.layer.backgroundColor = [[NSColor darkGrayColor] CGColor];
 //	self.layer.backgroundColor = [[NSColor colorWithHue:0.0 saturation:0.0 brightness:0.2 alpha:1.0] CGColor];
 	self.layer.frame = self.frame;

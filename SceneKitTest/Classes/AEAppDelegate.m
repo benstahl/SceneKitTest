@@ -33,6 +33,27 @@
 	[self launchModuleNamed:@"AEModuleSelect"];
 }
 
+///* ========================================================================== */
+//- (void)windowDidEnterFullScreen:(NSNotification *)notification {
+//	NSLog(@"----> Entered full screen.");
+////	CGDisplayHideCursor(kCGNullDirectDisplay);
+//	NSApplicationPresentationOptions currentOptions = [NSApp currentSystemPresentationOptions];
+//
+//	// Disable dock showing.
+//	[NSApp setPresentationOptions:currentOptions & ~NSApplicationPresentationAutoHideDock];
+//	[NSApp setPresentationOptions:currentOptions | NSApplicationPresentationHideDock];
+//}
+
+///* ========================================================================== */
+//- (void)windowDidExitFullScreen:(NSNotification *)notification {
+////	CGDisplayShowCursor(kCGNullDirectDisplay);
+//
+//	// Enable dock showing (when moused over).
+//	NSApplicationPresentationOptions currentOptions = [NSApp currentSystemPresentationOptions];
+//	[NSApp setPresentationOptions:currentOptions & ~NSApplicationPresentationHideDock];
+//	[NSApp setPresentationOptions:currentOptions | NSApplicationPresentationAutoHideDock];
+//}
+
 /* ========================================================================== */
 -(NSSize)window:(NSWindow *)window willUseFullScreenContentSize:(NSSize)proposedSize {
 //	NSLog(@"Proposed window size = %f, %f", proposedSize.width, proposedSize.height);
@@ -61,88 +82,27 @@
 
 	CGRect viewBounds = [mainView bounds];
 
-//	for (NSView *subview in mainView.subviews) {
-//		[subview removeFromSuperview];
-//	}
-//
-//	[mainView addSubview:moduleVC.view atI];
-//	[mainView addSubview:moduleVC.view];
-
 	[moduleVC.view setFrame:viewBounds];
 
 	[NSAnimationContext currentContext].duration = 0.4;
 	[NSAnimationContext currentContext].timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 	[NSAnimationContext currentContext].completionHandler = ^(){
-		NSLog(@"Transition complete.");
+//		NSLog(@"Transition complete.");
 		self.contentViewController = moduleVC;
-		mainView.layer.contentsGravity = kCAGravityResizeAspectFill;
+//		mainView.layer.contentsGravity = kCAGravityResizeAspectFill;
 	};
 	[NSAnimationContext beginGrouping];
 	[mainView animator].alphaValue = 0.0;
 	if (topView) {
+		// According to the docs, this will release the old module view when done.
 		[[mainView animator] replaceSubview:topView with:moduleVC.view];
 	} else {
+		// We don't have content yet, so just add the new view.
 		[[mainView animator] addSubview:moduleVC.view];
 	}
 	[mainView animator].alphaValue = 1.0;
 	[NSAnimationContext endGrouping];
-
-
-	// fade out
-//	[mainView animator].alphaValue = 0.0;
-
-//	self.contentViewController = moduleVC;
-
-//	CGSize newSize = CGSizeMake(viewBounds.size.width, viewBounds.size.width * 0.5625);
-//	[moduleVC.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable | NSViewMinXMargin | NSViewMaxXMargin | NSViewMinYMargin | NSViewMaxYMargin];
-//	[moduleVC.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
-
-//	[moduleVC.view setFrame:viewBounds];
-//	[moduleVC.view setFrame:NSMakeRect(0.0, 0.0, newSize.width, newSize.height)];
-//	[moduleVC.view setFrameOrigin:NSMakePoint(-newSize.width / 2, -newSize.height / 2)];
-
-//	mainView.layer.contentsGravity = kCAGravityResizeAspectFill;
-//	[mainView addSubview:moduleVC.view];
-
-//	// make the sub view the same size as our super view
-//	CGRect viewBounds = [mainView bounds];
-//	//	[moduleVC.view setFrame:[mainView bounds]];
-//	//	NSLog(@"New view size = %f,%f", viewBounds.size.width, viewBounds.size.width * 0.5625);
-//	CGSize newSize = CGSizeMake(viewBounds.size.width, viewBounds.size.width * 0.5625);
-//	[moduleVC.view setFrame:CGRectMake(viewBounds.origin.x, viewBounds.origin.y, newSize.width, newSize.height)];
-	// *push* our new sub view
-
-	//	[self window].contentView = moduleVC.view;
-
-//	self.contentViewController.view = moduleVC.view;
-
-	//	[self prepareViews];
-
-	// fade in
-	[mainView animator].alphaValue = 1.0;
-
-	//	if (!moduleVC) {
-	//		NSLog(@"moduleVC is nil.");
-	//	} else {
-	//		NSLog(@"moduleVC is not nil.");
-	//	}
-	//	if (!self.window) {
-	//		[NSBundle loadNibNamed:selectedModule.moduleXibName owner:self];
-	//	}
-	//
-	//	[self.window makeKeyAndOrderFront:self];
 }
-
-/* ========================================================================== */
-- (void)prepareViews { // this method will make sure we can animate in the switchSubViewsMethod
-	CATransition *transition = [CATransition animation];
-	transition.type = kCATransitionPush;
-	transition.subtype = kCATransitionFromLeft;
-	NSView *mainView = [[self window] contentView];
-	[mainView setAnimations:[NSDictionary dictionaryWithObject:transition forKey:@"subviews"]];
-	[mainView setWantsLayer:YES];
-}
-
 
 #pragma mark - controls
 

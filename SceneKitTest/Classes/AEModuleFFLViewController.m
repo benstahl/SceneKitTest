@@ -7,7 +7,9 @@
 //
 
 #import "AEModuleFFLViewController.h"
+#import "AEModuleFFLView.h"
 #import "AEFFLSceneView.h"
+#import "AEHeaderView.h"
 
 @interface AEModuleFFLViewController ()
 
@@ -29,6 +31,10 @@
 /* ========================================================================== */
 - (void)awakeFromNib {
 	NSLog(@"FFL Module View Controller awakeFromNib:");
+//	_headerView = [[AEHeaderView alloc] init];
+//	[self.view addSubview:_headerView];
+//	_headerView.frame = self.view.frame;
+	[((AEModuleFFLView*)self.view) adjustHeaderLabels];
 }
 
 #pragma mark - controls

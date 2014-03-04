@@ -743,6 +743,23 @@
 
 		// center string
 		[topAttrString addAttribute:NSParagraphStyleAttributeName value:centeringParagraphStyle range:NSMakeRange(0, topAttrString.length)];
+//		CTFontRef fontFace = CTFontCreateWithName((__bridge CFStringRef)(@"DIN-Bold"), 150.0, NULL);
+//		NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+//		[attributes setObject:(__bridge id)fontFace forKey:(NSString*)kCTFontAttributeName];
+//
+//		NSMutableAttributedString *topAttrString = [[NSMutableAttributedString alloc] initWithString:topLabelString attributes:attributes];
+
+//		[topAttrString addAttribute:NSFontNameAttribute value:@"DIN-Bold" range:NSMakeRange(0, topAttrString.length)];
+//		[topAttrString addAttribute:NSFontSizeAttribute value:@100.0 range:NSMakeRange(0, topAttrString.length)];
+
+//		CGFloat fontSize = 20.0;
+//		NSApplicationPresentationOptions currentOptions = [NSApp currentSystemPresentationOptions];
+//		if (currentOptions &= NSApplicationPresentationFullScreen) {
+//			fontSize *= 2.0;
+//		} else {
+//		}
+//		[topAttrString addAttribute:NSFontNameAttribute value:@"Helvetica" range:NSMakeRange(0, topAttrString.length)];
+//		[topAttrString addAttribute:NSFontSizeAttribute value:@(fontSize) range:NSMakeRange(0, topAttrString.length)];
 
 		// highlight and stroke the entire line.
 		[topAttrString addAttribute:NSForegroundColorAttributeName value:highlightColor range:NSMakeRange(0, topAttrString.length)];
@@ -751,6 +768,7 @@
 //		[topAttrString addAttribute:NSStrokeWidthAttributeName value:@5.0 range:NSMakeRange(0, topAttrString.length)];
 
 		[_vc.headerView.topLabel setAttributedStringValue:topAttrString];
+//		_vc.headerView.topLabel.string = @"THIS IS A STRING TEST"; //topAttrString;
 
 		/* --- Bottom label --- */
 		NSUInteger needsCountIndex = (_currentPickSet.fantasyTeamOwnerName.length) + 6 + _currentPickSet.fantasyTeamOwnerLocation.length + 7;
@@ -783,8 +801,8 @@
 		double delayInSeconds = kHeaderFadeOutTime + 0.1;
 		dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
 		dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-			_vc.headerView.topLabel.stringValue = @"";
-			_vc.headerView.bottomLabel.stringValue = @"";
+			[_vc.headerView.topLabel setStringValue:@""];
+			[_vc.headerView.bottomLabel setStringValue:@""];
 		});
 	}
 }

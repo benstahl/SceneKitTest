@@ -344,10 +344,10 @@
 			isa = PBXGroup;
 			children = (
 				69F86B6D18BFFB7200D92618 /* AEModuleTestPatterns.xib */,
-				69F86B6718BFFB1500D92618 /* AEModuleTestPatternsViewController.h */,
-				69F86B6818BFFB1500D92618 /* AEModuleTestPatternsViewController.m */,
 				69F86BA518BFFC1800D92618 /* AEModuleTestPatternsView.h */,
 				69F86BA618BFFC1800D92618 /* AEModuleTestPatternsView.m */,
+				69F86B6718BFFB1500D92618 /* AEModuleTestPatternsViewController.h */,
+				69F86B6818BFFB1500D92618 /* AEModuleTestPatternsViewController.m */,
 				6946E8FE18C17FD100809A0A /* AEPatternImagePane.h */,
 				6946E8FF18C17FD100809A0A /* AEPatternImagePane.m */,
 				6946E8FB18C17A2000809A0A /* AEPatternSelectPane.h */,

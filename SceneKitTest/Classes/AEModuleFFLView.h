@@ -9,6 +9,13 @@
 #import <Cocoa/Cocoa.h>
 #import "AEModuleView.h"
 
+@class AEModuleFFLViewController;
+
 @interface AEModuleFFLView : AEModuleView
+
+// This MUST be a strong reference or this outlet will be nil!
+@property (strong) IBOutlet AEModuleFFLViewController *fflViewController;
+
+- (void)adjustHeaderLabels;
 
 @end

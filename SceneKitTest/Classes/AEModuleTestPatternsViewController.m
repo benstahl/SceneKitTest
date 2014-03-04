@@ -204,11 +204,14 @@
 
 	[NSAnimationContext currentContext].duration = 0.3;
 	[NSAnimationContext currentContext].timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+	[NSAnimationContext currentContext].completionHandler = ^(){
+		CGDisplayShowCursor(kCGNullDirectDisplay);
+		_selectDrawerOpen = YES;
+	};
 	[NSAnimationContext beginGrouping];
 	[[_patternSelectPane animator] setFrame:NSMakeRect(0.0, _patternSelectPane.frame.origin.y, kTestPatternDrawerPosX, _testPatternsView.frame.size.height)];
 	[[_patternImagePane animator] setFrame:NSMakeRect(_patternSelectPane.frame.size.width, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height)];
 	[NSAnimationContext endGrouping];
-	_selectDrawerOpen = YES;
 }
 
 /* ========================================================================== */
@@ -217,13 +220,18 @@
 //	NSDictionary *newActions = @{@"bounds" : [NSNull null]};
 //	_patternImagePane.layer.actions = newActions;
 
-	[NSAnimationContext currentContext].duration = 0.15;
+//	NSLog(@"Closing drawer...");
+	[NSAnimationContext currentContext].duration = 2.15;
 	[NSAnimationContext currentContext].timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+	[NSAnimationContext currentContext].completionHandler = ^(){
+		CGDisplayHideCursor(kCGNullDirectDisplay);
+		_selectDrawerOpen = NO;
+//		NSLog(@"Drawer closed.");
+	};
 	[NSAnimationContext beginGrouping];
 	[[_patternSelectPane animator] setFrame:NSMakeRect(-kTestPatternDrawerPosX, _patternSelectPane.frame.origin.y, kTestPatternDrawerPosX, _testPatternsView.frame.size.height)];
 	[[_patternImagePane animator] setFrame:NSMakeRect(0.0, 0.0, _testPatternsView.frame.size.width, _testPatternsView.frame.size.height)];
 	[NSAnimationContext endGrouping];
-	_selectDrawerOpen = NO;
 }
 
 /* ========================================================================== */

@@ -34,6 +34,7 @@
 //	NSLog(@"AEPatternImagePane frame size = %f, %f", self.frame.size.width, self.frame.size.height);
 //	self.frame = NSMakeRect(0, 0, 400, 400);
 //	self.layer.frame = self.superview.frame;
+	self.layer.opaque = YES;
 	self.layer.contentsGravity = kCAGravityResizeAspect;
 	self.layer.backgroundColor = [[NSColor blackColor] CGColor];
 //	self.frame = NSMakeRect(self.frame.origin.x, self.frame.origin.y, 200.0, self.frame.size.height);

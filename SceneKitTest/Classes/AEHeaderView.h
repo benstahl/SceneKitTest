@@ -7,11 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <QuartzCore/QuartzCore.h>
 
-@interface AEHeaderView : NSView
+@interface AEHeaderView : NSView {
+	CALayer *_baseLayer;
+}
 
 @property (strong) IBOutlet NSTextField *topLabel;
 @property (strong) IBOutlet NSTextField *bottomLabel;
+
+//@property (strong) CATextLayer *topLabel;
+//@property (strong) CATextLayer *bottomLabel;
 
 - (void)fadeIn;
 - (void)fadeOut;
