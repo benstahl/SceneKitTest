@@ -238,13 +238,16 @@
 	_rankLayer.actions = newActions;
 
 	NSString *firstNameText = [[NSString stringWithFormat:@"%@", player.data[@"FIRST_NAME"]] uppercaseString];
-	[_firstNameLayer performSelectorOnMainThread:@selector(setString:) withObject:firstNameText waitUntilDone:YES];
+	_firstNameLayer.string = firstNameText;
+//	[_firstNameLayer performSelectorOnMainThread:@selector(setString:) withObject:firstNameText waitUntilDone:YES];
 
 	NSString *lastNameText = [[NSString stringWithFormat:@"%@", player.data[@"LAST_NAME"]] uppercaseString];
-	[_lastNameLayer performSelectorOnMainThread:@selector(setString:) withObject:lastNameText waitUntilDone:YES];
+	_lastNameLayer.string = lastNameText;
+//	[_lastNameLayer performSelectorOnMainThread:@selector(setString:) withObject:lastNameText waitUntilDone:YES];
 
 	NSString *rankNameText = [[NSString stringWithFormat:@"%@ RANK %@", player.data[@"POSITION"], player.data[@"POS_RANK"]] uppercaseString];
-	[_rankLayer performSelectorOnMainThread:@selector(setString:) withObject:rankNameText waitUntilDone:YES];
+	_rankLayer.string = rankNameText;
+//	[_rankLayer performSelectorOnMainThread:@selector(setString:) withObject:rankNameText waitUntilDone:YES];
 
 //	[CATransaction commit];
 
@@ -313,26 +316,26 @@
 
 /* ========================================================================== */
 - (void) drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx {
-	NSLog(@"***");
-
-	CGContextSetFillColorWithColor(ctx, [[NSColor clearColor] CGColor]);
-
-	//	NSGraphicsPushContext(ctx);
-	/*[word drawInRect:layer.bounds
-	 withFont:[UIFont systemFontOfSize:32]
-     lineBreakMode:UILineBreakModeWordWrap
-	 alignment:UITextAlignmentCenter];*/
-
-	CGContextSetFont(ctx, CGFontCreateWithFontName((CFStringRef)@"DIN-Bold"));
-	CGContextSetFontSize(ctx, 24.0);
-	[@"VERNON\nDAVIS" drawAtPoint:CGPointZero withAttributes:nil];
-
-	//	[@"VERNON\nDAVIS" drawAtPoint:CGPointMake(30.0f, 30.0f)
-	//			 forWidth:200.0f
-	//			 withFont:[NSFont fontWithName:@"DIN-Bold" size:72.0]
-	//		lineBreakMode:NSLineBreakByWordWrapping];
-
-	//	UIGraphicsPopContext();
+//	NSLog(@"***");
+//
+//	CGContextSetFillColorWithColor(ctx, [[NSColor clearColor] CGColor]);
+//
+//	//	NSGraphicsPushContext(ctx);
+//	/*[word drawInRect:layer.bounds
+//	 withFont:[UIFont systemFontOfSize:32]
+//     lineBreakMode:UILineBreakModeWordWrap
+//	 alignment:UITextAlignmentCenter];*/
+//
+//	CGContextSetFont(ctx, CGFontCreateWithFontName((CFStringRef)@"DIN-Bold"));
+//	CGContextSetFontSize(ctx, 24.0);
+//	[@"VERNON\nDAVIS" drawAtPoint:CGPointZero withAttributes:nil];
+//
+//	//	[@"VERNON\nDAVIS" drawAtPoint:CGPointMake(30.0f, 30.0f)
+//	//			 forWidth:200.0f
+//	//			 withFont:[NSFont fontWithName:@"DIN-Bold" size:72.0]
+//	//		lineBreakMode:NSLineBreakByWordWrapping];
+//
+//	//	UIGraphicsPopContext();
 }
 
 @end

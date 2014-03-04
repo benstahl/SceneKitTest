@@ -106,22 +106,37 @@
 - (void)adjustHeaderLabels {
 //	NSLog(@"Adjusting header labels...");
 
+//	CGFloat scalingBasis = 0.0;
 	CGFloat scale = 1.0;
-	NSApplicationPresentationOptions currentOptions = [NSApp currentSystemPresentationOptions];
-	if (currentOptions &= NSApplicationPresentationFullScreen) {
-		NSLog(@"Full screen = YES");
-		scale *= 2.0;
-	} else {
-		NSLog(@"Full screen = NO");
-	}
+//	NSApplicationPresentationOptions currentOptions = [NSApp currentSystemPresentationOptions];
+//	if (currentOptions &= NSApplicationPresentationFullScreen) {
+//		NSLog(@"Full screen = YES");
+//		scale *= 2.0;
+//		scalingBasis = [NSScreen mainScreen].frame.size.height;
+//	} else {
+//		NSLog(@"Full screen = NO");
+//		NSView *windowContentView = [self.superview window].contentView;
+//		scalingBasis = windowContentView.frame.size.height;
+//	}
 
-	CGFloat topFontSize = self.frame.size.height * 0.4 * scale;
-	CGFloat bottomFontSize = self.frame.size.height * 0.3 * scale;
-	CGFloat leading = self.frame.size.height * 0.21;
+	NSView *windowContentView = [self.superview window].contentView;
+	CGFloat scalingBasis = windowContentView.frame.size.height;
 
-	NSLog(@"frame size = %@", NSStringFromRect(self.layer.frame));
+//	NSLog(@"Scaling basis = %f", scalingBasis);
+	CGFloat topFontSize = scalingBasis * 0.085;
+	CGFloat bottomFontSize = scalingBasis * 0.07;
+	CGFloat leading = scalingBasis * 0.045;
+
+//	CGFloat scalingBasis = self.superview.frame.size.height;
+//	CGFloat topFontSize = scalingBasis * 0.4 * scale;
+//	CGFloat bottomFontSize = scalingBasis * 0.3 * scale;
+//	CGFloat leading = scalingBasis * 0.21;
+
+//	NSLog(@"frame size (before) = %@ | scale = %f", NSStringFromRect(self.layer.frame), scale);
+
 	self.layer.frame = CGRectMake(0.0, 0.0, self.superview.frame.size.width, self.superview.frame.size.height);
 //	self.frame = self.superview.frame;
+//	NSLog(@"frame size (after) = %@", NSStringFromRect(self.layer.frame));
 	_baseLayer.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
 	_baseLayer.position = CGPointMake(self.layer.frame.size.width / 2.0, self.superview.frame.size.height * 0.875);
 
@@ -133,8 +148,13 @@
 //	_bottomLabel.position = CGPointMake(self.layer.frame.size.width / 2.0, self.superview.frame.size.height * 0.84);
 	_bottomLabel.position = CGPointMake(self.layer.frame.size.width / 2.0, self.frame.size.height * 0.5 - leading);
 
+//	NSLog(@"Top font size (before) = %f", _topLabel.fontSize);
 	_topLabel.fontSize = topFontSize;
 	_bottomLabel.fontSize = bottomFontSize;
+//	NSLog(@"Top font size (after) = %f", _topLabel.fontSize);
+
+//	[_topLabel displayIfNeeded];
+//	[_bottomLabel displayIfNeeded];
 
 //	CGFloat labelFontSize = round(vc.headerView.frame.size.height * 0.35);
 //	//	NSApplicationPresentationOptions currentOptions = [NSApp currentSystemPresentationOptions];
@@ -195,6 +215,11 @@
 - (void)viewDidMoveToSuperview {
 	[self adjustHeaderLabels];
 }
+
+///* ========================================================================== */
+//- (void)viewWillDraw {
+//	[self adjustHeaderLabels];
+//}
 
 /* ========================================================================== */
 - (void)awakeFromNib {
