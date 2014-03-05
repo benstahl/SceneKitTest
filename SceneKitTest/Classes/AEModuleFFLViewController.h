@@ -7,15 +7,35 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CHCSVParser.h"
 
 @class AEFFLSceneView;
 @class AEHeaderView;
+@class CHCSVParser;
+@class AEPlayer;
+@class AETeam;
 
-@interface AEModuleFFLViewController : NSViewController
+@interface AEModuleFFLViewController : NSViewController <CHCSVParserDelegate> {
+	CHCSVParser *_playerParser;
+	CHCSVParser *_teamParser;
+	NSUInteger _currentParserLine;
+	NSMutableDictionary *_currentParsingPlayerData;
+	NSMutableDictionary *_currentParsingTeamData;
+	NSMutableArray *_playerKeys;
+	NSMutableArray *_teamKeys;
+}
 
 @property (assign) IBOutlet NSView *menuView;
 @property (assign) IBOutlet AEFFLSceneView *sceneView;
 @property (assign) IBOutlet AEHeaderView *headerView;
+
+@property (strong) NSMutableDictionary *players;
+@property (strong) NSMutableDictionary *teams;
+@property (strong) NSArray *playerIDPool;
+@property (strong) NSArray *validPlayerPositions;
+
+- (AEPlayer*)playerWithID:(NSString*)playerID;
+- (AETeam*)teamWithID:(NSString*)teamID;
 
 - (IBAction)showCardsButtonClicked:(id)sender;
 

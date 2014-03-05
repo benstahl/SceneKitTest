@@ -212,8 +212,8 @@
 
 //	AEFFLSceneView *sceneView = sceneView;
 
-	AEFFLSceneView *sceneView = _vc.sceneView;
-	AETeam *team = [sceneView teamWithID:player.data[@"TEAM_ID"]];
+//	AEFFLSceneView *sceneView = _vc.sceneView;
+	AETeam *team = [_vc teamWithID:player.data[@"TEAM_ID"]];
 
 	_headshotBackgroundNode.geometry.firstMaterial.multiply.contents = [AEUtility colorFromHexString:team.data[@"COLOR_BG_TINT"]];
 

@@ -17,27 +17,17 @@
 //@class AEHeaderView;
 @class AEModuleFFLViewController;
 
-@interface AEFFLSceneView : SCNView <CHCSVParserDelegate> {
+@interface AEFFLSceneView : SCNView {
 	SCNNode *_worldPivotNode;
 	SCNNode *_cameraNode;
 	SCNNode *_displayedCardsNode;
 	SCNNode *_sponsorLogoNode;
-
-	CHCSVParser *_playerParser;
-	CHCSVParser *_teamParser;
-	NSUInteger _currentParserLine;
-	NSMutableDictionary *_currentParsingPlayerData;
-	NSMutableDictionary *_currentParsingTeamData;
-	NSMutableArray *_playerKeys;
-	NSMutableArray *_teamKeys;
 	
-	NSArray *_playerIDPool;
 	NSMutableArray *_displayedCards;
 	NSUInteger _displayedCardCount;
 	NSDictionary *_cameraPositions;
 	NSDictionary *_sponsorLogoPositions;
 	NSDictionary *_cardPositions;
-	NSArray *_validPlayerPositions;
 //	AEPlayerCard *_playerCard;
 	BOOL _cardsAnimating;
 
@@ -46,12 +36,6 @@
 }
 
 @property (weak) IBOutlet AEModuleFFLViewController *vc;
-
-@property (strong) NSMutableDictionary *players;
-@property (strong) NSMutableDictionary *teams;
-
-- (AEPlayer*)playerWithID:(NSString*)playerID;
-- (AETeam*)teamWithID:(NSString*)teamID;
 
 - (IBAction)showCardsButtonClicked:(id)sender;
 

@@ -107,7 +107,7 @@
 //	NSLog(@"Adjusting header labels...");
 
 //	CGFloat scalingBasis = 0.0;
-	CGFloat scale = 1.0;
+//	CGFloat scale = 1.0;
 //	NSApplicationPresentationOptions currentOptions = [NSApp currentSystemPresentationOptions];
 //	if (currentOptions &= NSApplicationPresentationFullScreen) {
 //		NSLog(@"Full screen = YES");
