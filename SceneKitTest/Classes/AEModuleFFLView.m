@@ -27,9 +27,10 @@
 	NSLog(@"Module FFL View awakeFromNib:");
 //	self.translatesAutoresizingMaskIntoConstraints = YES;
 	self.layer.contentsGravity = kCAGravityCenter;
-	self.layer.backgroundColor = [[NSColor colorWithHue:0.0 saturation:1.0 brightness:0.0 alpha:1.0] CGColor];
-	self.layer.borderWidth = 0.5;
-	self.layer.borderColor = [[NSColor colorWithHue:0.0 saturation:0.0 brightness:1.0 alpha:1.0] CGColor];
+//	self.layer.backgroundColor = [[NSColor colorWithHue:0.0 saturation:1.0 brightness:0.0 alpha:1.0] CGColor];
+	self.layer.backgroundColor = [[NSColor blackColor] CGColor];
+//	self.layer.borderWidth = 0.5;
+//	self.layer.borderColor = [[NSColor colorWithHue:0.0 saturation:0.0 brightness:1.0 alpha:1.0] CGColor];
 }
 
 /* ========================================================================== */

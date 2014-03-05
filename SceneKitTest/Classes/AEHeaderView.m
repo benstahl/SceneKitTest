@@ -123,9 +123,9 @@
 	CGFloat scalingBasis = windowContentView.frame.size.height;
 
 //	NSLog(@"Scaling basis = %f", scalingBasis);
-	CGFloat topFontSize = scalingBasis * 0.085;
-	CGFloat bottomFontSize = scalingBasis * 0.07;
-	CGFloat leading = scalingBasis * 0.045;
+	CGFloat topFontSize = scalingBasis * 0.075;
+	CGFloat bottomFontSize = scalingBasis * 0.06;
+	CGFloat leading = scalingBasis * 0.04;
 
 //	CGFloat scalingBasis = self.superview.frame.size.height;
 //	CGFloat topFontSize = scalingBasis * 0.4 * scale;

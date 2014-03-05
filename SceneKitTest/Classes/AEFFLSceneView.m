@@ -29,8 +29,8 @@
 //	}
 
 	self.layer.contentsGravity = kCAGravityResizeAspectFill;
-	self.layer.borderWidth = 0.5;
-	self.layer.borderColor = [[NSColor darkGrayColor] CGColor];
+//	self.layer.borderWidth = 0.5;
+//	self.layer.borderColor = [[NSColor darkGrayColor] CGColor];
 
 	_displayedCards = [NSMutableArray arrayWithCapacity:5];
 	_playerPickSets = [NSMutableArray array];
@@ -38,7 +38,7 @@
 	_cardsAnimating = NO;
 
 	_cameraPositions = @{@"0" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 1.8, 44.5)], // 0 cards
-						 @"2" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 3.25, 32.0)], // 2 cards
+						 @"2" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 3.15, 32.0)], // 2 cards
 						 @"3" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 3.05, 34.0)], // 3 cards
 						 @"4" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.8, 36.0)], // 4 cards
 						 @"5" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.6, 44.5)], // 5 cards
@@ -120,17 +120,17 @@
 	[root addChildNode:leftLightNode];
 
 	// main light
-	SCNLight *light = [SCNLight light];
-	light.name = @"center light";
-    light.type = SCNLightTypeDirectional;
-	light.castsShadow = NO;
-    [light setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
-    [light setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
-	SCNNode *lightNode = [SCNNode node];
-	lightNode.light = light;
-	lightNode.position = SCNVector3Make(0, 10, -100);
-    lightNode.rotation = SCNVector4Make(0, 0, 0, 0);
-	[root addChildNode:lightNode];
+	SCNLight *centerLight = [SCNLight light];
+	centerLight.name = @"center light";
+    centerLight.type = SCNLightTypeDirectional;
+	centerLight.castsShadow = NO;
+    [centerLight setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
+    [centerLight setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
+	SCNNode *centerLightNode = [SCNNode node];
+	centerLightNode.light = centerLight;
+	centerLightNode.position = SCNVector3Make(0, 10, -100);
+    centerLightNode.rotation = SCNVector4Make(0, 0, 0, 0);
+	[root addChildNode:centerLightNode];
 
 	// right light
 	SCNLight *rightLight = [SCNLight light];
@@ -157,19 +157,19 @@
 
 	SCNNode *spotNode = [SCNNode node];
     spotNode.name = @"floor spot light";
-    spotNode.position = SCNVector3Make(0, 30, 2);
+    spotNode.position = SCNVector3Make(0, 30, -20);
     spotNode.rotation = SCNVector4Make(1, 0, 0, -M_PI_2);
 	spotNode.light = [SCNLight light];
 	spotNode.light.color = [NSColor colorWithHue:.60 saturation:100.0 brightness:0.30 alpha:1.0];
-	//	spotNode.light.color = [NSColor colorWithHue:0.0 saturation:0.0 brightness:0.30 alpha:1.0];
+//	spotNode.light.color = [NSColor colorWithHue:0.0 saturation:0.0 brightness:0.30 alpha:1.0];
 	spotNode.light.type = SCNLightTypeSpot;
 	spotNode.light.castsShadow = NO;
-	//    spotNode.light.shadowRadius = 10;
-	//    [spotNode.light setAttribute:@30 forKey:SCNLightShadowNearClippingKey];
-	//    [spotNode.light setAttribute:@50 forKey:SCNLightShadowFarClippingKey];
+//	spotNode.light.shadowRadius = 10;
+//    [spotNode.light setAttribute:@30 forKey:SCNLightShadowNearClippingKey];
+//    [spotNode.light setAttribute:@50 forKey:SCNLightShadowFarClippingKey];
     [spotNode.light setAttribute:@8 forKey:SCNLightSpotInnerAngleKey];
     [spotNode.light setAttribute:@45 forKey:SCNLightSpotOuterAngleKey];
-	[root addChildNode:spotNode];
+	[_cameraNode addChildNode:spotNode];
 
 //	SCNNode *cardSpotNode = [SCNNode node];
 //    cardSpotNode.name = @"card spot light";
@@ -482,7 +482,7 @@
 	dispatch_once(&onceToken, ^{
 		teamOwnerNames = @[@"Benjamin", @"Howard", @"E.J.", @"Brian", @"Joel", @"Ruby", @"Ricky", @"Brad", @"Geoff", @"Lisa", @"Lawrence", @"Alan", @"Evan", @"Mike", @"Victor", @"Consuela", @"Gabrielle", @"Ernesto", @"Kim", @"Kojiro", @"Franky", @"Simone", @"Felipe", @"Muhammad", @"Matthew", @"The Ghost", @"El Guapo", @"Sweet Caroline", @"Finklestein", @"Captain Kirk", @"Spock", @"The Terminator", @"Dirty Sanchez", @"Lonely Heart", @"Stone Cold Killa", @"James Bond", @"Cosmo Kramer", @"Gilligan", @"Captain Stubing", @"Ricardo Nixon", @"Buster McThunderstick", @"MacGyver", @"Homer Simpson", @"Troy McClure"];
 		teamOwnerLocations = @[@"Brooklyn", @"Sunnyvale", @"Ft. Lauderdale", @"Chicago", @"New York", @"Buffalo", @"Indianapolis", @"Tucson", @"San Francisco", @"San Rafael", @"Texas", @"Colorado", @"Paris", @"Tokyo", @"Madrid", @"Calgary", @"Toronto", @"Cairo", @"Santiago", @"Boise", @"New Orleans", @"Germany", @"Oslo", @"South Africa", @"Perth", @"Magagascar", @"Baghdad", @"London", @"Vancouver", @"Sonoma", @"Honolulu", @"Death Valley", @"Santa Monica", @"Boston", @"Potsdam", @"Albuquerque", @"Atlanta", @"Springfield", @"The North Pole", @"Iowa", @"Seattle", @"Houston", @"Austin", @"Oklahoma City", @"Portland", @"Westeros", @"New Zealand"];
-		fantasyTeamNames = @[@"Montezuma's Revenge", @"The Agony Of Defeat", @"Fail Whale", @"Cholula Luvrs Anonymous", @"Couch Potatos", @"Mingo Ate My Baby", @"Jamaal Charles In Charge", @"What Would Jones-Drew?", @"My Favorite Marshawn", @"There's Gore In Dem Hills", @"Vladimir Putin's Bling Ring", @"Injured Head & Shoulders", @"Butt-Fumbling Foot Fetishers", @"Connecticut Cholos", @"White Cassel", @"Back that Asomugha Up", @"James Starks of Winterfell", @"Van Buren Boys", @"Somewhere Over Dwayne Bowe", @"Somewhere Over Dwayne Bowe", @"Straight Cash Homey", @"Livin' On A Prayer", @"Bone Breakers", @"Addai late, Amendola short", @"Pop a Kaep", @"Badonkagronk", @"Multiple Scorgasms", @"Victorious Secret", @"Big Test Icicles", @"Wii Not Fit", @"Fire Breathing Rubber Duckies", @"The Mighty Morphin Flower Arrangers", @"The Muffin Stuffers", @"Cow Tipping Dwarfs", @"Viscious and Delicious", @"The Cereal Killers", @"Swamp Donkeys", @"Walla Walla Weasel Wackers", @"Super Heroes In Training", @"Red Hot Oompa-Loompas", @"Blue Balls of Destiny", @"One Hit Wonders", @"Brew Crew", @"Spinal Tappers", @"The Untouchables", @"Smokin Aces", @"Pigs Might Fly", @"The Y-Nots!", @"The Cheezeweasels", @"Wood Chuckers!", @"Wrecking Crew", @"Smooth Operators", @"Eleven Wise Monkeys", @"Unfrozen Caveman Lawyers"];
+		fantasyTeamNames = @[@"Montezuma’s Revenge", @"The Agony Of Defeat", @"Fail Whale", @"Cholula Luvrs Anonymous", @"Couch Potatos", @"Mingo Ate My Baby", @"Jamaal Charles In Charge", @"What Would Jones-Drew?", @"My Favorite Marshawn", @"There’s Gore In Dem Hills", @"Vladimir Putin’s Bling Ring", @"Injured Head & Shoulders", @"Butt-Fumbling Foot Fetishers", @"Connecticut Cholos", @"White Cassel", @"Back that Asomugha Up", @"James Starks of Winterfell", @"Van Buren Boys", @"Somewhere Over Dwayne Bowe", @"Somewhere Over Dwayne Bowe", @"Straight Cash Homey", @"Livin’ On A Prayer", @"Bone Breakers", @"Addai late, Amendola short", @"Pop a Kaep", @"Badonkagronk", @"Multiple Scorgasms", @"Victorious Secret", @"Big Test Icicles", @"Wii Not Fit", @"Fire Breathing Rubber Duckies", @"The Mighty Morphin Flower Arrangers", @"The Muffin Stuffers", @"Cow Tipping Dwarfs", @"Viscious and Delicious", @"The Cereal Killers", @"Swamp Donkeys", @"Walla Walla Weasel Wackers", @"Super Heroes In Training", @"Red Hot Oompa-Loompas", @"Blue Balls of Destiny", @"One Hit Wonders", @"Brew Crew", @"Spinal Tappers", @"The Untouchables", @"Smokin Aces", @"Pigs Might Fly", @"The Y-Nots!", @"The Cheezeweasels", @"Wood Chuckers!", @"Wrecking Crew", @"Smooth Operators", @"Eleven Wise Monkeys", @"Unfrozen Caveman Lawyers"];
 	});
 
 	AEPlayerPickSet *result = [[AEPlayerPickSet alloc] init];
@@ -547,7 +547,7 @@
 
 	if (_displayedCardCount == 0) {
 		_currentPickSet = [self randomPickSet];
-		NSString *topLabelString = [NSString stringWithFormat:@"\"%@\"", _currentPickSet.fantasyTeamName];
+		NSString *topLabelString = [NSString stringWithFormat:@"\“\%@\”", _currentPickSet.fantasyTeamName];
 		NSString *bottomLabelString = _currentPickSet.headerPickString;
 
 //		NSLog(@"Header string = %@", bottomLabelString);
