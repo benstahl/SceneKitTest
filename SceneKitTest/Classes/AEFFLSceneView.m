@@ -109,82 +109,82 @@
 	// left light
 	SCNLight *leftLight = [SCNLight light];
 	leftLight.name = @"left light";
-    leftLight.type = SCNLightTypeDirectional;
+	leftLight.type = SCNLightTypeDirectional;
 	leftLight.castsShadow = NO;
-    [leftLight setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
-    [leftLight setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
+	[leftLight setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
+	[leftLight setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
 	SCNNode *leftLightNode = [SCNNode node];
 	leftLightNode.light = leftLight;
 	leftLightNode.position = SCNVector3Make(-5, 10, -100);
-    leftLightNode.rotation = SCNVector4Make(0, 1, 0, -3.0);
+	leftLightNode.rotation = SCNVector4Make(0, 1, 0, -3.0);
 	[root addChildNode:leftLightNode];
 
 	// main light
 	SCNLight *centerLight = [SCNLight light];
 	centerLight.name = @"center light";
-    centerLight.type = SCNLightTypeDirectional;
+	centerLight.type = SCNLightTypeDirectional;
 	centerLight.castsShadow = NO;
-    [centerLight setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
-    [centerLight setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
+	[centerLight setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
+	[centerLight setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
 	SCNNode *centerLightNode = [SCNNode node];
 	centerLightNode.light = centerLight;
 	centerLightNode.position = SCNVector3Make(0, 10, -100);
-    centerLightNode.rotation = SCNVector4Make(0, 0, 0, 0);
+	centerLightNode.rotation = SCNVector4Make(0, 0, 0, 0);
 	[root addChildNode:centerLightNode];
 
 	// right light
 	SCNLight *rightLight = [SCNLight light];
 	rightLight.name = @"right light";
-    rightLight.type = SCNLightTypeDirectional;
+	rightLight.type = SCNLightTypeDirectional;
 	rightLight.castsShadow = NO;
-    [rightLight setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
-    [rightLight setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
+	[rightLight setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
+	[rightLight setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
 	SCNNode *rightLightNode = [SCNNode node];
 	rightLightNode.light = rightLight;
 	rightLightNode.position = SCNVector3Make(5, 10, -100);
-    rightLightNode.rotation = SCNVector4Make(0, 1, 0, 3.0);
+	rightLightNode.rotation = SCNVector4Make(0, 1, 0, 3.0);
 	[root addChildNode:rightLightNode];
 
-//    root.light = light;
+//	root.light = light;
 
 //	// omni light
 //	SCNLight *omni = [SCNLight light];
-//    omni.type = SCNLightTypeOmni;
+//	omni.type = SCNLightTypeOmni;
 //	SCNNode *omniNode = [SCNNode node];
 //	omniNode.light = omni;
 //	omniNode.position = SCNVector3Make(0, 2.8, -50);
 //	[root addChildNode:omniNode];
 
 	SCNNode *spotNode = [SCNNode node];
-    spotNode.name = @"floor spot light";
-    spotNode.position = SCNVector3Make(0, 30, -20);
-    spotNode.rotation = SCNVector4Make(1, 0, 0, -M_PI_2);
+	spotNode.name = @"floor spot light";
+	spotNode.position = SCNVector3Make(0, 30, -20);
+	spotNode.rotation = SCNVector4Make(1, 0, 0, -M_PI_2);
 	spotNode.light = [SCNLight light];
 	spotNode.light.color = [NSColor colorWithHue:.60 saturation:100.0 brightness:0.30 alpha:1.0];
 //	spotNode.light.color = [NSColor colorWithHue:0.0 saturation:0.0 brightness:0.30 alpha:1.0];
 	spotNode.light.type = SCNLightTypeSpot;
 	spotNode.light.castsShadow = NO;
 //	spotNode.light.shadowRadius = 10;
-//    [spotNode.light setAttribute:@30 forKey:SCNLightShadowNearClippingKey];
-//    [spotNode.light setAttribute:@50 forKey:SCNLightShadowFarClippingKey];
-    [spotNode.light setAttribute:@8 forKey:SCNLightSpotInnerAngleKey];
-    [spotNode.light setAttribute:@45 forKey:SCNLightSpotOuterAngleKey];
+//	[spotNode.light setAttribute:@30 forKey:SCNLightShadowNearClippingKey];
+//	[spotNode.light setAttribute:@50 forKey:SCNLightShadowFarClippingKey];
+	[spotNode.light setAttribute:@8 forKey:SCNLightSpotInnerAngleKey];
+	[spotNode.light setAttribute:@45 forKey:SCNLightSpotOuterAngleKey];
 	[_cameraNode addChildNode:spotNode];
 
 //	SCNNode *cardSpotNode = [SCNNode node];
-//    cardSpotNode.name = @"card spot light";
-//    cardSpotNode.position = SCNVector3Make(0, 2.8, 50);
-//    cardSpotNode.rotation = SCNVector4Make(1, 0, 0, 0);
+//	cardSpotNode.name = @"card spot light";
+//	cardSpotNode.position = SCNVector3Make(0, 2.8, 50);
+//	cardSpotNode.rotation = SCNVector4Make(1, 0, 0, 0);
 //	cardSpotNode.light = [SCNLight light];
 //	cardSpotNode.light.color = [NSColor colorWithHue:.00 saturation:00.0 brightness:1.0 alpha:1.0];
 //	//	spotNode.light.color = [NSColor colorWithHue:0.0 saturation:0.0 brightness:0.30 alpha:1.0];
 //	cardSpotNode.light.type = SCNLightTypeSpot;
 //	cardSpotNode.light.castsShadow = NO;
-//	//    spotNode.light.shadowRadius = 10;
-//	//    [spotNode.light setAttribute:@30 forKey:SCNLightShadowNearClippingKey];
-//	//    [spotNode.light setAttribute:@50 forKey:SCNLightShadowFarClippingKey];
-//    [cardSpotNode.light setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
-//    [cardSpotNode.light setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
+//	//	spotNode.light.shadowRadius = 10;
+//	//	[spotNode.light setAttribute:@30 forKey:SCNLightShadowNearClippingKey];
+//	//	[spotNode.light setAttribute:@50 forKey:SCNLightShadowFarClippingKey];
+//	[cardSpotNode.light setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
+//	[cardSpotNode.light setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
 //	[root addChildNode:cardSpotNode];
 
 //	SCNNode *ambientNode = [SCNNode node];
@@ -272,32 +272,141 @@
 
 /* ========================================================================== */
 - (void)mouseDown:(NSEvent *)theEvent {
+	/* --------------------------------------------------------------------------
+	 First hit test player cards.
+	 ------------------------------------------------------------------------- */
 	NSPoint winp = [theEvent locationInWindow];
-    NSPoint p = [self convertPoint:winp fromView:nil];
+	NSPoint p = [self convertPoint:winp fromView:nil];
+	CGPoint p2 = CGPointMake(p.x, p.y);
+	AEPlayerCard *touchedCard = nil;
 
-    CGPoint p2 = CGPointMake(p.x, p.y);
-    NSArray *pts = [(SCNView *)self hitTest:p2 options:@{SCNHitTestBoundingBoxOnlyKey : @YES, SCNHitTestRootNodeKey : _displayedCardsNode}];
-    for (SCNHitTestResult *result in pts) {
-        SCNNode *n = result.node;
-		
+	NSArray *pts = [(SCNView *)self hitTest:p2 options:@{SCNHitTestBoundingBoxOnlyKey : @YES, SCNHitTestRootNodeKey : _displayedCardsNode}];
+	for (SCNHitTestResult *result in pts) {
+		SCNNode *n = result.node;
+
 		// Hit test will find the exact node touched, move up the hierarchy until we find the player card object.
 		while ([n class] != [AEPlayerCard class]) {
 			n = n.parentNode;
 		}
 
-        CAKeyframeAnimation *jumpAnim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-        float x = n.position.x;
-        jumpAnim.duration = 0.75;
-        jumpAnim.values = @[
-			[NSValue valueWithSCNVector3:SCNVector3Make(x, 0.0, 0.0)],
-			[NSValue valueWithSCNVector3:SCNVector3Make(x, 1.5, 0.0)],
-			[NSValue valueWithSCNVector3:SCNVector3Make(x, 0.0, 0.0)]
-		];
-        jumpAnim.timingFunction =
-		[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        [n addAnimation:jumpAnim forKey:@"jump"];
-    }
+		if ([n class] == [AEPlayerCard class]) {
+			touchedCard = (AEPlayerCard*)n;
+			break;
+		}
+	}
+
+	if (touchedCard == nil) { return; }
+
+	/* --------------------------------------------------------------------------
+	 If we have a positive hit on a card, start a mouse event tracking loop for
+	 the duration of the drag. Detect an up or down swipe on the card by storing
+	 mouse points and time stamps and determining a direction and velocity.
+	 ------------------------------------------------------------------------- */
+	BOOL keepOn = YES;
+//	BOOL isInside = YES;
+	NSPoint mouseLoc;
+	NSPoint lastLoc = NSZeroPoint;
+	NSUInteger sampleCount = 3;
+	int lastX, lastY, newX, newY;
+	NSMutableArray *mousePoints = [NSMutableArray arrayWithCapacity:sampleCount];
+	NSMutableArray *timeStamps = [NSMutableArray arrayWithCapacity:sampleCount];
+//	CFTimeInterval lastTime = [NSDate timeIntervalSinceReferenceDate];
+
+//	NSLog(@"----------------------------\nMouse tracking loop started.\n----------------");
+
+	while (keepOn) {
+		theEvent = [[self window] nextEventMatchingMask: NSLeftMouseUpMask | NSLeftMouseDraggedMask];
+		mouseLoc = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+
+//		NSLog(@"(1) Last loc = %@ | Mouse loc = %@", NSStringFromPoint(lastLoc), NSStringFromPoint(mouseLoc));
+
+		lastX = round(lastLoc.x);
+		lastY = round(lastLoc.y);
+		newX = round(mouseLoc.x);
+		newY = round(mouseLoc.y);
+
+		switch ([theEvent type]) {
+			case NSLeftMouseDragged: {
+//				lastTime = [NSDate timeIntervalSinceReferenceDate];
+
+				// Since the event will log the last mouse location in the same pass through the loop as the mouse up event, we only want to store the last location if it differs from the current locations, so we can calculate velocty.
+
+//				NSLog(@"lastX = %@ | newX = %@ | lastY = %@ | newY = %@", @(lastX), @(newX), @(lastY), @(newY));
+
+				if (!(lastX == newX && lastY == newY) && !NSEqualPoints(lastLoc, NSZeroPoint)) {
+//					NSLog(@"  (NSLeftMouseDragged) Mouse loc = %@", NSStringFromPoint(mouseLoc));
+					if (mousePoints.count >= sampleCount) {
+						[mousePoints removeObjectAtIndex:0];
+						[timeStamps removeObjectAtIndex:0];
+					}
+					[mousePoints addObject:[NSValue valueWithPoint:mouseLoc]];
+					[timeStamps addObject:[NSNumber numberWithDouble:[NSDate timeIntervalSinceReferenceDate]]];
+				}
+
+//				if (!NSEqualPoints(lastLoc, mouseLoc) && !NSEqualPoints(lastLoc, NSZeroPoint)) {
+//					NSLog(@"Mouse loc (2) = %@", NSStringFromPoint(mouseLoc));
+//					if (mousePoints.count >= 5) {
+//						[mousePoints removeObjectAtIndex:0];
+//					}
+//					[mousePoints addObject:[NSValue valueWithPoint:mouseLoc]];
+//				}
+				lastLoc = mouseLoc; // mouseLoc;
+				break;
+			}
+			case NSLeftMouseUp: {
+//				if (isInside) [self doSomethingSignificant];
+//				NSLog(@"  (NSLeftMouseUp) Last loc = %@ | Mouse loc = %@", NSStringFromPoint(lastLoc), NSStringFromPoint(mouseLoc));
+
+//				NSLog(@"Mouse points: %@", mousePoints);
+
+				CGFloat angle = AENormalize360(AEPointsBearing([[mousePoints firstObject] pointValue], [[mousePoints lastObject] pointValue]));
+				CGFloat deltaDistance = AEPointsDistance([[mousePoints lastObject] pointValue], [[mousePoints firstObject] pointValue]);
+				CGFloat deltaTime = [[timeStamps lastObject] doubleValue] - [[timeStamps firstObject] doubleValue];
+				CGFloat velocity = deltaDistance / deltaTime;
+
+//				NSLog(@"%@ pixels over %@ seconds | velocity = %@", @(deltaDistance), @(deltaTime), @(velocity));
+
+//				CGFloat velocity = AEPointsDistance(lastLoc, mouseLoc);
+//				NSLog(@"  Angle = %f | velocity = %f", angle, velocity);
+
+				if (velocity > kSwipeVelocityThreshold) {
+					if ([AEUtility angle:angle isInRangeOfAngle:90.0 withVariance:kSwipeAngleVariance]) {
+						// Swipe up
+						NSLog(@"Swipe UP on card %@", touchedCard.player.data[@"DISPLAY_NAME"]);
+					} else if ([AEUtility angle:angle isInRangeOfAngle:270.0 withVariance:kSwipeAngleVariance]) {
+						// Swipe down
+						NSLog(@"Swipe DOWN on card %@", touchedCard.player.data[@"DISPLAY_NAME"]);
+					}
+				}
+
+				keepOn = NO;
+				break;
+			}
+			default:
+				/* Ignore any other kind of event. */
+				break;
+		}
+	};
+
+//	CAKeyframeAnimation *jumpAnim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+//	float x = n.position.x;
+//	float z = n.position.z;
+//	jumpAnim.duration = 0.3;
+//	jumpAnim.values = @[
+//						[NSValue valueWithSCNVector3:SCNVector3Make(x, 0.0, z)],
+//						[NSValue valueWithSCNVector3:SCNVector3Make(x, 0.5, z)],
+//						[NSValue valueWithSCNVector3:SCNVector3Make(x, 0.0, z)]
+//						];
+//	//		jumpAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//	[n addAnimation:jumpAnim forKey:@"jump"];
+
+	return;
 }
+
+///* ========================================================================== */
+//- (void)mouseMoved:(NSEvent *)theEvent {
+//
+//}
 
 /* ========================================================================== */
 - (void)animateCameraForCardCount:(NSUInteger)cardCount {
@@ -547,7 +656,7 @@
 
 	if (_displayedCardCount == 0) {
 		_currentPickSet = [self randomPickSet];
-		NSString *topLabelString = [NSString stringWithFormat:@"\“\%@\”", _currentPickSet.fantasyTeamName];
+		NSString *topLabelString = [NSString stringWithFormat:@"\u201c\%@\u201d", _currentPickSet.fantasyTeamName];
 		NSString *bottomLabelString = _currentPickSet.headerPickString;
 
 //		NSLog(@"Header string = %@", bottomLabelString);

@@ -126,4 +126,55 @@ CGFloat AERandFloat(CGFloat min, CGFloat max) {
 	NSLog(@"%@",[[[NSFontManager sharedFontManager] availableFontFamilies] description]);
 }
 
+/* =============================================================================
+ Checks to see if an an angle is within the variance passed in. The variance
+ value is on each side of the reference, so the total acceptable range will be
+ double the variance. Expects angles in the range of 0 to <360 and a
+ variance less than 360 (over 360 would match any angle).
+ ============================================================================ */
++ (BOOL)angle:(CGFloat)angleToCheck isInRangeOfAngle:(CGFloat)referenceAngle withVariance:(CGFloat)variance {
+	NSAssert1(angleToCheck >= 0.0 && angleToCheck < 360.0, @"angle:isInRangeOfAngle:withVariance: angle %f is out of allowed range >=0 to <360.", angleToCheck);
+	NSAssert1(referenceAngle >= 0.0 && referenceAngle < 360.0, @"angle:isInRangeOfAngle:withVariance: reference angle %f is out of allowed range >=0 to <360.", referenceAngle);
+	NSAssert1(variance < 360.0, @"angle:isInRangeOfAngle:withVariance: variance %f must be less than 360.", variance);
+	CGFloat min = referenceAngle - fabs(variance);
+	CGFloat max = referenceAngle + fabs(variance);
+
+	/* --- Deal with wrap-around negative values, rotate everything +360.0. --- */
+	//	if (min < 0.0) {
+	//		angleToCheck += 360.0;
+	//		min += 360.0;
+	//		max += 360.0;
+	//	}
+
+	/* --- Deal with wrap-around positive values, rotate everything -360.0. --- */
+	//	if (max >= 360.0) {
+	//		angleToCheck -= 360.0;
+	//		min -= 360.0;
+	//		max -= 360.0;
+	//	}
+
+	return (angleToCheck >= min && angleToCheck <= max);
+}
+
+/* =============================================================================
+ Find the smallest angle between two signed angles between 0 and +360. For
+ example, given the angles a1 = +175 and a2 = -175, it should return -10.
+ ============================================================================ */
++ (CGFloat)smallestAngleFromAngle1:(CGFloat)a1 angle2:(CGFloat)a2 {
+    CGFloat angle = AENormalize180(fmodf(a2 - a1, 360.0));
+    return angle;
+}
+
+#pragma mark - numeric range checks
+
+/* ========================================================================== */
++ (BOOL)floatIsInRange:(CGFloat)numToCheck min:(CGFloat)min max:(CGFloat)max {
+	return numToCheck >= min && numToCheck <= max;
+}
+
+/* ========================================================================== */
++ (BOOL)float:(CGFloat)numToCheck isInRangeOfFloat:(CGFloat)referenceNum withVariance:(CGFloat)variance {
+	return numToCheck >= referenceNum - variance && numToCheck <= referenceNum + variance;
+}
+
 @end

@@ -33,6 +33,10 @@
 
 	NSMutableArray *_playerPickSets;
 	AEPlayerPickSet *_currentPickSet;
+
+	BOOL _trackingMouseDrag;
+	NSPoint _lastDragPoint;
+	CFTimeInterval _lastDragTime;
 }
 
 @property (weak) IBOutlet AEModuleFFLViewController *vc;

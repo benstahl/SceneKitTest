@@ -22,3 +22,6 @@
 #define kHeaderFadeOutTime				0.65
 
 #define kTestPatternDrawerPosX			260.0
+
+#define kSwipeVelocityThreshold			150.0
+#define kSwipeAngleVariance				35.0
