@@ -24,7 +24,6 @@
 	SCNNode *_sponsorLogoNode;
 	
 	NSMutableArray *_displayedCards;
-	NSUInteger _displayedCardCount;
 	NSDictionary *_cameraPositions;
 	NSDictionary *_sponsorLogoPositions;
 	NSDictionary *_cardPositions;

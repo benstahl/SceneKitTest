@@ -38,6 +38,7 @@
 	_cardsAnimating = NO;
 
 	_cameraPositions = @{@"0" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 1.8, 44.5)], // 0 cards
+						 @"1" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 3.15, 32.0)], // 1 card
 						 @"2" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 3.15, 32.0)], // 2 cards
 						 @"3" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 3.05, 34.0)], // 3 cards
 						 @"4" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, 2.8, 36.0)], // 4 cards
@@ -47,9 +48,13 @@
 	CGFloat cardSpacingX = 4.25;
 	CGFloat cardPosY = 0.025;
 	_cardPositions = @{
+		@"1" : @[[NSValue valueWithSCNVector3:SCNVector3Make(0.0, cardPosY, 0.0)],
+				[NSValue valueWithSCNVector3:SCNVector3Make(0.0, cardPosY, 0.0)]
+				], // 1 card
+
 		@"2" : @[[NSValue valueWithSCNVector3:SCNVector3Make(-cardSpacingX * 0.5, cardPosY, 0.0)],
-				 [NSValue valueWithSCNVector3:SCNVector3Make(cardSpacingX * 0.5, cardPosY, .0)]
-		], // 2 cards
+				[NSValue valueWithSCNVector3:SCNVector3Make(cardSpacingX * 0.5, cardPosY, 0.0)]
+				], // 2 cards
 
 		@"3" : @[[NSValue valueWithSCNVector3:SCNVector3Make(-cardSpacingX * 1.0, cardPosY, 0.9)],
 				 [NSValue valueWithSCNVector3:SCNVector3Make(0.0, cardPosY, 0.0)],
@@ -303,22 +308,16 @@
 	 mouse points and time stamps and determining a direction and velocity.
 	 ------------------------------------------------------------------------- */
 	BOOL keepOn = YES;
-//	BOOL isInside = YES;
 	NSPoint mouseLoc;
 	NSPoint lastLoc = NSZeroPoint;
 	NSUInteger sampleCount = 3;
 	int lastX, lastY, newX, newY;
 	NSMutableArray *mousePoints = [NSMutableArray arrayWithCapacity:sampleCount];
 	NSMutableArray *timeStamps = [NSMutableArray arrayWithCapacity:sampleCount];
-//	CFTimeInterval lastTime = [NSDate timeIntervalSinceReferenceDate];
-
-//	NSLog(@"----------------------------\nMouse tracking loop started.\n----------------");
 
 	while (keepOn) {
 		theEvent = [[self window] nextEventMatchingMask: NSLeftMouseUpMask | NSLeftMouseDraggedMask];
 		mouseLoc = [self convertPoint:[theEvent locationInWindow] fromView:nil];
-
-//		NSLog(@"(1) Last loc = %@ | Mouse loc = %@", NSStringFromPoint(lastLoc), NSStringFromPoint(mouseLoc));
 
 		lastX = round(lastLoc.x);
 		lastY = round(lastLoc.y);
@@ -327,14 +326,7 @@
 
 		switch ([theEvent type]) {
 			case NSLeftMouseDragged: {
-//				lastTime = [NSDate timeIntervalSinceReferenceDate];
-
-				// Since the event will log the last mouse location in the same pass through the loop as the mouse up event, we only want to store the last location if it differs from the current locations, so we can calculate velocty.
-
-//				NSLog(@"lastX = %@ | newX = %@ | lastY = %@ | newY = %@", @(lastX), @(newX), @(lastY), @(newY));
-
 				if (!(lastX == newX && lastY == newY) && !NSEqualPoints(lastLoc, NSZeroPoint)) {
-//					NSLog(@"  (NSLeftMouseDragged) Mouse loc = %@", NSStringFromPoint(mouseLoc));
 					if (mousePoints.count >= sampleCount) {
 						[mousePoints removeObjectAtIndex:0];
 						[timeStamps removeObjectAtIndex:0];
@@ -343,39 +335,24 @@
 					[timeStamps addObject:[NSNumber numberWithDouble:[NSDate timeIntervalSinceReferenceDate]]];
 				}
 
-//				if (!NSEqualPoints(lastLoc, mouseLoc) && !NSEqualPoints(lastLoc, NSZeroPoint)) {
-//					NSLog(@"Mouse loc (2) = %@", NSStringFromPoint(mouseLoc));
-//					if (mousePoints.count >= 5) {
-//						[mousePoints removeObjectAtIndex:0];
-//					}
-//					[mousePoints addObject:[NSValue valueWithPoint:mouseLoc]];
-//				}
-				lastLoc = mouseLoc; // mouseLoc;
+				lastLoc = mouseLoc;
 				break;
 			}
 			case NSLeftMouseUp: {
-//				if (isInside) [self doSomethingSignificant];
-//				NSLog(@"  (NSLeftMouseUp) Last loc = %@ | Mouse loc = %@", NSStringFromPoint(lastLoc), NSStringFromPoint(mouseLoc));
-
-//				NSLog(@"Mouse points: %@", mousePoints);
-
 				CGFloat angle = AENormalize360(AEPointsBearing([[mousePoints firstObject] pointValue], [[mousePoints lastObject] pointValue]));
 				CGFloat deltaDistance = AEPointsDistance([[mousePoints lastObject] pointValue], [[mousePoints firstObject] pointValue]);
 				CGFloat deltaTime = [[timeStamps lastObject] doubleValue] - [[timeStamps firstObject] doubleValue];
-				CGFloat velocity = deltaDistance / deltaTime;
+				CGFloat velocity = deltaDistance / deltaTime; // pixels per second
 
-//				NSLog(@"%@ pixels over %@ seconds | velocity = %@", @(deltaDistance), @(deltaTime), @(velocity));
-
-//				CGFloat velocity = AEPointsDistance(lastLoc, mouseLoc);
-//				NSLog(@"  Angle = %f | velocity = %f", angle, velocity);
-
-				if (velocity > kSwipeVelocityThreshold) {
+				if (velocity > kSwipeVelocityThreshold && deltaDistance > kSwipeDistanceThreshold) {
 					if ([AEUtility angle:angle isInRangeOfAngle:90.0 withVariance:kSwipeAngleVariance]) {
 						// Swipe up
 						NSLog(@"Swipe UP on card %@", touchedCard.player.data[@"DISPLAY_NAME"]);
+						[self confirmPlayerCard:touchedCard];
 					} else if ([AEUtility angle:angle isInRangeOfAngle:270.0 withVariance:kSwipeAngleVariance]) {
 						// Swipe down
 						NSLog(@"Swipe DOWN on card %@", touchedCard.player.data[@"DISPLAY_NAME"]);
+						[self denyPlayerCard:touchedCard];
 					}
 				}
 
@@ -387,42 +364,112 @@
 				break;
 		}
 	};
-
-//	CAKeyframeAnimation *jumpAnim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-//	float x = n.position.x;
-//	float z = n.position.z;
-//	jumpAnim.duration = 0.3;
-//	jumpAnim.values = @[
-//						[NSValue valueWithSCNVector3:SCNVector3Make(x, 0.0, z)],
-//						[NSValue valueWithSCNVector3:SCNVector3Make(x, 0.5, z)],
-//						[NSValue valueWithSCNVector3:SCNVector3Make(x, 0.0, z)]
-//						];
-//	//		jumpAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-//	[n addAnimation:jumpAnim forKey:@"jump"];
-
 	return;
 }
 
-///* ========================================================================== */
-//- (void)mouseMoved:(NSEvent *)theEvent {
-//
-//}
+/* ========================================================================== */
+- (void)confirmPlayerCard:(AEPlayerCard*)pc {
+	CAKeyframeAnimation *jumpAnim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+	float x = pc.position.x;
+	float y = pc.position.y;
+	float z = pc.position.z;
+	jumpAnim.duration = 0.35;
+	jumpAnim.values = @[
+		[NSValue valueWithSCNVector3:SCNVector3Make(x, y, z)],
+		[NSValue valueWithSCNVector3:SCNVector3Make(x, 0.65, z)],
+		[NSValue valueWithSCNVector3:SCNVector3Make(x, y, z)]
+	];
+	jumpAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+	[pc addAnimation:jumpAnim forKey:@"position"];
+}
+
+/* ========================================================================== */
+- (void)denyPlayerCard:(AEPlayerCard*)pc {
+	_cardsAnimating = YES;
+	CATransform3D originalTransform = pc.transform;
+
+	[self animateCameraForCardCount:_displayedCards.count - 1];
+	[SCNTransaction begin];
+	[SCNTransaction setAnimationDuration:0.35];
+	[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+	[SCNTransaction setCompletionBlock:^{
+		[pc removeFromParentNode];
+		[_displayedCards removeObject:pc];
+		_cardsAnimating = NO;
+		[self rearrangeDisplayedCards];
+	}];
+	pc.transform = CATransform3DRotate(originalTransform, - M_PI_2, 1, 0, 0);
+	[SCNTransaction commit];
+}
 
 /* ========================================================================== */
 - (void)animateCameraForCardCount:(NSUInteger)cardCount {
-	NSInteger cardDelta = abs((int)cardCount - (int)_displayedCardCount);
-//	NSLog(@"Card count = %@ | Displayed card count = %@ | Card delta = %@", @(cardCount), @(_displayedCardCount), @(cardDelta));
+//	NSInteger cardDelta = abs((int)cardCount - (int)_displayedCards.count);
+//	NSLog(@"Card count = %@ | Displayed card count = %@ | Card delta = %@", @(cardCount), @(_displayedCards.count), @(cardDelta));
 
 	[SCNTransaction begin];
-	[SCNTransaction setAnimationDuration:0.5 + (.25 * cardDelta)];
+	[SCNTransaction setAnimationDuration:0.85]; // + (.25 * cardDelta)];
 	[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
 	_cameraNode.position = [_cameraPositions[[@(cardCount) stringValue]] SCNVector3Value];
 	[SCNTransaction commit];
 }
 
 /* ========================================================================== */
+- (void)rearrangeDisplayedCards {
+	if (!_displayedCards || _displayedCards.count == 0) { return; }
+
+	// Sort cards according to X position and reassign to _displayedCards array, we want cards to maintain their left to right order as we animate them.
+	NSMutableArray *sortedCards = [NSMutableArray arrayWithCapacity:_displayedCards.count];
+	while (sortedCards.count < _displayedCards.count) {
+		CGFloat lowestX = CGFLOAT_MAX;
+		NSUInteger lowestXIndex = NSUIntegerMax;
+		for (int i = 0; i < _displayedCards.count; i++) {
+			AEPlayerCard *card = _displayedCards[i];
+			if ([sortedCards containsObject:card]) { continue; }
+			if (card.position.x < lowestX) {
+				lowestX = card.position.x;
+				lowestXIndex = i;
+			}
+		}
+		[sortedCards addObject:_displayedCards[lowestXIndex]];
+	}
+	_displayedCards = sortedCards;
+
+	_cardsAnimating = YES;
+	CGFloat cardSpacingEndX = 4.25;
+	CGFloat totalWidthEnd = (_displayedCards.count - 1) * cardSpacingEndX;
+
+	for (int i = 0; i < _displayedCards.count; i++) {
+		[SCNTransaction begin];
+		//			[SCNTransaction setAnimationDuration:2.0];
+		[SCNTransaction setAnimationDuration:0.5];
+		[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+		[SCNTransaction setCompletionBlock:^{
+			static NSUInteger cardMovesCompleted = 0;
+			cardMovesCompleted++;
+			//				NSLog(@"completed = %@/%@", @(cardsCompleted), @(_displayedCards.count));
+			if (cardMovesCompleted >= _displayedCards.count) {
+				//					NSLog(@"animation complete.");
+				//					[_displayedCards removeAllObjects];
+				_cardsAnimating = NO;
+				cardMovesCompleted = 0;
+			}
+		}];
+
+//		AEPlayerCard *card = _displayedCards[[orderOfCards[i] intValue]];
+		AEPlayerCard *card = _displayedCards[i];
+		CGFloat posX = -(totalWidthEnd / 2.0) + cardSpacingEndX * i;
+		//			card.position = SCNVector3Make(posX, .025, fabs(posX) * 0.30);
+		card.position = [_cardPositions[[@(_displayedCards.count) stringValue]][i] SCNVector3Value];
+		//			card.position = SCNVector3Make(-(totalWidthEnd / 2.0) + cardSpacingEndX * i, (card.cardSize.y / 2.0) + .025, 0.0);
+		//			card.rotation = SCNVector4Make(0.0, 0.0, 0.0, 0.0);
+		card.rotation = SCNVector4Make(0.0, 1.0, 0.0, -posX * 0.075);
+		[SCNTransaction commit];
+	}
+}
+
+/* ========================================================================== */
 - (void)animateCardsInForPlayers:(NSArray*)players {
-//	_displayedCardCount = players.count;
 	NSUInteger playerCount = players.count;
 	CGFloat cardSpacingStartX = 6.0;
 	CGFloat cardSpacingEndX = 4.25;
@@ -463,12 +510,11 @@
 			[SCNTransaction setCompletionBlock:^{
 				static NSUInteger cardsInCompleted = 0;
 				cardsInCompleted++;
-				//				NSLog(@"completed = %@/%@", @(cardsCompleted), @(_displayedCardCount));
+				//				NSLog(@"completed = %@/%@", @(cardsCompleted), @(_displayedCards.count));
 				if (cardsInCompleted >= playerCount) {
 					//					NSLog(@"animation complete.");
 					//					[_displayedCards removeAllObjects];
 					_cardsAnimating = NO;
-					_displayedCardCount = players.count;
 					cardsInCompleted = 0;
 				}
 			}];
@@ -490,22 +536,24 @@
 
 /* ========================================================================== */
 - (void)animateCardsOut {
+	if (!_displayedCards || _displayedCards.count == 0) { return; }
 //	CGFloat cardSpacingEndX = 6.0;
 //	CGFloat totalWidthEnd = (_displayedCardCount - 1) * cardSpacingEndX;
 	NSArray *orderOfCards = nil;
+	NSUInteger displayedCardCount = _displayedCards.count;
 
-	if (_displayedCardCount == 2) {
+	if (_displayedCards.count == 2) {
 		orderOfCards = @[@0, @1];
-	} else if (_displayedCardCount == 3) {
+	} else if (_displayedCards.count == 3) {
 		orderOfCards = @[@0, @2, @1];
-	} else if (_displayedCardCount == 4) {
+	} else if (_displayedCards.count == 4) {
 		orderOfCards = @[@0, @3, @1, @2];
-	} else if (_displayedCardCount == 5) {
+	} else if (_displayedCards.count == 5) {
 		orderOfCards = @[@0, @4, @1, @3, @2];
 	}
 
 	_cardsAnimating = YES;
-	for (int i = 0; i < _displayedCardCount; i++) {
+	for (int i = 0; i < displayedCardCount; i++) {
 		AEPlayerCard *card = _displayedCards[i];
 
 		double delayInSeconds = 0.125 * i;
@@ -518,11 +566,10 @@
 				static NSUInteger cardsOutCompleted = 0;
 				cardsOutCompleted++;
 //				NSLog(@"completed = %@/%@", @(cardsCompleted), @(_displayedCardCount));
-				if (cardsOutCompleted >= _displayedCardCount) {
+				if (cardsOutCompleted >= displayedCardCount) {
 //					NSLog(@"animation complete.");
 //					[_displayedCards removeAllObjects];
 					_cardsAnimating = NO;
-					_displayedCardCount = 0;
 					cardsOutCompleted = 0;
 				}
 				card.animateEnvironment = NO;
@@ -654,7 +701,7 @@
 //	NSLog(@"Button clicked (scene view).");
 	if (_cardsAnimating) { return; }
 
-	if (_displayedCardCount == 0) {
+	if (_displayedCards.count == 0) {
 		_currentPickSet = [self randomPickSet];
 		NSString *topLabelString = [NSString stringWithFormat:@"\u201c\%@\u201d", _currentPickSet.fantasyTeamName];
 		NSString *bottomLabelString = _currentPickSet.headerPickString;

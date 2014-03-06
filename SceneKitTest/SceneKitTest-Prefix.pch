@@ -23,5 +23,6 @@
 
 #define kTestPatternDrawerPosX			260.0
 
-#define kSwipeVelocityThreshold			150.0
+#define kSwipeDistanceThreshold			20.0
+#define kSwipeVelocityThreshold			300.0
 #define kSwipeAngleVariance				35.0

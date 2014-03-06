@@ -32,13 +32,13 @@
 //		self.layer.borderColor = [[NSColor whiteColor] CGColor];
 //		self.layer.borderWidth = 1.0;
 
-		_baseLayer = [CALayer layer];
-//		_baseLayer.anchorPoint = CGPointMake(0.5, 0.5);
-		_baseLayer.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-//		_baseLayer.borderColor = [[NSColor whiteColor] CGColor];
-//		_baseLayer.borderWidth = 2.5;
-//		_baseLayer.backgroundColor = [[NSColor colorWithHue:0.62 saturation:0.0 brightness:0.0 alpha:0.50] CGColor];
-		_baseLayer.contentsGravity = kCAGravityResize;
+		_container = [CALayer layer];
+//		_container.anchorPoint = CGPointMake(0.5, 0.5);
+		_container.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+//		_container.borderColor = [[NSColor whiteColor] CGColor];
+//		_container.borderWidth = 2.5;
+//		_container.backgroundColor = [[NSColor colorWithHue:0.62 saturation:0.0 brightness:0.0 alpha:0.50] CGColor];
+		_container.contentsGravity = kCAGravityResize;
 
 		CGFloat fontSize = self.frame.size.height * 0.45;
 		CFTypeRef labelFont = CGFontCreateWithFontName((CFStringRef)@"DIN-Bold");
@@ -63,7 +63,7 @@
 //		_topLabel.borderColor = [[NSColor greenColor] CGColor];
 //		_topLabel.borderWidth = 2.0;
 		_topLabel.position = CGPointMake(self.layer.frame.size.width / 2.0, 450.0);
-		[_baseLayer addSublayer:_topLabel];
+		[_container addSublayer:_topLabel];
 
 		fontSize = self.frame.size.height * 0.325;
 
@@ -83,9 +83,9 @@
 //		_bottomLabel.shouldRasterize = YES;
 //		_bottomLabel.borderColor = [[NSColor magentaColor] CGColor];
 //		_bottomLabel.borderWidth = 2.0;
-		[_baseLayer addSublayer:_bottomLabel];
+		[_container addSublayer:_bottomLabel];
 		
-		[self.layer addSublayer:_baseLayer];
+		[self.layer addSublayer:_container];
 
     }
     return self;
@@ -137,8 +137,8 @@
 	self.layer.frame = CGRectMake(0.0, 0.0, self.superview.frame.size.width, self.superview.frame.size.height);
 //	self.frame = self.superview.frame;
 //	NSLog(@"frame size (after) = %@", NSStringFromRect(self.layer.frame));
-	_baseLayer.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-	_baseLayer.position = CGPointMake(self.layer.frame.size.width / 2.0, self.superview.frame.size.height * 0.875);
+	_container.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+	_container.position = CGPointMake(self.layer.frame.size.width / 2.0, self.superview.frame.size.height * 0.875);
 
 	_topLabel.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height / 2.0);
 //	_topLabel.position = CGPointMake(self.layer.frame.size.width / 2.0, self.superview.frame.size.height * 0.93);

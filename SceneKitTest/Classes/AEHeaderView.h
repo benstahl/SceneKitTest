@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface AEHeaderView : NSView {
-	CALayer *_baseLayer;
+	CALayer *_container;
 }
 
 //@property (strong) IBOutlet NSTextField *topLabel;
