@@ -22,7 +22,8 @@
 	SCNNode *_cameraNode;
 	SCNNode *_displayedCardsNode;
 	SCNNode *_sponsorLogoNode;
-	
+
+	NSArray *_sponsorLogosFilenames;
 	NSMutableArray *_displayedCards;
 	NSDictionary *_cameraPositions;
 	NSDictionary *_sponsorLogoPositions;

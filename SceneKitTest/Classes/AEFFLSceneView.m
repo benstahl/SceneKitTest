@@ -223,6 +223,8 @@
 	_displayedCardsNode = [SCNNode node];
 	[root addChildNode:_displayedCardsNode];
 
+	_sponsorLogosFilenames = @[@"logo_ffl", @"logo_ffl+subway", @"logo_ffl+toyota", @"logo_ffl+head_and_shoulders", @"logo_ffl+tropicana", @"logo_ffl+underarmour"];
+
 	// Sponsor logo geometry
 	CGSize sponsorLogoPlaneSize = CGSizeMake(8.0, 4.0);
 	CGFloat sponsorLogoScale = 1.5;
@@ -241,8 +243,8 @@
 	sponsorLogoMat.diffuse.contents = sponsorLogoImg;
 
 	_sponsorLogoPositions = @{
-		@"out" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, sponsorLogoPlaneSize.height / 2 + .1, -20.0)],
-		@"in" :  [NSValue valueWithSCNVector3:SCNVector3Make(0.0, sponsorLogoPlaneSize.height / 2 + .1, 10.0)]
+		@"out" : [NSValue valueWithSCNVector3:SCNVector3Make(0.0, sponsorLogoPlaneSize.height / 2 + .75, -20.0)],
+		@"in" :  [NSValue valueWithSCNVector3:SCNVector3Make(0.0, sponsorLogoPlaneSize.height / 2 + .75, 10.0)]
 	};
 
 //	sponsorLogoMat.emission.contents = sponsorLogoImg;
@@ -696,6 +698,11 @@
 
 /* ========================================================================== */
 - (void)animateLogoInAfterDelay:(CFTimeInterval)delayInSeconds {
+	NSUInteger randomLogoIndex = AERandInt(0, _sponsorLogosFilenames.count - 1);
+	NSString *sponsorLogoFilePath = [[[NSBundle mainBundle] URLForResource:[NSString stringWithFormat:@"Images/%@", _sponsorLogosFilenames[randomLogoIndex]] withExtension:@"png"] path];
+	NSImage *sponsorLogoImg = [[NSImage alloc] initWithContentsOfFile:sponsorLogoFilePath];
+	_sponsorLogoNode.geometry.firstMaterial.diffuse.contents = sponsorLogoImg;
+
 	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
 	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
 		[SCNTransaction begin];
