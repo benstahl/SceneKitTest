@@ -9,7 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface AEButton : NSControl <NSWindowDelegate>
+@interface AEButton : NSControl {
+	CAAnimation *_clickAnimation;
+}
 
 @property (strong) IBOutlet id target;
 

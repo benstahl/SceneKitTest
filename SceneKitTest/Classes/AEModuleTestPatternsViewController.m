@@ -56,7 +56,7 @@
 
 		[self setTestPatterns:[NSMutableArray arrayWithObjects:colorBars, grid, indianHead, overscan, resolution, nil]];
 
-		NSLog(@"%@ test patterns found.", @([self testPatterns].count));
+//		NSLog(@"%@ test patterns found.", @([self testPatterns].count));
 
 	//		self.images = [[NSMutableArray alloc] initWithCapacity:1];
 //
@@ -208,13 +208,13 @@
 
 	if (_selectDrawerOpen) { return; }
 
-	NSLog(@"Opening drawer...");
+//	NSLog(@"Opening drawer...");
 	[NSAnimationContext currentContext].duration = 0.3;
 	[NSAnimationContext currentContext].timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
 	[NSAnimationContext currentContext].completionHandler = ^(){
 //		CGDisplayShowCursor(kCGNullDirectDisplay);
 		_selectDrawerOpen = YES;
-		NSLog(@"Drawer open.");
+//		NSLog(@"Drawer open.");
 //		[self performSelector:@selector(toggleSelectDrawer:) withObject:self afterDelay:0.25];
 	};
 	[NSAnimationContext beginGrouping];
@@ -231,13 +231,13 @@
 
 	if (!_selectDrawerOpen) { return; }
 
-	NSLog(@"Closing drawer...");
+//	NSLog(@"Closing drawer...");
 	[NSAnimationContext currentContext].duration = 0.15;
 	[NSAnimationContext currentContext].timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
 	[NSAnimationContext currentContext].completionHandler = ^(){
 //		CGDisplayHideCursor(kCGNullDirectDisplay);
 		_selectDrawerOpen = NO;
-		NSLog(@"Drawer closed.");
+//		NSLog(@"Drawer closed.");
 //		[self performSelector:@selector(toggleSelectDrawer:) withObject:self afterDelay:0.25];
 	};
 	[NSAnimationContext beginGrouping];
@@ -250,12 +250,12 @@
 - (IBAction)toggleSelectDrawer:(id)sender {
 //	_selectDrawerOpen = !_selectDrawerOpen;
 	if (!_selectDrawerOpen) {
-		NSLog(@"Opening.");
+//		NSLog(@"Opening.");
 //		[self performSelectorOnMainThread:@selector(openSelectDrawer:) withObject:nil waitUntilDone:NO];
 //		[self performSelector:@selector(openSelectDrawer:) withObject:self afterDelay:0.025];
 		[self openSelectDrawer:self];
 	} else {
-		NSLog(@"Closing.");
+//		NSLog(@"Closing.");
 //		[self performSelectorOnMainThread:@selector(closeSelectDrawer:) withObject:nil waitUntilDone:NO];
 //		[self performSelector:@selector(closeSelectDrawer:) withObject:self afterDelay:0.025];
 		[self closeSelectDrawer:self];

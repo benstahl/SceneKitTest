@@ -22,7 +22,8 @@
 		_vc = vc;
 		_cardSize = SCNVector3Make(4.0, 5.6, 0.0);
 		
-//		NSImage *reflectionImg = [NSImage imageNamed:@"reflection"];
+//		NSString *reflectionFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/reflection" withExtension:@"png"] path];
+//		NSImage *reflectionImg = [[NSImage alloc] initWithContentsOfFile:reflectionFilePath];
 
 		/* --------------------------------------------------------------------------
 		 Headshot background
@@ -41,6 +42,7 @@
 		headshotBackgroundMat.emission.contents = headshotBackgroundImage;
 		headshotBackgroundMat.emission.intensity = 1.0;
 //		headshotBackgroundMat.reflective.contents = reflectionImg;
+//		headshotBackgroundMat.reflective.intensity = 0.25;
 //		headshotBackgroundMat.shininess = 1.0;
 //		headshotBackgroundMat.lightingModelName = SCNLightingModelBlinn;
 		_headshotBackgroundNode.geometry.firstMaterial = headshotBackgroundMat;
@@ -82,6 +84,7 @@
 //		baseMat.diffuse.contents = [NSColor clearColor];
 //		baseMat.emission.contents = baseImage;
 //		baseMat.reflective.contents = reflectionImg;
+//		baseMat.reflective.intensity = 0.35;
 //		baseMat.shininess = 1.0;
 		_baseNode.geometry.firstMaterial = baseMat;
 

@@ -89,31 +89,52 @@
 /* ========================================================================== */
 - (void)mouseDown:(NSEvent *)theEvent {
 //	NSLog(@"mouseDown.");
-	[_baseLayer removeAllAnimations];
-	CABasicAnimation *scale = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-	[scale setFromValue:[NSValue valueWithCATransform3D:_baseLayer.transform]];
-	[scale setToValue:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.80, 0.80, 1.0)]];
-	[scale setDuration:0.165f];
-	[scale setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
-	[scale setRemovedOnCompletion:NO];
-	[scale setFillMode:kCAFillModeForwards];
-	[_baseLayer addAnimation:scale forKey:@"scaleDown"];
+	[_baseLayer removeAnimationForKey:@"transform.scale"];
+//	_baseLayer.transform = CATransform3DScale(_baseLayer.transform, 0.80, 0.80, 1.0);
+//	CABasicAnimation *scale = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+//	[scale setFromValue:[NSValue valueWithCATransform3D:_baseLayer.transform]];
+//	[scale setToValue:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.80, 0.80, 1.0)]];
+//	[scale setDuration:0.165f];
+//	[scale setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+//	[scale setRemovedOnCompletion:NO];
+//	[scale setFillMode:kCAFillModeForwards];
+//	[_baseLayer addAnimation:scale forKey:@"transform.scale"];
+
+	CAKeyframeAnimation *scaleDownUp = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+	scaleDownUp.values = @[
+	   [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)],
+	   [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.8, 0.8, 1.0)],
+	   [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)],
+	];
+	scaleDownUp.keyTimes = @[@0.0, @0.35, @1.0];
+	scaleDownUp.duration = 0.165;
+	scaleDownUp.delegate = self;
+	_clickAnimation = (CAAnimation*)scaleDownUp;
+	[_baseLayer addAnimation:scaleDownUp forKey:@"transform.scale"];
+}
+
+/* ========================================================================== */
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+	if (flag) {
+		[self sendAction:NSSelectorFromString(_actionSelectorString) to:self.target];
+	}
 }
 
 /* ========================================================================== */
 - (void)mouseUp:(NSEvent *)theEvent {
 //	NSLog(@"mouseUp.");
-	[_baseLayer removeAllAnimations];
-	CABasicAnimation *scale = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-	[scale setFromValue:[NSValue valueWithCATransform3D:_baseLayer.transform]];
-	[scale setToValue:[NSValue valueWithCATransform3D:CATransform3DIdentity]];
-	[scale setDuration:0.2f];
-	[scale setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
-	[scale setRemovedOnCompletion:NO];
-	[scale setFillMode:kCAFillModeForwards];
-	[_baseLayer addAnimation:scale forKey:@"scaleUp"];
-
-	[self sendAction:NSSelectorFromString(_actionSelectorString) to:self.target];
+//	[_baseLayer removeAnimationForKey:@"transform.scale"];
+////	_baseLayer.transform = CATransform3DScale(_baseLayer.transform, 1.0, 1.0, 1.0);
+//	CABasicAnimation *scale = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+//	[scale setFromValue:[NSValue valueWithCATransform3D:_baseLayer.transform]];
+//	[scale setToValue:[NSValue valueWithCATransform3D:CATransform3DIdentity]];
+//	[scale setDuration:0.2f];
+//	[scale setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+//	[scale setRemovedOnCompletion:NO];
+//	[scale setFillMode:kCAFillModeForwards];
+//	[_baseLayer addAnimation:scale forKey:@"transform.scale"];
+//
+//	[self sendAction:NSSelectorFromString(_actionSelectorString) to:self.target];
 }
 
 @end
