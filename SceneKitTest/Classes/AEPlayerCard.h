@@ -27,9 +27,12 @@
 @property (strong) CATextLayer *lastNameLayer;
 @property (strong) CATextLayer *rankLayer;
 @property (strong) SCNNode *textNode;
+@property (strong) SCNNode *acceptRejectNode;
+@property (strong) CATextLayer *acceptRejectNodeIcon;
 @property BOOL animateEnvironment;
 
 - (id)initWithViewController:(AEModuleFFLViewController*)vc;
+- (void)configurePickSetStatus;
 - (void)configureWithPlayer:(AEPlayer*)player;
 - (void)stopEnvironmentLoop;
 - (void)fadeOutReflectionAfterDelay:(NSTimeInterval)delayInSeconds;

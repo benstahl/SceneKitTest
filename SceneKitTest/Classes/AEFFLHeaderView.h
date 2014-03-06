@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface AEHeaderView : NSView {
+@interface AEFFLHeaderView : NSView {
 	CALayer *_container;
 }
 

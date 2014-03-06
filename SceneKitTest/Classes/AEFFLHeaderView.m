@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 App Easel. All rights reserved.
 //
 
-#import "AEHeaderView.h"
+#import "AEFFLHeaderView.h"
 #import <QuartzCore/QuartzCore.h>
 
-@implementation AEHeaderView
+@implementation AEFFLHeaderView
 
 /* ========================================================================== */
 - (id)initWithFrame:(NSRect)frame {
@@ -245,11 +245,19 @@
 	//	[scale setFromValue:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.85, 0.85, 1.0)]];
 	[fade setFromValue:@(self.layer.opacity)];
 	[fade setToValue:@0.0];
-	[fade setDuration:kHeaderFadeOutTime];
 //	[fade setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
 	[fade setRemovedOnCompletion:NO];
 	[fade setFillMode:kCAFillModeForwards];
 	[self.layer addAnimation:fade forKey:@"fadeOut"];
+
+	// Wait until after fade out to blank labels.
+	double delayInSeconds = kHeaderFadeOutTime + 0.1;
+	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+		_topLabel.string = @"";
+		_bottomLabel.string = @"";
+	});
+
 }
 
 /* ========================================================================== */

@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum AEPlayerPickSetStatus : NSUInteger {
+	kPickSetStatusUnknown,
+	kPickSetStatusAccepted,
+	kPickSetStatusRejected
+} AEPlayerPickSetStatus;
+
 @interface AEPlayerPickSet : NSObject
 
 @property (strong) NSArray *players;

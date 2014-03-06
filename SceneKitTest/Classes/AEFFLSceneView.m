@@ -14,8 +14,10 @@
 #import "AEPlayerCard.h"
 #import "AEPlayerPickSet.h"
 #import "AEUtility.h"
-#import "AEHeaderView.h"
+#import "AEFFLHeaderView.h"
+#import "AEFFLMenuView.h"
 #import "AEModuleFFLViewController.h"
+#import "AEButton.h"
 
 @implementation AEFFLSceneView
 
@@ -112,20 +114,22 @@
 	[scene.rootNode addChildNode:_cameraNode];
 
 	// left light
-	SCNLight *leftLight = [SCNLight light];
-	leftLight.name = @"left light";
-	leftLight.type = SCNLightTypeDirectional;
-	leftLight.castsShadow = NO;
-	[leftLight setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
-	[leftLight setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
-	SCNNode *leftLightNode = [SCNNode node];
-	leftLightNode.light = leftLight;
-	leftLightNode.position = SCNVector3Make(-5, 10, -100);
-	leftLightNode.rotation = SCNVector4Make(0, 1, 0, -3.0);
-	[root addChildNode:leftLightNode];
+//	SCNLight *leftLight = [SCNLight light];
+//	leftLight.color = [NSColor colorWithHue:0.0 saturation:0.0 brightness:0.75 alpha:1.0];
+//	leftLight.name = @"left light";
+//	leftLight.type = SCNLightTypeDirectional;
+//	leftLight.castsShadow = NO;
+//	[leftLight setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
+//	[leftLight setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
+//	SCNNode *leftLightNode = [SCNNode node];
+//	leftLightNode.light = leftLight;
+//	leftLightNode.position = SCNVector3Make(-50, 10, -100);
+//	leftLightNode.rotation = SCNVector4Make(0, 1, 0, AEDegToRad(-45.0));
+//	[root addChildNode:leftLightNode];
 
 	// main light
 	SCNLight *centerLight = [SCNLight light];
+	centerLight.color = [NSColor colorWithHue:0.0 saturation:0.0 brightness:1.0 alpha:1.0];
 	centerLight.name = @"center light";
 	centerLight.type = SCNLightTypeDirectional;
 	centerLight.castsShadow = NO;
@@ -138,17 +142,18 @@
 	[root addChildNode:centerLightNode];
 
 	// right light
-	SCNLight *rightLight = [SCNLight light];
-	rightLight.name = @"right light";
-	rightLight.type = SCNLightTypeDirectional;
-	rightLight.castsShadow = NO;
-	[rightLight setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
-	[rightLight setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
-	SCNNode *rightLightNode = [SCNNode node];
-	rightLightNode.light = rightLight;
-	rightLightNode.position = SCNVector3Make(5, 10, -100);
-	rightLightNode.rotation = SCNVector4Make(0, 1, 0, 3.0);
-	[root addChildNode:rightLightNode];
+//	SCNLight *rightLight = [SCNLight light];
+//	rightLight.color = [NSColor colorWithHue:0.0 saturation:0.0 brightness:0.75 alpha:1.0];
+//	rightLight.name = @"right light";
+//	rightLight.type = SCNLightTypeDirectional;
+//	rightLight.castsShadow = NO;
+//	[rightLight setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
+//	[rightLight setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
+//	SCNNode *rightLightNode = [SCNNode node];
+//	rightLightNode.light = rightLight;
+//	rightLightNode.position = SCNVector3Make(50, 10, -100);
+//	rightLightNode.rotation = SCNVector4Make(0, 1, 0, AEDegToRad(45.0));
+//	[root addChildNode:rightLightNode];
 
 //	root.light = light;
 
@@ -275,8 +280,13 @@
 //	[SCNTransaction commit];
 }
 
+#pragma mark - input handlers
+
 /* ========================================================================== */
 - (void)mouseDown:(NSEvent *)theEvent {
+	// Disable if pick set is complete.
+	if (_displayedCards.count == _currentPickSet.needCount) { return; }
+
 	/* --------------------------------------------------------------------------
 	 First hit test player cards.
 	 ------------------------------------------------------------------------- */
@@ -347,12 +357,12 @@
 				if (velocity > kSwipeVelocityThreshold && deltaDistance > kSwipeDistanceThreshold) {
 					if ([AEUtility angle:angle isInRangeOfAngle:90.0 withVariance:kSwipeAngleVariance]) {
 						// Swipe up
-						NSLog(@"Swipe UP on card %@", touchedCard.player.data[@"DISPLAY_NAME"]);
-						[self confirmPlayerCard:touchedCard];
+//						NSLog(@"Swipe UP on card %@", touchedCard.player.data[@"DISPLAY_NAME"]);
+						[self acceptPlayerCard:touchedCard];
 					} else if ([AEUtility angle:angle isInRangeOfAngle:270.0 withVariance:kSwipeAngleVariance]) {
 						// Swipe down
-						NSLog(@"Swipe DOWN on card %@", touchedCard.player.data[@"DISPLAY_NAME"]);
-						[self denyPlayerCard:touchedCard];
+//						NSLog(@"Swipe DOWN on card %@", touchedCard.player.data[@"DISPLAY_NAME"]);
+						[self rejectPlayerCard:touchedCard];
 					}
 				}
 
@@ -367,51 +377,143 @@
 	return;
 }
 
+#pragma mark - card picking
+
 /* ========================================================================== */
-- (void)confirmPlayerCard:(AEPlayerCard*)pc {
+- (void)acceptPlayerCard:(AEPlayerCard*)pc {
+	NSUInteger displayedCardCount = _displayedCards.count;
+
+	/* --------------------------------------------------------------------------
+	 Accept the card.
+	 ------------------------------------------------------------------------- */
 	CAKeyframeAnimation *jumpAnim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
 	float x = pc.position.x;
 	float y = pc.position.y;
 	float z = pc.position.z;
-	jumpAnim.duration = 0.35;
+	jumpAnim.duration = 0.5;
 	jumpAnim.values = @[
 		[NSValue valueWithSCNVector3:SCNVector3Make(x, y, z)],
-		[NSValue valueWithSCNVector3:SCNVector3Make(x, 0.65, z)],
+		[NSValue valueWithSCNVector3:SCNVector3Make(x, 0.85, z)],
+		[NSValue valueWithSCNVector3:SCNVector3Make(x, y, z)],
+		[NSValue valueWithSCNVector3:SCNVector3Make(x, 0.25, z)],
 		[NSValue valueWithSCNVector3:SCNVector3Make(x, y, z)]
 	];
-	jumpAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+	jumpAnim.keyTimes = @[
+		@0.0,
+		@0.35,
+		@0.65,
+		@0.775,
+		@1.0
+	];
+//	jumpAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
 	[pc addAnimation:jumpAnim forKey:@"position"];
+
+	_currentPickSet.remainingCount--;
+	pc.player.pickSetStatus = kPickSetStatusAccepted;
+	[pc configurePickSetStatus];
+
+	/* --------------------------------------------------------------------------
+	 If this completes the pick set needed count, mark the remaining unmarked
+	 cards as rejected and animate them out.
+	 ------------------------------------------------------------------------- */
+//	NSLog(@"Displayed card count = %@ | needCount = %@ | remaining count = %@", @(displayedCardCount), @(_currentPickSet.needCount), @(_currentPickSet.remainingCount));
+
+	NSUInteger rejectedCardCount = 0;
+	if (_currentPickSet.remainingCount == 0) {
+		// Use a copy of the array because _displayed cards may be modified duting the loop.
+		NSArray *cardsCopy = [NSArray arrayWithArray:_displayedCards];
+
+		for (int i = 0; i < cardsCopy.count; i++) {
+			AEPlayerCard *aCard = cardsCopy[i];
+//			NSLog(@"  i = %@ | name = %@ | pick status = %@", @(i), aCard.player.data[@"DISPLAY_NAME"], @(aCard.player.pickSetStatus));
+			if (aCard.player.pickSetStatus == kPickSetStatusUnknown) {
+//				NSLog(@"Rejecting card %@", aCard.player.data[@"DISPLAY_NAME"]);
+				aCard.player.pickSetStatus = kPickSetStatusRejected;
+				[aCard configurePickSetStatus];
+//				[self rejectPlayerCard:aCard];
+				[self animateOutRejectedPlayerCard:_displayedCards[i] afterDelay:0.20];
+				rejectedCardCount++;
+			}
+		}
+//
+//		double delayInSeconds = 2.5;
+//		dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+//		dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//			[self showCardsButtonClicked:_vc.menuView.showCardsButton];
+//		});
+	}
+
+	/* --------------------------------------------------------------------------
+	 Adjust the camera for the new card count.
+	 ------------------------------------------------------------------------- */
+	[self animateCameraForCardCount:displayedCardCount - rejectedCardCount afterDelay:0.20];
 }
 
 /* ========================================================================== */
-- (void)denyPlayerCard:(AEPlayerCard*)pc {
-	_cardsAnimating = YES;
-	CATransform3D originalTransform = pc.transform;
+- (void)rejectPlayerCard:(AEPlayerCard*)pc {
+	pc.player.pickSetStatus = kPickSetStatusRejected;
+	[pc configurePickSetStatus];
 
-	[self animateCameraForCardCount:_displayedCards.count - 1];
-	[SCNTransaction begin];
-	[SCNTransaction setAnimationDuration:0.35];
-	[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
-	[SCNTransaction setCompletionBlock:^{
-		[pc removeFromParentNode];
-		[_displayedCards removeObject:pc];
-		_cardsAnimating = NO;
-		[self rearrangeDisplayedCards];
-	}];
-	pc.transform = CATransform3DRotate(originalTransform, - M_PI_2, 1, 0, 0);
-	[SCNTransaction commit];
+	NSUInteger displayedCardCount = _displayedCards.count;
+	[self animateOutRejectedPlayerCard:pc afterDelay:0.20];
+
+	NSUInteger rejectedCardCount = 1;
+
+//	NSLog(@"Displayed card count = %@ | needCount = %@", @(displayedCardCount), @(_currentPickSet.needCount));
+
+	if (displayedCardCount - 1 <= _currentPickSet.needCount) {
+		for (int i = 0; i < displayedCardCount; i++) {
+			AEPlayerCard *aCard = _displayedCards[i];
+//			NSLog(@"  i = %@ | name = %@ | pick status = %@", @(i), aCard.player.data[@"DISPLAY_NAME"], @(aCard.player.pickSetStatus));
+			if (aCard == pc) { continue; }
+			if (aCard.player.pickSetStatus == kPickSetStatusUnknown) {
+//				NSLog(@"Accepting card %@", aCard.player.data[@"DISPLAY_NAME"]);
+				aCard.player.pickSetStatus = kPickSetStatusAccepted;
+				[aCard configurePickSetStatus];
+			}
+		}
+	}
+
+//	NSLog(@"Animating camera for %@ cards | displayed = %@ | rejected = %@", @(displayedCardCount - rejectedCardCount), @(displayedCardCount), @(rejectedCardCount));
+	[self animateCameraForCardCount:displayedCardCount - rejectedCardCount afterDelay:0.20];
+}
+
+#pragma mark - animations
+
+/* ========================================================================== */
+- (void)animateOutRejectedPlayerCard:(AEPlayerCard*)pc afterDelay:(CFTimeInterval)delayInSeconds {
+	/* --- Animate card out after delay. --- */
+	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+		CATransform3D originalTransform = pc.transform;
+		_cardsAnimating = YES;
+		[SCNTransaction begin];
+		[SCNTransaction setAnimationDuration:0.35];
+		[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+		[SCNTransaction setCompletionBlock:^{
+			[pc removeFromParentNode];
+			[_displayedCards removeObject:pc];
+			_cardsAnimating = NO;
+			[self rearrangeDisplayedCards];
+		}];
+		pc.transform = CATransform3DRotate(originalTransform, - M_PI_2, 1, 0, 0);
+		[SCNTransaction commit];
+	});
 }
 
 /* ========================================================================== */
-- (void)animateCameraForCardCount:(NSUInteger)cardCount {
+- (void)animateCameraForCardCount:(NSUInteger)cardCount afterDelay:(CFTimeInterval)delayInSeconds {
 //	NSInteger cardDelta = abs((int)cardCount - (int)_displayedCards.count);
 //	NSLog(@"Card count = %@ | Displayed card count = %@ | Card delta = %@", @(cardCount), @(_displayedCards.count), @(cardDelta));
 
-	[SCNTransaction begin];
-	[SCNTransaction setAnimationDuration:0.85]; // + (.25 * cardDelta)];
-	[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
-	_cameraNode.position = [_cameraPositions[[@(cardCount) stringValue]] SCNVector3Value];
-	[SCNTransaction commit];
+	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+		[SCNTransaction begin];
+		[SCNTransaction setAnimationDuration:0.85]; // + (.25 * cardDelta)];
+		[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+		_cameraNode.position = [_cameraPositions[[@(cardCount) stringValue]] SCNVector3Value];
+		[SCNTransaction commit];
+	});
 }
 
 /* ========================================================================== */
@@ -517,6 +619,9 @@
 					_cardsAnimating = NO;
 					cardsInCompleted = 0;
 				}
+
+				// NOTE: Hack to prevent occasional freezes where updates stop happening.
+				[self setNeedsDisplay:YES];
 			}];
 
 			AEPlayerCard *card = _displayedCards[[orderOfCards[i] intValue]];
@@ -579,7 +684,7 @@
 
 			AEPlayerCard *card = _displayedCards[[orderOfCards[i] intValue]];
 //			AEPlayerCard *card = _displayedCards[i];
-			card.position = SCNVector3Make(card.position.x + 20.0, 0.5, 10.0 - (1.5 * i));
+			card.position = SCNVector3Make(card.position.x + 20.0, 0.25, 10.0 - (1.5 * i));
 //			card.position = SCNVector3Make(-(totalWidthEnd / 2.0) + cardSpacingEndX * i, 2.0, 22.0);
 			card.rotation = SCNVector4Make(1.0, 1.0, 0.0, AEDegToRad(-90.0));
 //			card.rotation = SCNVector4Make(0.0, 0.0, 0.0, 0.0);
@@ -649,7 +754,7 @@
 	result.players = [self randomUniquePlayersWithCount:result.cardCount position:randomPosition];
 	result.playerPosition = randomPosition;
 	result.needCount = AERandInt(1, result.cardCount - 1);
-	result.remainingCount = AERandInt(1, result.cardCount - 1);
+	result.remainingCount = result.needCount; //AERandInt(1, result.cardCount - 1);
 
 	return result;
 }
@@ -661,6 +766,8 @@
 	for (int i = 0; i < playerCount; i++) {
 		NSInteger randomPlayerIndex = AERandInt(0, tempPlayerIDPool.count - 1);
 		AEPlayer *player = [_vc playerWithID:tempPlayerIDPool[randomPlayerIndex]];
+		// Reset pick set status
+		player.pickSetStatus = kPickSetStatusUnknown;
 		//		[_displayedCards[i] configureWithPlayer:player];
 		[result addObject:player];
 		[tempPlayerIDPool removeObject:tempPlayerIDPool[randomPlayerIndex]];
@@ -689,6 +796,8 @@
 		NSInteger randomPlayerIndex = AERandInt(0, tempPlayerIDPool.count - 1);
 		AEPlayer *player = [_vc playerWithID:tempPlayerIDPool[randomPlayerIndex]];
 		//		[_displayedCards[i] configureWithPlayer:player];
+		// Reset pick set status
+		player.pickSetStatus = kPickSetStatusUnknown;
 		[result addObject:player];
 		[tempPlayerIDPool removeObject:tempPlayerIDPool[randomPlayerIndex]];
 		//		NSLog(@"Showing player card for player with id %@, data = %@", _vc.playerIDPool[randomPlayerIndex], player.data);
@@ -775,27 +884,30 @@
 //		[bottomAttrString addAttribute:NSForegroundColorAttributeName value:highlightColor range:NSMakeRange(cardsCountIndex, 1)];
 
 //		[_vc.headerView.bottomLabel setAttributedStringValue:bottomAttrString];
+		if ([sender class] == [AEButton class]) {
+			((AEButton*)sender).labelLayer.string = @"DISMISS";
+		}
+
 		_vc.headerView.topLabel.string = topLabelString;
 		_vc.headerView.bottomLabel.string = bottomLabelString;
 
 		[_vc.headerView fadeIn];
 		[self animateLogoOut];
 		[self animateCardsInForPlayers:_currentPickSet.players];
-		[self animateCameraForCardCount:_currentPickSet.cardCount];
+		[self animateCameraForCardCount:_currentPickSet.cardCount afterDelay:0.0];
 	} else {
 		[self animateCardsOut];
-		[self animateCameraForCardCount:0];
+		[self animateCameraForCardCount:0 afterDelay:0.0];
 		[self animateLogoInAfterDelay:0.5];
 		[_vc.headerView fadeOut];
 
-		// Wait until after fade out to blank labels.
+		// Wait until after fade out to swap button label.
 		double delayInSeconds = kHeaderFadeOutTime + 0.1;
 		dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
 		dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-//			[_vc.headerView.topLabel setStringValue:@""];
-//			[_vc.headerView.bottomLabel setStringValue:@""];
-			_vc.headerView.topLabel.string = @"";
-			_vc.headerView.bottomLabel.string = @"";
+			if ([sender class] == [AEButton class]) {
+				((AEButton*)sender).labelLayer.string = @"SHOW PLAYERS";
+			}
 		});
 	}
 }

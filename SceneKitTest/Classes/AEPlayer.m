@@ -15,6 +15,7 @@
 	if (self = [super init]) {
 		_data = [NSDictionary dictionary];
 		_playerID = nil;
+		_pickSetStatus = kPickSetStatusUnknown;
 	}
 	return self;
 }

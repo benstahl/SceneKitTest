@@ -28,7 +28,7 @@
                         <outlet property="vc" destination="RF8-cO-KNB" id="Mvv-g4-FLL"/>
                     </connections>
                 </sceneView>
-                <customView wantsLayer="YES" id="QVx-YX-eVc" userLabel="Menu View">
+                <customView wantsLayer="YES" id="QVx-YX-eVc" userLabel="Menu View" customClass="AEFFLMenuView">
                     <rect key="frame" x="20" y="15" width="760" height="50"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -57,8 +57,12 @@
                             </connections>
                         </customView>
                     </subviews>
+                    <connections>
+                        <outlet property="exitButton" destination="wRX-OZ-jkv" id="h7h-3A-xub"/>
+                        <outlet property="showCardsButton" destination="ej0-Bj-qz3" id="Y7X-9s-7xE"/>
+                    </connections>
                 </customView>
-                <customView wantsLayer="YES" id="rBt-CH-i5O" userLabel="Header View" customClass="AEHeaderView">
+                <customView wantsLayer="YES" id="rBt-CH-i5O" userLabel="Header View" customClass="AEFFLHeaderView">
                     <rect key="frame" x="0.0" y="350" width="800" height="100"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                 </customView>
@@ -69,8 +73,8 @@
         </view>
         <viewController id="RF8-cO-KNB" userLabel="FFL VC" customClass="AEModuleFFLViewController">
             <connections>
-                <outlet property="headerView" destination="rBt-CH-i5O" id="wpZ-fy-kj4"/>
-                <outlet property="menuView" destination="QVx-YX-eVc" id="D6W-6U-y4h"/>
+                <outlet property="headerView" destination="rBt-CH-i5O" id="XWF-w2-OSF"/>
+                <outlet property="menuView" destination="QVx-YX-eVc" id="qiu-lj-wxP"/>
                 <outlet property="sceneView" destination="OWA-gg-d4S" id="5oo-MA-9Lb"/>
                 <outlet property="view" destination="uje-6T-xqU" id="qhs-mH-3M2"/>
             </connections>

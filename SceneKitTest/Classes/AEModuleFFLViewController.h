@@ -10,7 +10,8 @@
 #import "CHCSVParser.h"
 
 @class AEFFLSceneView;
-@class AEHeaderView;
+@class AEFFLHeaderView;
+@class AEFFLMenuView;
 @class CHCSVParser;
 @class AEPlayer;
 @class AETeam;
@@ -25,9 +26,9 @@
 	NSMutableArray *_teamKeys;
 }
 
-@property (assign) IBOutlet NSView *menuView;
 @property (assign) IBOutlet AEFFLSceneView *sceneView;
-@property (assign) IBOutlet AEHeaderView *headerView;
+@property (assign) IBOutlet AEFFLHeaderView *headerView;
+@property (assign) IBOutlet AEFFLMenuView *menuView;
 
 @property (strong) NSMutableDictionary *players;
 @property (strong) NSMutableDictionary *teams;

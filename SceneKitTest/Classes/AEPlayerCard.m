@@ -24,108 +24,126 @@
 		
 //		NSImage *reflectionImg = [NSImage imageNamed:@"reflection"];
 
-		// Headshot BG geometry
+		/* --------------------------------------------------------------------------
+		 Headshot background
+		 ------------------------------------------------------------------------- */
 		SCNPlane *headshotBackgroundPlane = [SCNPlane planeWithWidth:_cardSize.x height:_cardSize.y];
 		_headshotBackgroundNode = [SCNNode nodeWithGeometry:headshotBackgroundPlane];
 		_headshotBackgroundNode.position = SCNVector3Make(0.0, 0.0, 0.0);
 		[self addChildNode:_headshotBackgroundNode];
 
-		// Headshot BG materials
 		SCNMaterial *headshotBackgroundMat = [SCNMaterial material];
 		[AEUtility configureMaterial:headshotBackgroundMat];
 		NSString *headshotBackgroundFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/pc_hs_bg" withExtension:@"png"] path];
 		NSImage *headshotBackgroundImage = [[NSImage alloc] initWithContentsOfFile:headshotBackgroundFilePath];
 		headshotBackgroundMat.diffuse.contents = headshotBackgroundImage;
+		headshotBackgroundMat.diffuse.intensity = 0.0;
+		headshotBackgroundMat.emission.contents = headshotBackgroundImage;
+		headshotBackgroundMat.emission.intensity = 1.0;
 //		headshotBackgroundMat.reflective.contents = reflectionImg;
 //		headshotBackgroundMat.shininess = 1.0;
 //		headshotBackgroundMat.lightingModelName = SCNLightingModelBlinn;
 		_headshotBackgroundNode.geometry.firstMaterial = headshotBackgroundMat;
-
 //		_headshotBackgroundNode.geometry.firstMaterial.reflective.contentsTransform = CATransform3DMakeTranslation(0.0, 0.0, 0.0);
 
-		// Headshot geometry
+		/* --------------------------------------------------------------------------
+		 Headshot image
+		 ------------------------------------------------------------------------- */
 		SCNPlane *headshotPlane = [SCNPlane planeWithWidth:_cardSize.x height:_cardSize.y];
 		_headshotNode = [SCNNode nodeWithGeometry:headshotPlane];
 		_headshotNode.position = SCNVector3Make(0.0, 0.0, 0.002);
 		[self addChildNode:_headshotNode];
 
-		// Headshot materials
 		SCNMaterial *headshotMat = [SCNMaterial material];
 		[AEUtility configureMaterial:headshotMat];
+		headshotMat.diffuse.contents = [CALayer layer];
+		headshotMat.diffuse.intensity = 0.0;
+		headshotMat.emission.contents = [CALayer layer];
+		headshotMat.emission.intensity = 1.0;
 		_headshotNode.geometry.firstMaterial = headshotMat;
 
-		// Base geometry (card outline, bg, etc.)
+		/* --------------------------------------------------------------------------
+		 Card base (card outline, bg, etc.)
+		 ------------------------------------------------------------------------- */
 		SCNPlane *basePlane = [SCNPlane planeWithWidth:_cardSize.x height:_cardSize.y];
 		_baseNode = [SCNNode nodeWithGeometry:basePlane];
 		_baseNode.position = SCNVector3Make(0.0, 0.0, 0.004);
 		[self addChildNode:_baseNode];
 
-		// Base materials (card outline, bg, etc.)
 		SCNMaterial *baseMat = [SCNMaterial material];
 		[AEUtility configureMaterial:baseMat];
 
-		[AEUtility configureMaterial:headshotBackgroundMat];
 		NSString *baseFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/pc_base" withExtension:@"png"] path];
 		NSImage *baseImage = [[NSImage alloc] initWithContentsOfFile:baseFilePath];
 		baseMat.diffuse.contents = baseImage;
+		baseMat.diffuse.intensity = 0.0;
+		baseMat.emission.contents = baseImage;
+		baseMat.emission.intensity = 1.0;
+//		baseMat.diffuse.contents = [NSColor clearColor];
+//		baseMat.emission.contents = baseImage;
 //		baseMat.reflective.contents = reflectionImg;
 //		baseMat.shininess = 1.0;
 		_baseNode.geometry.firstMaterial = baseMat;
 
-		// Primary color stripe geometry
+		/* --------------------------------------------------------------------------
+		 Primary color stripe geometry
+		 ------------------------------------------------------------------------- */
 		SCNPlane *primaryColorStripePlane = [SCNPlane planeWithWidth:_cardSize.x height:_cardSize.y];
 		_primaryColorStripeNode = [SCNNode nodeWithGeometry:primaryColorStripePlane];
 		_primaryColorStripeNode.position = SCNVector3Make(0.0, 0.0, 0.006);
 		[self addChildNode:_primaryColorStripeNode];
 
-		// Primary color stripe materials
 		SCNMaterial *primaryColorStripeMat = [SCNMaterial material];
 		[AEUtility configureMaterial:primaryColorStripeMat];
 		NSString *primaryColorStripeFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/pc_color_stripe_primary" withExtension:@"png"] path];
 		NSImage *primaryColorStripeImage = [[NSImage alloc] initWithContentsOfFile:primaryColorStripeFilePath];
 		primaryColorStripeMat.diffuse.contents = primaryColorStripeImage;
+		primaryColorStripeMat.diffuse.intensity = 0.0;
+		primaryColorStripeMat.emission.contents = primaryColorStripeImage;
+		primaryColorStripeMat.emission.intensity = 1.0;
 //		primaryColorStripeMat.reflective.contents = reflectionImg;
 //		primaryColorStripeMat.shininess = 0.3;
 		_primaryColorStripeNode.geometry.firstMaterial = primaryColorStripeMat;
 		
-		// Secondary color stripe geometry
+		/* --------------------------------------------------------------------------
+		 Secondary color stripe
+		 ------------------------------------------------------------------------- */
 		SCNPlane *secondaryColorStripePlane = [SCNPlane planeWithWidth:_cardSize.x height:_cardSize.y];
 		_secondaryColorStripeNode = [SCNNode nodeWithGeometry:secondaryColorStripePlane];
 		_secondaryColorStripeNode.position = SCNVector3Make(0.0, 0.0, 0.008);
 		[self addChildNode:_secondaryColorStripeNode];
 
-		// Secondary color stripe materials
 		SCNMaterial *secondaryColorStripeMat = [SCNMaterial material];
 		[AEUtility configureMaterial:secondaryColorStripeMat];
 		NSString *secondaryColorStripeFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/pc_color_stripe_secondary" withExtension:@"png"] path];
 		NSImage *secondaryColorStripeImage = [[NSImage alloc] initWithContentsOfFile:secondaryColorStripeFilePath];
 		secondaryColorStripeMat.diffuse.contents = secondaryColorStripeImage;
+		secondaryColorStripeMat.diffuse.intensity = 0.0;
+		secondaryColorStripeMat.emission.contents = secondaryColorStripeImage;
+		secondaryColorStripeMat.emission.intensity = 1.0;
 //		secondaryColorStripeMat.reflective.contents = reflectionImg;
 //		secondaryColorStripeMat.shininess = 0.3;
 		_secondaryColorStripeNode.geometry.firstMaterial = secondaryColorStripeMat;
 
-		// Team logo geometry
+		/* --------------------------------------------------------------------------
+		 Team logo image
+		 ------------------------------------------------------------------------- */
 		SCNPlane *teamLogoPlane = [SCNPlane planeWithWidth:_cardSize.x height:_cardSize.y];
 		_teamLogoNode = [SCNNode nodeWithGeometry:teamLogoPlane];
 		_teamLogoNode.position = SCNVector3Make(0.0, 0.0, 0.010);
 		[self addChildNode:_teamLogoNode];
 
-		// Team logo materials
 		SCNMaterial *teamLogoMat = [SCNMaterial material];
 		[AEUtility configureMaterial:teamLogoMat];
+		teamLogoMat.diffuse.contents = [CALayer layer];
+		teamLogoMat.diffuse.intensity = 0.0;
+		teamLogoMat.emission.contents =  [CALayer layer];
+		teamLogoMat.emission.intensity = 1.0;
 		_teamLogoNode.geometry.firstMaterial = teamLogoMat;
 
-//		_nameText = [SCNText textWithString:@"FIRSTNAME\nLASTNAME" extrusionDepth:0.0f];
-//		////	text.materials[1] = [SCNMaterial material];
-//		_nameText.font = [NSFont fontWithName:@"DIN-Bold" size:100];
-//		_nameText.containerFrame = CGRectMake(-_cardSize.x / 2, -_cardSize.y / 2, 400, 400);
-//		_nameText.alignmentMode = kCAAlignmentCenter;
-//		SCNNode *nameNode = [SCNNode nodeWithGeometry:_nameText];
-////		nameNode.scale = SCNVector3Make(0.2, 0.2, 0.2);
-//		nameNode.position = SCNVector3Make(0, _cardSize.y * 0.25, 0.006);
-//		nameNode.transform = CATransform3DScale(nameNode.transform, .005f, .005f, .005f);
-//		[self addChildNode:nameNode];
-
+		/* --------------------------------------------------------------------------
+		 Text layer (name and position ranking)
+		 ------------------------------------------------------------------------- */
 		CALayer *textLayer = [CALayer layer];
 //		textLayer.backgroundColor = [[NSColor blueColor] CGColor];
 //		textLayer.borderColor = [[NSColor yellowColor] CGColor];
@@ -174,15 +192,6 @@
 		_rankLayer.shouldRasterize = YES;
 		[textLayer addSublayer:_rankLayer];
 
-//		// Disable implicit animation on text changes for dynamic layers.
-//		NSDictionary *newActions = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNull null], @"contents", nil];
-//		_firstNameLayer.actions = newActions;
-//		_lastNameLayer.actions = newActions;
-//		_rankLayer.actions = newActions;
-
-//		[infoLayer setNeedsDisplay];
-//		[baseLayer setNeedsDisplay];
-
 		SCNPlane *textPlane = [SCNPlane planeWithWidth:_cardSize.x height:_cardSize.y];
 		_textNode = [SCNNode nodeWithGeometry:textPlane];
 		_textNode.position = SCNVector3Make(0.0, 0.0, 0.012);
@@ -191,19 +200,72 @@
 		SCNMaterial *textMat = [SCNMaterial material];
 		[AEUtility configureMaterial:textMat];
 		textMat.diffuse.contents = textLayer;
-//		textMat.lightingModelName = SCNLightingModelLambert;
-//		textMat.lightingModelName = SCNLightingModelBlinn;
-//		textMat.emission.contents = textLayer;
-//		textMat.transparent.contents = textLayer;
-		//	nameMat.reflective.contents = reflectionImg;
-		//	nameMat.shininess = 0.2;
-		//	nameMat.multiply.contents = [AEUtility colorFromHexString:team.data[@"COLOR_SECONDARY"]];
+		textMat.diffuse.intensity = 0.0;
+		textMat.emission.contents = textLayer;
+		textMat.emission.intensity = 1.0;
 		_textNode.geometry.firstMaterial = textMat;
 
+		/* --------------------------------------------------------------------------
+		 Confirmation or denial icon (checkmark or 'X')
+		 ------------------------------------------------------------------------- */
+		CALayer *acceptRejectLayer = [CALayer layer];
+//		acceptRejectLayer.backgroundColor = [[NSColor orangeColor] CGColor];
+//		acceptRejectLayer.borderColor = [[NSColor yellowColor] CGColor];
+		acceptRejectLayer.frame = CGRectMake(0, 0, 400, 560);
+//		acceptRejectLayer.contentsGravity = kCAGravityResize;
 
-//		[self configureWithPlayer:player];
+		_acceptRejectNodeIcon = [CATextLayer layer];
+		_acceptRejectNodeIcon.frame = CGRectMake(0, -320, 400, 560);
+		_acceptRejectNodeIcon.font = CGFontCreateWithFontName((CFStringRef)@"Helvetica Bold");
+		_acceptRejectNodeIcon.fontSize = 160.0;
+		_acceptRejectNodeIcon.alignmentMode = kCAAlignmentCenter;
+		_acceptRejectNodeIcon.string = @"\u2713";
+		_acceptRejectNodeIcon.foregroundColor = [[NSColor colorWithHue:0.33 saturation:1.0 brightness:0.85 alpha:1.0] CGColor];
+		_acceptRejectNodeIcon.shadowColor = [[NSColor blackColor] CGColor];
+		_acceptRejectNodeIcon.shadowOpacity = 1.0;
+		_acceptRejectNodeIcon.shadowOffset = CGSizeMake(6.0, -6.0);
+		_acceptRejectNodeIcon.shadowRadius = 2.5;
+		_acceptRejectNodeIcon.shouldRasterize = YES;
+		[acceptRejectLayer addSublayer:_acceptRejectNodeIcon];
+
+		SCNPlane *acceptRejectPlane = [SCNPlane planeWithWidth:_cardSize.x height:_cardSize.y];
+		_acceptRejectNode = [SCNNode nodeWithGeometry:acceptRejectPlane];
+		_acceptRejectNode.position = SCNVector3Make(0.0, 0.0, 0.014);
+		_acceptRejectNode.hidden = YES;
+		[self addChildNode:_acceptRejectNode];
+
+		SCNMaterial *acceptRejectMat = [SCNMaterial material];
+		[AEUtility configureMaterial:acceptRejectMat];
+		acceptRejectMat.diffuse.contents = acceptRejectLayer;
+		acceptRejectMat.diffuse.intensity = 0.0;
+		acceptRejectMat.emission.contents = acceptRejectLayer;
+		acceptRejectMat.emission.intensity = 1.0;
+		_acceptRejectNode.geometry.firstMaterial = acceptRejectMat;
 	}
 	return self;
+}
+
+/* ========================================================================== */
+- (void)configurePickSetStatus {
+	NSDictionary *newActions = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNull null], @"string", nil];
+	_acceptRejectNodeIcon.actions = newActions;
+
+	if (_player.pickSetStatus == kPickSetStatusAccepted) {
+		_acceptRejectNodeIcon.fontSize = 160.0;
+		_acceptRejectNodeIcon.string = @"\u2713";
+		_acceptRejectNodeIcon.foregroundColor = [[NSColor colorWithHue:0.33 saturation:1.0 brightness:0.85 alpha:1.0] CGColor];
+		_acceptRejectNode.hidden = NO;
+		_teamLogoNode.hidden = YES;
+	} else if (_player.pickSetStatus == kPickSetStatusRejected) {
+		_acceptRejectNodeIcon.fontSize = 160.0;
+		_acceptRejectNodeIcon.string = @"\u2718";
+		_acceptRejectNodeIcon.foregroundColor = [[NSColor colorWithHue:0.0 saturation:1.0 brightness:0.85 alpha:1.0] CGColor];
+		_acceptRejectNode.hidden = NO;
+		_teamLogoNode.hidden = YES;
+	} else {
+		_acceptRejectNode.hidden = YES;
+		_teamLogoNode.hidden = NO;
+	}
 }
 
 /* ========================================================================== */
@@ -215,11 +277,18 @@
 //	AEFFLSceneView *sceneView = _vc.sceneView;
 	AETeam *team = [_vc teamWithID:player.data[@"TEAM_ID"]];
 
+//	NSString *headshotBackgroundFilePath = [[[NSBundle mainBundle] URLForResource:@"Images/pc_hs_bg" withExtension:@"png"] path];
+//	NSImage *headshotBackgroundImage = [[NSImage alloc] initWithContentsOfFile:headshotBackgroundFilePath];
+//	_headshotBackgroundNode.geometry.firstMaterial.diffuse.contents = headshotBackgroundImage;
+//	_headshotBackgroundNode.geometry.firstMaterial.diffuse.intensity = 0.0;
+//	_headshotBackgroundNode.geometry.firstMaterial.emission.contents = headshotBackgroundImage;
+//	_headshotBackgroundNode.geometry.firstMaterial.emission.intensity = 1.0;
 	_headshotBackgroundNode.geometry.firstMaterial.multiply.contents = [AEUtility colorFromHexString:team.data[@"COLOR_BG_TINT"]];
 
 	NSString *headshotFilePath = [[[NSBundle mainBundle] URLForResource:[NSString stringWithFormat:@"PC Headshots/%@", player.data[@"ID"]] withExtension:@"png"] path];
 	NSImage *headshotImage = [[NSImage alloc] initWithContentsOfFile:headshotFilePath];
 	_headshotNode.geometry.firstMaterial.diffuse.contents = headshotImage;
+	_headshotNode.geometry.firstMaterial.emission.contents = headshotImage;
 
 	_primaryColorStripeNode.geometry.firstMaterial.multiply.contents = [AEUtility colorFromHexString:team.data[@"COLOR_PRIMARY"]];
 
@@ -227,7 +296,8 @@
 
 	NSString *teamLogoFilePath = [[[NSBundle mainBundle] URLForResource:[NSString stringWithFormat:@"PC Team Logos/%@", player.data[@"TEAM_ID"]] withExtension:@"png"] path];
 	NSImage *teamLogoImage = [[NSImage alloc] initWithContentsOfFile:teamLogoFilePath];
-	_teamLogoNode.geometry.firstMaterial.diffuse.contents = teamLogoImage;
+//	_teamLogoNode.geometry.firstMaterial.diffuse.contents = teamLogoImage;
+	_teamLogoNode.geometry.firstMaterial.emission.contents = teamLogoImage;
 
 //	[CATransaction begin];
 //	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
@@ -308,7 +378,6 @@
 		[SCNTransaction begin];
 		[SCNTransaction setAnimationDuration:1.0];
 //		[SCNTransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
-		_headshotBackgroundNode.geometry.firstMaterial.reflective.contents = blackImg;
 		_headshotBackgroundNode.geometry.firstMaterial.reflective.contents = blackImg;
 		[SCNTransaction commit];
 	});
