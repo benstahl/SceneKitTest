@@ -19,7 +19,7 @@
 
 /* ========================================================================== */
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-	NSLog(@"Module Select View Controller initWithNibName:%@ bundle:", nibNameOrNil);
+//	NSLog(@"Module Select View Controller initWithNibName:%@ bundle:", nibNameOrNil);
 
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -52,11 +52,10 @@
 
 /* ========================================================================== */
 - (void)awakeFromNib {
-	NSLog(@"Module Select View Controller awakeFromNib:");
-
+//	NSLog(@"Module Select View Controller awakeFromNib:");
 
 	_modulesArrayController.selectionIndex = 0;
-	NSLog(@"Array count = %@", @(self.modules.count));
+//	NSLog(@"Array count = %@", @(self.modules.count));
 
 	//	_infoView.layer = [CALayer layer];
 	//    _infoView.wantsLayer = YES;

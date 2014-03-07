@@ -685,13 +685,9 @@
 			}];
 
 			AEPlayerCard *card = _displayedCards[[orderOfCards[i] intValue]];
-//			AEPlayerCard *card = _displayedCards[i];
 			card.position = SCNVector3Make(card.position.x + 20.0, 0.25, 10.0 - (1.5 * i));
-//			card.position = SCNVector3Make(-(totalWidthEnd / 2.0) + cardSpacingEndX * i, 2.0, 22.0);
 			card.rotation = SCNVector4Make(1.0, 1.0, 0.0, AEDegToRad(-90.0));
-//			card.rotation = SCNVector4Make(0.0, 0.0, 0.0, 0.0);
 			[SCNTransaction commit];
-//			[card addAnimation:animation forKey:nil];
 		});
 	}
 }

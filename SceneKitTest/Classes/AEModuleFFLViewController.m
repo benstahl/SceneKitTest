@@ -25,7 +25,7 @@
 
 /* ========================================================================== */
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-	NSLog(@"FFL View Controller initWithNibName:%@ bundle:", nibNameOrNil);
+//	NSLog(@"FFL View Controller initWithNibName:%@ bundle:", nibNameOrNil);
 
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -36,7 +36,7 @@
 
 /* ========================================================================== */
 - (id)initWithCoder:(NSCoder *)aDecoder {
-	NSLog(@"FFL View Controller initWithCoder:");
+//	NSLog(@"FFL View Controller initWithCoder:");
 	if (self = [super initWithCoder:aDecoder]) {
 		_currentParserLine = 0;
 
@@ -55,7 +55,7 @@
 
 /* ========================================================================== */
 - (void)awakeFromNib {
-	NSLog(@"FFL Module View Controller awakeFromNib:");
+//	NSLog(@"FFL Module View Controller awakeFromNib:");
 //	_headerView = [[AEHeaderView alloc] init];
 //	[self.view addSubview:_headerView];
 //	_headerView.frame = self.view.frame;

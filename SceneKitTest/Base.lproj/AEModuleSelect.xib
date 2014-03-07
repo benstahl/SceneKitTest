@@ -101,10 +101,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="IA2-fT-xe6">
-                                <rect key="frame" x="-2" y="0.0" width="144" height="15"/>
+                                <rect key="frame" x="-2" y="0.0" width="144" height="18"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="© 2014 App Easel LLC" placeholderString="" id="bRe-Fs-EM7">
-                                    <font key="font" size="16" name="HelveticaNeue-Condensed"/>
+                                    <font key="font" size="14" name="Helvetica"/>
                                     <color key="textColor" red="0.99963301419999995" green="0.99960309270000003" blue="0.99962008000000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -113,7 +113,7 @@
                                 <rect key="frame" x="-2" y="18" width="139" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="DataCaster" id="ka9-F7-XAE">
-                                    <font key="font" size="32" name="HelveticaNeue-Condensed"/>
+                                    <font key="font" size="26" name="Helvetica"/>
                                     <color key="textColor" red="0.43453362579999999" green="0.74065297839999999" blue="0.99156391619999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -122,7 +122,7 @@
                                 <rect key="frame" x="129" y="33" width="22" height="13"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="™" placeholderString="" id="HVH-TG-hUC">
-                                    <font key="font" size="14" name="HelveticaNeue-Condensed"/>
+                                    <font key="font" size="12" name="HelveticaNeue"/>
                                     <color key="textColor" red="0.43453362579999999" green="0.74065297839999999" blue="0.99156391619999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
