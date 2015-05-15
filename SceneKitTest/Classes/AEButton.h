@@ -13,7 +13,7 @@
 	CAAnimation *_clickAnimation;
 }
 
-@property (strong) IBOutlet id target;
+//@property (weak) IBOutlet id target;
 
 @property (copy) NSString *actionSelectorString;
 @property (copy) NSString *buttonLabelText;

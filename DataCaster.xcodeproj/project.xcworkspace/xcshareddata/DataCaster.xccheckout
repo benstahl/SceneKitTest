@@ -10,29 +10,29 @@
 	<string>DataCaster</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E476DAEA-D6E5-492D-8566-01971293F05F</key>
+		<key>EAF8961890D47EFE5B58C3E14F5876C3D68F7034</key>
 		<string>https://github.com/benstahl/SceneKitTest.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>DataCaster.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E476DAEA-D6E5-492D-8566-01971293F05F</key>
+		<key>EAF8961890D47EFE5B58C3E14F5876C3D68F7034</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/benstahl/SceneKitTest.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E476DAEA-D6E5-492D-8566-01971293F05F</string>
+	<string>EAF8961890D47EFE5B58C3E14F5876C3D68F7034</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E476DAEA-D6E5-492D-8566-01971293F05F</string>
+			<string>EAF8961890D47EFE5B58C3E14F5876C3D68F7034</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SceneKitTest</string>
 		</dict>

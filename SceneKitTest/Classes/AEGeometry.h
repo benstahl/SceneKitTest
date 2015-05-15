@@ -105,7 +105,7 @@ CG_INLINE CGFloat AENormalize360(CGFloat angle) {
 		normalizedAngle = 0.0;
 	}
 
-	return fabsf(normalizedAngle);
+	return fabs(normalizedAngle);
 }
 
 /* =============================================================================

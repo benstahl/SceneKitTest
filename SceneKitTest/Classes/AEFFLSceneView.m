@@ -133,8 +133,8 @@
 	centerLight.name = @"center light";
 	centerLight.type = SCNLightTypeDirectional;
 	centerLight.castsShadow = NO;
-	[centerLight setAttribute:@75 forKey:SCNLightSpotInnerAngleKey];
-	[centerLight setAttribute:@90 forKey:SCNLightSpotOuterAngleKey];
+	centerLight.spotInnerAngle = 75.0;
+	centerLight.spotOuterAngle = 90.0;
 	SCNNode *centerLightNode = [SCNNode node];
 	centerLightNode.light = centerLight;
 	centerLightNode.position = SCNVector3Make(0, 10, -100);
@@ -177,8 +177,8 @@
 //	spotNode.light.shadowRadius = 10;
 //	[spotNode.light setAttribute:@30 forKey:SCNLightShadowNearClippingKey];
 //	[spotNode.light setAttribute:@50 forKey:SCNLightShadowFarClippingKey];
-	[spotNode.light setAttribute:@8 forKey:SCNLightSpotInnerAngleKey];
-	[spotNode.light setAttribute:@45 forKey:SCNLightSpotOuterAngleKey];
+	spotNode.light.spotInnerAngle = 75.0;
+	spotNode.light.spotOuterAngle = 90.0;
 	[_cameraNode addChildNode:spotNode];
 
 //	SCNNode *cardSpotNode = [SCNNode node];
