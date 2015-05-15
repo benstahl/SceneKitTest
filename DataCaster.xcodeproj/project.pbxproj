@@ -12,6 +12,7 @@
 		691B9C1018BC2C790073F01F /* AEModuleFFLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 691B9C0E18BC2C790073F01F /* AEModuleFFLViewController.m */; };
 		691B9C1418BC2CC90073F01F /* AEModuleFFL.xib in Resources */ = {isa = PBXBuildFile; fileRef = 691B9C1218BC2CC90073F01F /* AEModuleFFL.xib */; };
 		6941157C18C296B70061C676 /* AETestPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 6941157B18C296B70061C676 /* AETestPattern.m */; };
+		6944C6121B06BCA200B5D6B6 /* Movies in Resources */ = {isa = PBXBuildFile; fileRef = 6944C6111B06BCA200B5D6B6 /* Movies */; };
 		6946E8FD18C17A2000809A0A /* AEPatternSelectPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 6946E8FC18C17A2000809A0A /* AEPatternSelectPane.m */; };
 		6946E90018C17FD100809A0A /* AEPatternImagePane.m in Sources */ = {isa = PBXBuildFile; fileRef = 6946E8FF18C17FD100809A0A /* AEPatternImagePane.m */; };
 		695FBF3F18C7FE450087D24E /* AEFFLMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 695FBF3E18C7FE450087D24E /* AEFFLMenuView.m */; };
@@ -27,7 +28,6 @@
 		699F21D118B6DED4006F527B /* PC Team Logos in Resources */ = {isa = PBXBuildFile; fileRef = 699F21D018B6DED4006F527B /* PC Team Logos */; };
 		699F21D318B6FC6E006F527B /* PC Headshots in Resources */ = {isa = PBXBuildFile; fileRef = 699F21D218B6FC6E006F527B /* PC Headshots */; };
 		69BFE8FB18B95CF700DE5164 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 69BFE8F918B95CF700DE5164 /* Images */; };
-		69BFE8FC18B95CF700DE5164 /* Movies in Resources */ = {isa = PBXBuildFile; fileRef = 69BFE8FA18B95CF700DE5164 /* Movies */; };
 		69C11C0318BC499D00E2AD0B /* AEModuleSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C11C0218BC499D00E2AD0B /* AEModuleSelectView.m */; };
 		69C11C0618BC6A6400E2AD0B /* AEModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C11C0518BC6A6400E2AD0B /* AEModule.m */; };
 		69D3C29D18B97F5D00A0641F /* AEButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D3C29C18B97F5D00A0641F /* AEButton.m */; };
@@ -74,6 +74,7 @@
 		691B9C1318BC2CC90073F01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AEModuleFFL.xib; sourceTree = "<group>"; };
 		6941157A18C296B70061C676 /* AETestPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AETestPattern.h; path = Classes/AETestPattern.h; sourceTree = "<group>"; };
 		6941157B18C296B70061C676 /* AETestPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AETestPattern.m; path = Classes/AETestPattern.m; sourceTree = "<group>"; };
+		6944C6111B06BCA200B5D6B6 /* Movies */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Movies; path = Resources/Movies; sourceTree = "<group>"; };
 		6946E8FB18C17A2000809A0A /* AEPatternSelectPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEPatternSelectPane.h; path = Classes/AEPatternSelectPane.h; sourceTree = "<group>"; };
 		6946E8FC18C17A2000809A0A /* AEPatternSelectPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEPatternSelectPane.m; path = Classes/AEPatternSelectPane.m; sourceTree = "<group>"; };
 		6946E8FE18C17FD100809A0A /* AEPatternImagePane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEPatternImagePane.h; path = Classes/AEPatternImagePane.h; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		699F21D018B6DED4006F527B /* PC Team Logos */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "PC Team Logos"; path = "Resources/PC Team Logos"; sourceTree = "<group>"; };
 		699F21D218B6FC6E006F527B /* PC Headshots */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "PC Headshots"; path = "Resources/PC Headshots"; sourceTree = "<group>"; };
 		69BFE8F918B95CF700DE5164 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = Resources/Images; sourceTree = "<group>"; };
-		69BFE8FA18B95CF700DE5164 /* Movies */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Movies; path = Resources/Movies; sourceTree = "<group>"; };
 		69C11C0118BC499D00E2AD0B /* AEModuleSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModuleSelectView.h; path = Classes/AEModuleSelectView.h; sourceTree = "<group>"; };
 		69C11C0218BC499D00E2AD0B /* AEModuleSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AEModuleSelectView.m; path = Classes/AEModuleSelectView.m; sourceTree = "<group>"; };
 		69C11C0418BC6A6300E2AD0B /* AEModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEModule.h; path = Classes/AEModule.h; sourceTree = "<group>"; };
@@ -312,10 +312,10 @@
 		69EAF44718B45C5800515D17 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6944C6111B06BCA200B5D6B6 /* Movies */,
 				69F0FB1418BAFFF600169F0C /* Data */,
 				69F0FB1218BAFFAF00169F0C /* Fonts */,
 				69BFE8F918B95CF700DE5164 /* Images */,
-				69BFE8FA18B95CF700DE5164 /* Movies */,
 				699F21D218B6FC6E006F527B /* PC Headshots */,
 				699F21D018B6DED4006F527B /* PC Team Logos */,
 			);
@@ -440,7 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69BFE8FC18B95CF700DE5164 /* Movies in Resources */,
+				6944C6121B06BCA200B5D6B6 /* Movies in Resources */,
 				69BFE8FB18B95CF700DE5164 /* Images in Resources */,
 				69F0FB1518BAFFF600169F0C /* Data in Resources */,
 				6992E9F518BDF82A00EE155E /* AEModuleSelect.xib in Resources */,
